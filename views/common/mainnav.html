@@ -1,0 +1,45 @@
+<header>
+    <div class="container">
+        <div class="mainlogo col-md-3">
+            <a href="">
+                <a class="mainlogo" href="http://www.thunder-link.com "><img src="/images/LOGO3.png" title="Thunder Link" alt="Thunder Link"></a>
+            </a>
+        </div>
+        <div class="col-md-7">
+            <div class="main-search-bar input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <ul class="list-inline list-unstyled">
+                <li><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></li>
+                <li><i class="fa fa-comments fa-2x" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-nav">
+        <div class="container">
+            <div class="col-md-3">
+                <div class="category-meun">
+                    <a class="categroy-btn">
+                            ALL CATEGROY
+                            <i class="fa fa-list fa-1x" aria-hidden="true"></i>
+                        </a>
+                        <!--ALL CATEGROY SUB MENU-->
+                        <%-include('../compoment/main-sub-menu.html')%>
+                </div>
+
+            </div>
+            <div class="col-md-9">
+                <ul class="nav main-nav-bar">
+                    <% mainMenu.forEach((menu)=>{ %>
+                        <li class="active"><a href="<%=menu.url%>"><%=menu.label%></a></li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
