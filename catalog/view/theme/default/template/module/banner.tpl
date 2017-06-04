@@ -1,4 +1,4 @@
-<div id="banner<?php echo $module; ?>" class="owl-carousel">
+<div id="banner<?php echo $module; ?>" class="slick-container">
   <?php foreach ($banners as $banner) { ?>
   <div class="item">
     <?php if ($banner['link']) { ?>
@@ -10,12 +10,12 @@
   <?php } ?>
 </div>
 <script type="text/javascript"><!--
-$('#banner<?php echo $module; ?>').owlCarousel({
-	items: 6,
-	autoPlay: 3000,
-	singleItem: true,
-	navigation: false,
-	pagination: false,
-	transitionStyle: 'fade'
+$('#banner<?php echo $module; ?>').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true
 });
 --></script>

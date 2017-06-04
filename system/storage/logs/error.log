@@ -1,21 +1,15 @@
-2017-05-30 13:17:44 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:15 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:17 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:18 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:18 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:18 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:18 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:18 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:19 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:19 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:19 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-05-30 13:24:19 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/common/column_left.html! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-06-02 0:06:47 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link-new/catalog/view/theme/default/template/configure/index.tpl! in G:\php_projects\thunder-link-new\system\library\template\basic.php on line 26
-2017-06-02 0:09:26 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 1
-2017-06-02 0:09:26 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 165
-2017-06-02 0:09:28 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 1
-2017-06-02 0:09:28 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 165
-2017-06-02 0:09:36 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 1
-2017-06-02 0:09:36 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 165
-2017-06-02 0:09:37 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 1
-2017-06-02 0:09:37 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link-new\catalog\view\theme\default\template\configure\index.tpl on line 165
+2017-06-03 20:15:28 - PHP Notice:  A non well formed numeric value encountered in G:\php_projects\thunder-link\system\library\image.php on line 105
+2017-06-03 20:15:28 - PHP Notice:  A non well formed numeric value encountered in G:\php_projects\thunder-link\system\library\image.php on line 116
+2017-06-04 0:33:52 - PHP Notice:  Error: Could not load template G:\php_projects\thunder-link/catalog/view/theme/default/template/configure/index.tpl! in G:\php_projects\thunder-link\system\library\template\basic.php on line 26
+2017-06-04 1:05:41 - PHP Notice:  Use of undefined constant typical - assumed 'typical' in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 1:05:41 - PHP Notice:  Undefined variable: config in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 1:05:52 - PHP Notice:  Use of undefined constant typical - assumed 'typical' in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 1:05:52 - PHP Notice:  Undefined variable: config in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 1:06:43 - PHP Notice:  Use of undefined constant typical - assumed 'typical' in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 1:06:43 - PHP Notice:  Undefined variable: config in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 69
+2017-06-04 8:33:23 - PHP Notice:  Undefined variable: content_bottom in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 112
+2017-06-04 8:33:40 - PHP Notice:  Undefined variable: content_bottom in G:\php_projects\thunder-link\catalog\view\theme\default\template\configure\index.tpl on line 112
+2017-06-04 12:26:23 - PHP Notice:  Undefined variable: config_typical in G:\php_projects\thunder-link\catalog\view\theme\default\template\support\index.tpl on line 69
+2017-06-04 12:26:23 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\catalog\view\theme\default\template\support\index.tpl on line 69
+2017-06-04 12:26:25 - PHP Notice:  Undefined variable: config_typical in G:\php_projects\thunder-link\catalog\view\theme\default\template\support\index.tpl on line 69
+2017-06-04 12:26:25 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\catalog\view\theme\default\template\support\index.tpl on line 69

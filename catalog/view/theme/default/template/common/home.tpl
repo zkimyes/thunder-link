@@ -22,28 +22,28 @@
                         <div role="tabpanel" class="tab-pane active" id="home">
                             <div class="col-md-3">
                                 <a href="">
-                                    <img src="/images/u135.png" alt="">
+                                    <img src="/image/u135.png" alt="">
                                     <div><strong>US ￥ 35000</strong></div>
                                     <div>Huawei OptiX OSN3500</div>
                                 </a>
                             </div>
                             <div class="col-md-3">
                                 <a href="">
-                                    <img src="/images/u135.png" alt="">
+                                    <img src="/image/u135.png" alt="">
                                     <div><strong>US ￥ 35000</strong></div>
                                     <div>Huawei OptiX OSN3500</div>
                                 </a>
                             </div>
                             <div class="col-md-3">
                                 <a href="">
-                                    <img src="/images/u135.png" alt="">
+                                    <img src="/image/u135.png" alt="">
                                     <div><strong>US ￥ 35000</strong></div>
                                     <div>Huawei OptiX OSN3500</div>
                                 </a>
                             </div>
                             <div class="col-md-3">
                                 <a href="">
-                                    <img src="/images/u135.png" alt="">
+                                    <img src="/image/u135.png" alt="">
                                     <div><strong>US ￥ 35000</strong></div>
                                     <div>Huawei OptiX OSN3500</div>
                                 </a>
@@ -80,7 +80,7 @@
                             <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
                         </div>
                         <div class="col-md-5">
-                            <img src="/images/u646.png" alt="">
+                            <img src="/image/u646.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -89,7 +89,7 @@
                             <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
                         </div>
                         <div class="col-md-5">
-                            <img src="/images/u646.png" alt="">
+                            <img src="/image/u646.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -98,7 +98,7 @@
                             <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
                         </div>
                         <div class="col-md-5">
-                            <img src="/images/u646.png" alt="">
+                            <img src="/image/u646.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -131,28 +131,28 @@
                 <div class="col-md-10">
                     <div class="col-md-3">
                         <a href="">
-                            <img src="/images/u135.png" alt="">
+                            <img src="/image/u135.png" alt="">
                             <div><strong>US ￥ 35000</strong></div>
                             <div>Huawei OptiX OSN3500</div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="">
-                            <img src="/images/u135.png" alt="">
+                            <img src="/image/u135.png" alt="">
                             <div><strong>US ￥ 35000</strong></div>
                             <div>Huawei OptiX OSN3500</div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="">
-                            <img src="/images/u135.png" alt="">
+                            <img src="/image/u135.png" alt="">
                             <div><strong>US ￥ 35000</strong></div>
                             <div>Huawei OptiX OSN3500</div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="">
-                            <img src="/images/u135.png" alt="">
+                            <img src="/image/u135.png" alt="">
                             <div><strong>US ￥ 35000</strong></div>
                             <div>Huawei OptiX OSN3500</div>
                         </a>
