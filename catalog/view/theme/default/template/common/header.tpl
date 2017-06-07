@@ -24,7 +24,7 @@
     <script src="https://cdn.css.net/files/vue/2.3.2/vue.js"></script>
     <link href="https://cdn.css.net/files/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <script src="https://cdn.css.net/files/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.css.net/files/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!--webfonts-->
     <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
     <?php foreach ($styles as $style) { ?>
@@ -103,24 +103,26 @@
 
     <header>
         <div class="container">
-            <div class="mainlogo col-md-3">
-                <div id="logo">
-                    <?php if ($logo) { ?>
-                    <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-                    <?php } else { ?>
-                    <h1>
-                        <a href="<?php echo $home; ?>">
-                            <?php echo $name; ?>
-                        </a>
-                    </h1>
-                    <?php } ?>
+            <div class="row">
+                <div class="mainlogo col-md-3">
+                    <div id="logo">
+                        <?php if ($logo) { ?>
+                        <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+                        <?php } else { ?>
+                        <h1>
+                            <a href="<?php echo $home; ?>">
+                                <?php echo $name; ?>
+                            </a>
+                        </h1>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <?php echo $search; ?>
-            </div>
-            <div class="col-sm-3">
-                <?php echo $cart; ?>
+                <div class="col-sm-6">
+                    <?php echo $search; ?>
+                </div>
+                <div class="col-sm-3">
+                    <?php echo $cart; ?>
+                </div>
             </div>
         </div>
         <div class="main-nav">
