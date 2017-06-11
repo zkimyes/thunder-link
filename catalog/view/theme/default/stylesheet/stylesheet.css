@@ -391,7 +391,7 @@ a{
 
 .btn-o-success {
     border:1px #3ec492 solid;
-    background-color:none;
+    background-color:#fff;
     color:#3bb18f
 }
 
@@ -399,4 +399,14 @@ a{
     border:1px #3ec492 solid;
     background-color:#3ec492;
     color:#fff
+}
+
+.thunder-link-class .breadcrumb {
+    background-color:#fff;
+    font-size:16px;
+    margin:20px 0 0;
+}
+
+.thunder-link-class .breadcrumb>li+li::before{
+    content:">";
 }

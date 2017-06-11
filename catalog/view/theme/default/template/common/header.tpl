@@ -3,7 +3,7 @@
 <!--[if IE 8 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie8"><![endif]-->
 <!--[if IE 9 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
+<html dir="<?php echo $direction; ?>" class="thunder-link-class" lang="<?php echo $lang; ?>">
 <!--<![endif]-->
 
 <head>
@@ -20,11 +20,11 @@
     <?php if ($keywords) { ?>
     <meta name="keywords" content="<?php echo $keywords; ?>" />
     <?php } ?>
-    <script src="https://cdn.css.net/files/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdn.css.net/files/vue/2.3.2/vue.js"></script>
-    <link href="https://cdn.css.net/files/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <script src="https://cdn.css.net/files/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="https://cdn.css.net/files/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/vue/2.3.3/vue.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!--webfonts-->
     <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
     <?php foreach ($styles as $style) { ?>

@@ -16,3 +16,13 @@
 2017-06-05 21:45:23 - PHP Notice:  Error: Could not load template G:\php_projects\thunder-link/catalog/view/theme/default/template/contact/index.tpl! in G:\php_projects\thunder-link\system\library\template\basic.php on line 26
 2017-06-05 21:45:40 - PHP Notice:  Undefined variable: config_typical in G:\php_projects\thunder-link\catalog\view\theme\default\template\contact_us\index.tpl on line 69
 2017-06-05 21:45:40 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\catalog\view\theme\default\template\contact_us\index.tpl on line 69
+2017-06-10 15:52:08 - PHP Warning:  move_uploaded_file(G:/php_projects/thunder-link/image/catalog/婚育大家谈图片.jpg): failed to open stream: Invalid argument in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 268
+2017-06-10 15:52:08 - PHP Warning:  move_uploaded_file(): Unable to move 'E:\UPUPW_AP5.6_64\temp\phpDE63.tmp' to 'G:/php_projects/thunder-link/image/catalog/婚育大家谈图片.jpg' in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 268
+2017-06-10 16:50:17 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 34
+2017-06-10 17:27:45 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
+2017-06-10 17:29:34 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
+2017-06-10 17:32:42 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
+2017-06-10 17:32:59 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
+2017-06-10 17:47:20 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
+2017-06-10 17:47:24 - PHP Notice:  Undefined variable: product_id in G:\php_projects\thunder-link\catalog\controller\product\product.php on line 678
+2017-06-10 23:44:50 - PHP Notice:  Undefined variable: attr in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 116
