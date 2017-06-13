@@ -1,5 +1,20 @@
 <?php
+require_once DIR_VENDOR . '/autoload.php';
+use Qiniu\Auth;
+use Qiniu\Storage\BucketManager;
 class ControllerCommonFileManager extends Controller {
+	private $auth;
+	private $bucketMgr;
+	public function __construct($r){
+		parent::__construct($r);
+		 // 用于签名的公钥和私钥
+        $accessKey = 'kj2iTGT8HSg2RSLooRr-sXPBMx4gWkj6-iSLlq2V';
+        $secretKey = 'vA3J5YoTgnCej7vhQPdcZ2Y4CCoAn_XdxQNj_NH_';
+        // 初始化签权对象
+        $this->auth = new Auth($accessKey, $secretKey);
+		$this->bucketMgr = new BucketManager($this->auth);
+	}
+
 	public function index() {
 		$this->load->language('common/filemanager');
 
