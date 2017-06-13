@@ -8,7 +8,7 @@ final class My {
     public function __construct(){
         $loader = new \Twig_Loader_String();
         $this->twig = new \Twig_Environment($loader,[
-            'cache'=>DIR_SYSTEM.'/storage/twig_template_cache/'
+            'cache'=>false
         ]);
     }
     
