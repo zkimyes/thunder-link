@@ -58,12 +58,11 @@ final class Loader {
 		
 		// Trigger the pre events
 		$result = $this->registry->get('event')->trigger('view/' . $route . '/before', array(&$route, &$data));
-		
 		if ($result) {
 			return $result;
 		}
 		
-		$template = new Template('basic');
+		$template = new Template('my');
 		
 		foreach ($data as $key => $value) {
 			$template->set($key, $value);

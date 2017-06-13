@@ -4,9 +4,8 @@ class Template {
 
   	public function __construct($adaptor) {
 	    $class = 'Template\\' . $adaptor;
-
 		if (class_exists($class)) {
-			$this->adaptor = new $class($expire);
+			$this->adaptor = new $class($expire=null);
 		} else {
 			throw new \Exception('Error: Could not load template adaptor ' . $adaptor . '!');
 		}

@@ -45,7 +45,7 @@
     <div class="modal-footer"><?php echo $pagination; ?></div>
   </div>
 </div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 <?php if ($target) { ?>
 $('a.thumbnail').on('click', function(e) {
 	e.preventDefault();
@@ -237,4 +237,4 @@ $('#modal-image #button-delete').on('click', function(e) {
 		});
 	}
 });
-//--></script>
+</script>

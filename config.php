@@ -18,6 +18,7 @@ define('DIR_DOWNLOAD', __DIR__.'/system/storage/download/');
 define('DIR_LOGS', __DIR__.'/system/storage/logs/');
 define('DIR_MODIFICATION', __DIR__.'/system/storage/modification/');
 define('DIR_UPLOAD', __DIR__.'/system/storage/upload/');
+define('DIR_VENDOR',__DIR__.'/vendor/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

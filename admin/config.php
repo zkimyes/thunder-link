@@ -20,6 +20,7 @@ define('DIR_LOGS', 'G:/php_projects/thunder-link/system/storage/logs/');
 define('DIR_MODIFICATION', 'G:/php_projects/thunder-link/system/storage/modification/');
 define('DIR_UPLOAD', 'G:/php_projects/thunder-link/system/storage/upload/');
 define('DIR_CATALOG', 'G:/php_projects/thunder-link/catalog/');
+define('DIR_VENDOR','G:/php_projects/thunder-link/vendor/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

@@ -1,13 +1,13 @@
 <?php echo $header; ?>
 <div class="container">
     <ul class="breadcrumb">
-        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+        {% for breadcrumb in breadcrumbs %}
         <li>
-            <a href="<?php echo $breadcrumb['href']; ?>">
-                <?php echo $breadcrumb['text']; ?>
+            <a href="{{breadcrumb['href']}}">
+                {{breadcrumb['text']}}
             </a>
         </li>
-        <?php } ?>
+        {% endfor %}
     </ul>
     <div class="row">
         <div id="content" class="container">

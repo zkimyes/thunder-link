@@ -26,3 +26,56 @@
 2017-06-10 17:47:20 - PHP Notice:  Undefined variable: product in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 58
 2017-06-10 17:47:24 - PHP Notice:  Undefined variable: product_id in G:\php_projects\thunder-link\catalog\controller\product\product.php on line 678
 2017-06-10 23:44:50 - PHP Notice:  Undefined variable: attr in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 116
+2017-06-13 23:37:44 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:38:14 - PHP Notice:  Undefined property: Loader::$config in G:\php_projects\thunder-link\system\engine\loader.php on line 61
+2017-06-13 23:39:21 - PHP Warning:  require_once(G:\php_projects\thunder-link/vendor//vendor/autoload.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\system\library\template\twig.php on line 3
+2017-06-13 23:39:49 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 8
+2017-06-13 23:40:47 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:41:20 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:41:45 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:44:06 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:44:17 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:44:41 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:45:12 - PHP Notice:  Undefined variable: expire in G:\php_projects\thunder-link\system\library\template.php on line 9
+2017-06-13 23:46:00 - PHP Warning:  Missing argument 1 for Template\Twig::__construct(), called in G:\php_projects\thunder-link\system\library\template.php on line 8 and defined in G:\php_projects\thunder-link\system\library\template\twig.php on line 9
+2017-06-13 23:56:59 - PHP Notice:  Undefined variable: loader in G:\php_projects\thunder-link\system\library\template\my.php on line 14
+2017-06-13 23:58:02 - PHP Notice:  Undefined variable: loader in G:\php_projects\thunder-link\system\library\template\my.php on line 14
+2017-06-13 23:58:03 - PHP Notice:  Undefined variable: loader in G:\php_projects\thunder-link\system\library\template\my.php on line 14
+2017-06-13 23:59:50 - PHP Notice:  Undefined variable: loader in G:\php_projects\thunder-link\system\library\template\my.php on line 14
+2017-06-14 0:00:10 - PHP Notice:  Undefined variable: loader in G:\php_projects\thunder-link\system\library\template\my.php on line 14
+2017-06-14 0:00:47 - PHP Unknown:  Object of class Twig_Environment could not be converted to string in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:00:47 - PHP Notice:  Object of class Twig_Environment to string conversion in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:00:47 - PHP Notice:  Undefined property: Template\My::$Object in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:01:21 - PHP Unknown:  Object of class Twig_Environment could not be converted to string in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:01:21 - PHP Notice:  Object of class Twig_Environment to string conversion in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:01:21 - PHP Notice:  Undefined property: Template\My::$Object in G:\php_projects\thunder-link\system\library\template\my.php on line 16
+2017-06-14 0:13:15 - PHP Notice:  Undefined variable: twig in G:\php_projects\thunder-link\system\library\template\my.php on line 10
+2017-06-14 0:14:16 - PHP Notice:  Undefined variable: twig in G:\php_projects\thunder-link\system\library\template\my.php on line 31
+2017-06-14 0:19:29 - PHP Notice:  Undefined variable: output in G:\php_projects\thunder-link\system\library\template\my.php on line 31
+2017-06-14 0:24:28 - PHP Notice:  Undefined variable: breadcrumb in G:\php_projects\thunder-link\catalog\view\theme\default\template\product\product.tpl on line 6
+2017-06-14 0:29:23 - PHP Notice:  Use of undefined constant DIR_VENDOR - assumed 'DIR_VENDOR' in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 0:29:23 - PHP Warning:  require_once(DIR_VENDOR/autoload.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 0:29:23 - PHP Notice:  Use of undefined constant DIR_VENDOR - assumed 'DIR_VENDOR' in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 0:29:23 - PHP Warning:  require_once(DIR_VENDOR/autoload.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 0:29:40 - PHP Warning:  require_once(G:\php_projects\thunder-link\admin/vendor//autoload.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 0:30:09 - PHP Warning:  require_once(G:\php_projects\thunder-link\admin../vendor//autoload.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\system\library\template\my.php on line 3
+2017-06-14 1:09:13 - PHP Warning:  Missing argument 2 for Qiniu\Storage\BucketManager::stat(), called in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 16 and defined in G:\php_projects\thunder-link\vendor\qiniu\php-sdk\src\Qiniu\Storage\BucketManager.php on line 90
+2017-06-14 1:09:13 - PHP Notice:  Undefined variable: key in G:\php_projects\thunder-link\vendor\qiniu\php-sdk\src\Qiniu\Storage\BucketManager.php on line 92
+2017-06-14 1:10:27 - PHP Notice:  Undefined variable: ret in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 23
+2017-06-14 1:13:09 - PHP Notice:  Undefined variable: i in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 24
+2017-06-14 1:13:09 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 24
+2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25
+2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25
+2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25

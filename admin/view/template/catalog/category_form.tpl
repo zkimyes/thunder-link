@@ -1,4 +1,5 @@
-<?php echo $header; ?><?php echo $column_left; ?>
+{{header|raw}}
+{{column_left|raw}}
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
