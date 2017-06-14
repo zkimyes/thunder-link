@@ -1,24 +1,25 @@
 <?php
 
 // HTTP
-define('HTTP_SERVER', 'http://localhost:8080/');
+define('HTTP_SERVER', 'http://localhost:8888/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost:8080/');
-
+define('HTTPS_SERVER', 'http://localhost:8888/');
+$dir = $_SERVER['DOCUMENT_ROOT'];
+$dir = str_replace('\\','/',$dir);
 // DIR
-define('DIR_APPLICATION', __DIR__.'/catalog/');
-define('DIR_SYSTEM', __DIR__.'/system/');
-define('DIR_IMAGE', __DIR__.'/image/');
-define('DIR_LANGUAGE', __DIR__.'/catalog/language/');
-define('DIR_TEMPLATE', __DIR__.'/catalog/view/theme/');
-define('DIR_CONFIG', __DIR__.'/system/config/');
-define('DIR_CACHE', __DIR__.'/system/storage/cache/');
-define('DIR_DOWNLOAD', __DIR__.'/system/storage/download/');
-define('DIR_LOGS', __DIR__.'/system/storage/logs/');
-define('DIR_MODIFICATION', __DIR__.'/system/storage/modification/');
-define('DIR_UPLOAD', __DIR__.'/system/storage/upload/');
-define('DIR_VENDOR',__DIR__.'/vendor/');
+define('DIR_APPLICATION', $dir.'/catalog/');
+define('DIR_SYSTEM', $dir.'/system/');
+define('DIR_IMAGE', $dir.'/image/');
+define('DIR_LANGUAGE', $dir.'/catalog/language/');
+define('DIR_TEMPLATE', $dir.'/catalog/view/theme/');
+define('DIR_CONFIG', $dir.'/system/config/');
+define('DIR_CACHE', $dir.'/system/storage/cache/');
+define('DIR_DOWNLOAD', $dir.'/system/storage/download/');
+define('DIR_LOGS', $dir.'/system/storage/logs/');
+define('DIR_MODIFICATION', $dir.'/system/storage/modification/');
+define('DIR_UPLOAD', $dir.'/system/storage/upload/');
+define('DIR_VENDOR',$dir.'/vendor/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
