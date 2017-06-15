@@ -1,26 +1,28 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://localhost:8080/admin/');
-define('HTTP_CATALOG', 'http://localhost:8080/');
+define('HTTP_SERVER', 'http://localhost:8888/admin/');
+define('HTTP_CATALOG', 'http://localhost:8888/');
+
+$dir = $_SERVER['DOCUMENT_ROOT'];
+$dir = str_replace('\\','/',$dir);
 
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost:8080/admin/');
-define('HTTPS_CATALOG', 'http://localhost:8080/');
-
+define('HTTPS_SERVER', 'http://localhost:8888/admin/');
+define('HTTPS_CATALOG', 'http://localhost:8888/');
 // DIR
-define('DIR_APPLICATION', 'G:/php_projects/thunder-link/admin/');
-define('DIR_SYSTEM', 'G:/php_projects/thunder-link/system/');
-define('DIR_IMAGE', 'G:/php_projects/thunder-link/image/');
-define('DIR_LANGUAGE', 'G:/php_projects/thunder-link/admin/language/');
-define('DIR_TEMPLATE', 'G:/php_projects/thunder-link/admin/view/template/');
-define('DIR_CONFIG', 'G:/php_projects/thunder-link/system/config/');
-define('DIR_CACHE', 'G:/php_projects/thunder-link/system/storage/cache/');
-define('DIR_DOWNLOAD', 'G:/php_projects/thunder-link/system/storage/download/');
-define('DIR_LOGS', 'G:/php_projects/thunder-link/system/storage/logs/');
-define('DIR_MODIFICATION', 'G:/php_projects/thunder-link/system/storage/modification/');
-define('DIR_UPLOAD', 'G:/php_projects/thunder-link/system/storage/upload/');
-define('DIR_CATALOG', 'G:/php_projects/thunder-link/catalog/');
-define('DIR_VENDOR','G:/php_projects/thunder-link/vendor/');
+define('DIR_APPLICATION', $dir.'/admin/');
+define('DIR_SYSTEM', $dir.'/system/');
+define('DIR_IMAGE', $dir.'/image/');
+define('DIR_LANGUAGE', $dir.'/admin/language/');
+define('DIR_TEMPLATE', $dir.'/admin/view/template/');
+define('DIR_CONFIG', $dir.'/system/config/');
+define('DIR_CACHE', $dir.'/system/storage/cache/');
+define('DIR_DOWNLOAD', $dir.'/system/storage/download/');
+define('DIR_LOGS', $dir.'/system/storage/logs/');
+define('DIR_MODIFICATION', $dir.'/system/storage/modification/');
+define('DIR_UPLOAD', $dir.'/system/storage/upload/');
+define('DIR_CATALOG', $dir.'/catalog/');
+define('DIR_VENDOR',$dir.'/vendor/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

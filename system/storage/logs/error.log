@@ -79,8 +79,167 @@
 2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25
 2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25
 2017-06-14 1:14:51 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 25
+<<<<<<< HEAD
 2017-06-14 1:39:28 - PHP Warning:  Missing argument 1 for Controller::__construct(), called in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 6 and defined in G:\php_projects\thunder-link\system\engine\controller.php on line 5
 2017-06-14 1:39:28 - PHP Notice:  Undefined variable: registry in G:\php_projects\thunder-link\system\engine\controller.php on line 6
 2017-06-14 1:39:46 - PHP Notice:  Undefined variable: a in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 6
 2017-06-14 1:40:10 - PHP Warning:  Missing argument 1 for Controller::__construct(), called in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 9 and defined in G:\php_projects\thunder-link\system\engine\controller.php on line 5
 2017-06-14 1:40:10 - PHP Notice:  Undefined variable: registry in G:\php_projects\thunder-link\system\engine\controller.php on line 6
+=======
+2017-06-14 7:45:25 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497429925): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:45:25 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:45:25 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:45:25 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:45:25 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:45:25 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:45:25 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497429925): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:45:25 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:45:25 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:45:25 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:45:25 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:45:25 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:45:32 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497429932): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:45:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:45:32 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:45:32 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:45:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:45:32 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:45:32 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497429932): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:45:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:45:32 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:45:32 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:45:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:45:32 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:47:03 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430023): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:47:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:47:03 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:47:03 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:47:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:47:03 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:47:03 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430023): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:47:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:47:03 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:47:03 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:47:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:47:03 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:51:03 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430263): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:51:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:51:03 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:51:03 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:51:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:51:03 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:51:03 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430263): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:51:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:51:03 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:51:03 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:51:03 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:51:03 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:51:20 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430280): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:51:20 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:51:20 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:51:20 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:51:20 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:51:20 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:51:20 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430280): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:51:20 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:51:20 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:51:20 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:51:20 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:51:20 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:52:08 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430328): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:52:08 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:52:08 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:52:08 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:52:08 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:52:08 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:52:08 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430328): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:52:08 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:52:08 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:52:08 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:52:08 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:52:08 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:52:33 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430353): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:52:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:52:33 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:52:33 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:52:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:52:33 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:52:33 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430353): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:52:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:52:33 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:52:33 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:52:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:52:33 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:54:36 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430476): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:54:36 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:54:36 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:54:36 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:54:36 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:54:36 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:54:36 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430476): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:54:36 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:54:36 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:54:36 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:54:36 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:54:36 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:55:56 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430556): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:55:56 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:55:56 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:55:56 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:55:56 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:55:56 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:55:56 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430556): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:55:56 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:55:56 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:55:56 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:55:56 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:55:56 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:56:19 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430579): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:56:19 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:56:19 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:56:19 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:56:19 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:56:19 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:56:19 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430579): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:56:19 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:56:19 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:56:19 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:56:19 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:56:19 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:57:15 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.store.1497430635): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:57:15 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:57:15 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:57:15 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:57:15 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:57:15 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:57:15 - PHP Warning:  fopen(E:\php\php_projects\thunder-linksystem/storage/cache/cache.order_status.1.1497430635): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:57:15 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:57:15 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:57:15 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:57:15 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:57:15 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:57:45 - PHP Warning:  fopen(E:/php/php_projects/thunder-linksystem/storage/cache/cache.store.1497430665): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:57:45 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:57:45 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:57:45 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:57:45 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:57:45 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 7:57:45 - PHP Warning:  fopen(E:/php/php_projects/thunder-linksystem/storage/cache/cache.order_status.1.1497430665): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 7:57:45 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 7:57:45 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 7:57:45 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 7:57:45 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 7:57:45 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 8:00:38 - PHP Warning:  fopen(E:/php/php_projects/thunder-linksystem/storage/cache/cache.store.1497430838): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 8:00:38 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 8:00:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 8:00:38 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 8:00:38 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 8:00:38 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+2017-06-14 8:00:38 - PHP Warning:  fopen(E:/php/php_projects/thunder-linksystem/storage/cache/cache.order_status.1.1497430838): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 49
+2017-06-14 8:00:38 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 51
+2017-06-14 8:00:38 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 53
+2017-06-14 8:00:38 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 55
+2017-06-14 8:00:38 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
+2017-06-14 8:00:38 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
+>>>>>>> a69f08f3e4663de4bcc7aee3bfbe7c5a9e0dba8b
