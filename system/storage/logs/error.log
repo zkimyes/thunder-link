@@ -243,3 +243,32 @@
 2017-06-14 8:00:38 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 57
 2017-06-14 8:00:38 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in E:\php\php_projects\thunder-link\system\library\cache\file.php on line 59
 >>>>>>> a69f08f3e4663de4bcc7aee3bfbe7c5a9e0dba8b
+2017-06-16 0:20:25 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:20:25 - PHP Notice:  Undefined variable: text_forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 38
+2017-06-16 0:20:25 - PHP Notice:  Undefined variable: redirect in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 42
+2017-06-16 0:21:14 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:21:14 - PHP Notice:  Undefined variable: redirect in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 42
+2017-06-16 0:21:43 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:21:43 - PHP Notice:  Undefined variable: redirect in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 42
+2017-06-16 0:25:31 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:25:47 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:26:04 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 37
+2017-06-16 0:26:04 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 80
+2017-06-16 0:26:21 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 36
+2017-06-16 0:26:21 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 79
+2017-06-16 0:28:29 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:29:08 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:29:39 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:30:21 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:30:37 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: firstname in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 367
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: lastname in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 371
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: telephone in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 383
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: address_1 in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 387
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: city in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 391
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: country_id in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 397
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: country_id in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 403
+2017-06-16 0:31:05 - PHP Notice:  Undefined index: confirm in G:\php_projects\thunder-link\catalog\controller\account\register.php on line 435
+2017-06-16 0:31:06 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:31:14 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-06-16 0:31:58 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89

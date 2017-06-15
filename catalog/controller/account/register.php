@@ -8,6 +8,7 @@ class ControllerAccountRegister extends Controller {
 		}
 
 		$this->load->language('account/register');
+		$this->load->language('account/login');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -89,6 +90,7 @@ class ControllerAccountRegister extends Controller {
 
 		$data['button_continue'] = $this->language->get('button_continue');
 		$data['button_upload'] = $this->language->get('button_upload');
+		$data['text_forgotten'] = $this->language->get('text_forgotten');
 
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
@@ -338,6 +340,17 @@ class ControllerAccountRegister extends Controller {
 			$data['agree'] = $this->request->post['agree'];
 		} else {
 			$data['agree'] = false;
+		}
+
+		// Added strpos check to pass McAfee PCI compliance test (http://forum.opencart.com/viewtopic.php?f=10&t=12043&p=151494#p151295)
+		if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
+			$data['redirect'] = $this->request->post['redirect'];
+		} elseif (isset($this->session->data['redirect'])) {
+			$data['redirect'] = $this->session->data['redirect'];
+
+			unset($this->session->data['redirect']);
+		} else {
+			$data['redirect'] = '';
 		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
