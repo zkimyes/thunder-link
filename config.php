@@ -26,6 +26,6 @@ define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_DATABASE', 'new_thunder');
+define('DB_DATABASE', 'new_opencart');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');

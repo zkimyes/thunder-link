@@ -273,3 +273,270 @@
 2017-06-16 0:31:14 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
 2017-06-16 0:31:58 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
 2017-06-17 5:22:24 - PHP Notice:  Undefined variable: forgotten in /projects/thunder-link/catalog/view/theme/default/template/account/register.tpl on line 89
+2017-06-17 22:36:18 - PHP Notice:  Undefined variable: data in G:\php_projects\thunder-link\admin\controller\hot_sale\index.php on line 11
+2017-06-17 22:42:33 - PHP Notice:  Undefined variable: data in G:\php_projects\thunder-link\admin\controller\hot_sale\index.php on line 12
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: data in G:\php_projects\thunder-link\admin\controller\hot_sale\index.php on line 11
+2017-06-17 22:43:02 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 67
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 1
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 2
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 10
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:02 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:02 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 35
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 1
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 2
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 10
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:08 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:08 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 35
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 1
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 2
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 10
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:25 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 22:43:25 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 35
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 1
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 2
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 6
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 7
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 10
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 23:31:09 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 13
+2017-06-17 23:31:09 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\hot_sale\index.tpl on line 35
+2017-06-18 0:06:58 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link/admin/view/template/promotion/index.tpl! in G:\php_projects\thunder-link\system\library\template\my.php on line 33
+2017-06-18 0:10:33 - PHP Notice:  Error: Could not load template G:/php_projects/thunder-link/admin/view/template/promotion/index.tpl! in G:\php_projects\thunder-link\system\library\template\my.php on line 33
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:14:01 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 20
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 23
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 29
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 34
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 39
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 44
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 48
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 64
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 72
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 73
+2017-06-18 0:14:01 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 79
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:14:45 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 20
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 23
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 29
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 34
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 39
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 44
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 48
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 64
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 72
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 73
+2017-06-18 0:14:45 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 79
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:15:46 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 20
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 23
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 29
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 34
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 39
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 44
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 48
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 64
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 72
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 73
+2017-06-18 0:15:46 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 79
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:16:16 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 11
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 20
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 23
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 29
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 34
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 39
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 44
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 48
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 64
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 72
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 73
+2017-06-18 0:16:16 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 79
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 18
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 21
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 27
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 30
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 30
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 35
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 35
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 40
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 40
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 46
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 62
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 70
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 71
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 77
+2017-06-18 0:16:57 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: text_list in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 18
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 21
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 27
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 30
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: column_name in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 30
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 32
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 35
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: column_attribute_group in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 35
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 37
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: sort_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 40
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: column_sort_order in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 40
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: column_action in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 42
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: attributes in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 46
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: text_no_results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 62
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: pagination in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 70
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: results in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 71
+2017-06-18 0:16:58 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 77
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: header in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 1
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: column_left in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 2
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-06-18 0:17:51 - PHP Notice:  Undefined variable: footer in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 41
+2017-06-18 0:18:03 - PHP Notice:  Undefined variable: add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:18:03 - PHP Notice:  Undefined variable: button_add in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 6
+2017-06-18 0:18:03 - PHP Notice:  Undefined variable: button_delete in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 0:18:03 - PHP Notice:  Undefined variable: text_confirm in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 7
+2017-06-18 1:02:50 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 45
+2017-06-18 1:02:50 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 13
+2017-06-18 1:03:23 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 45
+2017-06-18 1:03:23 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 13
+2017-06-18 1:03:24 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 45
+2017-06-18 1:03:24 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 13
+2017-06-18 1:05:04 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 46
+2017-06-18 1:05:54 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 13
+2017-06-18 1:30:42 - PHP Warning:  Missing argument 1 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:30:42 - PHP Warning:  Missing argument 2 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:34:03 - PHP Notice:  Undefined variable: banner_total in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 12
+2017-06-18 1:34:03 - PHP Warning:  Missing argument 2 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:35:43 - PHP Warning:  Missing argument 2 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:35:43 - PHP Notice:  Undefined property: stdClass::$total in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-18 1:36:34 - PHP Warning:  Missing argument 2 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:36:34 - PHP Notice:  Undefined property: stdClass::$total in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-18 1:36:36 - PHP Warning:  Missing argument 2 for ModelPromotionPromotion::getList() in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 4
+2017-06-18 1:36:36 - PHP Notice:  Undefined property: stdClass::$total in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-18 1:36:44 - PHP Notice:  Undefined property: stdClass::$total in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-18 1:50:01 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-18 1:50:07 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:51:02 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:55:52 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:56:21 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:57:08 - PHP Notice:  Undefined variable: catchObject in G:\php_projects\thunder-link\system\library\db.php on line 22
+2017-06-18 1:58:26 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:58:30 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:58:35 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 1:58:40 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 16
+2017-06-18 2:12:35 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\model\sale\order.php on line 305
+2017-06-18 2:12:35 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\model\sale\order.php on line 305
+2017-06-18 2:15:02 - PHP Notice:  Undefined variable: key in G:\php_projects\thunder-link\system\library\db.php on line 18
+2017-06-18 2:15:02 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\startup\event.php on line 6
+2017-06-18 2:15:02 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\controller\startup\event.php on line 6
+2017-06-18 2:15:02 - PHP Notice:  Undefined variable: key in G:\php_projects\thunder-link\system\library\db.php on line 18
+2017-06-18 2:15:02 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\system\library\cart\user.php on line 16
+2017-06-18 2:24:04 - PHP Notice:  Undefined property: stdClass::$count in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 18
+2017-06-18 2:24:20 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17

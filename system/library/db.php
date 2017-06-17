@@ -1,10 +1,10 @@
 <?php
 class DB {
 	private $adaptor;
+	private $cache;
 
 	public function __construct($adaptor, $hostname, $username, $password, $database, $port = NULL) {
 		$class = 'DB\\' . $adaptor;
-
 		if (class_exists($class)) {
 			$this->adaptor = new $class($hostname, $username, $password, $database, $port);
 		} else {
@@ -12,7 +12,7 @@ class DB {
 		}
 	}
 
-	public function query($sql, $params = array()) {
+	public function query($sql, $params = array(),$cache=true) {
 		return $this->adaptor->query($sql, $params);
 	}
 

@@ -20,20 +20,28 @@ $response = new Response();
 $response->addHeader('Content-Type: text/html; charset=utf-8');
 $registry->set('response', $response);
 
+// Cache
+$registry->set('cache', new Cache($config->get('cache_type'), $config->get('cache_expire')));
+
 // Database
 if ($config->get('db_autostart')) {
-	$registry->set('db', new DB($config->get('db_type'), $config->get('db_hostname'), $config->get('db_username'), $config->get('db_password'), $config->get('db_database'), $config->get('db_port')));
+    $registry->set('db', new DB(
+		$config->get('db_type'),
+		$config->get('db_hostname'),
+		$config->get('db_username'),
+		$config->get('db_password'),
+		$config->get('db_database'),
+		$config->get('db_port'),
+		$registry
+	));
 }
 
 // Session
 if ($config->get('session_autostart')) {
-	$session = new Session();
-	$session->start();
-	$registry->set('session', $session);
+    $session = new Session();
+    $session->start();
+    $registry->set('session', $session);
 }
-
-// Cache 
-$registry->set('cache', new Cache($config->get('cache_type'), $config->get('cache_expire')));
 
 // Url
 $registry->set('url', new Url($config->get('site_ssl')));
@@ -52,37 +60,37 @@ $registry->set('event', $event);
 
 // Event Register
 if ($config->has('action_event')) {
-	foreach ($config->get('action_event') as $key => $value) {
-		$event->register($key, new Action($value));
-	}
+    foreach ($config->get('action_event') as $key => $value) {
+        $event->register($key, new Action($value));
+    }
 }
 
 // Config Autoload
 if ($config->has('config_autoload')) {
-	foreach ($config->get('config_autoload') as $value) {
-		$loader->config($value);
-	}
+    foreach ($config->get('config_autoload') as $value) {
+        $loader->config($value);
+    }
 }
 
 // Language Autoload
 if ($config->has('language_autoload')) {
-	foreach ($config->get('language_autoload') as $value) {
-		$loader->language($value);
-	}
+    foreach ($config->get('language_autoload') as $value) {
+        $loader->language($value);
+    }
 }
 
 // Library Autoload
 if ($config->has('library_autoload')) {
-	foreach ($config->get('library_autoload') as $value) {
-		$loader->library($value);
-	}
+    foreach ($config->get('library_autoload') as $value) {
+        $loader->library($value);
+    }
 }
 
 // Model Autoload
 if ($config->has('model_autoload')) {
-	foreach ($config->get('model_autoload') as $value) {
-		$loader->model($value);
-	}
+    foreach ($config->get('model_autoload') as $value) {
+        $loader->model($value);
+    }
 }
 
 // Front Controller
@@ -90,9 +98,9 @@ $controller = new Front($registry);
 
 // Pre Actions
 if ($config->has('action_pre_action')) {
-	foreach ($config->get('action_pre_action') as $value) {
-		$controller->addPreAction(new Action($value));
-	}
+    foreach ($config->get('action_pre_action') as $value) {
+        $controller->addPreAction(new Action($value));
+    }
 }
 
 // Dispatch

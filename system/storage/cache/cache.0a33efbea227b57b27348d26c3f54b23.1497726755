@@ -1,0 +1,1 @@
+{"num_rows":2,"row":{"tax_class_id":"9","tax_rate_id":"86","name":"VAT (20%)","rate":"20.0000","type":"P","priority":"1"},"rows":[{"tax_class_id":"9","tax_rate_id":"86","name":"VAT (20%)","rate":"20.0000","type":"P","priority":"1"},{"tax_class_id":"9","tax_rate_id":"87","name":"Eco Tax (-2.00)","rate":"2.0000","type":"F","priority":"2"}]}
