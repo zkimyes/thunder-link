@@ -540,3 +540,15 @@
 2017-06-18 2:15:02 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\system\library\cart\user.php on line 16
 2017-06-18 2:24:04 - PHP Notice:  Undefined property: stdClass::$count in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 18
 2017-06-18 2:24:20 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\controller\promotion\set.php on line 17
+2017-06-20 14:51:48 - PHP Unknown:  Argument 1 passed to Illuminate\Validation\Factory::__construct() must be an instance of Illuminate\Contracts\Translation\Translator, instance of Symfony\Component\Translation\Translator given, called in /projects/thunder-link/vendor/laravelbook/ardent/src/Ardent/Ardent.php on line 519 and defined in /projects/thunder-link/vendor/illuminate/validation/Factory.php on line 83
+2017-06-20 15:36:35 - PHP Warning:  require_once(/projects/thunder-link/catalog//model/oc_promotion.php): failed to open stream: No such file or directory in /projects/thunder-link/catalog/controller/common/home.php on line 2
+2017-06-20 15:36:56 - PHP Notice:  Undefined offset: 0 in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Model.php on line 601
+2017-06-20 16:09:33 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:11:17 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:11:17 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:14:49 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:14:49 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45

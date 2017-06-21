@@ -1,6 +1,13 @@
 {
     "require": {
         "twig/twig": "1.9.2",
-        "qiniu/php-sdk": "^7.1"
+        "qiniu/php-sdk": "^7.1",
+        "php-activerecord/php-activerecord": "^1.2"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

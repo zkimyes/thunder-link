@@ -8,6 +8,7 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
 {
     public static $files = array (
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
+        '6e60481d8c04e99474e2ba7b3658ab5a' => __DIR__ . '/..' . '/php-activerecord/php-activerecord/ActiveRecord.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -30,6 +31,14 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+        'P' => 
+        array (
+            'Pheasant' => 
+            array (
+                0 => __DIR__ . '/..' . '/lox/pheasant/lib',
+                1 => __DIR__ . '/..' . '/lox/pheasant/tests',
             ),
         ),
     );

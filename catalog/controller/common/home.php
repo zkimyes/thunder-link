@@ -8,6 +8,13 @@ class ControllerCommonHome extends Controller {
 		if (isset($this->request->get['route'])) {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}
+		
+		$this->load->_model('product_model');
+		$this->load->_model('promotion_model');
+
+		$product = new Product();
+
+		$promotion = new Promotion();
 
 		$data['test'] = 'adssadasdasdasdasdasdasdas';
 

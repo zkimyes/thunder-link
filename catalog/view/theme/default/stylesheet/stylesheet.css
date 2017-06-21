@@ -150,12 +150,52 @@ a {
 
 .prod-block {
     background-color: #fff;
+    text-align: center;
 }
 
 .prod-block::after {
     clear: both;
     content: '';
     display: block;
+}
+
+.prod-block h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.prod-block .nav-tabs {
+    border-bottom: 0 none;
+}
+
+.prod-block .nav-tabs li {
+    margin-left: -2px;
+}
+
+.prod-block .nav-tabs li a {
+    padding: 10px 20px;
+}
+
+.prod-block .nav-tabs>li.active>a,
+.prod-block .nav-tabs>li.active>a:focus,
+.prod-block .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: rgba(61, 195, 145, 1);
+    border: 0 none;
+    border-bottom-color: transparent;
+}
+
+.prod-block .nav-tabs>li>a,
+.prod-block .nav-tabs>li>a:focus,
+.prod-block .nav-tabs>li>a:hover {
+    cursor: default;
+    background-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.prod-block .nav-tabs>li>a:hover {
+    border: 1px #34bd8a solid;
 }
 
 .document-block {

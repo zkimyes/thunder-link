@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
+    'Pheasant' => array($vendorDir . '/lox/pheasant/lib', $vendorDir . '/lox/pheasant/tests'),
 );

@@ -36,7 +36,6 @@ final class Loader {
 		
 		$file  = DIR_APPLICATION . 'model/' . $route . '.php';
 		$class = 'Model' . preg_replace('/[^a-zA-Z0-9]/', '', $route);
-		
 		if (is_file($file)) {
 			include_once($file);
 			//echo $class;
@@ -47,6 +46,24 @@ final class Loader {
 			}
 
 			$this->registry->set('model_' . str_replace(array('/', '-', '.'), array('_', '', ''), (string)$route), $proxy);
+		} else {
+			throw new \Exception('Error: Could not load model ' . $route . '!');
+		}
+	}
+
+
+	/**
+	 * 自定义的加载自定义model的方法
+	 */
+
+	public function _model($route){
+		// Sanitize the call
+		$route = preg_replace('/[^a-zA-Z0-9_\/]/', '', (string)$route);
+		
+		$file  = DIR_APPLICATION . 'model/' . $route . '.php';
+		
+		if (is_file($file)) {
+			include_once($file);
 		} else {
 			throw new \Exception('Error: Could not load model ' . $route . '!');
 		}
