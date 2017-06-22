@@ -1,5 +1,8 @@
 <?php 
-require_once DIR_APPLICATION.'/model/base_model.php';
+require_once('base_model.php');
+/**
+ * promotion
+ */
 class Promotion extends base {
     static $table_name = 'oc_promotion';
     static $belongs_to = array(     

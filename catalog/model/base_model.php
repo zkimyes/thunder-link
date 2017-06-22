@@ -1,5 +1,6 @@
 <?php
-require_once DIR_VENDOR.'/autoload.php';
+require_once(DIR_VENDOR.'autoload.php');
+//active record orm 
 ActiveRecord\Config::initialize(function($cfg)
 {
    $cfg->set_connections(
@@ -11,6 +12,7 @@ ActiveRecord\Config::initialize(function($cfg)
    );
    $cfg->set_default_connection('development');
 });
+
 
 class base extends ActiveRecord\Model{
     

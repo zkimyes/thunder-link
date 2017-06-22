@@ -552,3 +552,27 @@
 2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
 2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
 2017-06-20 16:15:08 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 45
+2017-06-22 14:56:37 - PHP Warning:  PDO::__construct(): MySQL server has gone away in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:56:37 - PHP Warning:  PDO::__construct(): Error while reading greeting packet. PID=20146 in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:56:59 - PHP Warning:  PDO::__construct(): MySQL server has gone away in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:56:59 - PHP Warning:  PDO::__construct(): Error while reading greeting packet. PID=20146 in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:57:00 - PHP Warning:  PDO::__construct(): MySQL server has gone away in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:57:00 - PHP Warning:  PDO::__construct(): Error while reading greeting packet. PID=20146 in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:57:11 - PHP Warning:  PDO::__construct(): MySQL server has gone away in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 14:57:11 - PHP Warning:  PDO::__construct(): Error while reading greeting packet. PID=20146 in /projects/thunder-link/vendor/php-activerecord/php-activerecord/lib/Connection.php on line 260
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62
+2017-06-22 15:00:53 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in /projects/thunder-link/system/library/db/mysqli.php on line 62

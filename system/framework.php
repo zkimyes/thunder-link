@@ -36,6 +36,7 @@ if ($config->get('db_autostart')) {
 	));
 }
 
+
 // Session
 if ($config->get('session_autostart')) {
     $session = new Session();
