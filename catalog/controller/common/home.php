@@ -8,13 +8,11 @@ class ControllerCommonHome extends Controller {
 		if (isset($this->request->get['route'])) {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}
-		
-		$this->load->_model('product_model');
-		$this->load->_model('promotion_model');
 
-		$product = new Product();
 
-		$promotion = new Promotion();
+		$this->load->_model('hot_sale_category_model');
+		$hotCategory = new HotSaleCategory();
+		var_dump($hotCategory->getA());
 
 		$data['test'] = 'adssadasdasdasdasdasdasdas';
 

@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '841780ea2e1d6545ea3a253239d59c05' => $vendorDir . '/qiniu/php-sdk/src/Qiniu/functions.php',
-    '6e60481d8c04e99474e2ba7b3658ab5a' => $vendorDir . '/php-activerecord/php-activerecord/ActiveRecord.php',
 );

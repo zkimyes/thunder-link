@@ -8,7 +8,6 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
 {
     public static $files = array (
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
-        '6e60481d8c04e99474e2ba7b3658ab5a' => __DIR__ . '/..' . '/php-activerecord/php-activerecord/ActiveRecord.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -43,12 +42,24 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
         ),
     );
 
+    public static $classMap = array (
+        'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'IdiormString' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'IdiormStringException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'Model' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
+        'ORM' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
+        'ORMWrapper' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
+        'ParisMethodMissingException' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit1763caea63afa1b04beee535f009c755::$classMap;
 
         }, null, ClassLoader::class);
     }

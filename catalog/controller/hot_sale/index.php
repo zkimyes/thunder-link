@@ -9,7 +9,6 @@ class ControllerHotSaleIndex extends Controller {
 
         $this->load->_model('hot_sale_category_model');
         $category = new HotSaleCategory();
-        $category->getProducts();
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');

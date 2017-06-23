@@ -1,19 +1,10 @@
 <?php
 require_once(DIR_VENDOR.'autoload.php');
 //active record orm 
-ActiveRecord\Config::initialize(function($cfg)
-{
-   $cfg->set_connections(
-     array(
-       'development' => 'mysql://root:root@localhost/new_thunder',
-       'test' => 'mysql://username:password@localhost/test_database_name',
-       'production' => 'mysql://username:password@localhost/production_database_name'
-     )
-   );
-   $cfg->set_default_connection('development');
-});
+ORM::configure('mysql:host='.DB_HOSTNAME.';dbname='.DB_DATABASE, null, 'localhost');
+ORM::configure('username', DB_USERNAME, 'localhost');
+ORM::configure('password', DB_PASSWORD, 'localhost');
 
-
-class base extends ActiveRecord\Model{
-    
+class base {
+    public static $_connection_name = 'localhost';
 }
