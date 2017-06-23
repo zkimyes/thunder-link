@@ -10,10 +10,9 @@ class ControllerCommonHome extends Controller {
 		}
 
 
-		$this->load->_model('hot_sale_category_model');
-		$hotCategory = new HotSaleCategory();
-		var_dump($hotCategory->getA());
-
+		$this->load->model('hotsale/category');
+		
+		$this->model_hotsale_category->getHomeHotSale();
 		$data['test'] = 'adssadasdasdasdasdasdasdas';
 
 		$data['column_left'] = $this->load->controller('common/column_left');

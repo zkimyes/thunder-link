@@ -40,11 +40,9 @@ final class Loader {
 			include_once($file);
 			//echo $class;
 			$proxy = new Proxy();
-
 			foreach (get_class_methods($class) as $method) {
 				$proxy->{$method} = $this->callback($this->registry, $route . '/' . $method);
 			}
-
 			$this->registry->set('model_' . str_replace(array('/', '-', '.'), array('_', '', ''), (string)$route), $proxy);
 		} else {
 			throw new \Exception('Error: Could not load model ' . $route . '!');

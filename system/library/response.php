@@ -25,6 +25,11 @@ class Response {
 		$this->output = $output;
 	}
 
+	public function jsonOutput($output){
+		header('Content-Type: application/json');
+		$this->output = json_encode($output);
+	}
+
 	private function compress($data, $level = 0) {
 		if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && (strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== false)) {
 			$encoding = 'gzip';
