@@ -6,7 +6,7 @@
                 Hot Sale List
             </h1>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{getList|raw}}"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-primary" href="{{add_url|raw}}"><i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
 </div>
 <script>
     //Vue.config.delimiters = ['${', '}']
-   Vue.config.devtools = true
+    Vue.config.devtools = true
     var category = null;
     var getList = function() {
         $.get("{{getList_url|raw}}".replace('amp;', ''), function(data) {
@@ -50,14 +50,16 @@
     }
 
     var delt = function(id) {
-        $.post("{{delt_url|raw}}".replace("amp;", ''),{id:id},function(data) {
-            if(data.return){
+        $.post("{{delt_url|raw}}".replace("amp;", ''), {
+            id: id
+        }, function(data) {
+            if (data.return) {
                 getList();
             }
         }, 'json')
     }
     var hotsale = new Vue({
-        delimiters:['${', '}'],
+        delimiters: ['${', '}'],
         el: '#content',
         data: {
             category: category,
@@ -68,8 +70,8 @@
                 this.id = id;
                 delt(id);
             },
-            update:function(id){
-                location.href = "{{update_url|raw}}".replace("amp;", '')+"&id="+id;
+            update: function(id) {
+                location.href = "{{update_url|raw}}".replace("amp;", '') + "&id=" + id;
             }
         },
         mounted() {

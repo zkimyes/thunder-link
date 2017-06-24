@@ -2,7 +2,7 @@
 class ModelHotSaleCategory extends Model {
 	public function getList() {
         $query = $this->db->query(
-            'select * from oc_hot_sale_category'
+            'select * from oc_hot_sale_category order by id desc'
         );
         if($query->rows){
             return $query->rows;
@@ -31,14 +31,12 @@ class ModelHotSaleCategory extends Model {
     public function update($data){
         if(!empty($data)){
             $query = $this->db->query(
-                'insert into oc_hot_sale_category 
-                (`name`,meta_desc,meta_keywords) 
-                values 
-                (
-                    "'.$data['name'].'",
-                    "'.$data['meta_keywords'].'",
-                    "'.$data['meta_desc'].'"
-                )'
+                'update oc_hot_sale_category 
+                set `name`="'.$data['name'].'",
+                    meta_desc = "'.$data['meta_keywords'].'",
+                    meta_desc = "'.$data['meta_desc'].'"
+                where id = 
+                '.$data['id']
             );
             return $query;
         }

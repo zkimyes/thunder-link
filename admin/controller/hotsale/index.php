@@ -12,7 +12,8 @@ class ControllerHotSaleIndex extends Controller {
         $data['getList_url'] = $this->url->link('hotsale/index/getList','token=' . $this->session->data['token'],true);
         $data['delt_url'] = $this->url->link('hotsale/index/delt','token=' . $this->session->data['token'],true);
         $data['update_url'] = $this->url->link('hotsale/index/edit','token=' . $this->session->data['token'],true);
- 		$this->response->setOutput($this->load->view('hotsale/index', $data));
+        $data['add_url'] = $this->url->link('hotsale/index/add','token=' . $this->session->data['token'],true);
+        $this->response->setOutput($this->load->view('hotsale/index', $data));
     } 
 
     public function form($data){
