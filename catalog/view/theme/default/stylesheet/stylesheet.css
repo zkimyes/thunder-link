@@ -148,9 +148,14 @@ a {
     padding: 15px 0;
 }
 
+.promotion-block {
+    height: 240px !important;
+}
+
 .prod-block {
     background-color: #fff;
     text-align: center;
+    height: 300px;
 }
 
 .prod-block::after {
