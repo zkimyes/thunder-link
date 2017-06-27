@@ -6,7 +6,7 @@
             <div class="pull-right">
             </div>
             <h1>
-                <?php echo $heading_title; ?>
+                {{heading_title}}
             </h1>
             <ul class="breadcrumb">
                 <li>
