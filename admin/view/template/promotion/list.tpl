@@ -37,7 +37,7 @@
                                 {% for list in lists %}
                                 <tr>
                                     <td>{{list.id}}</td>
-                                    <td>{{list.name}}</td>
+                                    <td>{{list.title}}</td>
                                     <td>{{list.condition}}</td>
                                     <td>{{list.date_end}}</td>
                                     <td><button class="btn btn-warning">编辑</button></td>
