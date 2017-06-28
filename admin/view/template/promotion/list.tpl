@@ -27,7 +27,7 @@
                             <thead>
                                 <tr>
                                     <td width="40"><input type="checkbox"></td>
-                                    <td>product_name</td>
+                                    <td>title</td>
                                     <td>price</td>
                                     <td>condition</td>
                                     <td>option</td>
@@ -40,7 +40,7 @@
                                     <td>{{list.title}}</td>
                                     <td>{{list.condition}}</td>
                                     <td>{{list.date_end}}</td>
-                                    <td><button class="btn btn-warning">编辑</button></td>
+                                    <td><button class="btn btn-warning btn-xs">edit</button></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
@@ -55,4 +55,4 @@
         </div>
     </div>
 </div>
-<?php echo $footer; ?>
+{{footer|raw}}
