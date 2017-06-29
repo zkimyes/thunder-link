@@ -697,3 +697,10 @@
 2017-06-24 2:34:20 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\model\hotsale\category.php on line 21
 2017-06-24 2:34:20 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\model\hotsale\category.php on line 22
 2017-06-24 2:34:20 - PHP Notice:  Trying to get property of non-object in G:\php_projects\thunder-link\admin\model\hotsale\category.php on line 23
+2017-06-29 7:54:30 - PHP Notice:  Undefined variable: help_related in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 36
+2017-06-29 7:54:30 - PHP Notice:  Undefined variable: entry_related in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 36
+2017-06-29 7:55:31 - PHP Notice:  Undefined variable: help_related in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 36
+2017-06-29 7:55:31 - PHP Notice:  Undefined variable: entry_related in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 36
+2017-06-29 7:55:31 - PHP Notice:  Undefined variable: token in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 74
+2017-06-29 7:56:02 - PHP Notice:  Undefined variable: token in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 74
+2017-06-29 7:56:12 - PHP Notice:  Undefined variable: token in /projects/thunder-link/admin/view/template/promotion/form.tpl on line 74

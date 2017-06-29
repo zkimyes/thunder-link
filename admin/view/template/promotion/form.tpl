@@ -33,10 +33,15 @@
                                 <textarea placeholder="dddd" class="form-control" cols="30" rows="10"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>product</label>
-                                <select class="form-control">
-                                    <option value="">--select--</option>
-                                </select>
+                                <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="asdasdas">Related Product</span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="related" value="" placeholder="" id="input-related" class="form-control" />
+                                    <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
+                                        <div id="product-related_{{product_id}}"><i class="fa fa-minus-circle"></i>
+                                            <input type="hidden" name="product_related[]" value="" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="input-date-available">date_end</label>
@@ -61,6 +66,34 @@
 <script>
     $('.date').datetimepicker({
         pickTime: false
+    });
+    // Related
+    $('input[name=\'related\']').autocomplete({
+        'source': function(request, response) {
+            $.ajax({
+                url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' + encodeURIComponent(request),
+                dataType: 'json',
+                success: function(json) {
+                    response($.map(json, function(item) {
+                        return {
+                            label: item['name'],
+                            value: item['product_id']
+                        }
+                    }));
+                }
+            });
+        },
+        'select': function(item) {
+            $('input[name=\'related\']').val('');
+
+            $('#product-related' + item['value']).remove();
+
+            $('#product-related').append('<div id="product-related' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_related[]" value="' + item['value'] + '" /></div>');
+        }
+    });
+
+    $('#product-related').delegate('.fa-minus-circle', 'click', function() {
+        $(this).parent().remove();
     });
 </script>
 <?php echo $footer; ?>
