@@ -1,0 +1,35 @@
+.solution-nav {
+    border-bottom:2px #eee solid;
+    margin: 10px -15px;
+}
+
+.solution-nav ul{
+    margin: 0;
+    padding:0;
+}
+
+.solution-nav li{
+    display: inline-block;
+    font-size: 20px;
+    padding:5px 45px;
+}
+
+
+.solution{
+    overflow: hidden;
+    border:1px #ddd solid;
+    padding: 10px;
+}
+
+.solution .s-img{
+    float:left;
+}
+
+.solution .s-content{
+    margin-left: 210px;
+}
+
+
+.solution .s-content h4{
+    margin:0 0 10px 0;
+}

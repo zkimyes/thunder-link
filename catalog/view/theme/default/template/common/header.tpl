@@ -139,12 +139,12 @@
                     </div>
                     <div class="col-md-9">
                         <ul class="nav main-nav-bar">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Support</a></li>
-                            <li><a href="">Configure</a></li>
-                            <li><a href="">Solution</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">Blog</a></li>
+                            <li><a href="{{home}}">Home</a></li>
+                            <li><a href="{{support}}">Support</a></li>
+                            <li><a href="{{configure}}">Configure</a></li>
+                            <li><a href="{{solution}}">Solution</a></li>
+                            <li><a href="{{contact_us}}">Contact Us</a></li>
+                            <li><a href="{{home}}">Blog</a></li>
                         </ul>
                     </div>
                 </div>
