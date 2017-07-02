@@ -17,7 +17,7 @@
         "require": {
             "php": ">=5.2.4"
         },
-        "time": "2012-08-25T17:32:57+00:00",
+        "time": "2012-08-25 17:32:57",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -72,7 +72,7 @@
             "phpunit/phpunit": "~4.0",
             "squizlabs/php_codesniffer": "~2.3"
         },
-        "time": "2016-11-18T02:57:31+00:00",
+        "time": "2016-11-18 02:57:31",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -104,188 +104,49 @@
         ]
     },
     {
-        "name": "j4mie/idiorm",
-        "version": "v1.5.3",
-        "version_normalized": "1.5.3.0",
+        "name": "bephp/activerecord",
+        "version": "v2.1.1",
+        "version_normalized": "2.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/j4mie/idiorm.git",
-            "reference": "f2f170c44af4761fef8ef34d6dbc237cd95df799"
+            "url": "https://github.com/bephp/activerecord.git",
+            "reference": "a827ad80fc16678eca186cfc7be968c1dad7307d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://files.phpcomposer.com/files/j4mie/idiorm/f2f170c44af4761fef8ef34d6dbc237cd95df799.zip",
-            "reference": "f2f170c44af4761fef8ef34d6dbc237cd95df799",
+            "url": "https://files.phpcomposer.com/files/bephp/activerecord/a827ad80fc16678eca186cfc7be968c1dad7307d.zip",
+            "reference": "a827ad80fc16678eca186cfc7be968c1dad7307d",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.2.0"
+            "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "^4.8"
+            "phpdocumentor/phpdocumentor": "^2.8",
+            "phpunit/phpunit": "*",
+            "satooshi/php-coveralls": "*"
         },
-        "time": "2017-03-21T01:31:25+00:00",
+        "time": "2016-10-22 08:58:47",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "idiorm.php"
+            "files": [
+                "ActiveRecord.php"
             ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause",
-            "BSD-3-Clause",
-            "BSD-4-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Simon Holywell",
-                "email": "treffynnon@php.net",
-                "homepage": "http://simonholywell.com",
-                "role": "Maintainer"
-            },
-            {
-                "name": "Jamie Matthews",
-                "email": "jamie.matthews@gmail.com",
-                "homepage": "http://j4mie.org",
-                "role": "Developer"
-            },
-            {
-                "name": "Durham Hale",
-                "email": "me@durhamhale.com",
-                "homepage": "http://durhamhale.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "A lightweight nearly-zero-configuration object-relational mapper and fluent query builder for PHP5",
-        "homepage": "http://j4mie.github.com/idiormandparis",
-        "keywords": [
-            "idiorm",
-            "orm",
-            "query builder"
-        ]
-    },
-    {
-        "name": "j4mie/paris",
-        "version": "v1.5.6",
-        "version_normalized": "1.5.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/j4mie/paris.git",
-            "reference": "ec43a1f7f59d237c147495d29523da52e375f9e7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://files.phpcomposer.com/files/j4mie/paris/ec43a1f7f59d237c147495d29523da52e375f9e7.zip",
-            "reference": "ec43a1f7f59d237c147495d29523da52e375f9e7",
-            "shasum": ""
-        },
-        "require": {
-            "j4mie/idiorm": "1.5.*",
-            "php": ">=5.2.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8"
-        },
-        "time": "2017-03-21T02:13:30+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "paris.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause",
-            "BSD-3-Clause",
-            "BSD-4-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Simon Holywell",
-                "email": "treffynnon@php.net",
-                "homepage": "http://simonholywell.com",
-                "role": "Maintainer"
-            },
-            {
-                "name": "Jamie Matthews",
-                "email": "jamie.matthews@gmail.com",
-                "homepage": "http://j4mie.org",
-                "role": "Developer"
-            },
-            {
-                "name": "Durham Hale",
-                "email": "me@durhamhale.com",
-                "homepage": "http://durhamhale.com",
-                "role": "Maintainer"
-            }
-        ],
-        "description": "A lightweight Active Record implementation for PHP5, built on top of Idiorm",
-        "homepage": "http://j4mie.github.com/idiormandparis",
-        "keywords": [
-            "Active Record",
-            "model",
-            "orm",
-            "paris"
-        ]
-    },
-    {
-        "name": "lox/pheasant",
-        "version": "v1.3.2",
-        "version_normalized": "1.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/lox/pheasant.git",
-            "reference": "1bd7ee448f34144da71b843c622e5c3896b4a62d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://files.phpcomposer.com/files/lox/pheasant/1bd7ee448f34144da71b843c622e5c3896b4a62d.zip",
-            "reference": "1bd7ee448f34144da71b843c622e5c3896b4a62d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.7.2",
-            "phpunit/phpunit": "~3.7.18",
-            "satooshi/php-coveralls": "dev-master"
-        },
-        "time": "2015-05-05T09:28:58+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Pheasant": [
-                    "lib",
-                    "tests"
-                ]
-            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
-        "authors": [
-            {
-                "name": "Lachlan Donald",
-                "email": "lachlan@ljd.cc"
-            },
-            {
-                "name": "Richard Bone",
-                "email": "rjonbone@gmail.com"
-            }
-        ],
-        "description": "A lightweight data mapper for MySQL and PHP 5.3+",
+        "description": "micro activerecord library in PHP(only 400 lines with comments), support chain calls and relations(HAS_ONE, HAS_MANY, BELONGS_TO).",
+        "homepage": "http://lloydzhou.github.io/activerecord/",
         "keywords": [
-            "99designs",
             "activerecord",
-            "datamapper",
-            "mysql",
-            "orm"
+            "database",
+            "micro",
+            "orm",
+            "pdo",
+            "relation"
         ]
     }
 ]

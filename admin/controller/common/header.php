@@ -2,6 +2,7 @@
 class ControllerCommonHeader extends Controller {
 	public function index() {
 		$data['title'] = $this->document->getTitle();
+		$this->document->addScript('view/javascript/vue/vue.min.js');
 
 		if ($this->request->server['HTTPS']) {
 			$data['base'] = HTTPS_SERVER;

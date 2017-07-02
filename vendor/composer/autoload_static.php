@@ -8,6 +8,7 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
 {
     public static $files = array (
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
+        'd1f573e03feb57b0a500cc7be57520b4' => __DIR__ . '/..' . '/bephp/activerecord/ActiveRecord.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -32,25 +33,6 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
-        'P' => 
-        array (
-            'Pheasant' => 
-            array (
-                0 => __DIR__ . '/..' . '/lox/pheasant/lib',
-                1 => __DIR__ . '/..' . '/lox/pheasant/tests',
-            ),
-        ),
-    );
-
-    public static $classMap = array (
-        'IdiormMethodMissingException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
-        'IdiormResultSet' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
-        'IdiormString' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
-        'IdiormStringException' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
-        'Model' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
-        'ORM' => __DIR__ . '/..' . '/j4mie/idiorm/idiorm.php',
-        'ORMWrapper' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
-        'ParisMethodMissingException' => __DIR__ . '/..' . '/j4mie/paris/paris.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -59,7 +41,6 @@ class ComposerStaticInit1763caea63afa1b04beee535f009c755
             $loader->prefixLengthsPsr4 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit1763caea63afa1b04beee535f009c755::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit1763caea63afa1b04beee535f009c755::$classMap;
 
         }, null, ClassLoader::class);
     }

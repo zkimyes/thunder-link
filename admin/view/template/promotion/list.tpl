@@ -28,8 +28,8 @@
                                 <tr>
                                     <td width="40"><input type="checkbox"></td>
                                     <td>title</td>
-                                    <td>price</td>
                                     <td>condition</td>
+                                    <td>date_end</td>
                                     <td>option</td>
                                 </tr>
                             </thead>

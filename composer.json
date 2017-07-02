@@ -1,7 +1,8 @@
 {
     "require": {
         "twig/twig": "1.9.2",
-        "qiniu/php-sdk": "^7.1"
+        "qiniu/php-sdk": "^7.1",
+        "bephp/activerecord": "^2.1"
     },
     "repositories": {
         "packagist": {
