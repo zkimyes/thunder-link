@@ -3,6 +3,18 @@
 * solution 的目录
 * Undocumented class
 */
+require_once(DIR_VENDOR.'autoload.php');
+use Cake\Datasource\ConnectionManager;
+
+ConnectionManager::setConfig('default', [
+	'className' => 'Cake\Database\Connection',
+	'driver' => 'Cake\Database\Driver\Mysql',
+	'database' =>DB_DATABASE,
+	'username' => DB_USERNAME,
+	'password' => DB_PASSWORD,
+	'cacheMetadata' => false // If set to `true` you need to install the optional "cakephp/cache" package.
+]);
+use Cake\ORM\TableRegistry;
 class ControllerSolutionCategory extends Controller{
 
     public function index(){
@@ -26,8 +38,27 @@ class ControllerSolutionCategory extends Controller{
             ]);
 		}
     }
+
+
+    public function add(){
+
+    }
+
+    public function update(){
+        $this->form();
+    }
+
+
+    protected function form(){
+        $data['header'] = $this->load->controller('common/header');
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['footer'] = $this->load->controller('common/footer');
+        $data['back_url'] = $this->url->link('solution/category/index');
+        $this->response->setOutput($this->load->view('solution/category_form', $data));
+    }
     
     protected function getList() {
+        $token = $this->session->data['token'];
         $url = "";
         $data['url'] = $this->url;
         $data['breadcrumbs'] = array();
@@ -45,10 +76,7 @@ class ControllerSolutionCategory extends Controller{
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-
-        include_once(DIR_APPLICATION.'/model/soluton/category.php');
-        $category = new SolutionCategory();
-        var_dump($category);
+        $data['update_url'] = $this->url->link('solution/category/update');
 
         $data['lists'] = json_encode([
             [
@@ -74,6 +102,7 @@ class ControllerSolutionCategory extends Controller{
             ]
         ]);
 
+        $data['token'] = $token;
         $this->response->setOutput($this->load->view('solution/category_list', $data));
     }
 }

@@ -2029,3 +2029,29 @@
 2017-07-02 22:27:46 - PHP Warning:  include_once(../../model/soluton/category.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\admin\controller\solution\category.php on line 49
 2017-07-02 22:27:46 - PHP Warning:  include_once(): Failed opening '../../model/soluton/category.php' for inclusion (include_path='.;C:\php\pear') in G:\php_projects\thunder-link\admin\controller\solution\category.php on line 49
 2017-07-02 22:28:05 - PHP Warning:  require_once(../model_setting.php): failed to open stream: No such file or directory in G:\php_projects\thunder-link\admin\model\soluton\category.php on line 2
+2017-07-03 3:08:53 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 3:09:57 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 3:09:58 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 3:09:58 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 3:09:59 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 3:09:59 - PHP Warning:  require_once(php-activerecord/ActiveRecord.php): failed to open stream: No such file or directory in E:\php\php_projects\thunder-link\admin\model\model_setting.php on line 3
+2017-07-03 5:41:40 - PHP Unknown:  Argument 1 passed to Cake\ORM\Table::findAll() must be an instance of Cake\ORM\Query, none given, called in E:\php\php_projects\thunder-link\admin\controller\solution\category.php on line 27 and defined in E:\php\php_projects\thunder-link\vendor\cakephp\orm\Table.php on line 1187
+2017-07-03 5:41:40 - PHP Unknown:  Argument 2 passed to Cake\ORM\Table::findAll() must be of the type array, none given, called in E:\php\php_projects\thunder-link\admin\controller\solution\category.php on line 27 and defined in E:\php\php_projects\thunder-link\vendor\cakephp\orm\Table.php on line 1187
+2017-07-03 5:41:40 - PHP Notice:  Undefined variable: query in E:\php\php_projects\thunder-link\vendor\cakephp\orm\Table.php on line 1189
+2017-07-03 7:35:35 - PHP Notice:  Undefined variable: data in E:\php\php_projects\thunder-link\admin\controller\solution\category.php on line 53
+2017-07-03 7:35:35 - PHP Warning:  Invalid argument supplied for foreach() in E:\php\php_projects\thunder-link\system\engine\loader.php on line 82
+2017-07-03 7:35:35 - PHP Notice:  Undefined variable: header in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 1
+2017-07-03 7:35:35 - PHP Notice:  Undefined variable: column_left in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 2
+2017-07-03 7:35:35 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 74
+2017-07-03 7:35:35 - PHP Notice:  Undefined variable: footer in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 99
+2017-07-03 8:14:51 - PHP Notice:  Undefined variable: data in E:\php\php_projects\thunder-link\admin\controller\solution\category.php on line 53
+2017-07-03 8:14:51 - PHP Warning:  Invalid argument supplied for foreach() in E:\php\php_projects\thunder-link\system\engine\loader.php on line 82
+2017-07-03 8:14:51 - PHP Notice:  Undefined variable: header in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 1
+2017-07-03 8:14:51 - PHP Notice:  Undefined variable: column_left in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 2
+2017-07-03 8:14:51 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 74
+2017-07-03 8:14:51 - PHP Notice:  Undefined variable: footer in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 99
+2017-07-03 8:15:18 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 74
+2017-07-03 8:17:22 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 74
+2017-07-03 8:19:04 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 72
+2017-07-03 8:19:17 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 69
+2017-07-03 8:23:16 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 73

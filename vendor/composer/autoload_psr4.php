@@ -7,4 +7,17 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Qiniu\\' => array($vendorDir . '/qiniu/php-sdk/src/Qiniu'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
+    'Cake\\Validation\\' => array($vendorDir . '/cakephp/validation'),
+    'Cake\\Utility\\' => array($vendorDir . '/cakephp/utility'),
+    'Cake\\ORM\\' => array($vendorDir . '/cakephp/orm'),
+    'Cake\\I18n\\' => array($vendorDir . '/cakephp/i18n'),
+    'Cake\\Event\\' => array($vendorDir . '/cakephp/event'),
+    'Cake\\Datasource\\' => array($vendorDir . '/cakephp/datasource'),
+    'Cake\\Database\\' => array($vendorDir . '/cakephp/database'),
+    'Cake\\Core\\' => array($vendorDir . '/cakephp/core'),
+    'Cake\\Collection\\' => array($vendorDir . '/cakephp/collection'),
+    'Cake\\Chronos\\' => array($vendorDir . '/cakephp/chronos/src'),
+    'Aura\\Intl\\' => array($vendorDir . '/aura/intl/src'),
 );

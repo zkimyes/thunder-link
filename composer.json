@@ -2,7 +2,10 @@
     "require": {
         "twig/twig": "1.9.2",
         "qiniu/php-sdk": "^7.1",
-        "bephp/activerecord": "^2.1"
+        "bephp/activerecord": "^2.1",
+        "qycloud/activerecord": "^1.6",
+        "fuel/orm": "1.8.0.1",
+        "cakephp/orm": "^3.4"
     },
     "repositories": {
         "packagist": {

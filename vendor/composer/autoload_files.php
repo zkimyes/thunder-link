@@ -6,6 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '948ad5488880985ff1c06721a4e447fe' => $vendorDir . '/cakephp/utility/bootstrap.php',
+    '72142d7b40a3a0b14e91825290b5ad82' => $vendorDir . '/cakephp/core/functions.php',
+    '34122c0574b76bf21c9a8db62b5b9cf3' => $vendorDir . '/cakephp/chronos/src/carbon_compat.php',
+    '6bf338dc12d9a06e7afdab5ed899e2dc' => $vendorDir . '/cakephp/i18n/functions.php',
+    '028fdea3165c4ba1ecccc83b7fec69fc' => $vendorDir . '/cakephp/collection/functions.php',
     '841780ea2e1d6545ea3a253239d59c05' => $vendorDir . '/qiniu/php-sdk/src/Qiniu/functions.php',
     'd1f573e03feb57b0a500cc7be57520b4' => $vendorDir . '/bephp/activerecord/ActiveRecord.php',
+    'c7b822f3f23ab5d59be787190a93db6a' => $vendorDir . '/qycloud/activerecord/ActiveRecord.php',
 );

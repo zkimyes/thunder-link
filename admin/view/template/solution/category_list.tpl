@@ -18,28 +18,29 @@
         <h3 class="panel-title"><i class="fa fa-list"></i>Category List</h3>
       </div>
       <div class="panel-body">
-        <form method="post" action="" enctype="multipart/form-data" target="_blank" id="form-order">
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-              <thead>
-                <tr>
-                  <td style="width: 1px;" class="text-center"><input type="checkbox"/></td>
-                  <td>title</td>
-                  <td>link</td>
-                  <td class="text-right">Actions</td>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <td style="width: 1px;" class="text-center"><input type="checkbox"/></td>
+                <td>title</td>
+                <td>link</td>
+                <td class="text-right">Actions</td>
+              </tr>
+            </thead>
+            <tbody>
+                <tr v-for="list in category">
+                    <td><input type="checkbox"/></td>
+                    <td>${list.name}</td>
+                    <td>${list.link}</td>
+                    <td> 
+                      <button class="btn btn-danger btn-xs">删除</button>
+                      <button @click="update(list.id)" class="btn btn-info btn-xs">更新</button>
+                    </td>
                 </tr>
-              </thead>
-              <tbody>
-                  <tr v-for="list in category">
-                      <td><input type="checkbox"/></td>
-                      <td>${list.name}</td>
-                      <td>${list.link}</td>
-                      <td><button class="btn btn-danger btn-xs">删除</button></td>
-                  </tr>
-              </tbody>
-            </table>
-          </div>
-        </form>
+            </tbody>
+          </table>
+        </div>
         <div class="row">
           <div class="col-sm-6 text-left"></div>
           <div class="col-sm-6 text-right"></div>
@@ -73,7 +74,7 @@
                 delt(id);
             },
             update: function(id) {
-                location.href = "{{update_url|raw}}".replace("amp;", '') + "&id=" + id;
+                location.href = "{{update_url|raw}}&id=" + id+"&token={{token}}";
             }
         }
     })
