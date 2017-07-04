@@ -3,7 +3,7 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
-        <a href="<?php echo $url->link('solution/category/add'); ?>" data-toggle="tooltip" title="Category Add" class="btn btn-primary"><i class="fa fa-plus"></i></a></div>
+        <a href="{{add_url}}&token={{token}}" data-toggle="tooltip" title="Category Add" class="btn btn-primary"><i class="fa fa-plus"></i></a></div>
       <h1>Solution Category</h1>
       <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -22,19 +22,19 @@
           <table class="table table-bordered table-hover">
             <thead>
               <tr>
-                <td style="width: 1px;" class="text-center"><input type="checkbox"/></td>
+                <td style="width: 1px;" class="text-center"><input  @click="checkAll()" type="checkbox"/></td>
                 <td>title</td>
-                <td>link</td>
+                <td>url</td>
                 <td class="text-right">Actions</td>
               </tr>
             </thead>
             <tbody>
                 <tr v-for="list in category">
-                    <td><input type="checkbox"/></td>
-                    <td>${list.name}</td>
-                    <td>${list.link}</td>
+                    <td><input :checked="checked" type="checkbox"/></td>
+                    <td>${list.title}</td>
+                    <td>${list.url}</td>
                     <td> 
-                      <button class="btn btn-danger btn-xs">删除</button>
+                      <button @click="delt(list.id)" class="btn btn-danger btn-xs">删除</button>
                       <button @click="update(list.id)" class="btn btn-info btn-xs">更新</button>
                     </td>
                 </tr>
@@ -54,11 +54,10 @@
     var category = JSON.parse('{{lists|raw}}');
 
     var delt = function(id) {
-        $.post("{{delt_url|raw}}".replace("amp;", ''), {
-            id: id
+        $.post("{{delt_url|raw}}".replace("amp;", '')+'&token={{token}}', {
+            selected: [id]
         }, function(data) {
-            if (data.return) {
-            }
+          location.reload();
         }, 'json')
     }
     var solution = new Vue({
@@ -66,12 +65,16 @@
         el: '#content',
         data: {
             category: category,
-            id: null
+            id: null,
+            checked:false
         },
         methods: {
             delt: function(id) {
                 this.id = id;
                 delt(id);
+            },
+            checkAll:function(){
+              this.checked = window.event.target.checked
             },
             update: function(id) {
                 location.href = "{{update_url|raw}}&id=" + id+"&token={{token}}";

@@ -39,8 +39,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <button class="btn btn-primary">提交</button>
-                        <a class="btn btn-default" href="{{back_url|raw}}">取消</a>
+                        <button @click="submit()" class="btn btn-primary">提交</button>
+                        <a class="btn btn-default" href="{{back_url|raw}}&token={{token}}">取消</a>
                     </div>
                 </div>
             </div>
@@ -52,15 +52,35 @@
     var category = new Vue({
         el:'#content',
         data:{
-            title:'',
-            meta_keyword:'',
-            meta_desc:'',
-            url:''
+            id:'{{category.id}}',
+            title:'{{category.title}}',
+            meta_keyword:'{{category.meta_keyword}}',
+            meta_desc:'{{category.meta_desc}}',
+            url:'{{category.url}}'
         },
         methods:{
             submit(){
-                if(this.title == ''){
+                let data = {
+                    id:this.id,
+                    title:this.title,
+                    meta_keyword:this.meta_keyword,
+                    meta_desc:this.meta_desc,
+                    url:this.url
                 }
+
+                if(data.title == ""){
+                    return layer.msg('标题不能为空');
+                }
+
+                if(data.title == ""){
+                    return layer.msg('标题不能为空');
+                }
+
+                $.post('{{submit_url|raw}}&token={{token}}',data,function(res){
+                    if(res){
+                        location.href="{{back_url|raw}}&token={{token}}";
+                    }
+                },'json')
             }
         }
     });

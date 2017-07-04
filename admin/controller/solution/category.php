@@ -3,18 +3,6 @@
 * solution 的目录
 * Undocumented class
 */
-require_once(DIR_VENDOR.'autoload.php');
-use Cake\Datasource\ConnectionManager;
-
-ConnectionManager::setConfig('default', [
-	'className' => 'Cake\Database\Connection',
-	'driver' => 'Cake\Database\Driver\Mysql',
-	'database' =>DB_DATABASE,
-	'username' => DB_USERNAME,
-	'password' => DB_PASSWORD,
-	'cacheMetadata' => false // If set to `true` you need to install the optional "cakephp/cache" package.
-]);
-use Cake\ORM\TableRegistry;
 class ControllerSolutionCategory extends Controller{
 
     public function index(){
@@ -28,34 +16,61 @@ class ControllerSolutionCategory extends Controller{
     }
 
     public function delete(){
-        if (isset($this->request->post['selected']) && $this->validateDelete()) {
-			foreach ($this->request->post['selected'] as $attribute_id) {
-				$this->model_catalog_attribute->deleteAttribute($attribute_id);
-			}
+        $this->load->model('solution/category');
+        if (isset($this->request->post['selected'])) {
+            $this->model_solution_category->delt($this->request->post['selected']);
 			$this->response->jsonOutput([
                 'status'=>'1',
                 'info'=>'success'
             ]);
-		}
+		}else{
+            $this->response->jsonOutput([
+                'status'=>'0',
+                'info'=>'no item to delete'
+            ]);
+        }
     }
 
 
     public function add(){
-
+        $this->load->model('solution/category');
+        $data['submit_url'] = $this->url->link('solution/category/add');
+        if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){ 
+             $post = $this->request->post;
+             $rs = $this->model_solution_category->add($post);
+             //$this->response->jsonOutput($rs);
+        }else{ 
+            $this->form($data);
+        };
     }
 
     public function update(){
-        $this->form();
+        $this->load->model('solution/category');
+        $data['submit_url'] = $this->url->link('solution/category/update');
+        if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){ 
+             $post = $this->request->post;
+             $rs = $this->model_solution_category->update($post);
+             $this->response->jsonOutput($rs);
+        }else{ 
+            $id = $this->request->get['id'];
+            if(!empty($id)){
+                $category = $this->model_solution_category->find($id);
+            }
+            $data['category'] = $category;
+            $this->form($data);
+        };
     }
 
 
-    protected function form(){
+    protected function form($data){
         $data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['footer'] = $this->load->controller('common/footer');
+		$data['footer'] = $this->load->controller('common/footer'); 
         $data['back_url'] = $this->url->link('solution/category/index');
+        $data['token'] = $this->session->data['token'];
         $this->response->setOutput($this->load->view('solution/category_form', $data));
     }
+    
     
     protected function getList() {
         $token = $this->session->data['token'];
@@ -76,31 +91,14 @@ class ControllerSolutionCategory extends Controller{
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
+        $data['add_url'] = $this->url->link('solution/category/add');
         $data['update_url'] = $this->url->link('solution/category/update');
+        $data['delt_url'] = $this->url->link('solution/category/delete');
 
-        $data['lists'] = json_encode([
-            [
-                'id'=>'asd',
-                'name'=>'asd',
-                'meta_title'=>'asd',
-                'meta_desc'=>'sdadasd',
-                'link'=>'asdasdasd'
-            ],
-            [
-                'id'=>'asd',
-                'name'=>'asd',
-                'meta_title'=>'asd',
-                'meta_desc'=>'sdadasd',
-                'link'=>'asdasdasd'
-            ],
-            [
-                'id'=>'asd',
-                'name'=>'asd',
-                'meta_title'=>'asd',
-                'meta_desc'=>'sdadasd',
-                'link'=>'asdasdasd'
-            ]
-        ]);
+        $this->load->model('solution/category');
+        $categorys = $this->model_solution_category->getList();
+
+        $data['lists'] = json_encode($categorys);
 
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('solution/category_list', $data));

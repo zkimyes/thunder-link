@@ -2055,3 +2055,6 @@
 2017-07-03 8:19:04 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 72
 2017-07-03 8:19:17 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 69
 2017-07-03 8:23:16 - PHP Notice:  Undefined variable: token in E:\php\php_projects\thunder-link\admin\view\template\solution\category_form.tpl on line 73
+2017-07-04 6:56:04 - PHP Notice:  Undefined index: id in E:\php\php_projects\thunder-link\admin\model\solution\category.php on line 21
+2017-07-04 7:00:03 - PHP Notice:  Undefined index: id in E:\php\php_projects\thunder-link\admin\model\solution\category.php on line 21
+2017-07-04 8:37:20 - PHP Notice:  Undefined variable: attribute_id in E:\php\php_projects\thunder-link\admin\controller\solution\category.php on line 21
