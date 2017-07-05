@@ -10,13 +10,26 @@ class ModelSolutionArticle extends Model {
     }
 
     public function add($data = []){
-        $keys = join(',',array_keys($data));
-        $values = join(',',array_values($data));
-        $rs = $this->db->query("
-            insert into oc_solution_article (".$keys.") values
-             (".$values.")
-        ");
-        return $rs;
+        if(!empty($data)){
+            $data['createAt'] = date('YYYY-mm-DD HH:ii:ss');
+            $rs = $this->db->query("
+                insert into oc_solution_article (
+                    title,category_id,meta_title,meta_keywords,meta_desc,summary,content,createAt
+                ) values
+                (
+                    '".$this->db->escape($data['title'])."',
+                    0,
+                    '".$this->db->escape($data['title'])."',
+                    '".$this->db->escape($data['meta_keyword'])."',
+                    '".$this->db->escape($data['meta_desc'])."',
+                    '".$this->db->escape($data['summary'])."',
+                    '".$this->db->escape($data['content'])."',
+                    '".date('Y-m-d H:i:s')."'
+                )
+            ");
+            return $rs;
+        }
+        return false;
     }
 
 

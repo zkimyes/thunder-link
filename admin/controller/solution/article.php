@@ -36,12 +36,12 @@ class ControllerSolutionArticle extends Controller{
     
     
     public function add(){
-        $this->load->model('solution/category');
-        $data['submit_url'] = $this->url->link('solution/category/add');
+        $this->load->model('solution/article');
+        $data['submit_url'] = $this->url->link('solution/article/add');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_solution_category->add($post);
-            //$this->response->jsonOutput($rs);
+            $rs = $this->model_solution_article->add($post);
+            $this->response->jsonOutput($rs);
         }else{
             $data['breadcrumbs'][] = [
             'text'=>'Home',
