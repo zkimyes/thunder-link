@@ -10,8 +10,17 @@ class ModelSolutionCategory extends Model {
         $keys = join(',',array_keys($data));
         $values = join(',',array_values($data));
         $rs = $this->db->query("
-            insert into oc_solution_category (".$keys.") values
-             (".$values.")
+            insert into oc_solution_category 
+            (
+                title,meta_keyword,meta_desc,url
+            ) 
+            values
+            (
+                '".$this->db->escape($data['title'])."',
+                '".$this->db->escape($data['meta_keyword'])."',
+                '".$this->db->escape($data['meta_desc'])."',
+                '".$this->db->escape($data['url'])."'
+            )
         ");
         return $rs;
     }

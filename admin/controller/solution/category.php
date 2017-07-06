@@ -38,7 +38,7 @@ class ControllerSolutionCategory extends Controller{
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){ 
              $post = $this->request->post;
              $rs = $this->model_solution_category->add($post);
-             //$this->response->jsonOutput($rs);
+             $this->response->jsonOutput($rs);
         }else{ 
             $this->form($data);
         };

@@ -23,82 +23,71 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8">
+                        <input type="hidden" name="id" value="{{article.id}}">
                         <div class="form-group">
-                            <label>title</label>
-                            <input type="text" v-model="title" class="form-control" placeholder="title">
+                            <label>Solution Category</label>
+                            <select name="category_id" class="form-control">
+                                {% for category in categorys %}
+                                    <option value="{{category.id}}">{{category.title}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>meta keyword</label>
-                            <input type="text" v-model="meta_keyword" class="form-control" placeholder="meta keyword">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title" value="{{article.title}}" placeholder="title">
                         </div>
                         <div class="form-group">
-                            <label>meta description</label>
-                            <textarea v-model="meta_desc" class="form-control" placeholder="meta description"></textarea>
+                            <label>Meta Keywords</label>
+                            <input type="text" class="form-control" name="meta_keywords" value="{{article.meta_keywords}}" placeholder="meta keyword">
                         </div>
                         <div class="form-group">
-                            <label>summary</label>
-                            <textarea v-model="summary" class="form-control" placeholder="summary"></textarea>
+                            <label>Meta Description</label>
+                            <textarea class="form-control" name="meta_desc" placeholder="meta description">{{article.meta_desc}}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>content</label>
-                            <textarea class="form-control" id="editor" placeholder="meta description"></textarea>
+                            <label>Summary</label>
+                            <textarea class="form-control" name="summary" placeholder="summary">{{article.summary}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Content</label>
+                            <textarea class="form-control" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                      <button @click="submit()" class="btn btn-primary">提交</button>
-                      <a class="btn btn-default">取消</a>
+                      <button onclick="submit()" class="btn btn-primary">提交</button>
+                      <a href="{{back_url}}&token={{token}}" class="btn btn-default">取消</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-      Vue.config.devtools = true
-    var Article = new Vue({
-        el:'#content',
-        data:{
-            id:'{{article.id}}',
-            title:'{{article.title}}',
-            meta_keyword:'{{article.meta_keyword}}',
-            meta_desc:'{{article.meta_desc}}',
-            summary:'{{article.summary}}',
-            content:'{{article.content}}'
-        },
-        methods:{
-            submit(){
-                let data = {
-                    id:this.id,
-                    title:this.title,
-                    meta_keyword:this.meta_keyword,
-                    meta_desc:this.meta_desc,
-                    summary:this.summary,
-                    content:this.content
-                }
+        var editor = CKEDITOR.replace( 'editor' );
+        $('[name="category_id"]').val("{{article.category_id}}");
+        function submit(){
+            var _title = $('[name="title"]').val(),
+                _meta_keywords = $('[name="meta_keywords"]').val(),
+                _meta_desc = $('[name="meta_desc"]').val(),
+                _summary = $('[name="summary"]').val(),
+                _id = $('[name="id"]').val(),
+                _category_id = $('[name="category_id"]').val();
 
-                if(data.title == ""){
-                    return layer.msg('标题不能为空');
-                }
-
-                if(data.content == ""){
-                    return layer.msg('内容不能为空');
-                }
-
-                $.post('{{submit_url|raw}}&token={{token}}',data,function(res){
+                $.post('{{submit_url}}&token={{token}}',{
+                    id:_id,
+                    title:_title,
+                    category_id:_category_id,
+                    meta_keywords:_meta_keywords,
+                    meta_desc:_meta_desc,
+                    summary:_summary,
+                    content:editor.getData()
+                },function(res){
                     if(res){
-                        location.href="{{back_url|raw}}&token={{token}}";
+                        location.href = "{{back_url}}&token={{token}}";
                     }
-                },'json')
-            }
-        },
-        mounted(){
-            var editor = CKEDITOR.replace( 'editor' );
-            var _that = this;
-            editor.on('blur', function( evt ) {
-                _that.content = evt.editor.getData()
-            });
+                })
         }
-    });
+
     </script>
     <?php echo $footer; ?>

@@ -2061,3 +2061,6 @@
 2017-07-04 21:21:58 - PHP Notice:  Undefined variable: breadcrumbs in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 9
 2017-07-04 21:21:58 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 9
 2017-07-05 8:56:36 - PHP Notice:  Undefined index: summary in E:\php\php_projects\thunder-link\admin\model\solution\article.php on line 25
+2017-07-05 20:38:36 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89
+2017-07-05 21:39:19 - PHP Notice:  Undefined index: url in G:\php_projects\thunder-link\admin\model\solution\article.php on line 47
+2017-07-06 12:02:50 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\solution\article.php on line 47

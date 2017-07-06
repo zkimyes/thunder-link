@@ -11,16 +11,15 @@ class ModelSolutionArticle extends Model {
 
     public function add($data = []){
         if(!empty($data)){
-            $data['createAt'] = date('YYYY-mm-DD HH:ii:ss');
             $rs = $this->db->query("
                 insert into oc_solution_article (
                     title,category_id,meta_title,meta_keywords,meta_desc,summary,content,createAt
                 ) values
                 (
                     '".$this->db->escape($data['title'])."',
-                    0,
+                    ".intval($data['category_id']).",
                     '".$this->db->escape($data['title'])."',
-                    '".$this->db->escape($data['meta_keyword'])."',
+                    '".$this->db->escape($data['meta_keywords'])."',
                     '".$this->db->escape($data['meta_desc'])."',
                     '".$this->db->escape($data['summary'])."',
                     '".$this->db->escape($data['content'])."',
@@ -34,17 +33,22 @@ class ModelSolutionArticle extends Model {
 
 
     public function find($id=''){
-        $category = $this->db->query("select * from oc_solution_category where id =".intval($id));
-        return $category->row;
+        $article = $this->db->query("select * from oc_solution_article where id =".intval($id));
+        return $article->row;
     }
 
 
     public function update($data = []){
         $rs = $this->db->query("
-                update oc_solution_article set title='".$this->db->escape($data['title'])."',
-                meta_keyword='".$this->db->escape($data['meta_keyword'])."',
+                update oc_solution_article set
+                title='".$this->db->escape($data['title'])."',
+                category_id = ".intval($data['category_id']).",
+                meta_title='".$this->db->escape($data['title'])."',
+                meta_keywords='".$this->db->escape($data['meta_keywords'])."',
                 meta_desc='".$this->db->escape($data['meta_desc'])."',
-                url='".$this->db->escape($data['url'])."' where id='".intval($data['id'])."'
+                summary='".$this->db->escape($data['summary'])."',
+                content = '".$this->db->escape($data['content'])."'
+                where id='".intval($data['id'])."'
              ");
         return $rs;
     }

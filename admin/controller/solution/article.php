@@ -19,7 +19,7 @@ class ControllerSolutionArticle extends Controller{
     }
     
     public function delete(){
-        $this->load->model('solution/category');
+        $this->load->model('solution/article');
         if (isset($this->request->post['selected'])) {
             $this->model_solution_category->delt($this->request->post['selected']);
             $this->response->jsonOutput([
@@ -56,8 +56,8 @@ class ControllerSolutionArticle extends Controller{
     }
     
     public function update(){
-        $this->load->model('solution/category');
-        $data['submit_url'] = $this->url->link('solution/category/update');
+        $this->load->model('solution/article');
+        $data['submit_url'] = $this->url->link('solution/article/update');
         $data['breadcrumbs'][] = [
         'text'=>'Home',
         'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
@@ -68,14 +68,14 @@ class ControllerSolutionArticle extends Controller{
         ];
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_solution_category->update($post);
+            $rs = $this->model_solution_article->update($post);
             $this->response->jsonOutput($rs);
         }else{
             $id = $this->request->get['id'];
             if(!empty($id)){
-                $category = $this->model_solution_category->find($id);
+                $article = $this->model_solution_article->find($id);
             }
-            $data['category'] = $category;
+            $data['article'] = $article;
             $this->form($data);
         };
     }
@@ -83,10 +83,12 @@ class ControllerSolutionArticle extends Controller{
     
     protected function form($data){
         $this->document->addScript('https://cdn.bootcss.com/ckeditor/4.7.1/ckeditor.js');
+        $this->load->model('solution/category');
+        $data['categorys'] = $this->model_solution_category->getList();
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
-        $data['back_url'] = $this->url->link('solution/category/index');
+        $data['back_url'] = $this->url->link('solution/article/index');
         $data['token'] = $this->session->data['token'];
         $this->response->setOutput($this->load->view('solution/article_form', $data));
     }
