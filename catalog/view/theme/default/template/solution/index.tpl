@@ -9,24 +9,9 @@ if can not find your case here,or just need a quick technical advice . please ma
 
             <div class="solution-nav">
                 <ul>
-                    <li>
-                        <a href="">Access</a>
-                    </li>
-                    <li>
-                        Transmission
-                    </li>
-                    <li>
-                        Transmission
-                    </li>
-                    <li>
-                        Transmission
-                    </li>
-                    <li>
-                        Data
-                    </li>
-                    <li>
-                        Transmission
-                    </li>
+                    {% for category in solution_categoris %}
+                        <li>{{category.title}}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="solution-content">

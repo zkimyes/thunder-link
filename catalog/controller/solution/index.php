@@ -7,6 +7,14 @@ class ControllerSolutionIndex extends Controller{
 
 		$this->document->addStyle('catalog/view/theme/default/stylesheet/solution.css');
 
+
+		$this->load->model('solution/category');
+
+		$data['solution_categoris'] = $this->model_solution_category->getCategoris();
+
+		
+
+		$data['solution_category'] = $this->model_solution_category->getList();
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
