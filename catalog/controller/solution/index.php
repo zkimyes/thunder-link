@@ -9,10 +9,11 @@ class ControllerSolutionIndex extends Controller{
 
 
 		$this->load->model('solution/category');
-
+		$this->load->model('solution/article');
 		$data['solution_categoris'] = $this->model_solution_category->getCategoris();
+		$category_ids = implode(',',array_map('returnCid',$data['solution_categoris']));
+		$articles = $this->model_solution_article->getList($category_ids);
 
-		
 
 		$data['solution_category'] = $this->model_solution_category->getList();
 		$data['column_left'] = $this->load->controller('common/column_left');
@@ -24,4 +25,9 @@ class ControllerSolutionIndex extends Controller{
 
 		$this->response->setOutput($this->load->view('solution/index', $data));
     }
+}
+
+
+function returnCid($v){
+	return $v['id'];
 }
