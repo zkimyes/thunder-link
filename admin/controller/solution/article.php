@@ -21,7 +21,7 @@ class ControllerSolutionArticle extends Controller{
     public function delete(){
         $this->load->model('solution/article');
         if (isset($this->request->post['selected'])) {
-            $this->model_solution_category->delt($this->request->post['selected']);
+            $this->model_solution_article->delt($this->request->post['selected']);
             $this->response->jsonOutput([
             'status'=>'1',
             'info'=>'success'
