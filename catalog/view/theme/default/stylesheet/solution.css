@@ -35,6 +35,8 @@
     float: left;
     width: 574px;
     margin-left: 20px;
+    height: 160px;
+    margin-bottom: 10px;
 }
 
 .solution .s-img {
@@ -47,4 +49,17 @@
 
 .solution .s-content h4 {
     margin: 0 0 10px 0;
+}
+
+.solution-content-article .article-header{
+    margin: 40px 0 20px;
+}
+
+.solution-content-article .article-header h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+.solution-content-article .article-body img{
+    max-width: 100%;
 }

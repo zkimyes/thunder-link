@@ -209,6 +209,12 @@ class ControllerCommonMenu extends Controller {
 			'etsy' => $this->config->get('etsy_status'),
 		);
 
+		//自定义的功能
+		$data['hotsale'] = $this->url->link('hotsale/index','token=' . $this->session->data['token'], true);
+		$data['promotion'] = $this->url->link('promotion/set','token=' . $this->session->data['token'], true);
+		$data['solution_category'] = $this->url->link('solution/category','token=' . $this->session->data['token'], true);
+		$data['solution_article'] = $this->url->link('solution/article','token=' . $this->session->data['token'], true);
+
 		return $this->load->view('common/menu', $data);
 	}
 }

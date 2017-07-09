@@ -18,19 +18,36 @@
     <div class="container-fluid" id="content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list"></i>Article List</h3>
+                <h3 class="panel-title"><i class="fa "></i>Article Form</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8">
                         <input type="hidden" name="id" value="{{article.id}}">
                         <div class="form-group">
+                            <label>Banners</label>
+                            <select name="banner_id" class="form-control">
+                                <option value="">--请选择--</option>
+                                {% for banner in banners %}
+                                    <option value="{{banner.banner_id}}">{{banner.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Solution Category</label>
                             <select name="category_id" class="form-control">
+                                <option value="">--请选择--</option>
                                 {% for category in categorys %}
                                     <option value="{{category.id}}">{{category.title}}</option>
                                 {% endfor %}
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <div>
+                                <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                <input type="hidden" name="image" value="{{article.image}}" id="input-image" />
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Title</label>
@@ -66,17 +83,22 @@
     <script>
         var editor = CKEDITOR.replace( 'editor' );
         $('[name="category_id"]').val("{{article.category_id}}");
+        $('[name="banner_id"]').val("{{article.banner_id}}");
         function submit(){
             var _title = $('[name="title"]').val(),
                 _meta_keywords = $('[name="meta_keywords"]').val(),
                 _meta_desc = $('[name="meta_desc"]').val(),
                 _summary = $('[name="summary"]').val(),
                 _id = $('[name="id"]').val(),
+                _image = $('[name="image"]').val(),
+                _banner_id = $('[name="banner_id"]').val(),
                 _category_id = $('[name="category_id"]').val();
 
                 $.post('{{submit_url}}&token={{token}}',{
                     id:_id,
                     title:_title,
+                    image:_image,
+                    banner_id:_banner_id,
                     category_id:_category_id,
                     meta_keywords:_meta_keywords,
                     meta_desc:_meta_desc,

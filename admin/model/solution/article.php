@@ -13,7 +13,7 @@ class ModelSolutionArticle extends Model {
         if(!empty($data)){
             $rs = $this->db->query("
                 insert into oc_solution_article (
-                    title,category_id,meta_title,meta_keywords,meta_desc,summary,content,createAt
+                    title,category_id,meta_title,meta_keywords,meta_desc,summary,content,image,banner_id,createAt
                 ) values
                 (
                     '".$this->db->escape($data['title'])."',
@@ -23,6 +23,8 @@ class ModelSolutionArticle extends Model {
                     '".$this->db->escape($data['meta_desc'])."',
                     '".$this->db->escape($data['summary'])."',
                     '".$this->db->escape($data['content'])."',
+                    '".$this->db->escape($data['image'])."',
+                    ".intval($data['banner_id']).",
                     '".date('Y-m-d H:i:s')."'
                 )
             ");
@@ -47,8 +49,10 @@ class ModelSolutionArticle extends Model {
                 meta_keywords='".$this->db->escape($data['meta_keywords'])."',
                 meta_desc='".$this->db->escape($data['meta_desc'])."',
                 summary='".$this->db->escape($data['summary'])."',
-                content = '".$this->db->escape($data['content'])."'
-                where id='".intval($data['id'])."'
+                content = '".$this->db->escape($data['content'])."',
+                image = '".$this->db->escape($data['image'])."',
+                banner_id = ".intval($data['banner_id'])."
+                where id=".intval($data['id'])."
              ");
         return $rs;
     }

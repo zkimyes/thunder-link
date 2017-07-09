@@ -82,14 +82,23 @@ class ControllerSolutionArticle extends Controller{
     
     
     protected function form($data){
-        $this->document->addScript('https://cdn.bootcss.com/ckeditor/4.7.1/ckeditor.js');
         $this->load->model('solution/category');
+        $this->load->model('design/banner');
         $data['categorys'] = $this->model_solution_category->getList();
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         $data['back_url'] = $this->url->link('solution/article/index');
         $data['token'] = $this->session->data['token'];
+        if (!empty($data['article']['image']) && is_file(DIR_IMAGE . $data['article']['image'])) {
+			$data['thumb'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
+		} else {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+        $data['banners'] = $this->model_design_banner->getBanners();
+
+		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
         $this->response->setOutput($this->load->view('solution/article_form', $data));
     }
     

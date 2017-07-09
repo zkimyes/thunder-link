@@ -19,6 +19,19 @@
       <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
     </ul>
   </li>
+  <li id="hotsale">
+    <a href="{{hotsale|raw}}"><i class="fa fa-tags fa-fw"></i>  Hotsale</a>
+  </li>
+  <li id="promotion">
+    <a href="{{promotion|raw}}"><i class="fa fa-tags fa-fw"></i>   Promotion</a>
+  </li>
+  <li id="solution">
+    <a class="parent"><i class="fa fa-tags fa-fw"></i>  Solution</a>
+    <ul>
+      <li><a href="{{solution_category|raw}}">Category</a></li>
+      <li><a href="{{solution_article|raw}}">Article</a></li>
+    </ul>
+  </li>
   <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
     <ul>
       <li><a href="<?php echo $installer; ?>"><?php echo $text_installer; ?></a></li>

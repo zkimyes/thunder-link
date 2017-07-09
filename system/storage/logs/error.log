@@ -2067,3 +2067,56 @@
 2017-07-07 23:02:55 - PHP Notice:  Undefined index: articles in G:\php_projects\thunder-link\catalog\controller\solution\index.php on line 17
 2017-07-08 0:55:49 - PHP Warning:  Missing argument 1 for Controller::__construct(), called in G:\php_projects\thunder-link\admin\controller\common\filemanager.php on line 9 and defined in G:\php_projects\thunder-link\system\engine\controller.php on line 5
 2017-07-08 0:55:49 - PHP Notice:  Undefined variable: registry in G:\php_projects\thunder-link\system\engine\controller.php on line 6
+2017-07-09 13:44:09 - PHP Notice:  Undefined variable: thumb in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 38
+2017-07-09 13:44:09 - PHP Notice:  Undefined variable: placeholder in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 38
+2017-07-09 13:44:09 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 13:44:21 - PHP Notice:  Undefined variable: thumb in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 38
+2017-07-09 13:44:21 - PHP Notice:  Undefined variable: placeholder in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 38
+2017-07-09 13:44:21 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:11:14 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:12:42 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:30:07 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:30:15 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:31:49 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 39
+2017-07-09 14:32:06 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 14:32:10 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 14:32:27 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 14:32:36 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 14:49:50 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 15:05:08 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 40
+2017-07-09 15:10:04 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:10:41 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:16:27 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:21:34 - PHP Notice:  Undefined index: banner_id in G:\php_projects\thunder-link\admin\model\solution\article.php on line 54
+2017-07-09 15:21:42 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:23:45 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:29:34 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:32:35 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:33:16 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:34:30 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:34:43 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 15:36:51 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 16:34:23 - PHP Notice:  Undefined index: article in G:\php_projects\thunder-link\catalog\controller\solution\index.php on line 19
+2017-07-09 20:52:04 - PHP Warning:  array_map() expects parameter 1 to be a valid callback, function 'returnCid' not found or invalid function name in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 14
+2017-07-09 20:52:04 - PHP Warning:  implode(): Invalid arguments passed in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 14
+2017-07-09 21:02:27 - PHP Unknown:  Argument 1 passed to ModelSolutionArticle::find() must be an instance of int, string given in G:\php_projects\thunder-link\catalog\model\solution\article.php on line 13
+2017-07-09 21:02:44 - PHP Unknown:  Argument 1 passed to ModelSolutionArticle::find() must be an instance of int, string given in G:\php_projects\thunder-link\catalog\model\solution\article.php on line 13
+2017-07-09 21:03:09 - PHP Unknown:  Argument 1 passed to ModelSolutionArticle::find() must be an instance of int, integer given in G:\php_projects\thunder-link\catalog\model\solution\article.php on line 13
+2017-07-09 21:04:29 - PHP Unknown:  Argument 1 passed to ModelSolutionArticle::find() must be an instance of int, integer given in G:\php_projects\thunder-link\catalog\model\solution\article.php on line 13
+2017-07-09 21:04:41 - PHP Unknown:  Argument 1 passed to ModelSolutionArticle::find() must be an instance of int, integer given in G:\php_projects\thunder-link\catalog\model\solution\article.php on line 13
+2017-07-09 21:10:54 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:11:57 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:27:47 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:28:41 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:31:28 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:31:42 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:31:48 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:33:19 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:35:17 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:35:45 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:36:02 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:36:05 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:38:24 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:38:52 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 99
+2017-07-09 21:38:52 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-09 21:39:04 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49

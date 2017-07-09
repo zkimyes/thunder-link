@@ -18,12 +18,12 @@
             {% for article in articles %}
             <div class="solution">
                 <div class="s-img">
-                    <img src="/image/u8835.png" alt="">
+                    <img src="{{article.thumb}}" alt="">
                 </div>
                 <div class="s-content">
                     <h4>{{article.title}}</h4>
                     <p>{{article.summary}}</p>
-                    <a class="btn btn-link" href="">asdasd</a>
+                    <a class="btn btn-link" href="{{article.link|raw}}">Learn More</a>
                 </div>
             </div>
             {% endfor %}
