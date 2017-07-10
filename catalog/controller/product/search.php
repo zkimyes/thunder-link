@@ -60,9 +60,9 @@ class ControllerProductSearch extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			$limit = (int)$this->request->get['limit'];
+			$limit = $this->request->get['limit'];
 		} else {
-			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			$limit = $this->config->get('config_product_limit');
 		}
 
 		if (isset($this->request->get['search'])) {
@@ -215,25 +215,28 @@ class ControllerProductSearch extends Controller {
 
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
-					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				}
 
-				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-				} else {
+				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+                    if($result['price'] == '0.0000'){
+                        $price = false;
+                    }
+                } else {
 					$price = false;
 				}
 
 				if ((float)$result['special']) {
-					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$special = false;
 				}
 
 				if ($this->config->get('config_tax')) {
-					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price'], $this->session->data['currency']);
+					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
 				} else {
 					$tax = false;
 				}
@@ -248,9 +251,11 @@ class ControllerProductSearch extends Controller {
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
-					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
+					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,
+                    'model'       => $result['model'],
+                    'part_number' => $result['mpn'],
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
@@ -374,7 +379,7 @@ class ControllerProductSearch extends Controller {
 
 			$data['limits'] = array();
 
-			$limits = array_unique(array($this->config->get($this->config->get('config_theme') . '_product_limit'), 25, 50, 75, 100));
+			$limits = array_unique(array($this->config->get('config_product_limit'), 25, 50, 75, 100));
 
 			sort($limits);
 
@@ -429,19 +434,6 @@ class ControllerProductSearch extends Controller {
 			$data['pagination'] = $pagination->render();
 
 			$data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
-
-			// http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
-			if ($page == 1) {
-			    $this->document->addLink($this->url->link('product/search', '', true), 'canonical');
-			} elseif ($page == 2) {
-			    $this->document->addLink($this->url->link('product/search', '', true), 'prev');
-			} else {
-			    $this->document->addLink($this->url->link('product/search', $url . '&page='. ($page - 1), true), 'prev');
-			}
-
-			if ($limit && ceil($product_total / $limit) > $page) {
-			    $this->document->addLink($this->url->link('product/search', $url . '&page='. ($page + 1), true), 'next');
-			}
 		}
 
 		$data['search'] = $search;
@@ -459,7 +451,12 @@ class ControllerProductSearch extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+        $data['quote'] = $this->load->controller('module/quote');
 
-		$this->response->setOutput($this->load->view('product/search', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
+		}
 	}
 }

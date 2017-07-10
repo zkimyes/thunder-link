@@ -40,8 +40,6 @@ class ModelOpenbayEbayOpenbay extends Model{
 		$this->load->model('checkout/order');
 		$this->load->model('openbay/ebay_order');
 
-		$this->load->language('openbay/ebay_order');
-
 		if ($this->model_openbay_ebay_order->lockExists($order->smpId) == true) {
 			return;
 		}
@@ -50,13 +48,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 			$order->txn = array($order->txn);
 		}
 
-		$ebay_order = $this->openbay->ebay->getOrderBySmpId($order->smpId);
-
-		if (isset($ebay_order['order_id'])) {
-			$order_id = $ebay_order['order_id'];
-		} else {
-			$order_id = false;
-		}
+		$order_id = $this->model_openbay_ebay_order->find($order->smpId);
 
 		$created_hours = (int)$this->config->get('ebay_created_hours');
 		if ($created_hours == 0 || $created_hours == '') {
@@ -94,6 +86,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 				if ($this->config->get('ebay_stock_allocate') == 1) {
 					$this->openbay->ebay->log('Stock allocation is set to allocate stock when an order is paid');
 					$this->model_openbay_ebay_order->addOrderLines($order, $order_id);
+					$this->event->trigger('post.order.history.add', $order_id);
 				}
 
 				$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Paid');
@@ -101,6 +94,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 				$this->model_openbay_ebay_order->update($order_id, $this->default_refunded_id);
 				$this->model_openbay_ebay_order->cancel($order_id);
 				$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Refunded');
+				$this->event->trigger('post.order.history.add', $order_id);
 			} elseif ($order->payment->status == 'Part-Refunded' && ($order_loaded['order_status_id'] != $this->default_part_refunded_id) && in_array($this->default_paid_id, $order_history)) {
 				$this->model_openbay_ebay_order->update($order_id, $this->default_part_refunded_id);
 				$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Part Refunded');
@@ -148,14 +142,11 @@ class ModelOpenbayEbayOpenbay extends Model{
 						$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Updated with user info . ');
 					}
 				} else {
-					$this->openbay->ebay->log('No user information.');
+					$this->openbay->ebay->log('No user information . ');
 				}
 
-				$default_import_message = $this->language->get('text_smp_id') . (int)$order->smpId . "\r\n";
-				$default_import_message .= $this->language->get('text_buyer') . (string)$order->user->userid . "\r\n";
-
 				//new order, set to pending initially.
-				$this->model_openbay_ebay_order->confirm($order_id, $this->default_pending_id, $default_import_message);
+				$this->model_openbay_ebay_order->confirm($order_id, $this->default_pending_id, '[eBay Import:' . (int)$order->smpId . ']');
 				$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Pending');
 				$order_status_id = $this->default_pending_id;
 
@@ -177,6 +168,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 					$this->model_openbay_ebay_order->update($order_id, $this->default_refunded_id);
 					$this->model_openbay_ebay_order->cancel($order_id);
 					$this->openbay->ebay->log('Order ID: ' . $order_id . ' -> Refunded');
+					$this->event->trigger('post.order.history.add', $order_id);
 					$order_status_id = $this->default_refunded_id;
 				}
 
@@ -210,6 +202,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 			if ($this->config->get('ebay_stock_allocate') == 0) {
 				$this->openbay->ebay->log('Stock allocation is set to allocate stock when an item is bought');
 				$this->model_openbay_ebay_order->addOrderLines($order, $order_id);
+				$this->event->trigger('post.order.history.add', $order_id);
 			}
 		}
 
@@ -232,13 +225,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 		$this->load->model('localisation/currency');
 		$this->load->model('catalog/product');
 
-		if (isset($order->order->currency_id) && !empty($order->order->currency_id)) {
-			$currency = $this->model_localisation_currency->getCurrencyByCode($order->order->currency_id);
-		}
-
-		if (empty($currency)) {
-			$currency = $this->model_localisation_currency->getCurrencyByCode($this->config->get('ebay_def_currency'));
-		}
+		$currency = $this->model_localisation_currency->getCurrencyByCode($this->config->get('ebay_def_currency'));
 
 		if ($this->config->get('ebay_create_date') == 1) {
 			$created_date_obj = new DateTime((string)$order->order->created);
@@ -406,7 +393,7 @@ class ModelOpenbayEbayOpenbay extends Model{
 	private function updateOrderWithConfirmedData($order_id, $order) {
 		$this->load->model('localisation/currency');
 		$this->load->model('catalog/product');
-		$totals_language = $this->load->language('openbay/ebay_order');
+		$totals_language = $this->language->load('openbay/ebay_order');
 
 		$name_parts     = $this->openbay->splitName((string)$order->address->name);
 		$user           = array();

@@ -34,7 +34,7 @@ class ControllerModuleFilter extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-			$data['action'] = str_replace('&amp;', '&', $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url));
+			$data['action'] = str_replace('&amp;', '&', $this->url->link('product/category/products', 'path=' . $this->request->get['path'] . $url));
 
 			if (isset($this->request->get['filter'])) {
 				$data['filter_category'] = explode(',', $this->request->get['filter']);
@@ -71,7 +71,11 @@ class ControllerModuleFilter extends Controller {
 					);
 				}
 
-				return $this->load->view('module/filter', $data);
+				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/filter.tpl')) {
+					return $this->load->view($this->config->get('config_template') . '/template/module/filter.tpl', $data);
+				} else {
+					return $this->load->view('default/template/module/filter.tpl', $data);
+				}
 			}
 		}
 	}

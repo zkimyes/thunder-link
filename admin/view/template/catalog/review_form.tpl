@@ -49,10 +49,21 @@
             <div class="col-sm-10">
               <textarea name="text" cols="60" rows="8" placeholder="<?php echo $entry_text; ?>" id="input-text" class="form-control"><?php echo $text; ?></textarea>
               <?php if ($error_text) { ?>
-              <div class="text-danger"><?php echo $error_text; ?></div>
+              <span class="text-danger">
+              <?php echo $error_text; ?></span>
               <?php } ?>
             </div>
           </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-text">Reply</label>
+                <div class="col-sm-10">
+                    <textarea name="review" cols="60" rows="8" placeholder="Reply" id="input-text" class="form-control"><?php echo $review; ?></textarea>
+                    <?php if ($error_text) { ?>
+              <span class="text-danger">
+              <?php echo $error_text; ?></span>
+                    <?php } ?>
+                </div>
+            </div>
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_rating; ?></label>
             <div class="col-sm-10">

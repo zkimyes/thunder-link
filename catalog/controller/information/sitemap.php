@@ -71,26 +71,39 @@ class ControllerInformationSitemap extends Controller {
 		}
 
 		$data['special'] = $this->url->link('product/special');
-		$data['account'] = $this->url->link('account/account', '', true);
-		$data['edit'] = $this->url->link('account/edit', '', true);
-		$data['password'] = $this->url->link('account/password', '', true);
-		$data['address'] = $this->url->link('account/address', '', true);
-		$data['history'] = $this->url->link('account/order', '', true);
-		$data['download'] = $this->url->link('account/download', '', true);
+		$data['account'] = $this->url->link('account/account', '', 'SSL');
+		$data['edit'] = $this->url->link('account/edit', '', 'SSL');
+		$data['password'] = $this->url->link('account/password', '', 'SSL');
+		$data['address'] = $this->url->link('account/address', '', 'SSL');
+		$data['history'] = $this->url->link('account/order', '', 'SSL');
+		$data['download'] = $this->url->link('account/download', '', 'SSL');
 		$data['cart'] = $this->url->link('checkout/cart');
-		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
+		$data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
 		$data['search'] = $this->url->link('product/search');
-		$data['contact'] = $this->url->link('information/contact');
-
 		$this->load->model('catalog/information');
 
+        $data['company'] = $this->url->link('aboutus/index');
+        $data['support'] = $this->url->link('support/index');
+
+        $infor_category = $this->db->query("select * from oc_information_category");
+        $compaer = array();
+        foreach($infor_category->rows as $category){
+            $compaer[$category['category_id']] = $category['type'];
+        }
 		$data['informations'] = array();
 
-		foreach ($this->model_catalog_information->getInformations() as $result) {
-			$data['informations'][] = array(
-				'title' => $result['title'],
-				'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
-			);
+		foreach ( $this->model_catalog_information->getInformations() as $result) {
+            if($compaer[$result['categroy']] == '2'){
+                $data['supports'][] = array(
+                    'title' => $result['title'],
+                    'href'  => $this->url->link('support/index/detail', 'information_id=' . $result['information_id'])
+                );
+            }else{
+                $data['complanys'][] = array(
+                    'title' => $result['title'],
+                    'href'  => $this->url->link('aboutus/index', 'information_id=' . $result['information_id'])
+                );
+            }
 		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
@@ -100,6 +113,10 @@ class ControllerInformationSitemap extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('information/sitemap', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/sitemap.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/information/sitemap.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/information/sitemap.tpl', $data));
+		}
 	}
 }

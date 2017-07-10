@@ -4,11 +4,10 @@ class ControllerAccountRegister extends Controller {
 
 	public function index() {
 		if ($this->customer->isLogged()) {
-			$this->response->redirect($this->url->link('account/account', '', true));
+			$this->response->redirect($this->url->link('account/account', '', 'SSL'));
 		}
 
 		$this->load->language('account/register');
-		$this->load->language('account/login');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -17,15 +16,21 @@ class ControllerAccountRegister extends Controller {
 		$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 		$this->load->model('account/customer');
-
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
+            $this->request->post['telephone'] = "";
+            $this->request->post['fax'] = "";
+            $this->request->post['address_1'] = "";
+            $this->request->post['address_2'] = "";
+            $this->request->post['city'] = "";
+            $this->request->post['postcode'] = "";
+            $this->request->post['zone_id'] = "";
 			$customer_id = $this->model_account_customer->addCustomer($this->request->post);
-
+			
 			// Clear any previous login attempts for unregistered accounts.
-			$this->model_account_customer->deleteLoginAttempts($this->request->post['email']);
+			$this->model_account_customer->deleteLoginAttempts($this->request->post['remail']);
 
-			$this->customer->login($this->request->post['email'], $this->request->post['password']);
 
+			$this->customer->login($this->request->post['remail'], $this->request->post['password']);
 			unset($this->session->data['guest']);
 
 			// Add to activity log
@@ -50,17 +55,17 @@ class ControllerAccountRegister extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('account/account', '', true)
+			'href' => $this->url->link('account/account', '', 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_register'),
-			'href' => $this->url->link('account/register', '', true)
+			'href' => $this->url->link('account/register', '', 'SSL')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
-		$data['text_account_already'] = sprintf($this->language->get('text_account_already'), $this->url->link('account/login', '', true));
+		$data['text_account_already'] = sprintf($this->language->get('text_account_already'), $this->url->link('account/login', '', 'SSL'));
 		$data['text_your_details'] = $this->language->get('text_your_details');
 		$data['text_your_address'] = $this->language->get('text_your_address');
 		$data['text_your_password'] = $this->language->get('text_your_password');
@@ -90,7 +95,6 @@ class ControllerAccountRegister extends Controller {
 
 		$data['button_continue'] = $this->language->get('button_continue');
 		$data['button_upload'] = $this->language->get('button_upload');
-		$data['text_forgotten'] = $this->language->get('text_forgotten');
 
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
@@ -170,7 +174,8 @@ class ControllerAccountRegister extends Controller {
 			$data['error_confirm'] = '';
 		}
 
-		$data['action'] = $this->url->link('account/register', '', true);
+		$data['action2'] = $this->url->link('account/register', '', 'SSL');
+        $data['action1'] = $this->url->link('account/login', '', 'SSL');
 
 		$data['customer_groups'] = array();
 
@@ -204,10 +209,10 @@ class ControllerAccountRegister extends Controller {
 			$data['lastname'] = '';
 		}
 
-		if (isset($this->request->post['email'])) {
-			$data['email'] = $this->request->post['email'];
+		if (isset($this->request->post['remail'])) {
+			$data['remail'] = $this->request->post['remail'];
 		} else {
-			$data['email'] = '';
+			$data['remail'] = '';
 		}
 
 		if (isset($this->request->post['telephone'])) {
@@ -255,7 +260,7 @@ class ControllerAccountRegister extends Controller {
 		}
 
 		if (isset($this->request->post['country_id'])) {
-			$data['country_id'] = (int)$this->request->post['country_id'];
+			$data['country_id'] = $this->request->post['country_id'];
 		} elseif (isset($this->session->data['shipping_address']['country_id'])) {
 			$data['country_id'] = $this->session->data['shipping_address']['country_id'];
 		} else {
@@ -263,7 +268,7 @@ class ControllerAccountRegister extends Controller {
 		}
 
 		if (isset($this->request->post['zone_id'])) {
-			$data['zone_id'] = (int)$this->request->post['zone_id'];
+			$data['zone_id'] = $this->request->post['zone_id'];
 		} elseif (isset($this->session->data['shipping_address']['zone_id'])) {
 			$data['zone_id'] = $this->session->data['shipping_address']['zone_id'];
 		} else {
@@ -285,13 +290,13 @@ class ControllerAccountRegister extends Controller {
 			} else {
 				$account_custom_field = array();
 			}
-
+			
 			if (isset($this->request->post['custom_field']['address'])) {
 				$address_custom_field = $this->request->post['custom_field']['address'];
 			} else {
 				$address_custom_field = array();
-			}
-
+			}			
+			
 			$data['register_custom_field'] = $account_custom_field + $address_custom_field;
 		} else {
 			$data['register_custom_field'] = array();
@@ -315,20 +320,13 @@ class ControllerAccountRegister extends Controller {
 			$data['newsletter'] = '';
 		}
 
-		// Captcha
-		if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('register', (array)$this->config->get('config_captcha_page'))) {
-			$data['captcha'] = $this->load->controller('captcha/' . $this->config->get('config_captcha'), $this->error);
-		} else {
-			$data['captcha'] = '';
-		}
-
 		if ($this->config->get('config_account_id')) {
 			$this->load->model('catalog/information');
 
 			$information_info = $this->model_catalog_information->getInformation($this->config->get('config_account_id'));
 
 			if ($information_info) {
-				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_account_id'), true), $information_info['title'], $information_info['title']);
+				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_account_id'), 'SSL'), $information_info['title'], $information_info['title']);
 			} else {
 				$data['text_agree'] = '';
 			}
@@ -342,17 +340,6 @@ class ControllerAccountRegister extends Controller {
 			$data['agree'] = false;
 		}
 
-		// Added strpos check to pass McAfee PCI compliance test (http://forum.opencart.com/viewtopic.php?f=10&t=12043&p=151494#p151295)
-		if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
-			$data['redirect'] = $this->request->post['redirect'];
-		} elseif (isset($this->session->data['redirect'])) {
-			$data['redirect'] = $this->session->data['redirect'];
-
-			unset($this->session->data['redirect']);
-		} else {
-			$data['redirect'] = '';
-		}
-
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -360,10 +347,44 @@ class ControllerAccountRegister extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('account/register', $data));
+        // Added strpos check to pass McAfee PCI compliance test (http://forum.opencart.com/viewtopic.php?f=10&t=12043&p=151494#p151295)
+        if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
+            $data['redirect'] = $this->request->post['redirect'];
+        } elseif (isset($this->session->data['redirect'])) {
+            $data['redirect'] = $this->session->data['redirect'];
+
+            unset($this->session->data['redirect']);
+        } else {
+            $data['redirect'] = '';
+        }
+
+        if (isset($this->session->data['success'])) {
+            $data['success'] = $this->session->data['success'];
+
+            unset($this->session->data['success']);
+        } else {
+            $data['success'] = '';
+        }
+
+        $data['text_forgotten'] = "Forgotten Password?";
+        $data['forgotten'] = $this->url->link('account/forgotten', '', 'SSL');
+        $data['register'] = $this->url->link('account/register', '', 'SSL');
+        $data['email'] = "";
+
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/login.tpl')) {
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/login.tpl', $data));
+        } else {
+            $this->response->setOutput($this->load->view('default/template/account/login.tpl', $data));
+        }
+
+		/*if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/register.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/register.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/account/register.tpl', $data));
+		}*/
 	}
 
-	private function validate() {
+	public function validate() {
 		if ((utf8_strlen(trim($this->request->post['firstname'])) < 1) || (utf8_strlen(trim($this->request->post['firstname'])) > 32)) {
 			$this->error['firstname'] = $this->language->get('error_firstname');
 		}
@@ -372,61 +393,63 @@ class ControllerAccountRegister extends Controller {
 			$this->error['lastname'] = $this->language->get('error_lastname');
 		}
 
-		if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
+		if ((utf8_strlen($this->request->post['remail']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['remail'])) {
 			$this->error['email'] = $this->language->get('error_email');
 		}
 
-		if ($this->model_account_customer->getTotalCustomersByEmail($this->request->post['email'])) {
+		if ($this->model_account_customer->getTotalCustomersByEmail($this->request->post['remail'])) {
 			$this->error['warning'] = $this->language->get('error_exists');
 		}
 
-		if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
-			$this->error['telephone'] = $this->language->get('error_telephone');
-		}
+        if($this->request->post['rver'] != $_SESSION['register']){
+            $this->error['warning'] = "verification code is not correct";
+        }
 
-		if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
+		/*if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+			$this->error['telephone'] = $this->language->get('error_telephone');
+		}*/
+
+		/*if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
 			$this->error['address_1'] = $this->language->get('error_address_1');
 		}
 
 		if ((utf8_strlen(trim($this->request->post['city'])) < 2) || (utf8_strlen(trim($this->request->post['city'])) > 128)) {
 			$this->error['city'] = $this->language->get('error_city');
-		}
+		}*/
 
 		$this->load->model('localisation/country');
 
-		$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
+		//$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
 
-		if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
+		/*if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
 			$this->error['postcode'] = $this->language->get('error_postcode');
-		}
+		}*/
 
 		if ($this->request->post['country_id'] == '') {
 			$this->error['country'] = $this->language->get('error_country');
 		}
 
-		if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '' || !is_numeric($this->request->post['zone_id'])) {
+		/*if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '') {
 			$this->error['zone'] = $this->language->get('error_zone');
-		}
+		}*/
 
 		// Customer Group
-		if (isset($this->request->post['customer_group_id']) && is_array($this->config->get('config_customer_group_display')) && in_array($this->request->post['customer_group_id'], $this->config->get('config_customer_group_display'))) {
+		/*if (isset($this->request->post['customer_group_id']) && is_array($this->config->get('config_customer_group_display')) && in_array($this->request->post['customer_group_id'], $this->config->get('config_customer_group_display'))) {
 			$customer_group_id = $this->request->post['customer_group_id'];
 		} else {
 			$customer_group_id = $this->config->get('config_customer_group_id');
-		}
+		}*/
 
 		// Custom field validation
-		$this->load->model('account/custom_field');
+		/*$this->load->model('account/custom_field');
 
 		$custom_fields = $this->model_account_custom_field->getCustomFields($customer_group_id);
 
 		foreach ($custom_fields as $custom_field) {
-            if ($custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']])) {
+			if ($custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']])) {
 				$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
-			} elseif (($custom_field['type'] == 'text' && !empty($custom_field['validation'])) && !filter_var($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']], FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => $custom_field['validation'])))) {
-            	$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field_validate'), $custom_field['name']);
-            }
-		}
+			}
+		}*/
 
 		if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
 			$this->error['password'] = $this->language->get('error_password');
@@ -434,15 +457,6 @@ class ControllerAccountRegister extends Controller {
 
 		if ($this->request->post['confirm'] != $this->request->post['password']) {
 			$this->error['confirm'] = $this->language->get('error_confirm');
-		}
-
-		// Captcha
-		if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('register', (array)$this->config->get('config_captcha_page'))) {
-			$captcha = $this->load->controller('captcha/' . $this->config->get('config_captcha') . '/validate');
-
-			if ($captcha) {
-				$this->error['captcha'] = $captcha;
-			}
 		}
 
 		// Agree to terms

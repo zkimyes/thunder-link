@@ -18,6 +18,7 @@ class ControllerModuleCarousel extends Controller {
 				$data['banners'][] = array(
 					'title' => $result['title'],
 					'link'  => $result['link'],
+                    'description'=> $result['description'],
 					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
 				);
 			}
@@ -25,6 +26,10 @@ class ControllerModuleCarousel extends Controller {
 
 		$data['module'] = $module++;
 
-		return $this->load->view('module/carousel', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/carousel.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/module/carousel.tpl', $data);
+		} else {
+			return $this->load->view('default/template/module/carousel.tpl', $data);
+		}
 	}
 }
