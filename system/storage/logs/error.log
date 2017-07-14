@@ -2120,3 +2120,5 @@
 2017-07-09 21:38:52 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 99
 2017-07-09 21:38:52 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
 2017-07-09 21:39:04 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
+2017-07-14 22:01:56 - PHP Notice:  Undefined variable: products in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 83
+2017-07-14 22:01:56 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 83

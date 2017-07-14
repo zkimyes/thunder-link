@@ -1,4 +1,5 @@
-<?php echo $header; ?><?php echo $column_left; ?>
+{{header|raw}}
+{{column_left|raw}}
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -31,10 +32,10 @@
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active in" id="tab-general">
+            <div class="tab-pane active" id="tab-general">
               <ul class="nav nav-tabs" id="language">
                 <?php foreach ($languages as $language) { ?>
-                <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
+                <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
                 <?php } ?>
               </ul>
               <div class="tab-content">
@@ -52,7 +53,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
                     <div class="col-sm-10">
-                      <textarea name="category_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['description'] : ''; ?></textarea>
+                      <textarea name="category_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>" class="form-control summernote"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['description'] : ''; ?></textarea>
                     </div>
                   </div>
                   <div class="form-group required">
@@ -76,20 +77,11 @@
                       <textarea name="category_description[<?php echo $language['language_id']; ?>][meta_keyword]" rows="5" placeholder="<?php echo $entry_meta_keyword; ?>" id="input-meta-keyword<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_keyword'] : ''; ?></textarea>
                     </div>
                   </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="热搜词，用,号连接">Hot Tag</span></label>
-                        <div class="col-sm-10">
-                            <div class="checkbox">
-                                <input type="text" name="category_description[<?php echo $language['language_id']; ?>][word_tag]" value="<?php echo $word_tag ?>" placeholder="Hot Tag"  class="form-control" />
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <?php } ?>
               </div>
             </div>
-            <div class="tab-pane fade" id="tab-data">
+            <div class="tab-pane" id="tab-data">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-parent"><?php echo $entry_parent; ?></label>
                 <div class="col-sm-10">
@@ -171,36 +163,6 @@
                 </div>
               </div>
               <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="是否是整机目录">mower</span></label>
-                    <div class="col-sm-10">
-                        <div class="checkbox">
-                            <label>
-                                <?php if ($mower) { ?>
-                                <input type="checkbox" name="mower" value="1" checked="checked" id="input-mower" />
-                                <?php } else { ?>
-                                <input type="checkbox" name="mower" value="1" id="input-mower" />
-                                <?php } ?>
-                                &nbsp; </label>
-                        </div>
-                    </div>
-              </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="关联的banner">Banner</span></label>
-                    <div class="col-sm-10">
-                        <div class="checkbox">
-                            <select name="banner" id="input-banner" class="form-control">
-                                <?php foreach ($banners as $b) { ?>
-                                <?php if ($b['banner_id'] == $banner) { ?>
-                                <option value="<?php echo $b['banner_id']; ?>" selected="selected"><?php echo $b['name']; ?></option>
-                                <?php } else { ?>
-                                <option value="<?php echo $b['banner_id']; ?>"><?php echo $b['name']; ?></option>
-                                <?php } ?>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-column"><span data-toggle="tooltip" title="<?php echo $help_column; ?>"><?php echo $entry_column; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="column" value="<?php echo $column; ?>" placeholder="<?php echo $entry_column; ?>" id="input-column" class="form-control" />
@@ -274,13 +236,6 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript"><!--
-<?php foreach ($languages as $language) { ?>
-$('#input-description<?php echo $language['language_id']; ?>').summernote({
-	height: 300
-});
-<?php } ?>
-//--></script> 
   <script type="text/javascript"><!--
 $('input[name=\'path\']').autocomplete({
 	'source': function(request, response) {

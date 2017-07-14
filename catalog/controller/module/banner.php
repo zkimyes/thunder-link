@@ -5,7 +5,6 @@ class ControllerModuleBanner extends Controller {
 
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
-// Add the new slick-theme.css if you want the default styling
 		$this->document->addStyle('catalog/view/javascript/slick/slick.css');
 		$this->document->addStyle('catalog/view/javascript/slick/slick-theme.css');
 		$this->document->addScript('catalog/view/javascript/slick/slick.min.js');
@@ -19,7 +18,6 @@ class ControllerModuleBanner extends Controller {
 				$data['banners'][] = array(
 					'title' => $result['title'],
 					'link'  => $result['link'],
-                    'description'=> $result['description'],
 					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
 				);
 			}
@@ -27,10 +25,6 @@ class ControllerModuleBanner extends Controller {
 
 		$data['module'] = $module++;
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/banner.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/module/banner.tpl', $data);
-		} else {
-			return $this->load->view('default/template/module/banner.tpl', $data);
-		}
+		return $this->load->view('module/banner', $data);
 	}
 }

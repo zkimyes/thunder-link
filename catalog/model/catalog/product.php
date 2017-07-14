@@ -15,13 +15,6 @@ class ModelCatalogProduct extends Model {
 				'meta_title'       => $query->row['meta_title'],
 				'meta_description' => $query->row['meta_description'],
 				'meta_keyword'     => $query->row['meta_keyword'],
-                'what_is_included' => $query->row['what_is_included'],
-                'overview'     => $query->row['overview'],
-                'techspecs'     => $query->row['techspecs'],
-                'qanda'     => $query->row['qanda'],
-                'keyfeature'     => $query->row['keyfeature'],
-                'deliveryandpayment'  => $query->row['deliveryandpayment'],
-                'warranty'     => $query->row['warranty'],
 				'tag'              => $query->row['tag'],
 				'model'            => $query->row['model'],
 				'sku'              => $query->row['sku'],
@@ -193,6 +186,7 @@ class ModelCatalogProduct extends Model {
 		}
 
 		$product_data = array();
+
 		$query = $this->db->query($sql);
 
 		foreach ($query->rows as $result) {
@@ -497,12 +491,12 @@ class ModelCatalogProduct extends Model {
 		return $query->row['total'];
 	}
 
-	public function getProfiles($product_id) {
-		return $this->db->query("SELECT `pd`.* FROM `" . DB_PREFIX . "product_recurring` `pp` JOIN `" . DB_PREFIX . "recurring_description` `pd` ON `pd`.`language_id` = " . (int)$this->config->get('config_language_id') . " AND `pd`.`recurring_id` = `pp`.`recurring_id` JOIN `" . DB_PREFIX . "recurring` `p` ON `p`.`recurring_id` = `pd`.`recurring_id` WHERE `product_id` = " . (int)$product_id . " AND `status` = 1 AND `customer_group_id` = " . (int)$this->config->get('config_customer_group_id') . " ORDER BY `sort_order` ASC")->rows;
-	}
-
 	public function getProfile($product_id, $recurring_id) {
 		return $this->db->query("SELECT * FROM `" . DB_PREFIX . "recurring` `p` JOIN `" . DB_PREFIX . "product_recurring` `pp` ON `pp`.`recurring_id` = `p`.`recurring_id` AND `pp`.`product_id` = " . (int)$product_id . " WHERE `pp`.`recurring_id` = " . (int)$recurring_id . " AND `status` = 1 AND `pp`.`customer_group_id` = " . (int)$this->config->get('config_customer_group_id'))->row;
+	}
+
+	public function getProfiles($product_id) {
+		return $this->db->query("SELECT `pd`.* FROM `" . DB_PREFIX . "product_recurring` `pp` JOIN `" . DB_PREFIX . "recurring_description` `pd` ON `pd`.`language_id` = " . (int)$this->config->get('config_language_id') . " AND `pd`.`recurring_id` = `pp`.`recurring_id` JOIN `" . DB_PREFIX . "recurring` `p` ON `p`.`recurring_id` = `pd`.`recurring_id` WHERE `product_id` = " . (int)$product_id . " AND `status` = 1 AND `customer_group_id` = " . (int)$this->config->get('config_customer_group_id') . " ORDER BY `sort_order` ASC")->rows;
 	}
 
 	public function getTotalProductSpecials() {
@@ -514,10 +508,4 @@ class ModelCatalogProduct extends Model {
 			return 0;
 		}
 	}
-
-
-    public function getProductDownLoad($product_id){
-        $query = $this->db->query("select * from oc_product_to_download left join oc_download_description ON oc_download_description.download_id = oc_product_to_download.download_id left JOIN oc_download ON oc_download.download_id = oc_product_to_download.download_id WHERE oc_product_to_download.product_id =".(int)$product_id);
-        return $query->rows;
-    }
 }

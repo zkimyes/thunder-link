@@ -1,14 +1,13 @@
 <?php
 class ControllerModuleSlideshow extends Controller {
 	public function index($setting) {
-		static $module = 0;
+		static $module = 0;		
 
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
 
-
-        $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
-        $this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
 
 		$data['banners'] = array();
 
@@ -19,18 +18,13 @@ class ControllerModuleSlideshow extends Controller {
 				$data['banners'][] = array(
 					'title' => $result['title'],
 					'link'  => $result['link'],
-					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height']),
-				    'description'=> $result['description']
-                );
+					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
+				);
 			}
 		}
 
 		$data['module'] = $module++;
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/slideshow.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/module/slideshow.tpl', $data);
-		} else {
-			return $this->load->view('default/template/module/slideshow.tpl', $data);
-		}
+		return $this->load->view('module/slideshow', $data);
 	}
 }

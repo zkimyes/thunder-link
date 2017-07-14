@@ -1,129 +1,88 @@
 <?php echo $header; ?>
-<script type="text/javascript" src="view/javascript/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" src="view/javascript/ueditor/ueditor.all.js"></script>
 <?php echo $column_left; ?>
 <div id="content">
-  <div class="page-header">
+    <div class="page-header">
+        <div class="container-fluid">
+            <h1>
+                Solution Category
+            </h1>
+            <ul class="breadcrumb">
+                <li>
+                    <a></a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container-fluid">
-      <div class="pull-right">
-        <button type="submit" form="form-category" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
-        <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
-      <h1><?php echo $heading_title; ?></h1>
-      <ul class="breadcrumb">
-        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-        <?php } ?>
-      </ul>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <?php if ($error_warning) { ?>
-    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </div>
-    <?php } ?>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_form; ?></h3>
-      </div>
-      <div class="panel-body">
-        <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-category" class="form-horizontal">
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active in" id="tab-general">
-              <ul class="nav nav-tabs" id="language">
-                <?php foreach ($languages as $language) { ?>
-                <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
-                <?php } ?>
-              </ul>
-              <div class="tab-content">
-                <?php foreach ($languages as $language) { ?>
-                <div class="tab-pane" id="language<?php echo $language['language_id']; ?>">
-                  <div class="form-group required">
-                    <label class="col-sm-2 control-label" for="input-name<?php echo $language['language_id']; ?>"><?php echo $entry_name; ?></label>
-                    <div class="col-sm-10">
-                      <input type="text" name="solution_title" value="<?php echo isset($solution_title) ? $solution_title : ''; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name<?php echo $language['language_id']; ?>" class="form-control" />
-                      <?php if (isset($error_name[$language['language_id']])) { ?>
-                      <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
-                      <?php } ?>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>title</label>
+                            <input type="text" v-model="title" class="form-control" placeholder="title">
+                            <div v-if="title === ''" class="help-block text-danger">title 不能为空</div>
+                        </div>
+                        <div class="form-group">
+                            <label>meta keyword</label>
+                            <input type="text" v-model="meta_keyword" class="form-control" placeholder="meta keyword">
+                        </div>
+                        <div class="form-group">
+                            <label>meta description</label>
+                            <textarea v-model="meta_desc" class="form-control" placeholder="meta description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>link url</label>
+                            <input type="text" v-model="url" class="form-control" placeholder="link url">
+                        </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
-                    <div class="col-sm-10">
-                      <textarea name="description" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>"><?php echo isset($description) ? $description : ''; ?></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group required">
-                    <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
-                    <div class="col-sm-10">
-                      <input type="text" name="meta_title" value="<?php echo isset($meta_title) ? $meta_title : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />
-                      <?php if (isset($error_meta_title[$language['language_id']])) { ?>
-                      <div class="text-danger"><?php echo $error_meta_title[$language['language_id']]; ?></div>
-                      <?php } ?>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-meta-description<?php echo $language['language_id']; ?>"><?php echo $entry_meta_description; ?></label>
-                    <div class="col-sm-10">
-                      <textarea name="meta_description" rows="5" cols="" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($meta_description) ? $meta_description : ''; ?></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-meta-keyword<?php echo $language['language_id']; ?>"><?php echo $entry_meta_keyword; ?></label>
-                    <div class="col-sm-10">
-                      <input name="meta_keyword" class="form-control" placeholder="meta_keyword" value="<?php echo isset($meta_keyword) ? $meta_keyword : ''; ?>">
-                    </div>
-                  </div>
                 </div>
-                <?php } ?>
-              </div>
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <button @click="submit()" class="btn btn-primary">提交</button>
+                        <a class="btn btn-default" href="{{back_url|raw}}&token={{token}}">取消</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript"><!--
-<?php foreach ($languages as $language) { ?>
-          UE.getEditor("input-description<?php echo $language['language_id']; ?>");
-<?php } ?>
-//--></script>
-  <script type="text/javascript"><!--
+</div>
+<script>
+    Vue.config.devtools = true
+    var category = new Vue({
+        el:'#content',
+        data:{
+            id:'{{category.id}}',
+            title:'{{category.title}}',
+            meta_keyword:'{{category.meta_keyword}}',
+            meta_desc:'{{category.meta_desc}}',
+            url:'{{category.url}}'
+        },
+        methods:{
+            submit(){
+                let data = {
+                    id:this.id,
+                    title:this.title,
+                    meta_keyword:this.meta_keyword,
+                    meta_desc:this.meta_desc,
+                    url:this.url
+                }
 
-      // Related
-      $('input[name=\'related\']').autocomplete({
-          'source': function(request, response) {
-              $.ajax({
-                  url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
-                  dataType: 'json',
-                  success: function(json) {
-                      response($.map(json, function(item) {
-                          return {
-                              label: item['name'],
-                              value: item['product_id']
-                          }
-                      }));
-                  }
-              });
-          },
-          'select': function(item) {
-              $('input[name=\'related\']').val('');
+                if(data.title == ""){
+                    return layer.msg('标题不能为空');
+                }
 
-              $('#product-related' + item['value']).remove();
+                if(data.title == ""){
+                    return layer.msg('标题不能为空');
+                }
 
-              $('#product-related').append('<div id="product-related' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="related_product_id[]" value="' + item['value'] + '" /></div>');
-          }
-      });
-//--></script>
-  <script type="text/javascript"><!--
-      $('#product-related').delegate('.fa-minus-circle', 'click', function() {
-          $(this).parent().remove();
-      });
-//--></script>
-  <script type="text/javascript"><!--
-$('#language a:first').tab('show');
-//--></script></div>
+                $.post('{{submit_url|raw}}&token={{token}}',data,function(res){
+                    if(res){
+                        location.href="{{back_url|raw}}&token={{token}}";
+                    }
+                },'json')
+            }
+        }
+    });
+</script>
 <?php echo $footer; ?>

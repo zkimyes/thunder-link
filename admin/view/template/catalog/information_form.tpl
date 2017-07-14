@@ -1,7 +1,4 @@
-<?php echo $header; ?>
-<script type="text/javascript" src="view/javascript/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" src="view/javascript/ueditor/ueditor.all.js"></script>
-<?php echo $column_left; ?>
+<?php echo $header; ?><?php echo $column_left; ?>
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -37,7 +34,7 @@
             <div class="tab-pane active" id="tab-general">
               <ul class="nav nav-tabs" id="language">
                 <?php foreach ($languages as $language) { ?>
-                <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
+                <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
                 <?php } ?>
               </ul>
               <div class="tab-content">
@@ -52,33 +49,10 @@
                       <?php } ?>
                     </div>
                   </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-title<?php echo $language['language_id']; ?>">装饰图片</label>
-                        <div class="col-sm-10">
-                            <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="" /></a>
-                            <input type="hidden" name="banner" value="<?php echo $banner ?>" id="input-image" />
-                            <?php if (isset($error_title[$language['language_id']])) { ?>
-                            <div class="text-danger"><?php echo $error_title[$language['language_id']]; ?></div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-title<?php echo $language['language_id']; ?>">目录</label>
-                        <div class="col-sm-3">
-                            <select class="form-control" name="categroy">
-                                <option value="">请选择</option>
-                                <?php if(!empty($menus)){ ?>
-                                    <?php foreach($menus as $menu){ ?>
-                                    <option value="<?php echo $menu['category_id'] ?>"><?php echo $menu['name'] ?></option>
-                                    <?php } ?>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
                     <div class="col-sm-10">
-                      <textarea style="height: 300px;" name="information_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>xxx" ><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['description'] : ''; ?></textarea>
+                      <textarea name="information_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>" class="form-control summernote"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['description'] : ''; ?></textarea>
                       <?php if (isset($error_description[$language['language_id']])) { ?>
                       <div class="text-danger"><?php echo $error_description[$language['language_id']]; ?></div>
                       <?php } ?>
@@ -102,7 +76,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-meta-keyword<?php echo $language['language_id']; ?>"><?php echo $entry_meta_keyword; ?></label>
                     <div class="col-sm-10">
-                      <textarea  name="information_description[<?php echo $language['language_id']; ?>][meta_keyword]" rows="5" placeholder="<?php echo $entry_meta_keyword; ?>" id="input-meta-keyword<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_keyword'] : ''; ?></textarea>
+                      <textarea name="information_description[<?php echo $language['language_id']; ?>][meta_keyword]" rows="5" placeholder="<?php echo $entry_meta_keyword; ?>" id="input-meta-keyword<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_keyword'] : ''; ?></textarea>
                     </div>
                   </div>
                 </div>
@@ -233,12 +207,6 @@
     </div>
   </div>
   <script type="text/javascript"><!--
-<?php foreach ($languages as $language) { ?>
-          UE.getEditor("input-description<?php echo $language['language_id']; ?>xxx");
-<?php } ?>
-//--></script>
-  <script type="text/javascript"><!--
 $('#language a:first').tab('show');
-      $('select[name=categroy]').val("<?php echo $categroy ?>");
 //--></script></div>
 <?php echo $footer; ?>

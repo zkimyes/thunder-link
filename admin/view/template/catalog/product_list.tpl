@@ -2,12 +2,7 @@
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
-      <div class="pull-right">
-          <a data-value="1" data-type="is_best_sale" class="b_btn btn btn-primary">设置bestsale</a>
-          <a data-value="0" data-type="is_best_sale" class="b_btn btn btn-warning">取消bestsale</a>
-          <a data-value="1" data-type="is_latest" class="b_btn btn btn-primary">设置latest</a>
-          <a data-value="0" data-type="is_latest" class="b_btn btn btn-warning">取消latest</a>
-          <a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+      <div class="pull-right"><a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
         <button type="button" data-toggle="tooltip" title="<?php echo $button_copy; ?>" class="btn btn-default" onclick="$('#form-product').attr('action', '<?php echo $copy; ?>').submit()"><i class="fa fa-copy"></i></button>
         <button type="button" data-toggle="tooltip" title="<?php echo $button_delete; ?>" class="btn btn-danger" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#form-product').submit() : false;"><i class="fa fa-trash-o"></i></button>
       </div>
@@ -57,7 +52,6 @@
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
             </div>
-
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
@@ -75,22 +69,6 @@
                   <?php } ?>
                 </select>
               </div>
-            <div class="form-group">
-                <label class="control-label" for="filter_ti">是否bestsale或latest</label>
-                <select name="filter_ti" id="input-ti" class="form-control">
-                    <option value="*"></option>
-                    <?php if ($filter_ti == 'is_best_sale') { ?>
-                    <option value="is_best_sale" selected="selected">bestsale</option>
-                    <?php } else { ?>
-                    <option value="is_best_sale">bestsale</option>
-                    <?php } ?>
-                    <?php if ($filter_ti == 'is_latest') { ?>
-                    <option value="is_latest" selected="selected">latest</option>
-                    <?php } else { ?>
-                    <option value="is_latest">latest</option>
-                    <?php } ?>
-                </select>
-            </div>
               <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
@@ -127,8 +105,6 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_status; ?>"><?php echo $column_status; ?></a>
                     <?php } ?></td>
-                    <td class="text-left">是否bestsale</td>
-                    <td class="text-left">是否latest</td>
                   <td class="text-right"><?php echo $column_action; ?></td>
                 </tr>
               </thead>
@@ -162,14 +138,12 @@
                     <span class="label label-success"><?php echo $product['quantity']; ?></span>
                     <?php } ?></td>
                   <td class="text-left"><?php echo $product['status']; ?></td>
-                    <td><?php echo $product['is_best_sale'] ?></td>
-                    <td><?php echo $product['is_latest'] ?></td>
                   <td class="text-right"><a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>
                 <tr>
-                  <td class="text-center" colspan="10"><?php echo $text_no_results; ?></td>
+                  <td class="text-center" colspan="8"><?php echo $text_no_results; ?></td>
                 </tr>
                 <?php } ?>
               </tbody>
@@ -217,41 +191,8 @@ $('#button-filter').on('click', function() {
 		url += '&filter_status=' + encodeURIComponent(filter_status);
 	}
 
-    var filter_ti = $('select[name=\'filter_ti\']').val();
-    if (filter_ti != '*') {
-        url += '&filter_ti=' + encodeURIComponent(filter_ti);
-    }
-
 	location = url;
 });
-
-
-
-      $(".b_btn").on("click",function(){
-          var selected = $("input[name^=selected]:checked");
-          var value = $(this).data('value');
-          var type = $(this).data('type');
-          if(0 == selected.length){
-              alert("最少选择一个产品");
-          }else{
-              var ids = (function(){
-                  var temp = [];
-                  selected.each(function(){
-                     temp.push($(this).val());
-                  });
-                  return temp;
-              })();
-              $.get("index.php?route=catalog/product/set_product&token=<?php echo $token; ?>",
-                      {
-                         id:ids,
-                          value:value,
-                          type:type
-                      }
-                      ,function(res) {
-                          location.reload();
-              },'json');
-          }
-      });
 //--></script>
   <script type="text/javascript"><!--
 $('input[name=\'filter_name\']').autocomplete({
