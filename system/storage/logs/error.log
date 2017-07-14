@@ -2122,3 +2122,32 @@
 2017-07-09 21:39:04 - PHP Notice:  Undefined variable: image in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 49
 2017-07-14 22:01:56 - PHP Notice:  Undefined variable: products in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 83
 2017-07-14 22:01:56 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 83
+2017-07-14 22:30:11 - PHP Notice:  Undefined variable: article in G:\php_projects\thunder-link\admin\controller\solution\article.php on line 127
+2017-07-14 22:38:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 721
+2017-07-14 22:43:22 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:43:22 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:44:33 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:44:33 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:45:07 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:45:07 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:45:25 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:45:25 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:46:11 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:46:11 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:47:00 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:47:00 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:49:12 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-14 22:49:12 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\solution\article_form.tpl on line 77
+2017-07-15 0:10:42 - PHP Notice:  Undefined index: related_product_ids in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:11:05 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:11:16 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:11:34 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:12:28 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:12:28 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
+2017-07-15 0:13:07 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:13:07 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
+2017-07-15 0:13:40 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:13:40 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
+2017-07-15 0:13:55 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
+2017-07-15 0:21:37 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
+2017-07-15 0:21:37 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18

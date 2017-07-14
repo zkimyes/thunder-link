@@ -693,4 +693,13 @@ class ModelCatalogProduct extends Model {
 
 		return $query->row['total'];
 	}
+
+
+	/**根据id获取产品信息 **/
+
+	public function getProductsByProductIds($product_ids){
+		$sql = "SELECT p.product_id,pd.name FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' and p.product_id in (".$product_ids.")";
+		$query = $this->db->query($sql);
+		return $query->rows;
+	}
 }

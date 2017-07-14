@@ -123,6 +123,7 @@
                     related_product_ids:_related_product,
                     content:editor.getData()
                 },function(res){
+                    debugger
                     if(res){
                         location.href = "{{back_url}}&token={{token}}";
                     }

@@ -3,7 +3,7 @@ class ModelSolutionArticle extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
         $artilces = $this->db->query('
-            select a.title,a.id,a.createAt,c.title as category_name from oc_solution_article as a left join oc_solution_category as c
+            select a.title,a.id,a.createAt,c.title as category_name,a.image from oc_solution_article as a left join oc_solution_category as c
             on c.id = a.category_id;
         ');
         return $artilces->rows;
@@ -25,7 +25,7 @@ class ModelSolutionArticle extends Model {
                     '".$this->db->escape($data['content'])."',
                     '".$this->db->escape($data['image'])."',
                     ".intval($data['banner_id']).",
-                    '".$this->db->escape($data['related_product_ids'])."'
+                    '".$this->db->escape($data['related_product_ids'])."',
                     '".date('Y-m-d H:i:s')."'
                 )
             ");

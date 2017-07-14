@@ -27,22 +27,29 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <td>title</td>
-                                <td>category</td>
-                                <td>createAt</td>
+                                <td>Id</td>
+                                <td>Title</td>
+                                <td>Category</td>
+                                <td>Image</td>
+                                <td>CreateAt</td>
                                 <td class="text-right">Actions</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="list in category">
-                                <td>${list.title}</td>
-                                <td>${list.category_name}</td>
-                                <td>${list.createAt}</td>
+                            {% for list in lists %}
+                            <tr>
+                                <td>{{list.id}}</td>
+                                <td>{{list.title}}</td>
+                                <td>{{list.category_name}}</td>
+                                <td><img src="{{list.thumb}}" alt=""></td>
+                                <td>{{list.createAt}}</td>
                                 <td>
-                                    <button @click="delt(list.id)" class="btn btn-danger btn-xs">删除</button>
-                                    <button @click="update(list.id)" class="btn btn-info btn-xs">更新</button>
+                                    <button onclick="delt('{{list.id}}')" class="btn btn-danger btn-xs">删除</button>
+                                    <a href="{{update_url|raw}}&id={{list.id}}&token={{token}}" class="btn btn-info btn-xs">更新</a>
                                 </td>
                             </tr>
+
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
@@ -55,9 +62,6 @@
     </div>
 </div>
 <script>
-    Vue.config.devtools = true
-    var category = JSON.parse('{{lists|raw}}');
-
     var delt = function(id) {
         $.post("{{delt_url|raw}}".replace("amp;", '') + '&token={{token}}', {
             selected: [id]
@@ -65,26 +69,5 @@
             location.reload();
         }, 'json')
     }
-    var solution = new Vue({
-        delimiters: ['${', '}'],
-        el: '#content',
-        data: {
-            category: category,
-            id: null,
-            checked: false
-        },
-        methods: {
-            delt: function(id) {
-                this.id = id;
-                delt(id);
-            },
-            checkAll: function() {
-                this.checked = window.event.target.checked
-            },
-            update: function(id) {
-                location.href = "{{update_url|raw}}&id=" + id + "&token={{token}}";
-            }
-        }
-    })
 </script>
 <?php echo $footer; ?>

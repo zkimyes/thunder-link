@@ -49,8 +49,9 @@ class ControllerSolutionArticle extends Controller{
             ];
             $data['breadcrumbs'][] = [
             'text'=>'Solution Article Add',
-            'href'=>''
+            'href'=>'javascript:;'
             ];
+            $data['product_relateds'] = [];
             $this->form($data);
         };
     }
@@ -79,16 +80,8 @@ class ControllerSolutionArticle extends Controller{
             $data['article'] = $article;
             $data['product_relateds'] = [];
             if(!empty($article['related_product_ids'])){
-            }
-            foreach ($products as $product_id) {
-                $related_info = $this->model_catalog_product->getProduct($product_id);
-
-                if ($related_info) {
-                    $data['product_relateds'][] = array(
-                        'product_id' => $related_info['product_id'],
-                        'name'       => $related_info['name']
-                    );
-                }
+                $related_info = $this->model_catalog_product->getProductsByProductIds($article['related_product_ids']);
+                $data['product_relateds'] = $related_info;
             }
             $this->form($data);
         };
@@ -132,7 +125,14 @@ class ControllerSolutionArticle extends Controller{
         
         $this->load->model('solution/article');
         $articles = $this->model_solution_article->getList();
-        $data['lists'] = json_encode($articles);
+        foreach($articles as $article){
+            if (!empty($article['image']) && is_file(DIR_IMAGE . $article['image'])) {
+                $article['thumb'] = $this->model_tool_image->resize($article['image'], 50, 50);
+            } else {
+                $article['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
+            }
+            $data['lists'][] = $article;
+        }
         
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('solution/article_list', $data));
