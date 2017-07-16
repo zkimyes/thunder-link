@@ -498,10 +498,11 @@ a {
 
 .sub-category {
     position: absolute;
-    height: 400px;
     background: #f2f2f2;
     width: 100%;
     z-index: 10;
+    min-height: 450px;
+    display: none;
 }
 
 .sub-category ul {
@@ -511,8 +512,12 @@ a {
 }
 
 .sub-category>ul>li {
-    margin: 5px 0;
+    margin: 10px 0;
     position: relative;
+}
+
+.sub-category a {
+    color: #3bb18f;
 }
 
 .sub-category .f-cate {
@@ -526,14 +531,34 @@ a {
     position: absolute;
     right: 0;
     top: 20%;
+    color: #3bb18f;
 }
 
 .left-sub-category {
     background: #fff;
-    width: 500px;
+    width: 1000px;
     position: absolute;
     left: 220px;
-    height: 300px;
+    height: 100%;
     z-index: 10;
     top: 0;
+    border: 1px solid #eee;
+}
+
+.sub-category .solution-list {
+    overflow: hidden;
+}
+
+.sub-category .solution-list ul {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sub-category .solution-list a {
+    color: #666;
+    font-size: 16px;
+    padding:5px 10px;
+    background-color: #ccc;
+    display: block;
+    margin: 5px -10px;
 }
