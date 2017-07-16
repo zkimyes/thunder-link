@@ -28,7 +28,7 @@
                         <thead>
                             <tr>
                                 <td>Id</td>
-                                <td>Title</td>
+                                <td width='50%'>Title</td>
                                 <td>Category</td>
                                 <td>Image</td>
                                 <td>CreateAt</td>

@@ -102,11 +102,17 @@ a {
     padding: 10px 25px;
 }
 
+.main-nav-container {
+    float: left;
+    margin-left: 100px;
+}
+
 .category-meun {
     width: 220px;
     height: 50px;
     position: relative;
     margin-left: -15px;
+    float: left;
 }
 
 .categroy-btn {
@@ -488,4 +494,46 @@ a {
 
 .login .login-by-3td-way {
     margin-top: 60px;
+}
+
+.sub-category {
+    position: absolute;
+    height: 400px;
+    background: #f2f2f2;
+    width: 100%;
+    z-index: 10;
+}
+
+.sub-category ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.sub-category>ul>li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.sub-category .f-cate {
+    font-size: 16px;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.sub-category i {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.left-sub-category {
+    background: #fff;
+    width: 500px;
+    position: absolute;
+    left: 220px;
+    height: 300px;
+    z-index: 10;
+    top: 0;
 }

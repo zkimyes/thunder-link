@@ -29,10 +29,9 @@ CREATE TABLE `oc_solution_article` (
   `summary` varchar(255) DEFAULT NULL,
   `content` text,
   `createAt` datetime DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `banner_id` int(11) DEFAULT NULL,
+  `related_product_ids` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of oc_solution_article
--- ----------------------------
-INSERT INTO `oc_solution_article` VALUES ('1', '124', 'asd', 'asdasdasdasda', 'sdasd', 'sadasas', 'dasda', 'sdas', '2017-07-04 20:43:02');

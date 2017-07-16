@@ -2151,3 +2151,4 @@
 2017-07-15 0:13:55 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
 2017-07-15 0:21:37 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 17
 2017-07-15 0:21:37 - PHP Notice:  Undefined index: related_product_ids  in G:\php_projects\thunder-link\catalog\controller\solution\article.php on line 18
+2017-07-15 3:59:06 - PHP Notice:  Undefined index: related_product_ids in /projects/thunder-link/catalog/controller/solution/article.php on line 17

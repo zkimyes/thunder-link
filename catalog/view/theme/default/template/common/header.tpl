@@ -127,17 +127,33 @@
         </div>
         <div class="main-nav">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="category-meun">
-                            <a class="categroy-btn">
+                <div class="clearfix">
+                    <div class="category-meun">
+                        <a class="categroy-btn">
                             ALL CATEGROY
-                            <i class="fa fa-list fa-1x" aria-hidden="true"></i>
-                        </a>
-                        </div>
+                                <i class="fa fa-list fa-1x" aria-hidden="true"></i>
+                            </a> {% autoescape%}
+                        <div class="sub-category">
+                            <ul>
+                                {% for category in categories %}
+                                <li>
+                                    <a class="f-cate" href="{{category.href|raw}}">{{category.name}} </a> {% if category.children %}
+                                    <div>
+                                        {% for subcategory in category.children %}
+                                        <a href="{{subcategory.href|raw}}">{{subcategory.name}}</a> {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                    <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="left-sub-category">
 
+                            </div>
+                        </div>
+                        {%endautoescape%}
                     </div>
-                    <div class="col-md-9">
+                    <div class="main-nav-container">
                         <ul class="nav main-nav-bar">
                             <li><a href="{{home}}">Home</a></li>
                             <li><a href="{{support}}">Support</a></li>
