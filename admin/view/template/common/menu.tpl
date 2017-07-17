@@ -20,13 +20,20 @@
     </ul>
   </li>
   <li id="hotsale">
-    <a href="{{hotsale|raw}}"><i class="fa fa-tags fa-fw"></i>  Hotsale</a>
+    <a class="parent" href="{{hotsale|raw}}"><i class="fa fa-tags fa-fw"></i> <span>Hotsale</span></a>
   </li>
   <li id="promotion">
-    <a href="{{promotion|raw}}"><i class="fa fa-tags fa-fw"></i>   Promotion</a>
+    <a class="parent" href="{{promotion|raw}}"><i class="fa fa-tags fa-fw"></i> <span>Promotion</span></a>
   </li>
   <li id="solution">
-    <a class="parent"><i class="fa fa-tags fa-fw"></i>  Solution</a>
+    <a class="parent"><i class="fa fa-tags fa-fw"></i> <span>Solution</span></a>
+    <ul>
+      <li><a href="{{solution_category|raw}}">Category</a></li>
+      <li><a href="{{solution_article|raw}}">Article</a></li>
+    </ul>
+  </li>
+  <li id="configuration">
+    <a class="parent"><i class="fa fa-cog fa-fw"></i> <span>Configuration</span></a>
     <ul>
       <li><a href="{{solution_category|raw}}">Category</a></li>
       <li><a href="{{solution_article|raw}}">Article</a></li>
