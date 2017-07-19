@@ -79,10 +79,10 @@
             <li><a href="{{solution_article|raw}}">Article</a></li>
         </ul>
     </li>
-    <li id="configration">
+    <li id="configuration">
         <a class="parent"><i class="fa fa-adn"></i> <span>configration</span></a>
         <ul>
-            <li><a href="">category</a></li>
+            <li><a href="{{config_category|raw}}">category</a></li>
             <li><a href="">typical config</a></li>
         </ul>
     </li>

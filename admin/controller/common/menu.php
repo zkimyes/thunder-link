@@ -214,6 +214,8 @@ class ControllerCommonMenu extends Controller {
 		$data['promotion'] = $this->url->link('promotion/set','token=' . $this->session->data['token'], true);
 		$data['solution_category'] = $this->url->link('solution/category','token=' . $this->session->data['token'], true);
 		$data['solution_article'] = $this->url->link('solution/article','token=' . $this->session->data['token'], true);
+		$data['config_category'] = $this->url->link('configuration/category','token=' . $this->session->data['token'], true);
+		// $data['config_product']
 
 		return $this->load->view('common/menu', $data);
 	}
