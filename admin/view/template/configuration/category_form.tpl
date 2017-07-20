@@ -27,11 +27,15 @@
                             <input type="text" v-model="name" class="form-control" placeholder="填写标题">
                         </div>
                         <div class="form-group">
-                            <label>meta keyword</label>
+                            <label>Meta Keyword</label>
                             <input type="text" v-model="meta_keyword" class="form-control" placeholder="meta keyword">
                         </div>
                         <div class="form-group">
-                            <label>meta description</label>
+                            <label>Meta Description</label>
+                            <textarea v-model="meta_description" class="form-control" placeholder="meta description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
                             <textarea v-model="meta_description" class="form-control" placeholder="meta description"></textarea>
                         </div>
                     </div>
@@ -49,31 +53,31 @@
 <script>
     Vue.config.devtools = true
     var category = new Vue({
-        el:'#content',
-        data:{
-            category_id:'{{category.category_id}}',
-            name:'{{category.name}}',
-            meta_keyword:'{{category.meta_keyword}}',
-            meta_description:'{{category.meta_description}}'
+        el: '#content',
+        data: {
+            category_id: '{{category.category_id}}',
+            name: '{{category.name}}',
+            meta_keyword: '{{category.meta_keyword}}',
+            meta_description: '{{category.meta_description}}'
         },
-        methods:{
-            submit(){
+        methods: {
+            submit() {
                 let data = {
-                    category_id:this.id,
-                    name:this.name,
-                    meta_keyword:this.meta_keyword,
-                    meta_desc:this.meta_desc
+                    category_id: this.id,
+                    name: this.name,
+                    meta_keyword: this.meta_keyword,
+                    meta_description: this.meta_description
                 }
 
-                if(data.name == ""){
+                if (data.name == "") {
                     return layer.msg('标题不能为空');
                 }
 
-                $.post('{{submit_url|raw}}&token={{token}}',data,function(res){
-                    if(res){
-                        location.href="{{back_url|raw}}&token={{token}}";
+                $.post('{{submit_url|raw}}&token={{token}}', data, function(res) {
+                    if (res) {
+                        location.href = "{{back_url|raw}}&token={{token}}";
                     }
-                },'json')
+                }, 'json')
             }
         }
     });
