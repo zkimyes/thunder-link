@@ -28,19 +28,23 @@
                         <thead>
                             <tr>
                                 <td style="width: 1px;" class="text-center"><input @click="checkAll()" type="checkbox" /></td>
-                                <td>title</td>
-                                <td>url</td>
-                                <td class="text-right">Actions</td>
+                                <td>Title</td>
+                                <td width="40">Thumb</td>
+                                <td width="100">Banner Id</td>
+                                <td width="100">Sort Orders</td>
+                                <td width="150">Actions</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="list in category">
                                 <td><input :checked="checked" type="checkbox" /></td>
-                                <td>${list.title}</td>
-                                <td>${list.url}</td>
+                                <td>${list.name}</td>
+                                <td><img :src="list.thumb" alt=""></td>
+                                <td>${list.banner}</td>
+                                <td>${list.sort_order}</td>
                                 <td>
-                                    <button @click="delt(list.id)" class="btn btn-danger btn-xs">删除</button>
-                                    <button @click="update(list.id)" class="btn btn-info btn-xs">更新</button>
+                                    <button @click="delt(list.category_id)" class="btn btn-danger btn-xs">删除</button>
+                                    <button @click="update(list.category_id)" class="btn btn-info btn-xs">更新</button>
                                 </td>
                             </tr>
                         </tbody>

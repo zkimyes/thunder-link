@@ -6,10 +6,14 @@
             <h1>
                 Solution Category
             </h1>
-            <ul class="breadcrumb">
+             <ul class="breadcrumb">
+                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                 <li>
-                    <a></a>
+                    <a href="<?php echo $breadcrumb['href']; ?>">
+                        <?php echo $breadcrumb['text']; ?>
+                    </a>
                 </li>
+                <?php } ?>
             </ul>
         </div>
     </div>

@@ -49,7 +49,7 @@ class ControllerPromotionSet extends Controller {
 	}
 
 	public function edit(){
-		$data['title'] = "Add";
+		$data['title'] = "Edit";
 		$this->load->language('setting/setting');
 		$this->document->setTitle($this->language->get('heading_title'));
 		$this->load->model('setting/setting');

@@ -7,9 +7,13 @@
                 Solution Category
             </h1>
             <ul class="breadcrumb">
+                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                 <li>
-                    <a></a>
+                    <a href="<?php echo $breadcrumb['href']; ?>">
+                        <?php echo $breadcrumb['text']; ?>
+                    </a>
                 </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
@@ -19,9 +23,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>title</label>
-                            <input type="text" v-model="title" class="form-control" placeholder="title">
-                            <div v-if="title === ''" class="help-block text-danger">title 不能为空</div>
+                            <label>Title</label>
+                            <input type="text" v-model="name" class="form-control" placeholder="填写标题">
                         </div>
                         <div class="form-group">
                             <label>meta keyword</label>
@@ -29,11 +32,7 @@
                         </div>
                         <div class="form-group">
                             <label>meta description</label>
-                            <textarea v-model="meta_desc" class="form-control" placeholder="meta description"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>link url</label>
-                            <input type="text" v-model="url" class="form-control" placeholder="link url">
+                            <textarea v-model="meta_description" class="form-control" placeholder="meta description"></textarea>
                         </div>
                     </div>
                 </div>
@@ -52,27 +51,21 @@
     var category = new Vue({
         el:'#content',
         data:{
-            id:'{{category.id}}',
-            title:'{{category.title}}',
+            category_id:'{{category.category_id}}',
+            name:'{{category.name}}',
             meta_keyword:'{{category.meta_keyword}}',
-            meta_desc:'{{category.meta_desc}}',
-            url:'{{category.url}}'
+            meta_description:'{{category.meta_description}}'
         },
         methods:{
             submit(){
                 let data = {
-                    id:this.id,
-                    title:this.title,
+                    category_id:this.id,
+                    name:this.name,
                     meta_keyword:this.meta_keyword,
-                    meta_desc:this.meta_desc,
-                    url:this.url
+                    meta_desc:this.meta_desc
                 }
 
-                if(data.title == ""){
-                    return layer.msg('标题不能为空');
-                }
-
-                if(data.title == ""){
+                if(data.name == ""){
                     return layer.msg('标题不能为空');
                 }
 
