@@ -2154,3 +2154,17 @@
 2017-07-15 3:59:06 - PHP Notice:  Undefined index: related_product_ids in /projects/thunder-link/catalog/controller/solution/article.php on line 17
 2017-07-20 21:57:09 - PHP Notice:  Undefined variable: category in G:\php_projects\thunder-link\admin\controller\configuration\category.php on line 93
 2017-07-20 23:45:58 - PHP Notice:  Undefined variable: url in G:\php_projects\thunder-link\admin\controller\configuration\category.php on line 61
+2017-07-21 5:16:42 - PHP Notice:  Undefined variable: thumb in E:\php\php_projects\thunder-link\admin\view\template\configuration\category_form.tpl on line 44
+2017-07-21 5:16:42 - PHP Notice:  Undefined variable: placeholder in E:\php\php_projects\thunder-link\admin\view\template\configuration\category_form.tpl on line 44
+2017-07-21 5:32:26 - PHP Notice:  Undefined variable: thumb in E:\php\php_projects\thunder-link\admin\view\template\configuration\category_form.tpl on line 44
+2017-07-21 5:32:26 - PHP Notice:  Undefined variable: placeholder in E:\php\php_projects\thunder-link\admin\view\template\configuration\category_form.tpl on line 44
+2017-07-21 5:32:58 - PHP Notice:  Undefined variable: placeholder in E:\php\php_projects\thunder-link\admin\view\template\configuration\category_form.tpl on line 44
+2017-07-21 6:24:40 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1246
+2017-07-21 6:30:49 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1243
+2017-07-21 6:31:14 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1243
+2017-07-21 6:31:42 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1243
+2017-07-21 6:32:16 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1243
+2017-07-21 6:32:27 - PHP Notice:  Array to string conversion in E:\php\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1243
+2017-07-21 6:34:05 - PHP Warning:  json_decode() expects parameter 1 to be string, array given in E:\php\php_projects\thunder-link\admin\controller\configuration\category.php on line 94
+2017-07-21 7:22:57 - PHP Notice:  Undefined index: sort_order in E:\php\php_projects\thunder-link\admin\model\configuration\category.php on line 41
+2017-07-21 7:22:57 - PHP Notice:  Undefined index: banner in E:\php\php_projects\thunder-link\admin\model\configuration\category.php on line 42

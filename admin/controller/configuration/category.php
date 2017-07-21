@@ -79,11 +79,20 @@ class ControllerConfigurationCategory extends Controller{
     
     
     protected function form($data){
+        $this->load->model('design/banner');
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         $data['back_url'] = $this->url->link('configuration/category/index');
         $data['token'] = $this->session->data['token'];
+        if (!empty($data['category']['image']) && is_file(DIR_IMAGE . $data['category']['image'])) {
+			$data['thumb'] = $this->model_tool_image->resize($data['category']['image'], 100, 100);
+		} else {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+        $data['banners'] = $this->model_design_banner->getBanners();
+
+		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
         $this->response->setOutput($this->load->view('configuration/category_form', $data));
     }
     
