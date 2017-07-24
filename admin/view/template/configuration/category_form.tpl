@@ -36,6 +36,10 @@
                             <input type="text" v-model="name" class="form-control" placeholder="填写标题">
                         </div>
                         <div class="form-group">
+                            <label>Description</label>
+                            <textarea v-model="description" class="form-control" placeholder="填写标题"></textarea>
+                        </div>
+                        <div class="form-group">
                             <label>Meta Title</label>
                             <input type="text" v-model="meta_title" class="form-control" placeholder="Meta Title">
                         </div>
@@ -53,6 +57,11 @@
                                 <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" data-placeholder="<?php echo $placeholder; ?>" alt="" title=""/></a>
                                 <input type="hidden" name="image" v-model="image" id="input-image" />
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Sort Order</label>
+                            <input type="text" v-model="sort_order" class="form-control" placeholder="0">
+                            <p class="help-text">数字越大排序越靠前</p>
                         </div>
                     </div>
                 </div>
@@ -72,25 +81,29 @@
         delimiters: ['${', '}'],
         el: '#content',
         data: {
-            banner:"{{category.banner}}",
+            banner: "{{category.banner}}",
             category_id: '{{category.category_id}}',
             name: '{{category.name}}',
-            meta_title:'{{category.meta_title}}',
+            description: '{{category.description}}',
+            meta_title: '{{category.meta_title}}',
             meta_keyword: '{{category.meta_keyword}}',
             meta_description: '{{category.meta_description}}',
-            image:'{{category.image}}'
+            sort_order: '{{category.sort_order}}',
+            image: '{{category.image}}'
         },
         methods: {
             submit() {
                 let data = {
                     category_id: this.category_id,
                     name: this.name,
-                    meta_title:this.meta_title,
+                    description: this.description,
+                    meta_title: this.meta_title,
                     meta_keyword: this.meta_keyword,
                     meta_description: this.meta_description,
-                    image:$('#input-image').val()
+                    sort_order: this.sort_order,
+                    banner: this.banner,
+                    image: $('#input-image').val()
                 }
-                debugger
 
                 if (data.name == "") {
                     return layer.msg('标题不能为空');

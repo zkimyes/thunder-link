@@ -66,6 +66,7 @@
         $.post("{{delt_url|raw}}".replace("amp;", '') + '&token={{token}}', {
             selected: [id]
         }, function(data) {
+            layer.msg('删除成功');
             location.reload();
         }, 'json')
     }

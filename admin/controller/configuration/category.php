@@ -10,7 +10,7 @@ class ControllerConfigurationCategory extends Controller{
     public function delete(){
         $this->load->model('configuration/category');
         if (isset($this->request->post['selected'])) {
-            $this->model_solution_category->delt($this->request->post['selected']);
+            $this->model_configuration_category->delt($this->request->post['selected']);
             $this->response->jsonOutput([
             'status'=>'1',
             'info'=>'success'
@@ -25,7 +25,7 @@ class ControllerConfigurationCategory extends Controller{
     
     
     public function add(){
-        $this->load->model('solution/category');
+        $this->load->model('configuration/category');
         $url = '';
         $data['submit_url'] = $this->url->link('configuration/category/add');
         $data['breadcrumbs'] = [];
@@ -41,7 +41,7 @@ class ControllerConfigurationCategory extends Controller{
         );
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_solution_category->add($post);
+            $rs = $this->model_configuration_category->add($post);
             $this->response->jsonOutput($rs);
         }else{
             $this->form($data);
