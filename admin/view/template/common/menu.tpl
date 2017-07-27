@@ -83,7 +83,9 @@
         <a class="parent"><i class="fa fa-adn"></i> <span>configration</span></a>
         <ul>
             <li><a href="{{config_category|raw}}">category</a></li>
-            <li><a href="">typical config</a></li>
+            <li><a href="{{config_typical|raw}}">typical</a></li>
+            <li><a href="{{config_board_type|raw}}">board type</a></li>
+            <li><a href="{{config_board|raw}}">board</a></li>
         </ul>
     </li>
     <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>

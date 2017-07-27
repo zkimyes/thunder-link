@@ -23,10 +23,10 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <input type="hidden" name="id" value="{{article.id}}">
+                        <input type="hidden" name="id" v-model="id">
                         <div class="form-group">
                             <label>Config Category</label>
-                            <select name="category_id" class="form-control">
+                            <select v-model="category_id" name="category_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for category in categorys %}
                                     <option value="{{category.category_id}}">{{category.name}}</option>
@@ -38,28 +38,26 @@
                                 <label>Image</label>
                                 <div>
                                     <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
-                                    <input type="hidden" name="image" value="{{article.image}}" id="input-image" />
+                                    <input v-model="image" type="hidden" name="image" value="{{article.image}}" id="input-image" />
                                 </div>
                             </div>
                             <div class="pull-left" style="margin-left:100px;">
                                 <label>Blueprint</label>
                                 <div>
-                                    <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
-                                    <input type="hidden" name="image" value="{{article.blueprint}}" id="input-image" />
+                                    <a href="javascript:;" id="thumb-blueprint" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb_blueprint; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                    <input v-model="blueprint" type="hidden" name="blueprint" id="input-blueprint" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" class="form-control" name="title" value="{{article.title}}" placeholder="title">
+                            <input type="text" class="form-control" name="name" v-model="name" placeholder="输入标题">
                         </div>
                         <div class="form-group">
-                            <label>Summary</label>
-                            <textarea class="form-control" name="summary" placeholder="summary">{{article.summary}}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Content</label>
-                            <textarea class="form-control" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
+                            <label>Parameter <button @click="addParameter()" class="btn btn-xs btn-primary"><i class="fa fa-plus"></i>增加</button> </label>
+                            <div class="parameter">
+                                <div class="parameter-item" v-for="(param,index) in parameter">参数名：<input v-model="param.name" type="text"> 值：<input v-model="param.value" type="text"> 最小值：<input v-model="param.min" type="text">最大值：<input v-model="param.max" type="text"> <button @click="removeParameter(index)" class="btn btn-xs btn-warning"><i class="fa fa-close"></i></button></div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
@@ -107,56 +105,59 @@
         </div>
     </div>
     <script>
-        var editor = CKEDITOR.replace('editor', {
-            toolbarGroups: [{
-                "name": "basicstyles",
-                "groups": ["basicstyles"]
-            }, {
-                "name": "links",
-                "groups": ["links"]
-            }, {
-                "name": "paragraph",
-                "groups": ["list", "blocks"]
-            }, {
-                "name": "document",
-                "groups": ["mode"]
-            }, {
-                "name": "insert",
-                "groups": ["insert"]
-            }, {
-                "name": "styles",
-                "groups": ["styles"]
-            }, {
-                "name": "about",
-                "groups": ["about"]
-            }]
-        });
+        // var editor = CKEDITOR.replace('editor');
     </script>
     <script>
         Vue.config.devtools = true
-        var category = new Vue({
-            el:'#content',
-            data:{
-                category_id:'{{}}'
+        var typical = new Vue({
+            el: '#content',
+            delimiters: ['${', '}'],
+            data: {
+                id: '{{typical.id}}',
+                category_id: '{{typical.category_id}}',
+                image: '{{typical.image}}',
+                name: '{{typical.name}}',
+                link_product_id: '{{typical.link_product_id}}',
+                parameter: [{
+                    name: 'Speed',
+                    min: 0,
+                    value: 1,
+                    max: 1
+                }],
+                blueprint: '{{typical.blueprint}}',
+                link_boards: '{{typical.link_boards}}',
+                sort_order: '{{typical.sort_order}}',
             },
-            methods:{
-                submit(){
-                    let data = {
-                    }
+            methods: {
+                addParameter: function() {
+                    this.parameter.push({
+                        name: '',
+                        value: '',
+                        min: 0,
+                        max: 1
+                    })
+                },
+                removeParameter: function(index) {
+                    this.parameter = this.parameter.filter(function(item, key) {
+                        return key != index
+                    })
+                },
+                submit: function() {
+                    let data = {}
 
-                    if(data.title == ""){
+                    if (data.title == "") {
                         return layer.msg('标题不能为空');
                     }
 
-                    if(data.title == ""){
+                    if (data.title == "") {
                         return layer.msg('标题不能为空');
                     }
 
-                    $.post('{{submit_url|raw}}&token={{token}}',data,function(res){
-                        if(res){
-                            location.href="{{back_url|raw}}&token={{token}}";
+                    $.post('{{submit_url|raw}}&token={{token}}', data, function(res) {
+                        if (res) {
+                            location.href = "{{back_url|raw}}&token={{token}}";
                         }
-                    },'json')
+                    }, 'json')
                 }
             }
         });

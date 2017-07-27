@@ -1,9 +1,9 @@
 <?php
-class ModelConfigurationTypical extends Model {
+class ModelConfigurationCategory extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
-        $typical = $this->db->query('select a.id,a.`name`,a.image,a.sort_order,a.blueprint,c.`name` as category_name from oc_config_typical as a left join oc_config_category as c on c.category_id = a.category_id');
-        return $typical->rows;
+        $categorys = $this->db->query('select category_id,`name`,image,sort_order,banner from oc_config_category');
+        return $categorys->rows;
     }
 
     public function add($data = []){
@@ -29,8 +29,8 @@ class ModelConfigurationTypical extends Model {
 
 
     public function find($id=''){
-        $typical = $this->db->query("select * from oc_config_typical where id =".intval($id));
-        return $typical->row;
+        $category = $this->db->query("select * from oc_config_category where category_id =".intval($id));
+        return $category->row;
     }
 
 

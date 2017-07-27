@@ -1,9 +1,9 @@
 <?php
-class ModelConfigurationTypical extends Model {
+class ModelConfigurationBoardType extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
-        $typical = $this->db->query('select a.id,a.`name`,a.image,a.sort_order,a.blueprint,c.`name` as category_name from oc_config_typical as a left join oc_config_category as c on c.category_id = a.category_id');
-        return $typical->rows;
+        $types = $this->db->query('select * from oc_config_board_type');
+        return $types->rows;
     }
 
     public function add($data = []){
@@ -29,8 +29,8 @@ class ModelConfigurationTypical extends Model {
 
 
     public function find($id=''){
-        $typical = $this->db->query("select * from oc_config_typical where id =".intval($id));
-        return $typical->row;
+        $type = $this->db->query("select * from oc_config_board_type where id =".intval($id));
+        return $type->row;
     }
 
 
@@ -51,7 +51,7 @@ class ModelConfigurationTypical extends Model {
     public function delt($id=[]){
         if(count($id)>0){
             $id = join(',',$id);
-            $rs = $this->db->query("delete from oc_config_category where category_id in (".$id.")");
+            $rs = $this->db->query("delete from oc_config_board_type where id in (".$id.")");
             return $rs;
         }
         return false;
