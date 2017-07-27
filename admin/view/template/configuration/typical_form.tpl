@@ -62,32 +62,30 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-related">Sysrtem Board</label>
+                                    <label for="input-related">系统板</label>
                                     <div>
-                                        <input type="text" name="related" value="" placeholder="输入名字搜索产品" id="input-related" class="form-control" />
-                                        <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                                            <?php foreach ($product_relateds as $product_related) { ?>
-                                            <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i>
-                                                <?php echo $product_related['name']; ?>
-                                                <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
-                                            </div>
-                                            <?php } ?>
+                                        <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
+                                        <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                            <label class="input-group" style="margin-bottom:10px;" v-for="board in system_board">
+                                                <input class="col-md-1" v-model="system.id" :value="board.id" type="radio"> 
+                                                <span class="col-md-8">${board.name}</span>
+                                                <input v-if="system.id == board.id" class="col-md-2" style="padding:0" placeholder="数量" v-model="system.qty" type="text">
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-related">Config Board</label>
+                                    <label for="input-related">配置板</label>
                                     <div>
-                                        <input type="text" name="related" value="" placeholder="输入名字搜索产品" id="input-related" class="form-control" />
-                                        <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                                            <?php foreach ($product_relateds as $product_related) { ?>
-                                            <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i>
-                                                <?php echo $product_related['name']; ?>
-                                                <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
-                                            </div>
-                                            <?php } ?>
+                                        <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
+                                        <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                              <label v-for="(board,key) in other_board">
+                                                <input class="col-md-1" v-model="other" :value="board.id" type="checkbox"> 
+                                                <span class="col-md-6">${board.name} ${key}</span>
+                                                <input class="col-md-2" placeholder="数量" v-model="other.qty" class="col-md-2" style="padding:0" type="text">
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -104,9 +102,6 @@
             </div>
         </div>
     </div>
-    <script>
-        // var editor = CKEDITOR.replace('editor');
-    </script>
     <script>
         Vue.config.devtools = true
         var typical = new Vue({
@@ -127,6 +122,27 @@
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
+                system:{
+                    id:0,
+                    qty:0
+                },
+                other:[{
+                    id:0,
+                    qty:0
+                }],
+                boards:JSON.parse('{{boards|raw}}')
+            },
+            computed:{
+                system_board:function(){
+                    return this.boards.filter(function(item){
+                        return item.type == 1;
+                    });
+                },
+                other_board:function(){
+                    return this.boards.filter(function(item){
+                        return item.type == 2;
+                    });
+                }
             },
             methods: {
                 addParameter: function() {

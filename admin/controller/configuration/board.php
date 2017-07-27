@@ -3,14 +3,14 @@
 
 class ControllerConfigurationBoard extends Controller{
     public function index(){
-        $this->document->setTitle('Configuration Category');
+        $this->document->setTitle('Configuration Board');
         $this->getList();
     }
     
     public function delete(){
-        $this->load->model('configuration/category');
+        $this->load->model('configuration/board');
         if (isset($this->request->post['selected'])) {
-            $this->model_configuration_category->delt($this->request->post['selected']);
+            $this->model_configuration_board->delt($this->request->post['selected']);
             $this->response->jsonOutput([
             'status'=>'1',
             'info'=>'success'
@@ -25,9 +25,9 @@ class ControllerConfigurationBoard extends Controller{
     
     
     public function add(){
-        $this->load->model('configuration/category');
+        $this->load->model('configuration/board');
         $url = '';
-        $data['submit_url'] = $this->url->link('configuration/category/add');
+        $data['submit_url'] = $this->url->link('configuration/board/add');
         $data['breadcrumbs'] = [];
         
         $data['breadcrumbs'][] = array(
@@ -36,12 +36,12 @@ class ControllerConfigurationBoard extends Controller{
         );
         
         $data['breadcrumbs'][] = array(
-        'text' => 'Configuration Category',
-        'href' => $this->url->link('configuration/category', 'token=' . $this->session->data['token'] . $url, true)
+        'text' => 'Configuration Board Add',
+        'href' => $this->url->link('configuration/board/add', 'token=' . $this->session->data['token'] . $url, true)
         );
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_configuration_category->add($post);
+            $rs = $this->model_configuration_board->add($post);
             $this->response->jsonOutput($rs);
         }else{
             $this->form($data);
@@ -49,7 +49,7 @@ class ControllerConfigurationBoard extends Controller{
     }
     
     public function update(){
-        $this->load->model('configuration/category');
+        $this->load->model('configuration/board');
         $url = '';
         $data['breadcrumbs'] = [];
         
@@ -59,41 +59,34 @@ class ControllerConfigurationBoard extends Controller{
         );
         
         $data['breadcrumbs'][] = array(
-        'text' => 'Configuration Category',
-        'href' => $this->url->link('configuration/category', 'token=' . $this->session->data['token'] . $url, true)
+        'text' => 'Configuration Board Update',
+        'href' => $this->url->link('configuration/board/update', 'token=' . $this->session->data['token'] . $url, true)
         );
-        $data['submit_url'] = $this->url->link('configuration/category/update');
+        $data['submit_url'] = $this->url->link('configuration/board/update');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_configuration_category->update($post);
+            $rs = $this->model_configuration_board->update($post);
             $this->response->jsonOutput($rs);
         }else{
             $id = $this->request->get['id'];
             if(!empty($id)){
-                $category = $this->model_configuration_category->find($id);
+                $board = $this->model_configuration_board->find($id);
             }
-            $data['category'] = $category;
+            $data['board'] = $board;
             $this->form($data);
         };
     }
     
     
     protected function form($data){
-        $this->load->model('design/banner');
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
-        $data['back_url'] = $this->url->link('configuration/category/index');
+        $data['back_url'] = $this->url->link('configuration/board/index');
         $data['token'] = $this->session->data['token'];
-        if (!empty($data['category']['image']) && is_file(DIR_IMAGE . $data['category']['image'])) {
-			$data['thumb'] = $this->model_tool_image->resize($data['category']['image'], 100, 100);
-		} else {
-			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-		}
-        $data['banners'] = $this->model_design_banner->getBanners();
-
-		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-        $this->response->setOutput($this->load->view('configuration/category_form', $data));
+        $this->load->model('configuration/board_type');
+        $data['board_types'] = json_encode($this->model_configuration_board_type->getList());
+        $this->response->setOutput($this->load->view('configuration/board_form', $data));
     }
     
     
@@ -109,33 +102,22 @@ class ControllerConfigurationBoard extends Controller{
         );
         
         $data['breadcrumbs'][] = array(
-        'text' => 'Configuration Category',
-        'href' => $this->url->link('configuration/category', 'token=' . $this->session->data['token'] . $url, true)
+        'text' => 'Configuration Board',
+        'href' => $this->url->link('configuration/board', 'token=' . $this->session->data['token'] . $url, true)
         );
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         
-        $data['add_url'] = $this->url->link('configuration/category/add');
-        $data['update_url'] = $this->url->link('configuration/category/update');
-        $data['delt_url'] = $this->url->link('configuration/category/delete');
+        $data['add_url'] = $this->url->link('configuration/board/add');
+        $data['update_url'] = $this->url->link('configuration/board/update');
+        $data['delt_url'] = $this->url->link('configuration/board/delete');
         
-        $this->load->model('configuration/category');
-        $this->load->model('tool/image');
-        $categorys = $this->model_configuration_category->getList();
+        $this->load->model('configuration/board');
+        $boards = $this->model_configuration_board->getList();
         
-        $data['lists'] = [];
-        foreach($categorys as &$category){
-            if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
-                $category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
-            } else {
-                $category['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
-            }
-            $data['lists'][] = $category;
-        }
-        
-        $data['lists'] = json_encode($data['lists']);
+        $data['lists'] = json_encode($boards);
         $data['token'] = $token;
-        $this->response->setOutput($this->load->view('configuration/category_list', $data));
+        $this->response->setOutput($this->load->view('configuration/board_list', $data));
     }
 }

@@ -2550,3 +2550,52 @@
 2017-07-25 15:04:35 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1227
 2017-07-25 15:27:29 - PHP Notice:  Undefined variable: thumb in /projects/thunder-link/admin/view/template/configuration/board_type_form.tpl on line 48
 2017-07-25 15:27:29 - PHP Notice:  Undefined variable: placeholder in /projects/thunder-link/admin/view/template/configuration/board_type_form.tpl on line 48
+2017-07-27 11:09:45 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\admin\view\template\setting\setting.tpl on line 1187
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: meta_title in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 40
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: meta_description in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 41
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 42
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 43
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: sort_order in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 44
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: banner in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 45
+2017-07-27 11:55:36 - PHP Notice:  Undefined index: category_id in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 46
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 18
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: sort_order in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 19
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: description in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 20
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: meta_title in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 21
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: meta_description in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 22
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 23
+2017-07-27 12:00:16 - PHP Notice:  Undefined index: banner in G:\php_projects\thunder-link\admin\model\configuration\board_type.php on line 24
+2017-07-27 13:51:08 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 43
+2017-07-27 13:51:20 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\system\engine\loader.php on line 43
+2017-07-27 13:51:46 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1227
+2017-07-27 16:09:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1225
+2017-07-27 16:09:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1225
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 18
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: sort_order in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 19
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 20
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: meta_title in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 21
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: meta_description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 22
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 23
+2017-07-27 18:08:48 - PHP Notice:  Undefined index: banner in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 24
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 18
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: sort_order in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 19
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 20
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: meta_title in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 21
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: meta_description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 22
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 23
+2017-07-27 18:34:49 - PHP Notice:  Undefined index: banner in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 24
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: image in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 18
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: sort_order in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 19
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 20
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: meta_title in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 21
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: meta_description in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 22
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: meta_keyword in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 23
+2017-07-27 18:35:54 - PHP Notice:  Undefined index: banner in G:\php_projects\thunder-link\admin\model\configuration\category.php on line 24
+2017-07-27 18:41:12 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 69
+2017-07-27 18:41:12 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 69
+2017-07-27 18:41:12 - PHP Notice:  Undefined variable: product_relateds in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 85
+2017-07-27 18:41:12 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 85
+2017-07-27 19:57:47 - PHP Notice:  Undefined variable: product_related in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 69
+2017-07-27 19:57:47 - PHP Notice:  Undefined variable: product_related in G:\php_projects\thunder-link\admin\view\template\configuration\typical_form.tpl on line 70
+2017-07-27 20:38:18 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1375
+2017-07-27 20:39:21 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1375

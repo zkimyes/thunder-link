@@ -24,18 +24,18 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Name</label>
-                            <input :disabled="type == 1" type="text" v-model="name" class="form-control" placeholder="填写标题">
+                            <input type="text" v-model="name" class="form-control" placeholder="输入板卡名">
                         </div>
                         <div class="form-group">
-                            <label>Type</label>
-                            <select class="form-control" v-model="type">
-                                <option value="1">System Board</option>
-                                <option value="2">Other</option>
+                            <label>Board Type</label>
+                            <select class="form-control" v-model="border_type_id">
+                                <option value="">--选择板卡类型--</option>
+                                <option v-for="board_type in board_types" :value="board_type.id">${board_type.name}</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Sort Order</label>
-                            <input type="text" v-model="order" class="form-control" placeholder="0">
+                            <input type="text" v-model="order" class="form-control" placeholder="排序值">
                             <p class="help-text">数字越大排序越靠前</p>
                         </div>
                     </div>
@@ -52,27 +52,33 @@
 </div>
 <script>
     Vue.config.devtools = true
-    var category = new Vue({
+    var app = new Vue({
         delimiters: ['${', '}'],
         el: '#content',
         data: {
-            id: '{{board_type.id}}',
-            name: '{{board_type.name}}',
-            type: '{{board_type.type}}',
-            order: '{{board_type.order}}'
+            id: '{{board.id}}',
+            name: '{{board.name}}',
+            border_type_id:'{{board.border_type_id}}',
+            board_types:JSON.parse('{{board_types|raw}}'),
+            order: '{{board.order}}'
         },
         methods: {
             submit() {
                 let data = {
                     id: this.id,
                     name: this.name,
-                    type: this.type,
+                    border_type_id: this.border_type_id,
                     order: this.order
                 }
 
                 if (data.name == "") {
-                    return layer.msg('标题不能为空');
+                    return layer.msg('板卡名字不能为空');
                 }
+
+                if (data.border_type_id == "") {
+                    return layer.msg('请选择办卡类型');
+                }
+
 
                 $.post('{{submit_url|raw}}&token={{token}}', data, function(res) {
                     if (res) {

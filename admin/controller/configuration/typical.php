@@ -80,6 +80,7 @@ class ControllerConfigurationTypical extends Controller{
     
     protected function form($data){
         $this->load->model('configuration/category');
+        $this->load->model('configuration/board');
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
@@ -96,6 +97,7 @@ class ControllerConfigurationTypical extends Controller{
 			$data['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
         $data['categorys'] = $this->model_configuration_category->getList();
+        $data['boards'] = json_encode($this->model_configuration_board->getList());
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
         $this->response->setOutput($this->load->view('configuration/typical_form', $data));
     }

@@ -10,18 +10,13 @@ class ModelConfigurationBoardType extends Model {
         $keys = join(',',array_keys($data));
         $values = join(',',array_values($data));
         $rs = $this->db->query("
-            INSERT INTO `oc_config_category`
-            (`name`, `image`, `sort_order`, `description`, `meta_title`, `meta_description`, `meta_keyword`, `banner`)
+            INSERT INTO `oc_config_board_type`
+            (`name`, `type`, `order`)
              VALUES 
              (
                  '".$this->db->escape($data['name'])."',
-                 '".$this->db->escape($data['image'])."',
-                 ".intval($data['sort_order']).",
-                 '".$this->db->escape($data['description'])."',
-                 '".$this->db->escape($data['meta_title'])."',
-                 '".$this->db->escape($data['meta_description'])."',
-                 '".$this->db->escape($data['meta_keyword'])."',
-                 ".intval($data['banner'])."
+                 ".intval($data['order']).",
+                 ".intval($data['order'])."
                  )
         ");
         return $rs;
@@ -36,15 +31,11 @@ class ModelConfigurationBoardType extends Model {
 
     public function update($data = []){
         $rs = $this->db->query("
-                update oc_config_category set `name`='".$this->db->escape($data['name'])."',
-                meta_title='".$this->db->escape($data['meta_title'])."',
-                meta_description='".$this->db->escape($data['meta_description'])."',
-                meta_keyword='".$this->db->escape($data['meta_keyword'])."',
-                image='".$this->db->escape($data['image'])."',
-                sort_order=".intval($data['sort_order']).",
-                banner=".intval($data['banner'])."
-                 where category_id=".intval($data['category_id'])."
-             ");
+                update oc_config_board_type set 
+                `name`='".$this->db->escape($data['name'])."',
+                type=".intval($data['type']).",
+                `order`=".intval($data['order'])."
+                 where id=".intval($data['id'])."");
         return $rs;
     }
 

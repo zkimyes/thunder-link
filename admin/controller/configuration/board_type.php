@@ -10,7 +10,7 @@ class ControllerConfigurationBoardType extends Controller{
     public function delete(){
         $this->load->model('configuration/board_type');
         if (isset($this->request->post['selected'])) {
-            $this->model_configuration_category->delt($this->request->post['selected']);
+            $this->model_configuration_board_type->delt($this->request->post['selected']);
             $this->response->jsonOutput([
             'status'=>'1',
             'info'=>'success'
