@@ -59,34 +59,19 @@
                                 <div class="parameter-item" v-for="(param,index) in parameter">参数名：<input v-model="param.name" type="text"> 值：<input v-model="param.value" type="text"> 最小值：<input v-model="param.min" type="text">最大值：<input v-model="param.max" type="text"> <button @click="removeParameter(index)" class="btn btn-xs btn-warning"><i class="fa fa-close"></i></button></div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="input-related">系统板</label>
-                                    <div>
-                                        <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
-                                        <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                            <label class="input-group" style="margin-bottom:10px;" v-for="board in system_board">
-                                                <input class="col-md-1" v-model="system.id" :value='board.id' type="radio"> 
-                                                <span class="col-md-8">${board.name}</span>
-                                                <input v-if="system.id == board.id" class="col-md-2" style="padding:0" placeholder="数量" v-model="system.qty" type="text">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="input-related">配置板</label>
-                                    <div>
-                                        <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
-                                        <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                              <label class="input-group" style="margin-bottom:10px;" v-for="(board,key) in other_board">
-                                                <input class="col-md-1" v-model="other" :value="board.id" type="checkbox"> 
-                                                <span class="col-md-8">${board.name}</span>
-                                                <input class="col-md-2" placeholder="数量" v-if="other.indexOf(board.id)>=0" @input="getValue(key)" class="col-md-2" style="padding:0" type="text">
-                                            </label>
-                                        </div>
+                        <div class="form-group">
+                            <label for="input-related">板卡</label>
+                            <div style="position:relative">
+                                <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." id="input-related" v-model="search" class="form-control" />
+                                <ul class="dropdown-menu" v-if="search != ''" style="left:0;top:32px;display:block;">
+                                    <li @click="choose({id:board.id,name:board.name,qty:0})" v-for="board in boardResult"><a href="javascript:;">${board.name}</a></li>
+                                    <li style="text-indent:2em;" v-if="boardResult == ''">没有结果</li>
+                                </ul>
+                                <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                    <div v-for="board in choosedBoards" style="margin-bottom:5px;overflow:hidden;" >
+                                        <div class="col-md-7">${board.name}</div>
+                                        <div class="col-md-3"><input style="width:100%;" style="padding:0" v-model="board.qty" placeholder="数量" type="text"></div>
+                                        <div class="col-md-2"><button class="btn btn-xs btn-danger" ><i class="fa fa-remove"></i></button></div>
                                     </div>
                                 </div>
                             </div>
@@ -119,26 +104,28 @@
                     value: 1,
                     max: 1
                 }],
+                search:'',
+                choosedBoards:[],
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
-                system:{
-                    id:0,
-                    qty:0
-                },
-                other:[],
                 boards:JSON.parse('{{boards|raw}}')
             },
             computed:{
-                system_board:function(){
-                    return this.boards.filter(function(item){
-                        return item.type == 1;
-                    });
-                },
-                other_board:function(){
-                    return this.boards.filter(function(item){
-                        return item.type == 2;
-                    });
+                boardResult:function(){
+                    var _vm = this;
+                    var data;
+                    if(_vm.search != ''){
+                       data  = _vm.boards.filter(function(item){
+                            return item.name.toLocaleUpperCase().indexOf(_vm.search.toLocaleUpperCase())>=0
+                        })
+                    }
+
+                    if(_vm.search == '@'){
+                        data = _vm.boards;
+                    }
+                    
+                    return data
                 }
             },
             methods: {
@@ -155,17 +142,15 @@
                         return key != index
                     })
                 },
-                getValue:function(key){
-                    var e = event || window.event;
-                    console.log(e.target.value);
-                    this.other = this.other.map(function(item,index){
-                        if(index == key){
-                            return {
-                                id:item,
-                                qty:e.target.value
-                            }
-                        }
-                    })
+                choose:function(choosed){
+                    var _vm = this;
+                    if(choosed){
+                        var data = _vm.choosedBoards.filter(function(item){
+                            return item.id != choosed.id
+                        }).concat(choosed);
+                        _vm.choosedBoards = data;
+                        _vm.search = '';
+                    }
                 },
                 submit: function() {
                     let data = {}
