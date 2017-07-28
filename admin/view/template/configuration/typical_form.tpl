@@ -67,7 +67,7 @@
                                         <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
                                         <div class="well well-sm" style="height: 150px; overflow: auto;">
                                             <label class="input-group" style="margin-bottom:10px;" v-for="board in system_board">
-                                                <input class="col-md-1" v-model="system.id" :value="board.id" type="radio"> 
+                                                <input class="col-md-1" v-model="system.id" :value='board.id' type="radio"> 
                                                 <span class="col-md-8">${board.name}</span>
                                                 <input v-if="system.id == board.id" class="col-md-2" style="padding:0" placeholder="数量" v-model="system.qty" type="text">
                                             </label>
@@ -81,10 +81,10 @@
                                     <div>
                                         <input type="text" name="related" value="" placeholder="筛选" id="input-related" class="form-control" />
                                         <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                              <label v-for="(board,key) in other_board">
+                                              <label class="input-group" style="margin-bottom:10px;" v-for="(board,key) in other_board">
                                                 <input class="col-md-1" v-model="other" :value="board.id" type="checkbox"> 
-                                                <span class="col-md-6">${board.name} ${key}</span>
-                                                <input class="col-md-2" placeholder="数量" v-model="other.qty" class="col-md-2" style="padding:0" type="text">
+                                                <span class="col-md-8">${board.name}</span>
+                                                <input class="col-md-2" placeholder="数量" v-if="other.indexOf(board.id)>=0" @input="getValue(key)" class="col-md-2" style="padding:0" type="text">
                                             </label>
                                         </div>
                                     </div>
@@ -126,10 +126,7 @@
                     id:0,
                     qty:0
                 },
-                other:[{
-                    id:0,
-                    qty:0
-                }],
+                other:[],
                 boards:JSON.parse('{{boards|raw}}')
             },
             computed:{
@@ -156,6 +153,18 @@
                 removeParameter: function(index) {
                     this.parameter = this.parameter.filter(function(item, key) {
                         return key != index
+                    })
+                },
+                getValue:function(key){
+                    var e = event || window.event;
+                    console.log(e.target.value);
+                    this.other = this.other.map(function(item,index){
+                        if(index == key){
+                            return {
+                                id:item,
+                                qty:e.target.value
+                            }
+                        }
                     })
                 },
                 submit: function() {
