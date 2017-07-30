@@ -197,7 +197,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <img src="http://localhost:8888/image/cache/catalog/demo/macbook_1-200x200.jpg" alt="">
+                                    <img src="/image/cache/catalog/demo/macbook_1-200x200.jpg" alt="">
                                 </div>
                             </div>
                         </div>
