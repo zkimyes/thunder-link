@@ -15,7 +15,6 @@ class ModelConfigurationTypical extends Model {
              VALUES 
              (
                  '".$this->db->escape($data['name'])."',
-                 '".$this->db->escape($data['image'])."',
                  ".intval($data['sort_order']).",
                  '".$this->db->escape($data['description'])."',
                  '".$this->db->escape($data['meta_title'])."',
@@ -29,21 +28,30 @@ class ModelConfigurationTypical extends Model {
 
 
     public function find($id=''){
-        $typical = $this->db->query("select * from oc_config_typical where id =".intval($id));
+        $typical = $this->db->query("
+            select 
+            typical.*,
+            product.image,
+            product_desc.name as product_name
+            from oc_config_typical typical 
+            left join oc_product_description as product_desc on typical.link_product_id = product_desc.product_id 
+            left join oc_product as product on typical.link_product_id = product.product_id
+            where typical.id =".intval($id));
         return $typical->row;
     }
 
 
     public function update($data = []){
         $rs = $this->db->query("
-                update oc_config_category set `name`='".$this->db->escape($data['name'])."',
-                meta_title='".$this->db->escape($data['meta_title'])."',
-                meta_description='".$this->db->escape($data['meta_description'])."',
-                meta_keyword='".$this->db->escape($data['meta_keyword'])."',
-                image='".$this->db->escape($data['image'])."',
-                sort_order=".intval($data['sort_order']).",
-                banner=".intval($data['banner'])."
-                 where category_id=".intval($data['category_id'])."
+                update oc_config_typical 
+                set category_id = ".intval($data['category_id']).",
+                `name`='".$this->db->escape($data['name'])."',
+                link_product_id = ".intval($data['link_product_id']).",
+                parameter = '".$this->db->escape(json_encode($data['parameter']))."',
+                blueprint = '".$this->db->escape($data['blueprint'])."',
+                link_boards = '".$this->db->escape(json_encode($data['link_boards']))."',
+                sort_order=".intval($data['sort_order'])."
+                 where id=".intval($data['id'])."
              ");
         return $rs;
     }
@@ -56,4 +64,5 @@ class ModelConfigurationTypical extends Model {
         }
         return false;
     }
+
 }

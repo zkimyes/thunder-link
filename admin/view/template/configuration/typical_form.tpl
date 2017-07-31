@@ -33,20 +33,32 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <div class="form-group" style="overflow:hidden">
-                            <div class="pull-left">
-                                <label>图片</label>
-                                <div>
-                                    <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
-                                    <input v-model="image" type="hidden" name="image" value="{{article.image}}" id="input-image" />
+                        <div class="form-group">
+                            <label>关联产品</label>
+                            <div style="position:relative">
+                                <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." v-model="product_search" @input="searchProduct()" class="form-control" />
+                                <ul class="dropdown-menu" v-if="product_search != ''" style="left:0;top:32px;display:block;">
+                                    <li @click="chooseProduct(product)" v-for="product in products"><a href="javascript:;">${product.name}</a>
+                                    </li>
+                                    <li style="text-indent:2em" v-if="isAjax">搜索中...</li>
+                                    <li style="text-indent:2em;" v-if="isAjax == false && product_search != '' && products.length ==0">没有结果</li>
+                                </ul>
+                                <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                    <div v-if="link_product.product_id != ''">
+                                        <div class="col-md-3">
+                                            <img :src="link_product.thumb" alt="">
+                                        </div>
+                                        <div class="col-md-6"><strong>${link_product.name}</strong></div>
+                                        <div class="col-md-2"><button @click="removeRelatedProduct()" class="btn btn-danger btn-xs"><i class="fa fa-remove"></i></button></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pull-left" style="margin-left:100px;">
-                                <label>布线图</label>
-                                <div>
-                                    <a href="javascript:;" id="thumb-blueprint" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb_blueprint; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
-                                    <input v-model="blueprint" type="hidden" name="blueprint" id="input-blueprint" />
-                                </div>
+                        </div>
+                        <div class="form-group" style="overflow:hidden">
+                            <label>配置图</label>
+                            <div>
+                                <a href="javascript:;" id="thumb-blueprint" data-toggle="image" class="img-thumbnail"><img src="{{typical.thumb_blueprint}}"  data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                <input v-model="blueprint" type="hidden" name="blueprint" id="input-blueprint" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -60,28 +72,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="input-related">系统板</label>
-                            <div style="position:relative">
-                                <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." id="input-related" v-model="search" class="form-control" />
-                                <ul class="dropdown-menu" v-if="search != ''" style="left:0;top:32px;display:block;">
-                                    <li @click="choose({id:board.id,name:board.name,type:board.type,qty:0})" v-for="board in boardResult"><a href="javascript:;">${board.name}</a>
-                                    </li>
-                                    <li style="text-indent:2em;" v-if="boardResult == ''">没有结果</li>
-                                </ul>
-                                <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <div v-for="board in choosedBoards" style="margin-bottom:5px;overflow:hidden;" >
-                                        <div class="col-md-7">
-                                            <span class="label label-default" v-if="board.type == 1">系统板</span>
-                                            <span class="label label-success" v-else>配置板</span>
-                                            ${board.name}
-                                        </div>
-                                        <div class="col-md-1"><input v-number style="width:100%;" style="padding:0" v-model="board.qty" placeholder="数量" type="text"></div>
-                                        <div class="col-md-2"><button class="btn btn-xs btn-danger" ><i class="fa fa-remove"></i></button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label for="input-related">板卡</label>
                             <div style="position:relative">
                                 <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." id="input-related" v-model="search" class="form-control" />
@@ -91,7 +81,7 @@
                                     <li style="text-indent:2em;" v-if="boardResult == ''">没有结果</li>
                                 </ul>
                                 <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <div v-for="board in choosedBoards" style="margin-bottom:5px;overflow:hidden;" >
+                                    <div v-for="board in link_boards" style="margin-bottom:5px;overflow:hidden;" >
                                         <div class="col-md-7">
                                             <span class="label label-default" v-if="board.type == 1">系统板</span>
                                             <span class="label label-success" v-else>配置板</span>
@@ -107,14 +97,16 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <button onclick="submit()" class="btn btn-primary">提交</button>
+                        <button @click="submit()" class="btn btn-primary">提交</button>
                         <a href="{{back_url}}&token={{token}}" class="btn btn-default">取消</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
     <script>
+        console.log(_);
         Vue.config.devtools = true;
         Vue.directive('number',function(el){
             if(isNaN(el.value)){
@@ -138,12 +130,21 @@
                     value: 1,
                     max: 1
                 }],
-                search:'',
-                choosedBoards:[],
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
-                boards:JSON.parse('{{boards|raw}}')
+                search:'',
+                link_boards:[],
+                product_search:'',
+                products:[],
+                link_product:{
+                    product_id:'{{typical.link_product_id}}',
+                    name:'{{typical.product_name}}',
+                    image:'{{typical.image}}',
+                    thumb:'{{typical.thumb}}'
+                },
+                boards:JSON.parse('{{boards|raw}}'),
+                isAjax:false
             },
             computed:{
                 boardResult:function(){
@@ -179,25 +180,62 @@
                 choose:function(choosed){
                     var _vm = this;
                     if(choosed){
-                        var data = _vm.choosedBoards.filter(function(item){
+                        var data = _vm.link_boards.filter(function(item){
                             return item.id != choosed.id
                         }).concat(choosed);
-                        data.sort(function(item){
-                            console.log(item);
+                        data.sort(function(a,b){
+                            return a.type-b.type
                         })
-                        _vm.choosedBoards = data;
+                        _vm.link_boards = data;
                         _vm.search = '';
                     }
                 },
-                submit: function() {
-                    let data = {}
-
-                    if (data.title == "") {
-                        return layer.msg('标题不能为空');
+                chooseProduct:function(product){
+                    var _vm = this;
+                    if(product){
+                        _vm.link_product = {
+                            product_id:product.product_id,
+                            name:product.name,
+                            thumb:product.thumb
+                        }
+                        _vm.link_product_id = product.product_id
+                        _vm.product_search = '';
+                        _vm.products = [];
                     }
-
-                    if (data.title == "") {
-                        return layer.msg('标题不能为空');
+                },
+                removeRelatedProduct:function(){
+                    var _vm = this;
+                    _vm.link_product = {
+                        product_id:'',
+                        name:''
+                    }
+                    _vm.link_product_id = '';
+                },
+                searchProduct:_.debounce(function(){
+                    var _vm = this;
+                    _vm.isAjax = true;
+                    $.get('{{product_search_url|raw}}&token={{token}}',{
+                        search:_vm.product_search
+                    },function(res){
+                        _vm.isAjax = false;
+                        if(res.products){
+                            _vm.products = res.products
+                        }
+                    },'json')
+                },500),
+                submit: function() {
+                    var data = {
+                        id:this.id,
+                        category_id:this.category_id,
+                        name:this.name,
+                        link_product_id:this.link_product_id,
+                        parameter:this.parameter,
+                        blueprint:$('#input-blueprint').val(),
+                        link_boards:this.link_boards,
+                        sort_order:this.sort_order
+                    }
+                    if (data.name == "") {
+                        return layer.msg('产品名称不能为空');
                     }
 
                     $.post('{{submit_url|raw}}&token={{token}}', data, function(res) {

@@ -49,6 +49,7 @@ class ControllerConfigurationTypical extends Controller{
     }
     
     public function update(){
+        $this->document->setTitle('Configuration Typical Update');
         $this->load->model('configuration/typical');
         $url = '';
         $data['breadcrumbs'] = [];
@@ -65,7 +66,7 @@ class ControllerConfigurationTypical extends Controller{
         $data['submit_url'] = $this->url->link('configuration/typical/update');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_configuration_category->update($post);
+            $rs = $this->model_configuration_typical->update($post);
             $this->response->jsonOutput($rs);
         }else{
             $id = $this->request->get['id'];
@@ -84,17 +85,18 @@ class ControllerConfigurationTypical extends Controller{
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
-        $data['back_url'] = $this->url->link('configuration/category/index');
+        $data['back_url'] = $this->url->link('configuration/typical/index');
         $data['token'] = $this->session->data['token'];
+        $data['product_search_url'] = $this->url->link('configuration/typical/getProduct');
         if (!empty($data['typical']['image']) && is_file(DIR_IMAGE . $data['typical']['image'])) {
-			$data['thumb'] = $this->model_tool_image->resize($data['typical']['image'], 100, 100);
+			$data['typical']['thumb'] = $this->model_tool_image->resize($data['typical']['image'], 100, 100);
 		} else {
-			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+			$data['typical']['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
         if (!empty($data['typical']['blueprint']) && is_file(DIR_IMAGE . $data['typical']['blueprint'])) {
-			$data['thumb_blueprint'] = $this->model_tool_image->resize($data['category']['image'], 100, 100);
+			$data['typical']['thumb_blueprint'] = $this->model_tool_image->resize($data['category']['image'], 100, 100);
 		} else {
-			$data['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+			$data['typical']['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
         $data['categorys'] = $this->model_configuration_category->getList();
         $data['boards'] = json_encode($this->model_configuration_board->getList());
@@ -148,5 +150,36 @@ class ControllerConfigurationTypical extends Controller{
         $data['lists'] = json_encode($data['lists']);
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('configuration/typical_list', $data));
+    }
+
+
+
+    public function getProduct(){
+        $this->load->model('catalog/product');
+        $this->load->model('tool/image');
+        $search = $this->request->get['search'];
+        if($search == '@'){
+            $result = $this->model_catalog_product->getProducts([
+                'start'=>0,
+                'limit'=>5
+            ]);
+        }else{
+            $result = $this->model_catalog_product->getProducts([
+                'filter_name'=>$search,
+                'start'=>0,
+                'limit'=>5
+            ]);
+        }
+        foreach($result as &$product){
+            if (!empty($product['image']) && is_file(DIR_IMAGE . $product['image'])) {
+                $product['thumb'] = $this->model_tool_image->resize($product['image'], 100, 100);
+            } else {
+                $product['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+            }
+        }
+        
+        $this->response->jsonOutput([
+            'products'=>$result
+        ]);
     }
 }

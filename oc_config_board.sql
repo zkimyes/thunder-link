@@ -90,7 +90,6 @@ DROP TABLE IF EXISTS `oc_config_typical`;
 CREATE TABLE `oc_config_typical` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
-  `image` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `link_product_id` int(11) NOT NULL,
@@ -100,14 +99,3 @@ CREATE TABLE `oc_config_typical` (
   `sort_order` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of oc_config_typical
--- ----------------------------
-INSERT INTO `oc_config_typical` VALUES ('12', '48', '', 'OSN 1500B Gold Line', 'OSN 1500B Gold Line configuration.&lt;/br&gt;\r\nOSN 1500B Subrack with 2*PIU, 1*AUX, 2*SSQ2CXL4(S-4.1), 1*R1SLQ1(S-1.1), 1*R1EFT4&lt;/br&gt;, 1*PD1(D75S)', '565', '', '', '', '3');
-INSERT INTO `oc_config_typical` VALUES ('13', '43', '', 'OSN 3500 Gold Line', 'OSN 3500 Gold Line configuration, \r\nOSN 3500 Subrack with redundancy 1+1 SXCSA, 1+1 GSCC, 2*SLD64, 1*SLQ16, 1*SLQ4, 1*SLO1, 1*EGS4, 1*EFS0, 1*PQ1', '0', '', '', '', '1');
-INSERT INTO `oc_config_typical` VALUES ('14', '43', '', 'OSN 3500 Silver Line', 'OSN 3500 Silver Line', '0', '', '', '', '2');
-INSERT INTO `oc_config_typical` VALUES ('15', '43', '', 'OSN 3500 Platinum Line', 'OSN 3500 Platinum Line', '0', '', '', '', '3');
-INSERT INTO `oc_config_typical` VALUES ('16', '43', '', 'OSN 3500 Jade Line', 'OSN 3500 Jade Line', '0', '', '', '', '4');
-INSERT INTO `oc_config_typical` VALUES ('17', '44', 'catalog/20150626002613.png', '111112', '&lt;p&gt;22222222222&lt;/p&gt;', '565', '', '', '', '1231');
-INSERT INTO `oc_config_typical` VALUES ('19', '44', '', 'asdasdasd', '&lt;p&gt;&lt;img src=&quot;/image/editor/image/20160424/1461495734497060.jpg&quot; title=&quot;1461495734497060.jpg&quot; alt=&quot;235102-130G112002730.jpg&quot;/&gt;&lt;/p&gt;', '566', '', '', '', '0');
