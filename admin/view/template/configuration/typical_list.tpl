@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="list in category">
+                            <tr v-for="list in typicals">
                                 <td><input :checked="checked" type="checkbox" /></td>
                                 <td>${list.id}</td>
                                 <td>${list.name}</td>
@@ -64,7 +64,7 @@
 </div>
 <script>
     Vue.config.devtools = true
-    var category = JSON.parse('{{lists|raw}}');
+    var typicals = JSON.parse('{{lists|raw}}');
 
     var delt = function(id) {
         $.post("{{delt_url|raw}}".replace("amp;", '') + '&token={{token}}', {
@@ -78,7 +78,7 @@
         delimiters: ['${', '}'],
         el: '#content',
         data: {
-            category: category,
+            typicals: typicals,
             id: null,
             checked: false
         },

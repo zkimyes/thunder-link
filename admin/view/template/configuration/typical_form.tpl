@@ -81,14 +81,13 @@
                                     <li style="text-indent:2em;" v-if="boardResult == ''">没有结果</li>
                                 </ul>
                                 <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <div v-for="board in link_boards" style="margin-bottom:5px;overflow:hidden;" >
+                                    <div v-for="board in link_boards" style="margin-bottom:5px;overflow:hidden;">
                                         <div class="col-md-7">
                                             <span class="label label-default" v-if="board.type == 1">系统板</span>
-                                            <span class="label label-success" v-else>配置板</span>
-                                            ${board.name}
+                                            <span class="label label-success" v-else>配置板</span> ${board.name}
                                         </div>
                                         <div class="col-md-1"><input v-number style="width:100%;" style="padding:0" v-model="board.qty" placeholder="数量" type="text"></div>
-                                        <div class="col-md-2"><button class="btn btn-xs btn-danger" ><i class="fa fa-remove"></i></button></div>
+                                        <div class="col-md-2"><button class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></button></div>
                                     </div>
                                 </div>
                             </div>
@@ -106,12 +105,11 @@
     </div>
     <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
     <script>
-        console.log(_);
         Vue.config.devtools = true;
-        Vue.directive('number',function(el){
-            if(isNaN(el.value)){
+        Vue.directive('number', function(el) {
+            if (isNaN(el.value)) {
                 el.value = 0;
-            }else{
+            } else {
                 el.value = parseInt(el.value);
             }
         })
@@ -133,33 +131,33 @@
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
-                search:'',
-                link_boards:[],
-                product_search:'',
-                products:[],
-                link_product:{
-                    product_id:'{{typical.link_product_id}}',
-                    name:'{{typical.product_name}}',
-                    image:'{{typical.image}}',
-                    thumb:'{{typical.thumb}}'
+                search: '',
+                link_boards: JSON.parse('{{typical.link_boards|raw}}'),
+                product_search: '',
+                products: [],
+                link_product: {
+                    product_id: '{{typical.link_product_id}}',
+                    name: '{{typical.product_name}}',
+                    image: '{{typical.image}}',
+                    thumb: '{{typical.thumb}}'
                 },
-                boards:JSON.parse('{{boards|raw}}'),
-                isAjax:false
+                boards: JSON.parse('{{boards|raw}}'),
+                isAjax: false
             },
-            computed:{
-                boardResult:function(){
+            computed: {
+                boardResult: function() {
                     var _vm = this;
                     var data;
-                    if(_vm.search != ''){
-                       data  = _vm.boards.filter(function(item){
-                            return item.name.toLocaleUpperCase().indexOf(_vm.search.toLocaleUpperCase())>=0
+                    if (_vm.search != '') {
+                        data = _vm.boards.filter(function(item) {
+                            return item.name.toLocaleUpperCase().indexOf(_vm.search.toLocaleUpperCase()) >= 0
                         })
                     }
 
-                    if(_vm.search == '@'){
+                    if (_vm.search == '@') {
                         data = _vm.boards;
                     }
-                    
+
                     return data
                 }
             },
@@ -177,62 +175,62 @@
                         return key != index
                     })
                 },
-                choose:function(choosed){
+                choose: function(choosed) {
                     var _vm = this;
-                    if(choosed){
-                        var data = _vm.link_boards.filter(function(item){
+                    if (choosed) {
+                        var data = _vm.link_boards.filter(function(item) {
                             return item.id != choosed.id
                         }).concat(choosed);
-                        data.sort(function(a,b){
-                            return a.type-b.type
+                        data.sort(function(a, b) {
+                            return a.type - b.type
                         })
                         _vm.link_boards = data;
                         _vm.search = '';
                     }
                 },
-                chooseProduct:function(product){
+                chooseProduct: function(product) {
                     var _vm = this;
-                    if(product){
+                    if (product) {
                         _vm.link_product = {
-                            product_id:product.product_id,
-                            name:product.name,
-                            thumb:product.thumb
+                            product_id: product.product_id,
+                            name: product.name,
+                            thumb: product.thumb
                         }
                         _vm.link_product_id = product.product_id
                         _vm.product_search = '';
                         _vm.products = [];
                     }
                 },
-                removeRelatedProduct:function(){
+                removeRelatedProduct: function() {
                     var _vm = this;
                     _vm.link_product = {
-                        product_id:'',
-                        name:''
+                        product_id: '',
+                        name: ''
                     }
                     _vm.link_product_id = '';
                 },
-                searchProduct:_.debounce(function(){
+                searchProduct: _.debounce(function() {
                     var _vm = this;
                     _vm.isAjax = true;
-                    $.get('{{product_search_url|raw}}&token={{token}}',{
-                        search:_vm.product_search
-                    },function(res){
+                    $.get('{{product_search_url|raw}}&token={{token}}', {
+                        search: _vm.product_search
+                    }, function(res) {
                         _vm.isAjax = false;
-                        if(res.products){
+                        if (res.products) {
                             _vm.products = res.products
                         }
-                    },'json')
-                },500),
+                    }, 'json')
+                }, 500),
                 submit: function() {
                     var data = {
-                        id:this.id,
-                        category_id:this.category_id,
-                        name:this.name,
-                        link_product_id:this.link_product_id,
-                        parameter:this.parameter,
-                        blueprint:$('#input-blueprint').val(),
-                        link_boards:this.link_boards,
-                        sort_order:this.sort_order
+                        id: this.id,
+                        category_id: this.category_id,
+                        name: this.name,
+                        link_product_id: this.link_product_id,
+                        parameter: this.parameter,
+                        blueprint: $('#input-blueprint').val(),
+                        link_boards: this.link_boards,
+                        sort_order: this.sort_order
                     }
                     if (data.name == "") {
                         return layer.msg('产品名称不能为空');

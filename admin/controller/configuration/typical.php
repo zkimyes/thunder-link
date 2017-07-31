@@ -8,9 +8,9 @@ class ControllerConfigurationTypical extends Controller{
     }
     
     public function delete(){
-        $this->load->model('configuration/category');
+        $this->load->model('configuration/typical');
         if (isset($this->request->post['selected'])) {
-            $this->model_configuration_category->delt($this->request->post['selected']);
+            $this->model_configuration_typical->delt($this->request->post['selected']);
             $this->response->jsonOutput([
             'status'=>'1',
             'info'=>'success'
@@ -25,9 +25,10 @@ class ControllerConfigurationTypical extends Controller{
     
     
     public function add(){
-        $this->load->model('configuration/Typical');
+        $this->document->setTitle('Configuration Typical Add');
+        $this->load->model('configuration/typical');
         $url = '';
-        $data['submit_url'] = $this->url->link('configuration/category/add');
+        $data['submit_url'] = $this->url->link('configuration/typical/add');
         $data['breadcrumbs'] = [];
         
         $data['breadcrumbs'][] = array(
@@ -36,12 +37,12 @@ class ControllerConfigurationTypical extends Controller{
         );
         
         $data['breadcrumbs'][] = array(
-        'text' => 'Configuration Category',
-        'href' => $this->url->link('configuration/category', 'token=' . $this->session->data['token'] . $url, true)
+        'text' => 'Configuration Typical Add',
+        'href' => $this->url->link('configuration/typical', 'token=' . $this->session->data['token'] . $url, true)
         );
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
-            $rs = $this->model_configuration_category->add($post);
+            $rs = $this->model_configuration_typical->add($post);
             $this->response->jsonOutput($rs);
         }else{
             $this->form($data);
@@ -130,23 +131,22 @@ class ControllerConfigurationTypical extends Controller{
         
         $this->load->model('configuration/typical');
         $this->load->model('tool/image');
-        $categorys = $this->model_configuration_typical->getList();
+        $typicals = $this->model_configuration_typical->getList();
         
         $data['lists'] = [];
-        foreach($categorys as &$category){
-            if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
-                $category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
+        foreach($typicals as &$typical){
+            if (!empty($typical['image']) && is_file(DIR_IMAGE . $typical['image'])) {
+                $typical['thumb'] = $this->model_tool_image->resize($typical['image'], 50, 50);
             } else {
-                $category['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
+                $typical['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
             }
-            if (!empty($category['blueprint']) && is_file(DIR_IMAGE . $category['blueprint'])) {
-                $category['thumb_blueprint'] = $this->model_tool_image->resize($category['blueprint'], 50, 50);
+            if (!empty($typical['blueprint']) && is_file(DIR_IMAGE . $typical['blueprint'])) {
+                $typical['thumb_blueprint'] = $this->model_tool_image->resize($typical['blueprint'], 50, 50);
             } else {
-                $category['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 50, 50);
+                $typical['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 50, 50);
             }
-            $data['lists'][] = $category;
+            $data['lists'][] = $typical;
         }
-        
         $data['lists'] = json_encode($data['lists']);
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('configuration/typical_list', $data));

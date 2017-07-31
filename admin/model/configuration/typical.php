@@ -2,27 +2,25 @@
 class ModelConfigurationTypical extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
-        $typical = $this->db->query('select a.id,a.`name`,a.image,a.sort_order,a.blueprint,c.`name` as category_name from oc_config_typical as a left join oc_config_category as c on c.category_id = a.category_id');
+        $typical = $this->db->query('SELECT t.id,t.name,c.name as category_name, p.image FROM `oc_config_typical` as t LEFT JOIN oc_config_category as c on c.category_id = t.category_id LEFT JOIN oc_product as p on p.product_id = t.link_product_id');
         return $typical->rows;
     }
 
     public function add($data = []){
-        $keys = join(',',array_keys($data));
-        $values = join(',',array_values($data));
         $rs = $this->db->query("
-            INSERT INTO `oc_config_category`
-            (`name`, `image`, `sort_order`, `description`, `meta_title`, `meta_description`, `meta_keyword`, `banner`)
-             VALUES 
-             (
-                 '".$this->db->escape($data['name'])."',
-                 ".intval($data['sort_order']).",
-                 '".$this->db->escape($data['description'])."',
-                 '".$this->db->escape($data['meta_title'])."',
-                 '".$this->db->escape($data['meta_description'])."',
-                 '".$this->db->escape($data['meta_keyword'])."',
-                 ".intval($data['banner'])."
-                 )
-        ");
+            INSERT INTO `oc_config_typical`
+            (`category_id`, `name`, `description`, `link_product_id`, `parameter`, `blueprint`, `link_boards`, `sort_order`) 
+            VALUES (
+                ".intval($data['category_id']).",
+                '".$this->db->escape($data['name'])."',
+                '',
+                ".intval($data['link_product_id']).",
+                '".$this->db->escape(json_encode($data['parameter'],true))."',
+                '".$this->db->escape($data['blueprint'])."',
+                '".$this->db->escape(json_encode($data['link_boards'],true))."',
+                ".intval($data['sort_order'])."
+                )
+            ");
         return $rs;
     }
 
@@ -59,7 +57,7 @@ class ModelConfigurationTypical extends Model {
     public function delt($id=[]){
         if(count($id)>0){
             $id = join(',',$id);
-            $rs = $this->db->query("delete from oc_config_category where category_id in (".$id.")");
+            $rs = $this->db->query("delete from oc_config_typical where id in (".$id.")");
             return $rs;
         }
         return false;
