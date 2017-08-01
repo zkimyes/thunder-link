@@ -2640,3 +2640,7 @@
 2017-07-31 15:56:09 - PHP Notice:  Undefined index: list in /projects/thunder-link/admin/controller/configuration/typical.php on line 152
 2017-07-31 15:59:08 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1235
 2017-07-31 15:59:13 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1235
+2017-08-01 1:48:37 - PHP Notice:  Undefined index: category in E:\php\php_projects\thunder-link\admin\controller\configuration\typical.php on line 98
+2017-08-01 1:50:21 - PHP Notice:  Undefined index: category in E:\php\php_projects\thunder-link\admin\controller\configuration\typical.php on line 98
+2017-08-01 1:50:25 - PHP Notice:  Undefined index: category in E:\php\php_projects\thunder-link\admin\controller\configuration\typical.php on line 98
+2017-08-01 1:51:45 - PHP Notice:  Undefined index: category in E:\php\php_projects\thunder-link\admin\controller\configuration\typical.php on line 98

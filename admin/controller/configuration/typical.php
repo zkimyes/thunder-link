@@ -95,7 +95,7 @@ class ControllerConfigurationTypical extends Controller{
 			$data['typical']['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
         if (!empty($data['typical']['blueprint']) && is_file(DIR_IMAGE . $data['typical']['blueprint'])) {
-			$data['typical']['thumb_blueprint'] = $this->model_tool_image->resize($data['category']['image'], 100, 100);
+			$data['typical']['thumb_blueprint'] = $this->model_tool_image->resize($data['typical']['blueprint'], 100, 100);
 		} else {
 			$data['typical']['thumb_blueprint'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}

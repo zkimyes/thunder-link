@@ -2,7 +2,7 @@
 class ModelConfigurationTypical extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
-        $typical = $this->db->query('SELECT t.id,t.name,c.name as category_name, p.image FROM `oc_config_typical` as t LEFT JOIN oc_config_category as c on c.category_id = t.category_id LEFT JOIN oc_product as p on p.product_id = t.link_product_id');
+        $typical = $this->db->query('SELECT t.id,t.name,t.blueprint,t.sort_order,c.name as category_name, p.image FROM `oc_config_typical` as t LEFT JOIN oc_config_category as c on c.category_id = t.category_id LEFT JOIN oc_product as p on p.product_id = t.link_product_id');
         return $typical->rows;
     }
 

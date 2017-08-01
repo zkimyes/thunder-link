@@ -76,7 +76,7 @@
                             <div style="position:relative">
                                 <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." id="input-related" v-model="search" class="form-control" />
                                 <ul class="dropdown-menu" v-if="search != ''" style="left:0;top:32px;display:block;">
-                                    <li @click="choose({id:board.id,name:board.name,type:board.type,qty:0})" v-for="board in boardResult"><a href="javascript:;">${board.name}</a>
+                                    <li @click="chooseBoard({id:board.id,name:board.name,type:board.type,qty:0})" v-for="board in boardResult"><a href="javascript:;">${board.name}</a>
                                     </li>
                                     <li style="text-indent:2em;" v-if="boardResult == ''">没有结果</li>
                                 </ul>
@@ -87,9 +87,16 @@
                                             <span class="label label-success" v-else>配置板</span> ${board.name}
                                         </div>
                                         <div class="col-md-1"><input v-number style="width:100%;" style="padding:0" v-model="board.qty" placeholder="数量" type="text"></div>
-                                        <div class="col-md-2"><button class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></button></div>
+                                        <div class="col-md-2"><button @click="removeBoard(board)" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></button></div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-related">排序值</label>
+                            <div>
+                                <input class="form-control" v-model="sort_order" placeholder="输入排序值" type="text">
                             </div>
                         </div>
                     </div>
@@ -122,12 +129,7 @@
                 image: '{{typical.image}}',
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
-                parameter: [{
-                    name: '',
-                    min: 0,
-                    value: 1,
-                    max: 1
-                }],
+                parameter: JSON.parse('{{typical.parameter|raw}}'),
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
@@ -175,7 +177,7 @@
                         return key != index
                     })
                 },
-                choose: function(choosed) {
+                chooseBoard: function(choosed) {
                     var _vm = this;
                     if (choosed) {
                         var data = _vm.link_boards.filter(function(item) {
@@ -187,6 +189,11 @@
                         _vm.link_boards = data;
                         _vm.search = '';
                     }
+                },
+                removeBoard:function(board){
+                    this.link_boards = this.link_boards.filter(function(item) {
+                        return item.id != board.id
+                    })
                 },
                 chooseProduct: function(product) {
                     var _vm = this;
@@ -234,6 +241,28 @@
                     }
                     if (data.name == "") {
                         return layer.msg('产品名称不能为空');
+                    }
+
+                    if(data.blueprint == ""){
+                        return layer.msg("产品空配置图必选");
+                    }
+
+                    if(data.blueprint == ""){
+                        return layer.msg("产品空配置图必选");
+                    }
+
+                    if(data.link_boards.length == 0){
+                        return layer.msg("产品板卡必选");
+                    }else{
+                        var flag = false;
+                        for(var i=0;i<data.link_boards.length;i++){
+                            if(data.link_boards[i].type == 1){
+                                flag = true
+                            }
+                        }
+                        if(!flag){
+                            layer.msg('必选系统板卡');
+                        }
                     }
 
                     $.post('{{submit_url|raw}}&token={{token}}', data, function(res) {
