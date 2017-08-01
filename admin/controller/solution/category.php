@@ -34,6 +34,14 @@ class ControllerSolutionCategory extends Controller{
     
     public function add(){
         $this->load->model('solution/category');
+        $data['breadcrumbs'][] = [
+        'text'=>'Home',
+        'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
+        ];
+        $data['breadcrumbs'][] = [
+        'text'=>'Solution Category Add',
+        'href'=>$this->url->link('solution/category/add','token='.$this->session->data['token'])
+        ];
         $data['submit_url'] = $this->url->link('solution/category/add');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
@@ -52,7 +60,7 @@ class ControllerSolutionCategory extends Controller{
         ];
         $data['breadcrumbs'][] = [
         'text'=>'Solution Category Update',
-        'href'=>''
+        'href'=>$this->url->link('solution/category/update','id='.$this->request->get['id'].'&token='.$this->session->data['token'])
         ];
         $data['submit_url'] = $this->url->link('solution/category/update');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
@@ -92,8 +100,8 @@ class ControllerSolutionCategory extends Controller{
         );
         
         $data['breadcrumbs'][] = array(
-        'text' => $this->language->get('heading_title'),
-        'href' => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, true)
+        'text' => 'Solution Category',
+        'href' => $this->url->link('solution/category', 'token=' . $this->session->data['token'] . $url, true)
         );
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');

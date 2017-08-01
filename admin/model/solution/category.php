@@ -7,8 +7,6 @@ class ModelSolutionCategory extends Model {
     }
 
     public function add($data = []){
-        $keys = join(',',array_keys($data));
-        $values = join(',',array_values($data));
         $rs = $this->db->query("
             insert into oc_solution_category 
             (
