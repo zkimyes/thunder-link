@@ -44,7 +44,7 @@
                                     <li style="text-indent:2em;" v-if="isAjax == false && product_search != '' && products.length ==0">没有结果</li>
                                 </ul>
                                 <div class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <div v-if="link_product.product_id != ''">
+                                    <div v-if="link_product">
                                         <div class="col-md-3">
                                             <img :src="link_product.thumb" alt="">
                                         </div>
@@ -129,20 +129,20 @@
                 image: '{{typical.image}}',
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
-                parameter: JSON.parse('{{typical.parameter|raw}}'),
+                parameter: '{{typical.parameter|raw}}'?JSON.parse('{{typical.parameter|raw}}'):'',
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
                 search: '',
-                link_boards: JSON.parse('{{typical.link_boards|raw}}'),
+                link_boards: '{{typical.link_boards|raw}}'?JSON.parse('{{typical.link_boards|raw}}'):[],
                 product_search: '',
                 products: [],
-                link_product: {
+                link_product:'{{typical.product_name}}'?{
                     product_id: '{{typical.link_product_id}}',
                     name: '{{typical.product_name}}',
                     image: '{{typical.image}}',
                     thumb: '{{typical.thumb}}'
-                },
+                }:'',
                 boards: JSON.parse('{{boards|raw}}'),
                 isAjax: false
             },

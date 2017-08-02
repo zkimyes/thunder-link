@@ -1,10 +1,10 @@
 <?php
 
 // HTTP
-define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST']);
+define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // HTTPS
-define('HTTPS_SERVER', 'https://'.$_SERVER['HTTP_HOST']);
+define('HTTPS_SERVER', 'https://'.$_SERVER['HTTP_HOST'].'/');
 $dir = $_SERVER['DOCUMENT_ROOT'];
 $dir = str_replace('\\','/',$dir);
 // DIR

@@ -1,95 +1,54 @@
 <?php
-class ControllerConfigureIndex extends Controller {
-	public function index() {
-		$this->document->setTitle($this->config->get('config_meta_title'));
-		$this->document->setDescription($this->config->get('config_meta_description'));
-		$this->document->setKeywords($this->config->get('config_meta_keyword'));
-		$this->document->addStyle('catalog/view/theme/default/stylesheet/configure.css');
-		$this->document->addScript('catalog/view/javascript/app/configure.js');
-		if (isset($this->request->get['route'])) {
-			$this->document->addLink(HTTP_SERVER, 'canonical');
-		}
+class ControllerConfigurationIndex extends Controller {
+    public function index() {
+        $this->document->setTitle($this->config->get('config_meta_title'));
+        $this->document->setDescription($this->config->get('config_meta_description'));
+        $this->document->setKeywords($this->config->get('config_meta_keyword'));
+        $this->document->addStyle('catalog/view/theme/default/stylesheet/configure.css');
+        $this->document->addScript('catalog/view/javascript/app/configure.js');
+        
+        $this->load->model('tool/image');
+        $this->load->model('configuration/category');
+        $this->load->model('configuration/typical');
+        $data['column_left'] = $this->load->controller('common/column_left');
+        $data['column_right'] = $this->load->controller('common/column_right');
+        $data['content_top'] = $this->load->controller('common/content_top');
+        $data['content_bottom'] = null;
+        $data['footer'] = $this->load->controller('common/footer');
+        $data['header'] = $this->load->controller('common/header');
+        
+        $data['categorys'] = $this->model_configuration_category->getList();
+        
+        foreach($data['categorys'] as &$category){
+            if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
+                $category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
+            } else {
+                $category['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
+            }
+        }
+        
+        if(!empty($this->request->get['category_id'])){
+            $data['category_id'] = $this->request->get['category_id'];
+        }else{
+            $data['category_id'] = count($data['categorys'])>0?$data['categorys'][0]['category_id']:null;
+        }
+        
 
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
-		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = null;
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
+		$data['typicals'] = $this->model_configuration_typical->getList($condition=[
+			'category_id'=>$data['category_id']
+		]);
 
+		foreach($data['typicals'] as &$typical){
+            if (!empty($typical['image']) && is_file(DIR_IMAGE . $typical['image'])) {
+                $typical['thumb'] = $this->model_tool_image->resize($typical['image'], 228, 180);
+            } else {
+                $typical['thumb'] = $this->model_tool_image->resize('no_image.png', 228, 180);
+            }
+        }
 
-
-	   $data['config_typical'] = [
-		   '0'=>[
-			   'name'=>'asdasd',
-			   'img-url'=>'/image/u672.png',
-			   'parameters'=>[
-				   '0'=>[
-					   'name'=>'Speed',
-					   'range'=>'40'
-				   ],
-				   '1'=>[
-					   'name'=>'Distance',
-					   'range'=>'50'
-				   ],
-				   '2'=>[
-					   'name'=>'SFP',
-					   'range'=>'66'
-				   ],
-				   '3'=>[
-					   'name'=>'SDFDFDF',
-					   'range'=>'30'
-				   ]
-			   ]
-		   ],
-		   '1'=>[
-			   'name'=>'asdas213123213d',
-			   'img-url'=>'/image/u672.png',
-			   'parameters'=>[
-				   '0'=>[
-					   'name'=>'Speed',
-					   'range'=>'40'
-				   ],
-				   '1'=>[
-					   'name'=>'Distance',
-					   'range'=>'50'
-				   ],
-				   '2'=>[
-					   'name'=>'SFP',
-					   'range'=>'66'
-				   ],
-				   '3'=>[
-					   'name'=>'SDFDFDF',
-					   'range'=>'30'
-				   ]
-			   ]
-		   ],
-		   '2'=>[
-			   'name'=>'asdas213123213d',
-			   'img-url'=>'/image/u672.png',
-			   'parameters'=>[
-				   '0'=>[
-					   'name'=>'Speed',
-					   'range'=>'40'
-				   ],
-				   '1'=>[
-					   'name'=>'Distance',
-					   'range'=>'50'
-				   ],
-				   '2'=>[
-					   'name'=>'SFP',
-					   'range'=>'66'
-				   ],
-				   '3'=>[
-					   'name'=>'SDFDFDF',
-					   'range'=>'30'
-				   ]
-			   ]
-		   ]
-	   ];
-
-
-		$this->response->setOutput($this->load->view('configure/index', $data));
-	}
-
+		var_dump($data['typicals']);
+        
+        $this->response->setOutput($this->load->view('configuration/index', $data));
+    }
+    
 }

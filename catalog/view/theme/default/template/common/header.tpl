@@ -207,7 +207,7 @@
                         <ul class="nav main-nav-bar">
                             <li><a href="{{home}}">Home</a></li>
                             <li><a href="{{support}}">Support</a></li>
-                            <li><a href="{{configure}}">Configure</a></li>
+                            <li><a href="{{configuration}}">Configure</a></li>
                             <li><a href="{{solution}}">Solution</a></li>
                             <li><a href="{{contact_us}}">Contact Us</a></li>
                             <li><a href="{{home}}">Blog</a></li>
