@@ -53,20 +53,20 @@ class ControllerSupportCategory extends Controller{
     
     public function update(){
         $this->load->model('support/category');
-        $data['breadcrumbs'][] = [
-        'text'=>'Home',
-        'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
-        ];
-        $data['breadcrumbs'][] = [
-        'text'=>'support Category Update',
-        'href'=>$this->url->link('support/category/update','id='.$this->request->get['id'].'&token='.$this->session->data['token'])
-        ];
         $data['submit_url'] = $this->url->link('support/category/update');
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             $post = $this->request->post;
             $rs = $this->model_support_category->update($post);
             $this->response->jsonOutput($rs);
         }else{
+            $data['breadcrumbs'][] = [
+            'text'=>'Home',
+            'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
+            ];
+            $data['breadcrumbs'][] = [
+            'text'=>'support Category Update',
+            'href'=>$this->url->link('support/category/update','id='.$this->request->get['id'].'&token='.$this->session->data['token'])
+            ];
             $id = $this->request->get['id'];
             if(!empty($id)){
                 $category = $this->model_support_category->find($id);

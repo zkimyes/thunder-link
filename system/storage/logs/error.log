@@ -2774,3 +2774,7 @@
 2017-08-02 21:39:22 - PHP Notice:  Undefined variable: config in G:\php_projects\thunder-link\catalog\view\theme\default\template\configuration\index.tpl on line 17
 2017-08-02 21:39:22 - PHP Notice:  Undefined variable: config in G:\php_projects\thunder-link\catalog\view\theme\default\template\configuration\index.tpl on line 21
 2017-08-02 21:39:22 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\catalog\view\theme\default\template\configuration\index.tpl on line 21
+2017-08-03 20:45:42 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
+2017-08-03 20:46:18 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
+2017-08-03 20:46:58 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
+2017-08-03 20:47:08 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62

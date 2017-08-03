@@ -1,5 +1,5 @@
 <?php
-class ModelSupportArticle extends Model {
+class ModelSupportTag extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
         $artilces = $this->db->query('
@@ -66,5 +66,14 @@ class ModelSupportArticle extends Model {
             return $rs;
         }
         return false;
+    }
+
+
+    public function findByName($name=''){
+        if(!empty($name)){
+            $rs = $this->db->query("
+                select * from oc_support_tag where name like '%'".$this->db->escape($name)."'%';
+            ");
+        }
     }
 }

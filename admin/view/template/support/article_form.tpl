@@ -3,7 +3,7 @@
 <div id="content">
     <div class="page-header">
         <div class="container-fluid">
-            <h1>Solution Article</h1>
+            <h1>Support Article</h1>
             <ul class="breadcrumb">
                 <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                 <li>
@@ -34,7 +34,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Solution Category</label>
+                            <label>Support Category</label>
                             <select name="category_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for category in categorys %}
@@ -82,6 +82,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="input-related">Tags</label>
+                            <div>
+                                <input type="text" value="" placeholder="输入标签" class="form-control" />
+                                <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
+                                    <span title="点击清除" class="label label-info">asdas</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -94,9 +103,26 @@
         </div>
     </div>
     <script>
+        Vue.config.devtools = true
         var editor = CKEDITOR.replace( 'editor' );
+        var tags = [
+            {
+                id:'1',
+                name:'123'
+            }
+        ];
         $('[name="category_id"]').val("{{article.category_id}}");
         $('[name="banner_id"]').val("{{article.banner_id}}");
+
+        new Vue({
+            el: '#content',
+            delimiters: ['${', '}'],
+            data:{
+                tags:tags
+            }
+        })
+
+        
         function submit(){
             var _title = $('[name="title"]').val(),
                 _meta_keywords = $('[name="meta_keywords"]').val(),
@@ -123,7 +149,6 @@
                     related_product_ids:_related_product,
                     content:editor.getData()
                 },function(res){
-                    debugger
                     if(res){
                         location.href = "{{back_url}}&token={{token}}";
                     }

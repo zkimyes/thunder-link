@@ -137,4 +137,14 @@ class ControllerSupportArticle extends Controller{
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('support/article_list', $data));
     }
+
+
+    public function ajaxGetTagByName(){
+        $name = $this->request->get['name'];
+        $this->load->model('support/tag');
+        if(!empty($name)){
+            $tags = $this->model_support_tag->findByName($name);
+            $this->respose->jsonOutput($tags);
+        }
+    }
 }

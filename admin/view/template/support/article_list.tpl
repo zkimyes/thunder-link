@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="pull-right">
                 <a href="{{add_url}}&token={{token}}" data-toggle="tooltip" title="Article Add" class="btn btn-primary"><i class="fa fa-plus"></i></a></div>
-            <h1>Solution Article</h1>
+            <h1>Support Article</h1>
             <ul class="breadcrumb">
                 <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                 <li>
