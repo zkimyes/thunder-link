@@ -80,12 +80,20 @@
         </ul>
     </li>
     <li id="configuration">
-        <a class="parent"><i class="fa fa-adn"></i> <span>configration</span></a>
+        <a class="parent"><i class="fa fa-adn"></i> <span>Configration</span></a>
         <ul>
-            <li><a href="{{config_category|raw}}">category</a></li>
-            <li><a href="{{config_typical|raw}}">typical</a></li>
-            <li><a href="{{config_board_type|raw}}">board type</a></li>
-            <li><a href="{{config_board|raw}}">board</a></li>
+            <li><a href="{{config_category|raw}}">Category</a></li>
+            <li><a href="{{config_typical|raw}}">Typical</a></li>
+            <li><a href="{{config_board_type|raw}}">Board Type</a></li>
+            <li><a href="{{config_board|raw}}">Board</a></li>
+        </ul>
+    </li>
+    <li id="support">
+        <a class="parent"><i class="fa fa-gg" aria-hidden="true"></i> <span>Support</span></a>
+        <ul>
+            <li><a href="{{support_category|raw}}">Category</a></li>
+            <li><a href="{{support_article|raw}}">Article</a></li>
+            <li><a href="{{support_tags|raw}}">Tag</a></li>
         </ul>
     </li>
     <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>

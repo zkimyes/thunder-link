@@ -218,7 +218,9 @@ class ControllerCommonMenu extends Controller {
 		$data['config_typical'] = $this->url->link('configuration/typical','token='.$this->session->data['token'],true);
 		$data['config_board'] = $this->url->link('configuration/board','token='.$this->session->data['token'],true);
 		$data['config_board_type'] = $this->url->link('configuration/board_type','token='.$this->session->data['token'],true);
-
+		$data['support_category'] = $this->url->link('support/category','token='.$this->session->data['token'],true);
+		$data['support_article'] = $this->url->link('support/article','token='.$this->session->data['token'],true);
+		$data['support_tags'] = $this->url->link('support/tags','token='.$this->session->data['token'],true);
 		return $this->load->view('common/menu', $data);
 	}
 }
