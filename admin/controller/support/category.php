@@ -100,15 +100,15 @@ class ControllerSupportCategory extends Controller{
         
         $data['breadcrumbs'][] = array(
         'text' => 'Support Category',
-        'href' => $this->url->link('support/support', 'token=' . $this->session->data['token'] . $url, true)
+        'href' => $this->url->link('support/category/add', 'token=' . $this->session->data['token'] . $url, true)
         );
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         
-        $data['add_url'] = $this->url->link('support/support/add');
-        $data['update_url'] = $this->url->link('support/support/update');
-        $data['delt_url'] = $this->url->link('support/support/delete');
+        $data['add_url'] = $this->url->link('support/category/add');
+        $data['update_url'] = $this->url->link('support/category/update');
+        $data['delt_url'] = $this->url->link('support/category/delete');
         
         $this->load->model('support/category');
         $supports = $this->model_support_category->getList();

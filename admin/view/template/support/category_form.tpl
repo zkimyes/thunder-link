@@ -4,7 +4,7 @@
     <div class="page-header">
         <div class="container-fluid">
             <h1>
-                Solution Category
+                Support Category
             </h1>
             <ul class="breadcrumb">
                 <?php foreach ($breadcrumbs as $breadcrumb) { ?>
