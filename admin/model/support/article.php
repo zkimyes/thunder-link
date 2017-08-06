@@ -3,15 +3,14 @@ class ModelSupportArticle extends Model {
 
     public function getList($condition=[],$field=[],$order=""){
         $artilces = $this->db->query('
-            select a.title,a.id,a.createAt,c.title as category_name,a.image from oc_support_article as a left join oc_support_category as c
-            on c.id = a.category_id;
+            select * from oc_support_article
         ');
         return $artilces->rows;
     }
 
     public function add($data = []){
         if(!empty($data)){
-            $rs = $this->db->query("
+            $this->db->query("
                 insert into oc_support_article (
                     title,category_id,meta_title,meta_keywords,meta_desc,summary,content,image,banner_id,related_product_ids,createAt
                 ) values
@@ -29,6 +28,12 @@ class ModelSupportArticle extends Model {
                     '".date('Y-m-d H:i:s')."'
                 )
             ");
+            $support_id = $this->db->getLastId();
+            $sql = "insert into oc_support_tag_relative (support_id,tag_id)";
+            foreach($tag_id in $data['tags_id']){
+                $sql .="(".intval($tag_id).",".intval($support_id).")"
+            }
+            $this->db->query();
             return $rs;
         }
         return false;
