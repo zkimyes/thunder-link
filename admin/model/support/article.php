@@ -30,10 +30,10 @@ class ModelSupportArticle extends Model {
             ");
             $support_id = $this->db->getLastId();
             $sql = "insert into oc_support_tag_relative (support_id,tag_id)";
-            foreach($tag_id in $data['tags_id']){
-                $sql .="(".intval($tag_id).",".intval($support_id).")"
+            foreach($data['tag_ids'] as $tag_id){
+                $sql .="(".intval($tag_id).",".intval($support_id)."),";
             }
-            $this->db->query();
+            $this->db->query($sql);
             return $rs;
         }
         return false;

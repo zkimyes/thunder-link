@@ -219,7 +219,7 @@
                 meta_desc: _meta_desc,
                 summary: _summary,
                 related_product_ids: _related_product,
-                tags: tags,
+                tag_ids: tags.map(item=>{return item.id}),
                 content: editor.getData()
             }, function(res) {
                 if (res) {
