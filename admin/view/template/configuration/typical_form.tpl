@@ -110,7 +110,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
     <script>
         Vue.config.devtools = true;
         Vue.directive('number', function(el) {
@@ -129,20 +128,20 @@
                 image: '{{typical.image}}',
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
-                parameter: '{{typical.parameter|raw}}'?JSON.parse('{{typical.parameter|raw}}'):'',
+                parameter: '{{typical.parameter|raw}}' ? JSON.parse('{{typical.parameter|raw}}') : '',
                 blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
                 search: '',
-                link_boards: '{{typical.link_boards|raw}}'?JSON.parse('{{typical.link_boards|raw}}'):[],
+                link_boards: '{{typical.link_boards|raw}}' ? JSON.parse('{{typical.link_boards|raw}}') : [],
                 product_search: '',
                 products: [],
-                link_product:'{{typical.product_name}}'?{
+                link_product: '{{typical.product_name}}' ? {
                     product_id: '{{typical.link_product_id}}',
                     name: '{{typical.product_name}}',
                     image: '{{typical.image}}',
                     thumb: '{{typical.thumb}}'
-                }:'',
+                } : '',
                 boards: JSON.parse('{{boards|raw}}'),
                 isAjax: false
             },
@@ -190,7 +189,7 @@
                         _vm.search = '';
                     }
                 },
-                removeBoard:function(board){
+                removeBoard: function(board) {
                     this.link_boards = this.link_boards.filter(function(item) {
                         return item.id != board.id
                     })
@@ -243,24 +242,24 @@
                         return layer.msg('产品名称不能为空');
                     }
 
-                    if(data.blueprint == ""){
+                    if (data.blueprint == "") {
                         return layer.msg("产品空配置图必选");
                     }
 
-                    if(data.blueprint == ""){
+                    if (data.blueprint == "") {
                         return layer.msg("产品空配置图必选");
                     }
 
-                    if(data.link_boards.length == 0){
+                    if (data.link_boards.length == 0) {
                         return layer.msg("产品板卡必选");
-                    }else{
+                    } else {
                         var flag = false;
-                        for(var i=0;i<data.link_boards.length;i++){
-                            if(data.link_boards[i].type == 1){
+                        for (var i = 0; i < data.link_boards.length; i++) {
+                            if (data.link_boards[i].type == 1) {
                                 flag = true
                             }
                         }
-                        if(!flag){
+                        if (!flag) {
                             layer.msg('必选系统板卡');
                         }
                     }

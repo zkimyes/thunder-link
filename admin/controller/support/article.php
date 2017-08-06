@@ -106,8 +106,8 @@ class ControllerSupportArticle extends Controller{
         $data['banners'] = $this->model_design_banner->getBanners();
 
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-
-
+        $data['ajaxGetTags'] = $this->url->link('support/tag/ajaxGetTagByName');
+        $data['ajaxAddTags'] = $this->url->link('support/tag/ajaxAddTag');
         $this->response->setOutput($this->load->view('support/article_form', $data));
     }
     

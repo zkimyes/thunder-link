@@ -2778,3 +2778,6 @@
 2017-08-03 20:46:18 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
 2017-08-03 20:46:58 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
 2017-08-03 20:47:08 - PHP Notice:  Undefined index: id in G:\php_projects\thunder-link\admin\controller\support\category.php on line 62
+2017-08-04 14:46:42 - PHP Notice:  Trying to get property of non-object in /projects/thunder-link/admin/controller/support/article.php on line 109
+2017-08-04 14:53:41 - PHP Unknown:  Object of class DB could not be converted to string in /projects/thunder-link/admin/model/support/tag.php on line 76
+2017-08-04 15:34:58 - PHP Notice:  Undefined index: name in /projects/thunder-link/admin/controller/support/tag.php on line 152

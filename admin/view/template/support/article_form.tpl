@@ -69,25 +69,32 @@
                             <label>Content</label>
                             <textarea class="form-control" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
                         </div>
-                       <div class="form-group">
+                        <div class="form-group">
                             <label for="input-related">Related Products</label>
                             <div>
                                 <input type="text" name="related" value="" placeholder="输入名字搜索产品" id="input-related" class="form-control" />
                                 <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
                                     <?php foreach ($product_relateds as $product_related) { ?>
-                                    <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_related['name']; ?>
-                                    <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
+                                    <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i>
+                                        <?php echo $product_related['name']; ?>
+                                        <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
                                     </div>
                                     <?php } ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div id="tags" class="form-group">
                             <label for="input-related">Tags</label>
-                            <div>
-                                <input type="text" value="" placeholder="输入标签" class="form-control" />
+                            <div style="position:relative">
+                                <input type="text" v-model="tag" @keyup="findTag()" @keyup.enter="addTag()" placeholder="输入标签" class="form-control" />
+                                <ul class="dropdown-menu" v-if="tag != ''" style="left:0;top:32px;display:block;">
+                                    <li @click="chooseTag(tag)" v-for="tag in tagList"><a href="javascript:;">${tag.name}</a>
+                                    </li>
+                                    <li v-if="isFetch" style="text-indent:2em;">检索中...</li>
+                                    <li style="text-indent:2em;" v-if="!isFetch && tagList == ''">没有结果,回车添加标签</li>
+                                </ul>
                                 <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <span title="点击清除" class="label label-info">asdas</span>
+                                    <span style="margin:0 5px 0 0;" v-for="tag in tags" title="点击清除" @click="removeTag(tag)" class="label label-info">${tag.name}</span>
                                 </div>
                             </div>
                         </div>
@@ -95,8 +102,8 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                      <button onclick="submit()" class="btn btn-primary">提交</button>
-                      <a href="{{back_url}}&token={{token}}" class="btn btn-default">取消</a>
+                        <button onclick="submit()" class="btn btn-primary">提交</button>
+                        <a href="{{back_url}}&token={{token}}" class="btn btn-default">取消</a>
                     </div>
                 </div>
             </div>
@@ -104,26 +111,91 @@
     </div>
     <script>
         Vue.config.devtools = true
-        var editor = CKEDITOR.replace( 'editor' );
-        var tags = [
-            {
-                id:'1',
-                name:'123'
-            }
-        ];
+        var editor = CKEDITOR.replace('editor');
+        var tags = [];
         $('[name="category_id"]').val("{{article.category_id}}");
         $('[name="banner_id"]').val("{{article.banner_id}}");
 
         new Vue({
-            el: '#content',
+            el: '#tags',
             delimiters: ['${', '}'],
-            data:{
-                tags:tags
+            data: {
+                tags: tags,
+                tagList: [],
+                tag: '',
+                isFetch: false
+            },
+            methods: {
+                removeTag: function(tag) {
+                    this.tags = this.tags.filter(function(item) {
+                        return item.id != tag.id;
+                    })
+                },
+                addTag: function() {
+                    var _vm = this;
+                    var flag = null;
+                    flag = _vm.tags.find(function(item) {
+                        return item.name == _vm.tag;
+                    })
+                    if (!flag) {
+                        $.get('{{ajaxGetTags|raw}}&token={{token}}', {
+                            name: _vm.tag
+                        }, function(res) {
+                            if (!res || res.length == 0) {
+                                $.post('{{ajaxAddTags|raw}}&token={{token}}', {
+                                    name: _vm.tag,
+                                    token: '{{token}}'
+                                }, function(rt) {
+                                    if (rt && rt.msg && rt.msg == 'succ') {
+                                        _vm.tags.push({
+                                            id: rt.id,
+                                            name: _vm.tag
+                                        })
+                                    } else {
+                                        return layer.msg('添加错误，请联系管理员')
+                                    }
+                                    _vm.tag = '';
+                                }, 'json')
+                            }
+                        }, 'json')
+                    }
+                },
+                findTag: _.debounce(function() {
+                    var _vm = this;
+                    var flag = null
+                    flag = _vm.tags.find(function(item) {
+                        return item.name == _vm.tag;
+                    })
+                    if (!flag) {
+                        _vm.isFetch = true;
+                        $.get('{{ajaxGetTags|raw}}&token={{token}}', {
+                            name: _vm.tag
+                        }, function(res) {
+                            _vm.isFetch = false;
+                            if (res && res.length > 0) {
+                                _vm.tagList = res;
+                            } else {
+                                _vm.tagList = []
+                            }
+                        }, 'json')
+                    }
+                }, 300),
+                chooseTag: function(tag) {
+                    var _vm = this;
+                    var flag = null;
+                    flag = _vm.tags.find(function(item) {
+                        return item.name == tag.name;
+                    })
+                    if (!flag) {
+                        _vm.tags.push(tag);
+                    }
+                    _vm.tag = '';
+                }
             }
         })
 
-        
-        function submit(){
+
+        function submit() {
             var _title = $('[name="title"]').val(),
                 _meta_keywords = $('[name="meta_keywords"]').val(),
                 _meta_desc = $('[name="meta_desc"]').val(),
@@ -133,26 +205,27 @@
                 _banner_id = $('[name="banner_id"]').val(),
                 _category_id = $('[name="category_id"]').val(),
                 _related_product = [];
-                 $('[name^="product_related"]').each(function(item){
-                   _related_product[item] = $(this).val();
-                })
-                _related_product = _related_product.join(',');
-                $.post('{{submit_url}}&token={{token}}',{
-                    id:_id,
-                    title:_title,
-                    image:_image,
-                    banner_id:_banner_id,
-                    category_id:_category_id,
-                    meta_keywords:_meta_keywords,
-                    meta_desc:_meta_desc,
-                    summary:_summary,
-                    related_product_ids:_related_product,
-                    content:editor.getData()
-                },function(res){
-                    if(res){
-                        location.href = "{{back_url}}&token={{token}}";
-                    }
-                })
+            $('[name^="product_related"]').each(function(item) {
+                _related_product[item] = $(this).val();
+            })
+            _related_product = _related_product.join(',');
+            $.post('{{submit_url}}&token={{token}}', {
+                id: _id,
+                title: _title,
+                image: _image,
+                banner_id: _banner_id,
+                category_id: _category_id,
+                meta_keywords: _meta_keywords,
+                meta_desc: _meta_desc,
+                summary: _summary,
+                related_product_ids: _related_product,
+                tags: tags,
+                content: editor.getData()
+            }, function(res) {
+                if (res) {
+                    location.href = "{{back_url}}&token={{token}}";
+                }
+            })
         }
 
 
@@ -160,7 +233,7 @@
         $('input[name=\'related\']').autocomplete({
             'source': function(request, response) {
                 $.ajax({
-                    url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+                    url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' + encodeURIComponent(request),
                     dataType: 'json',
                     success: function(json) {
                         response($.map(json, function(item) {

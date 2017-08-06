@@ -2,7 +2,7 @@
 /**
 * 客户支持文章管理
 */
-class ControllerSupportArticle extends Controller{
+class ControllerSupportTag extends Controller{
     public function index(){
         $this->document->setTitle("Solution Article");
         
@@ -144,7 +144,27 @@ class ControllerSupportArticle extends Controller{
         $this->load->model('support/tag');
         if(!empty($name)){
             $tags = $this->model_support_tag->findByName($name);
-            $this->respose->jsonOutput($tags);
+            $this->response->jsonOutput($tags);
+        }else{
+            $this->response->jsonOutput(false);
+        }
+    }
+
+    public function ajaxAddTag(){
+        $name = $this->request->post['name'];
+        $this->load->model('support/tag');
+        if(!empty($name)){
+            $res = $this->model_support_tag->add(['name'=>$name]);
+            if($res){
+                $id = $this->db->getLastId();
+                $this->response->jsonOutput([
+                    'id'=>$id,
+                    'msg'=>'succ'
+                ]);
+            }else{
+                $this->response->jsonOutput(false);
+            }
+            
         }
     }
 }
