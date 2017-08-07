@@ -94,7 +94,7 @@
                                     <li style="text-indent:2em;" v-if="!isFetch && tagList == ''">没有结果,回车添加标签</li>
                                 </ul>
                                 <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                                    <span style="margin:0 5px 0 0;" v-for="tag in tags" title="点击清除" @click="removeTag(tag)" class="label label-info">${tag.name}</span>
+                                    <span style="margin:0 5px 0 0;" v-for="tag in tags" title="点击清除" @click="removeTag(tag)" v-for="tag in tagList" class="label label-info">${tag.name}</span>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
     <script>
         Vue.config.devtools = true
         var editor = CKEDITOR.replace('editor');
-        var tags = [];
+        var tags = JSON.parse('{{article.tags|raw}}'||'[]');
         $('[name="category_id"]').val("{{article.category_id}}");
         $('[name="banner_id"]').val("{{article.banner_id}}");
 

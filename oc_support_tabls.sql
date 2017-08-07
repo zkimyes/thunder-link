@@ -1,35 +1,26 @@
--- phpMyAdmin SQL Dump
--- version 4.7.1
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: 2017-08-06 08:48:10
--- 服务器版本： 5.7.18
--- PHP Version: 5.6.30
+/*
+Navicat MySQL Data Transfer
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+Source Server         : 本地
+Source Server Version : 50505
+Source Host           : localhost:3306
+Source Database       : new_thunder
 
+Target Server Type    : MYSQL
+Target Server Version : 50505
+File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+Date: 2017-08-07 16:20:41
+*/
 
---
--- Database: `new_thunder`
---
+SET FOREIGN_KEY_CHECKS=0;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `oc_support_article`
---
-
+-- ----------------------------
+-- Table structure for `oc_support_article`
+-- ----------------------------
+DROP TABLE IF EXISTS `oc_support_article`;
 CREATE TABLE `oc_support_article` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `meta_title` varchar(255) DEFAULT NULL,
@@ -40,118 +31,88 @@ CREATE TABLE `oc_support_article` (
   `createAt` datetime DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `banner_id` int(11) DEFAULT NULL,
-  `related_product_ids` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `related_product_ids` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of oc_support_article
+-- ----------------------------
+INSERT INTO `oc_support_article` VALUES ('2', '126', 'asdasdasdasdasdasdasds', 'asdasdasdasdasdasdasds', 'asdasdas', 'dasdas', 'dasdasd', '&lt;p&gt;asdasdasdasd&lt;/p&gt;\n', '2017-08-07 13:50:57', 'catalog/20150723000650.png', '7', '42');
 
---
--- 表的结构 `oc_support_category`
---
-
+-- ----------------------------
+-- Table structure for `oc_support_category`
+-- ----------------------------
+DROP TABLE IF EXISTS `oc_support_category`;
 CREATE TABLE `oc_support_category` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) DEFAULT NULL,
   `meta_keyword` varchar(255) DEFAULT NULL,
   `meta_desc` text,
-  `url` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `oc_support_category`
---
+-- ----------------------------
+-- Records of oc_support_category
+-- ----------------------------
+INSERT INTO `oc_support_category` VALUES ('125', 'Access Network', 'Access Network', 'Access Network', '');
+INSERT INTO `oc_support_category` VALUES ('126', 'Transmission Network', 'Transmission Network', 'Transmission Network', '');
+INSERT INTO `oc_support_category` VALUES ('127', 'Data Communication', 'Data Communication', 'Data Communication', 'Data Communication');
 
-INSERT INTO `oc_support_category` (`id`, `title`, `meta_keyword`, `meta_desc`, `url`) VALUES
-(125, 'Access Network', 'Access Network', 'Access Network', ''),
-(126, 'Transmission Network', 'Transmission Network', 'Transmission Network', ''),
-(127, 'Data Communication', 'Data Communication', 'Data Communication', 'Data Communication');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `oc_support_tags`
---
-
-CREATE TABLE `oc_support_tags` (
-  `id` int(11) NOT NULL,
-  `name` varchar(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- 转存表中的数据 `oc_support_tags`
---
-
-INSERT INTO `oc_support_tags` (`id`, `name`) VALUES
-(1, 'tagss'),
-(2, 'dd'),
-(3, 'ww'),
-(4, 'ww22'),
-(5, 'asd'),
-(6, 'wwww'),
-(7, 'asdasda'),
-(8, 'wwwwaaa'),
-(9, 'dawdawd'),
-(10, 'wwadasd'),
-(11, 'wetwetwvsfs'),
-(12, 'asdadasdasd'),
-(13, 'adwadwasdaw'),
-(14, 'asdasdwadaw'),
-(15, 'wwwwwadd'),
-(16, 'ddww');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `oc_support_tag_relative`
---
-
+-- ----------------------------
+-- Table structure for `oc_support_tag_relative`
+-- ----------------------------
+DROP TABLE IF EXISTS `oc_support_tag_relative`;
 CREATE TABLE `oc_support_tag_relative` (
   `support_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
+-- ----------------------------
+-- Records of oc_support_tag_relative
+-- ----------------------------
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '3');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '7');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '9');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '3');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '7');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '9');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '3');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '7');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '9');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '3');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '7');
+INSERT INTO `oc_support_tag_relative` VALUES ('2', '9');
 
---
--- Indexes for table `oc_support_article`
---
-ALTER TABLE `oc_support_article`
-  ADD PRIMARY KEY (`id`);
+-- ----------------------------
+-- Table structure for `oc_support_tags`
+-- ----------------------------
+DROP TABLE IF EXISTS `oc_support_tags`;
+CREATE TABLE `oc_support_tags` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
---
--- Indexes for table `oc_support_category`
---
-ALTER TABLE `oc_support_category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `oc_support_tags`
---
-ALTER TABLE `oc_support_tags`
-  ADD PRIMARY KEY (`id`);
-
---
--- 在导出的表使用AUTO_INCREMENT
---
-
---
--- 使用表AUTO_INCREMENT `oc_support_article`
---
-ALTER TABLE `oc_support_article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- 使用表AUTO_INCREMENT `oc_support_category`
---
-ALTER TABLE `oc_support_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
---
--- 使用表AUTO_INCREMENT `oc_support_tags`
---
-ALTER TABLE `oc_support_tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ----------------------------
+-- Records of oc_support_tags
+-- ----------------------------
+INSERT INTO `oc_support_tags` VALUES ('1', 'tagss');
+INSERT INTO `oc_support_tags` VALUES ('2', 'dd');
+INSERT INTO `oc_support_tags` VALUES ('3', 'ww');
+INSERT INTO `oc_support_tags` VALUES ('4', 'ww22');
+INSERT INTO `oc_support_tags` VALUES ('5', 'asd');
+INSERT INTO `oc_support_tags` VALUES ('6', 'wwww');
+INSERT INTO `oc_support_tags` VALUES ('7', 'asdasda');
+INSERT INTO `oc_support_tags` VALUES ('8', 'wwwwaaa');
+INSERT INTO `oc_support_tags` VALUES ('9', 'dawdawd');
+INSERT INTO `oc_support_tags` VALUES ('10', 'wwadasd');
+INSERT INTO `oc_support_tags` VALUES ('11', 'wetwetwvsfs');
+INSERT INTO `oc_support_tags` VALUES ('12', 'asdadasdasd');
+INSERT INTO `oc_support_tags` VALUES ('13', 'adwadwasdaw');
+INSERT INTO `oc_support_tags` VALUES ('14', 'asdasdwadaw');
+INSERT INTO `oc_support_tags` VALUES ('15', 'wwwwwadd');
+INSERT INTO `oc_support_tags` VALUES ('16', 'ddww');
+INSERT INTO `oc_support_tags` VALUES ('17', 'k');
+INSERT INTO `oc_support_tags` VALUES ('18', 'y');

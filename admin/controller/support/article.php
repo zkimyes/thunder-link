@@ -11,8 +11,8 @@ class ControllerSupportArticle extends Controller{
         'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
         ];
         $data['breadcrumbs'][] = [
-        'text'=>'Solution Article',
-        'href'=>''
+        'text'=>'Support Article',
+        'href'=>'javascript:;'
         ];
         
         $this->getList($data);
@@ -76,6 +76,7 @@ class ControllerSupportArticle extends Controller{
             $id = $this->request->get['id'];
             if(!empty($id)){
                 $article = $this->model_support_article->find($id);
+                $article['tags'] = json_encode($this->model_support_article->getRelateTagsById($id));
             }
             $data['article'] = $article;
             $data['product_relateds'] = [];
@@ -102,6 +103,7 @@ class ControllerSupportArticle extends Controller{
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
+
 
         $data['banners'] = $this->model_design_banner->getBanners();
 
