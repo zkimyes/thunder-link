@@ -4,15 +4,15 @@
 */
 class ControllerSupportTag extends Controller{
     public function index(){
-        $this->document->setTitle("Solution Article");
+        $this->document->setTitle("Tags List");
         
         $data['breadcrumbs'][] = [
         'text'=>'Home',
         'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
         ];
         $data['breadcrumbs'][] = [
-        'text'=>'Solution Article',
-        'href'=>''
+        'text'=>'Support Tags',
+        'href'=>'javascript:;'
         ];
         
         $this->getList($data);
@@ -119,23 +119,14 @@ class ControllerSupportTag extends Controller{
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         
-        $data['add_url'] = $this->url->link('support/article/add');
-        $data['update_url'] = $this->url->link('support/article/update');
-        $data['delt_url'] = $this->url->link('support/article/delete');
+        $data['add_url'] = $this->url->link('support/tag/add');
+        $data['update_url'] = $this->url->link('support/tag/update');
+        $data['delt_url'] = $this->url->link('support/tag/delete');
         
-        $this->load->model('support/article');
-        $articles = $this->model_support_article->getList();
-        foreach($articles as $article){
-            if (!empty($article['image']) && is_file(DIR_IMAGE . $article['image'])) {
-                $article['thumb'] = $this->model_tool_image->resize($article['image'], 50, 50);
-            } else {
-                $article['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
-            }
-            $data['lists'][] = $article;
-        }
-        
+        $this->load->model('support/tag');
+        $data['lists'] = $this->model_support_tag->getList();
         $data['token'] = $token;
-        $this->response->setOutput($this->load->view('support/article_list', $data));
+        $this->response->setOutput($this->load->view('support/tag_list', $data));
     }
 
 

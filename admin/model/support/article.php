@@ -75,7 +75,7 @@ class ModelSupportArticle extends Model {
         related_product_ids='".$this->db->escape($data['related_product_ids'])."'
         where id=".intval($data['id'])."
         ");
-        $this->db->query("delte")
+        $this->db->query("DELETE FROM `oc_support_tag_relative` WHERE support_id = ".intval($data['id']));
         $sql = "insert into oc_support_tag_relative (support_id,tag_id) values";
         $values = [];
         foreach($data['tag_ids'] as $tag_id){

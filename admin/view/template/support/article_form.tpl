@@ -23,10 +23,9 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <input type="hidden" name="id" value="{{article.id}}">
                         <div class="form-group">
                             <label>Banners</label>
-                            <select name="banner_id" class="form-control">
+                            <select v-model="banner_id" name="banner_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for banner in banners %}
                                     <option value="{{banner.banner_id}}">{{banner.name}}</option>
@@ -35,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label>Support Category</label>
-                            <select name="category_id" class="form-control">
+                            <select v-model="category_id" name="category_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for category in categorys %}
                                     <option value="{{category.id}}">{{category.title}}</option>
@@ -51,19 +50,19 @@
                         </div>
                         <div class="form-group">
                             <label>Title</label>
-                            <input type="text" class="form-control" name="title" value="{{article.title}}" placeholder="title">
+                            <input v-model="title" type="text" class="form-control" name="title" placeholder="标题">
                         </div>
                         <div class="form-group">
                             <label>Meta Keywords</label>
-                            <input type="text" class="form-control" name="meta_keywords" value="{{article.meta_keywords}}" placeholder="meta keyword">
+                            <input v-model="meta_keywords" type="text" class="form-control" name="meta_keywords" placeholder="关键词">
                         </div>
                         <div class="form-group">
                             <label>Meta Description</label>
-                            <textarea class="form-control" name="meta_desc" placeholder="meta description">{{article.meta_desc}}</textarea>
+                            <textarea v-model="meta_desc" class="form-control" name="meta_desc" placeholder="meta description"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Summary</label>
-                            <textarea class="form-control" name="summary" placeholder="summary">{{article.summary}}</textarea>
+                            <textarea v-model="summary" class="form-control" name="summary" placeholder="summary"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Content</label>
@@ -102,7 +101,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <button onclick="submit()" class="btn btn-primary">提交</button>
+                        <button @click="submit()" class="btn btn-primary">提交</button>
                         <a href="{{back_url}}&token={{token}}" class="btn btn-default">取消</a>
                     </div>
                 </div>
@@ -111,19 +110,22 @@
     </div>
     <script>
         Vue.config.devtools = true
-        var editor = CKEDITOR.replace('editor');
-        var tags = JSON.parse('{{article.tags|raw}}'||'[]');
-        $('[name="category_id"]').val("{{article.category_id}}");
-        $('[name="banner_id"]').val("{{article.banner_id}}");
-
         new Vue({
-            el: '#tags',
+            el: '#content',
             delimiters: ['${', '}'],
             data: {
-                tags: tags,
+                id: '{{article.id}}',
+                title: '{{article.title}}',
+                banner_id: '{{article.banner_id}}',
+                category_id: '{{article.category_id}}',
+                meta_keywords: '{{article.meta_keywords}}',
+                meta_desc: '{{article.meta_desc}}',
+                summary: '{{article.summary}}',
+                tags: '{{article.tags|raw}}' ? JSON.parse('{{article.tags|raw}}') : [],
                 tagList: [],
                 tag: '',
-                isFetch: false
+                isFetch: false,
+                editor: null
             },
             methods: {
                 removeTag: function(tag) {
@@ -190,43 +192,41 @@
                         _vm.tags.push(tag);
                     }
                     _vm.tag = '';
+                },
+                submit: function() {
+                    var _vm = this,
+                        _image = $('[name="image"]').val(),
+                        _related_product = [];
+                    $('[name^="product_related"]').each(function(item) {
+                        _related_product[item] = $(this).val();
+                    })
+                    _related_product = _related_product.join(',');
+                    $.post('{{submit_url}}&token={{token}}', {
+                        id: _vm.id,
+                        title: _vm.title,
+                        image: _image,
+                        banner_id: _vm.banner_id,
+                        category_id: _vm.category_id,
+                        meta_keywords: _vm.meta_keywords,
+                        meta_desc: _vm.meta_desc,
+                        summary: _vm.summary,
+                        related_product_ids: _related_product,
+                        tag_ids: _vm.tags.map(item => {
+                            return item.id
+                        }),
+                        content: _vm.editor.getData()
+                    }, function(res) {
+                        if (res) {
+                            location.href = "{{back_url}}&token={{token}}";
+                        }
+                    })
                 }
+
+            },
+            mounted: function() {
+                this.editor = CKEDITOR.replace('editor');
             }
         })
-
-
-        function submit() {
-            var _title = $('[name="title"]').val(),
-                _meta_keywords = $('[name="meta_keywords"]').val(),
-                _meta_desc = $('[name="meta_desc"]').val(),
-                _summary = $('[name="summary"]').val(),
-                _id = $('[name="id"]').val(),
-                _image = $('[name="image"]').val(),
-                _banner_id = $('[name="banner_id"]').val(),
-                _category_id = $('[name="category_id"]').val(),
-                _related_product = [];
-            $('[name^="product_related"]').each(function(item) {
-                _related_product[item] = $(this).val();
-            })
-            _related_product = _related_product.join(',');
-            $.post('{{submit_url}}&token={{token}}', {
-                id: _id,
-                title: _title,
-                image: _image,
-                banner_id: _banner_id,
-                category_id: _category_id,
-                meta_keywords: _meta_keywords,
-                meta_desc: _meta_desc,
-                summary: _summary,
-                related_product_ids: _related_product,
-                tag_ids: tags.map(item=>{return item.id}),
-                content: editor.getData()
-            }, function(res) {
-                if (res) {
-                    location.href = "{{back_url}}&token={{token}}";
-                }
-            })
-        }
 
 
         // Related
