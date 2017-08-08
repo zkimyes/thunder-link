@@ -69,9 +69,8 @@ class ControllerSupportCategory extends Controller{
             ];
             $id = $this->request->get['id'];
             if(!empty($id)){
-                $category = $this->model_support_category->find($id);
+                $data['category'] = $this->model_support_category->find($id);
             }
-            $data['category'] = $category;
             $this->form($data);
         };
     }
@@ -83,6 +82,7 @@ class ControllerSupportCategory extends Controller{
         $data['footer'] = $this->load->controller('common/footer');
         $data['back_url'] = $this->url->link('support/category/index');
         $data['token'] = $this->session->data['token'];
+        $data['categories'] = json_encode($this->model_support_category->getNoneRelateCategories(isset($data['category'])?$data['category']['id']:0));
         $this->response->setOutput($this->load->view('support/category_form', $data));
     }
     
@@ -111,9 +111,8 @@ class ControllerSupportCategory extends Controller{
         $data['delt_url'] = $this->url->link('support/category/delete');
         
         $this->load->model('support/category');
-        $supports = $this->model_support_category->getList();
-        
-        $data['lists'] = json_encode($supports);
+        $categories = $this->model_support_category->getList();
+        $data['lists'] = json_encode($categories);
         
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('support/category_list', $data));

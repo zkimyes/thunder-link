@@ -113,7 +113,13 @@ class ControllerSupportTag extends Controller{
     
     
     protected function getList($data) {
+        $url = '';
         $token = $this->session->data['token'];
+        if (isset($this->request->get['page'])) {
+			$page = $this->request->get['page'];
+		} else {
+			$page = 1;
+		}
         $data['url'] = $this->url;
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
@@ -124,7 +130,15 @@ class ControllerSupportTag extends Controller{
         $data['delt_url'] = $this->url->link('support/tag/delete');
         
         $this->load->model('support/tag');
-        $data['lists'] = $this->model_support_tag->getList();
+        $data['lists'] = $this->model_support_tag->getList([],"","",(int)$page);
+        $total = $this->model_support_tag->getTotalTags();
+        $pagination = new Pagination();
+		$pagination->total = $total;
+		$pagination->page = $page;
+		$pagination->limit = 12;
+		$pagination->url = $this->url->link('support/tag', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+
+		$data['pagination'] = $pagination->render();
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('support/tag_list', $data));
     }

@@ -23,6 +23,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label>Parent Category</label>
+                            <select v-model="parent_id" class="form-control">
+                                <option value="0">-- 没有父级目录 --</option>
+                                <option v-for="category in categories" :value="category.id">${category.title}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Name</label>
                             <input type="text" v-model="title" class="form-control" placeholder="输入目录名">
                         </div>
@@ -54,12 +61,15 @@
     Vue.config.devtools = true
     var category = new Vue({
         el: '#content',
+        delimiters: ['${', '}'],
         data: {
             id: '{{category.id}}',
             title: '{{category.title}}',
             meta_keyword: '{{category.meta_keyword}}',
             meta_desc: '{{category.meta_desc}}',
-            url: '{{category.url}}'
+            url: '{{category.url}}',
+            parent_id:'{{category.parent_id}}'||0,
+            categories:'{{categories|raw}}'?JSON.parse('{{categories|raw}}'):[]
         },
         methods: {
             submit() {
@@ -68,6 +78,7 @@
                     title: this.title,
                     meta_keyword: this.meta_keyword,
                     meta_desc: this.meta_desc,
+                    parent_id:this.parent_id,
                     url: this.url
                 }
 

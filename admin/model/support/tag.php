@@ -1,11 +1,19 @@
 <?php
 class ModelSupportTag extends Model {
 
-    public function getList($condition=[],$field=[],$order=""){
-        $artilces = $this->db->query('
-            select * from oc_support_tags limit 0,20;
-        ');
+    public function getList($condition=[],$field=[],$order="",$page=1){
+        if($page<0){
+            $page = 1;
+        }
+        $sql = "select * from oc_support_tags ";
+        $sql .="limit ".((int)($page - 1) * 12).",12";
+        $artilces = $this->db->query($sql);
         return $artilces->rows;
+    }
+
+    public function getTotalTags(){
+        $count = $this->db->query("select count(*) as total from oc_support_tags");
+        return $count->row['total'];
     }
 
     public function add($data = []){

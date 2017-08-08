@@ -29,7 +29,7 @@ class ModelSupportArticle extends Model {
             )
             ");
             $support_id = $this->db->getLastId();
-            $sql = "insert into oc_support_tag_relative (support_id,tag_id)";
+            $sql = "insert into oc_support_tag_relative (support_id,tag_id) values ";
             $values = [];
             foreach($data['tag_ids'] as $tag_id){
                 $values[] ="(".intval($support_id).",".intval($tag_id).")";

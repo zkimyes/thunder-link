@@ -48,8 +48,7 @@
                     </table>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 text-left"></div>
-                    <div class="col-sm-6 text-right"></div>
+                    <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
                 </div>
             </div>
         </div>

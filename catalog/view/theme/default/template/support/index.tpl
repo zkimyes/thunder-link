@@ -8,8 +8,10 @@
                     <div class="title">Support Services >></div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
                     <div class="support-search input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="VPN Client drivers,firmware,NOS,and application software" aria-describedby="sizing-addon1">
-                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        <input type="text" id="support_search" class="form-control" name="search" placeholder="VPN Client drivers,firmware,NOS,and application software">
+                        <span class="input-group-btn">
+                            <button id="support_search_btn" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
                     </div>
                     <div class="support-search-hot-tag">
                         <a class="label label-default" href="">Support Services</a>
@@ -23,60 +25,12 @@
                 </section>
 
                 <section>
-                    <div class="title">Search for
-                    </div>
+                    <div class="title">Search for</div>
                     <div class="doc-list-content">
-                        <div class="doc-list">
-                            <div class="col-md-3">
-                                <img src="/image/u20733.png" alt="">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="title">U2000V100R006C02SPC301 Installation Introduction</div>
-                                <div class="tags">Tags:<a>osn3500</a><a>u200</a></div>
-                                <div class="desc">software lisTips:This introduction take U2000V100R006C02SPC301 as example to install, if there is other version, please make the corresponding changes according the versions. The installation of the network management software
-                                    won’t be completed, if the operating system or the version of database is...</div>
-                                <div class="info">
-                                    <span><i class="fa fa-eye"></i>500</span>
-                                    <span><i class="fa fa-comments"></i>50</span>
-                                    <span><i class="fa fa-share"></i></span>
-                                </div>
-                            </div>
+                        <div style="background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
+                            <div></div>
                         </div>
-
-                        <div class="doc-list">
-                            <div class="col-md-3">
-                                <img src="/image/u20733.png" alt="">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="title">U2000V100R006C02SPC301 Installation Introduction</div>
-                                <div class="tags">Tags:<a>osn3500</a><a>u200</a></div>
-                                <div class="desc">software lisTips:This introduction take U2000V100R006C02SPC301 as example to install, if there is other version, please make the corresponding changes according the versions. The installation of the network management software
-                                    won’t be completed, if the operating system or the version of database is...</div>
-                                <div class="info">
-                                    <span><i class="fa fa-eye"></i>500</span>
-                                    <span><i class="fa fa-comments"></i>50</span>
-                                    <span><i class="fa fa-share"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="doc-list">
-                            <div class="col-md-3">
-                                <img src="/image/u20733.png" alt="">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="title">U2000V100R006C02SPC301 Installation Introduction</div>
-                                <div class="tags">Tags:<a>osn3500</a><a>u200</a></div>
-                                <div class="desc">software lisTips:This introduction take U2000V100R006C02SPC301 as example to install, if there is other version, please make the corresponding changes according the versions. The installation of the network management software
-                                    won’t be completed, if the operating system or the version of database is...</div>
-                                <div class="info">
-                                    <span><i class="fa fa-eye"></i>500</span>
-                                    <span><i class="fa fa-comments"></i>50</span>
-                                    <span><i class="fa fa-share"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
+                        <!--doc list start-->
                         <div class="doc-list">
                             <div class="col-md-3">
                                 <img src="/image/u20733.png" alt="">
@@ -107,39 +61,22 @@
             </div>
 
             <div class="support-right col-md-3">
+                {% for sider_category in sider_categories %}
                 <div class="support-right-block">
-                    <div class="title">Access Network</div>
+                    <div class="title"><a href="{{sider_category.url|raw}}">{{sider_category.title}}</a></div>
                     <ul class="list-unstyled">
-                        <li><a href="">MA5683T</a></li>
-                        <li><a href="">MA5683T</a></li>
-                        <li><a href="">MA5683T</a></li>
-                        <li><a href="">MA5683T</a></li>
-                        <li><a href="">MA5683T</a></li>
+                        {% for child in sider_category['child'] %}
+                        <li><a href="{{child.url|raw}}">{{child.title}}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
-                <div class="support-right-block">
-                    <div class="title">Transmission Network</div>
-                    <ul class="list-unstyled">
-                        <li><a href="">OSN2500</a></li>
-                        <li><a href="">OSN2500</a></li>
-                        <li><a href="">OSN2500</a></li>
-                        <li><a href="">OSN2500</a></li>
-                        <li><a href="">OSN2500</a></li>
-                    </ul>
-                </div>
-                <div class="support-right-block">
-                    <div class="title">Data Communication</div>
-                    <ul class="list-unstyled">
-                        <li><a href="">S5700 Switch</a></li>
-                        <li><a href="">S5700 Switch</a></li>
-                        <li><a href="">S5700 Switch</a></li>
-                        <li><a href="">S5700 Switch</a></li>
-                        <li><a href="">S5700 Switch</a></li>
-                    </ul>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </main>
+<script>
+    var searchUrl = '{{search_action|raw}}';
+</script>
 <?php echo $content_bottom ?>
 <?php echo $footer; ?>
