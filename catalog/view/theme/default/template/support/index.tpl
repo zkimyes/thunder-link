@@ -25,9 +25,9 @@
                 </section>
 
                 <section>
-                    <div class="title">Search for</div>
+                    <div class="title">Search {{search}}</div>
                     <div class="doc-list-content">
-                        <div style="background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
+                        <div id="loading" style="display:none;background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
                             <div></div>
                         </div>
                         <!--doc list start-->

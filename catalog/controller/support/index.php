@@ -17,6 +17,7 @@ class ControllerSupportIndex extends Controller {
         
         
         $this->load->model('support/category');
+        $this->load->model('support/article');
         $categories = $this->model_support_category->getList('',"id,title,parent_id");
         $parents = [];
         $childs = [];
@@ -46,6 +47,12 @@ class ControllerSupportIndex extends Controller {
             $search = $this->request->get['search'];
         }else{
             $search = "";
+        }
+        $data['search'] = strip_tags(htmlentities($search));
+
+        if(!empty($data['search'])){
+            $result = $this->model_support_article->searchByText($data['search']);
+            var_dump($result);
         }
 
         $this->response->setOutput($this->load->view('support/index', $data));
