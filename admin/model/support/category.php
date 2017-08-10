@@ -67,4 +67,9 @@ class ModelSupportCategory extends Model {
         return $result->rows;
     }
 
+
+    public function makeTree($array,$pid=0,$parent_title=""){
+        return $array;
+    }
+
 }

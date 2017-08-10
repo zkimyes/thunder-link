@@ -2804,3 +2804,302 @@
 2017-08-08 21:28:27 - PHP Warning:  Missing argument 2 for Document::addLink(), called in G:\php_projects\thunder-link\catalog\controller\support\index.php on line 7 and defined in G:\php_projects\thunder-link\system\library\document.php on line 34
 2017-08-08 21:28:27 - PHP Notice:  Undefined variable: rel in G:\php_projects\thunder-link\system\library\document.php on line 38
 2017-08-08 15:38:16 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/support/article.php on line 39
+2017-08-09 15:31:54 - PHP Warning:  explode() expects at least 2 parameters, 1 given in G:\php_projects\thunder-link\catalog\controller\support\index.php on line 60
+2017-08-09 15:31:54 - PHP Warning:  explode() expects at least 2 parameters, 1 given in G:\php_projects\thunder-link\catalog\controller\support\index.php on line 60
+2017-08-09 15:51:37 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\article.php on line 39
+2017-08-09 15:52:53 - PHP Notice:  Undefined index: tag_ids in G:\php_projects\thunder-link\admin\model\support\article.php on line 34
+2017-08-09 15:52:53 - PHP Warning:  Invalid argument supplied for foreach() in G:\php_projects\thunder-link\admin\model\support\article.php on line 34
+2017-08-09 15:59:37 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\article.php on line 42
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:23 - PHP Notice:  Undefined index: pid in G:\php_projects\thunder-link\admin\model\support\category.php on line 73
+2017-08-09 16:50:57 - PHP Notice:  Undefined index: name in G:\php_projects\thunder-link\admin\model\support\category.php on line 74
+2017-08-09 16:50:57 - PHP Notice:  Undefined index: name in G:\php_projects\thunder-link\admin\model\support\category.php on line 74
+2017-08-09 20:20:37 - PHP Warning:  DB\MySQLi::query(): Couldn't fetch mysqli_result in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 35
+2017-08-09 20:20:37 - PHP Warning:  DB\MySQLi::query(): Couldn't fetch mysqli_result in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 35
+2017-08-09 20:20:37 - PHP Warning:  DB\MySQLi::query(): Property access is not allowed yet in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 35
+2017-08-09 20:20:37 - PHP Warning:  DB\MySQLi::query(): Couldn't fetch mysqli_result in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 35
+2017-08-09 20:20:37 - PHP Warning:  DB\MySQLi::query(): Property access is not allowed yet in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 35
+2017-08-09 20:45:13 - PHP Notice:  Undefined variable: par in G:\php_projects\thunder-link\admin\model\support\category.php on line 77
+2017-08-09 21:46:16 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:46:16 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:46:16 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:47:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:47:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:47:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:19 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:48:19 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:48:19 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:48:21 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:21 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:21 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 21:48:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:48:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 21:48:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 543
+2017-08-09 22:04:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 22:04:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 22:04:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 22:04:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 22:04:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-09 22:04:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 0:15:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 0:15:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 0:15:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 1:03:42 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:03:42 - PHP Notice:  Undefined variable: res in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 193
+2017-08-10 1:04:33 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:04:33 - PHP Notice:  Undefined variable: res in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 193
+2017-08-10 1:05:01 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:06:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 1332
+2017-08-10 1:11:56 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:11:56 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 94
+2017-08-10 1:11:56 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:11:56 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:12:09 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:12:11 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:12:11 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 94
+2017-08-10 1:12:11 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:12:11 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:12:17 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:12:17 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 94
+2017-08-10 1:12:17 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:12:17 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:12:33 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:12:33 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 94
+2017-08-10 1:12:33 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:12:33 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:12:51 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:12:51 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 94
+2017-08-10 1:12:51 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:12:51 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 95
+2017-08-10 1:14:41 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:14:41 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 96
+2017-08-10 1:14:41 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:14:41 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 97
+2017-08-10 1:14:47 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:14:47 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 96
+2017-08-10 1:14:47 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:14:47 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 97
+2017-08-10 1:15:07 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:15:15 - PHP Notice:  Undefined variable: sql in G:\php_projects\thunder-link\admin\model\support\tag.php on line 96
+2017-08-10 1:15:15 - PHP Warning:  mysqli::query(): Empty query in G:\php_projects\thunder-link\system\library\db\mysqli.php on line 18
+2017-08-10 1:15:15 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 97
+2017-08-10 1:16:20 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:17:09 - PHP Notice:  Undefined index: selected in G:\php_projects\thunder-link\admin\controller\support\tag.php on line 183
+2017-08-10 1:31:23 - PHP Notice:  Undefined variable: rs in G:\php_projects\thunder-link\admin\model\support\tag.php on line 102
+2017-08-10 1:40:57 - PHP Notice:  Undefined variable: id in G:\php_projects\thunder-link\admin\model\support\tag.php on line 78
+2017-08-10 1:41:02 - PHP Notice:  Undefined variable: id in G:\php_projects\thunder-link\admin\model\support\tag.php on line 78
+2017-08-10 1:41:39 - PHP Notice:  Undefined variable: id in G:\php_projects\thunder-link\admin\model\support\tag.php on line 78
+2017-08-10 1:42:32 - PHP Notice:  Undefined variable: id in G:\php_projects\thunder-link\admin\model\support\tag.php on line 78
+2017-08-10 1:52:03 - PHP Notice:  Undefined variable: id in G:\php_projects\thunder-link\admin\model\support\tag.php on line 78
+2017-08-10 2:00:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:00:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:00:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:03:42 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:03:42 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:03:42 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 653
+2017-08-10 2:04:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 658
+2017-08-10 2:04:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 658
+2017-08-10 2:04:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 658
+2017-08-10 2:04:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:04:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:04:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:07 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:07 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:07 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:05:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 657
+2017-08-10 2:06:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:06:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:06:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:07:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:07:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:07:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:08:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:08:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:08:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:05 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:12 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:12 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:12 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:15 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:15 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:15 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:11:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:49 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:49 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:13:49 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:11 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:33 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:33 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:33 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:14:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:15:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:15:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:15:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 662
+2017-08-10 2:16:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:16:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:16:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:16:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:16:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:16:58 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 666
+2017-08-10 2:17:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:36 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:36 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:36 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:38 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:39 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:39 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:17:39 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 669
+2017-08-10 2:18:46 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:18:46 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:18:46 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:19:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:19:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:19:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:35 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:47 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:47 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:47 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:52 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:52 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:52 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:53 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:54 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:54 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:54 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:56 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:56 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:56 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:59 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:59 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:20:59 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:23 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:23 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:23 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:26 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:27 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:27 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:27 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:29 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:30 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:30 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:30 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:31 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:32:51 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:20 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:34:34 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:24 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:24 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:24 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:37 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:37 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:37 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:35:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:36:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:36:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:36:00 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:39:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:39:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:39:22 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 685
+2017-08-10 2:40:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:01 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:18 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:18 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:18 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:40 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:40 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:40 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:43 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:43 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:43 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:40:55 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:04 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:04 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:04 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:41:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 691
+2017-08-10 2:59:21 - PHP Warning:  Missing argument 2 for ModelSupportArticle::viewArticle() in G:\php_projects\thunder-link\catalog\model\support\article.php on line 54
+2017-08-10 3:18:37 - PHP Notice:  Undefined variable: forgotten in G:\php_projects\thunder-link\catalog\view\theme\default\template\account\register.tpl on line 89

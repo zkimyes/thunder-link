@@ -44,9 +44,14 @@ class ControllerConfigurationIndex extends Controller {
             } else {
                 $typical['thumb'] = $this->model_tool_image->resize('no_image.png', 228, 180);
             }
+            if (!empty($typical['blueprint']) && is_file(DIR_IMAGE . $typical['blueprint'])) {
+                $typical['blueprint_thumb'] = $this->model_tool_image->resize($typical['blueprint'], 228, 180);
+            } else {
+                $typical['blueprint_thumb'] = $this->model_tool_image->resize('no_image.png', 228, 180);
+            }
+            $typical['link_boards'] = json_decode($typical['link_boards'],true);
         }
 
-		var_dump($data['typicals']);
         
         $this->response->setOutput($this->load->view('configuration/index', $data));
     }

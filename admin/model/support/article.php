@@ -28,14 +28,17 @@ class ModelSupportArticle extends Model {
             '".date('Y-m-d H:i:s')."'
             )
             ");
-            $support_id = $this->db->getLastId();
-            $sql = "insert into oc_support_tag_relative (support_id,tag_id) values ";
-            $values = [];
-            foreach($data['tag_ids'] as $tag_id){
-                $values[] ="(".intval($support_id).",".intval($tag_id).")";
+            if(!empty($data['tag_ids'])){
+                $support_id = $this->db->getLastId();
+                $sql = "insert into oc_support_tag_relative (support_id,tag_id) values ";
+                $values = [];
+                foreach($data['tag_ids'] as $tag_id){
+                    $values[] ="(".intval($support_id).",".intval($tag_id).")";
+                }
+                $sql = $sql.' '.join(',',$values);
+                $this->db->query($sql);
             }
-            $sql = $sql.' '.join(',',$values);
-            $this->db->query($sql);
+            
             return $rs;
         }
         return false;
@@ -75,14 +78,16 @@ class ModelSupportArticle extends Model {
         related_product_ids='".$this->db->escape($data['related_product_ids'])."'
         where id=".intval($data['id'])."
         ");
-        $this->db->query("DELETE FROM `oc_support_tag_relative` WHERE support_id = ".intval($data['id']));
-        $sql = "insert into oc_support_tag_relative (support_id,tag_id) values";
-        $values = [];
-        foreach($data['tag_ids'] as $tag_id){
-            $values[] ="(".intval($data['id']).",".intval($tag_id).")";
+        if(!empty($data['tag_ids'])){
+            $this->db->query("DELETE FROM `oc_support_tag_relative` WHERE support_id = ".intval($data['id']));
+            $sql = "insert into oc_support_tag_relative (support_id,tag_id) values";
+            $values = [];
+            foreach($data['tag_ids'] as $tag_id){
+                $values[] ="(".intval($data['id']).",".intval($tag_id).")";
+            }
+            $sql = $sql.' '.join(',',$values);
+            $this->db->query($sql);
         }
-        $sql = $sql.' '.join(',',$values);
-        $this->db->query($sql);
         return $rs;
     }
     

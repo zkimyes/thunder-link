@@ -5,6 +5,7 @@ class ControllerSupportIndex extends Controller {
         $this->document->setDescription($this->config->get('config_meta_description'));
         $this->document->setKeywords($this->config->get('config_meta_keyword'));
 		$this->document->addLink('https://cdn.bootcss.com/loaders.css/0.1.2/loaders.min.css','stylesheet');
+        $this->document->addLink('/catalog/view/theme/default/stylesheet/support.css','stylesheet');
         $this->document->addScript("/catalog/view/javascript/app/support.js");
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
@@ -18,6 +19,7 @@ class ControllerSupportIndex extends Controller {
         
         $this->load->model('support/category');
         $this->load->model('support/article');
+        $data['is_search_tags'] = $this->model_support_article->getIsSeachTags();
         $categories = $this->model_support_category->getList('',"id,title,parent_id");
         $parents = [];
         $childs = [];
@@ -34,6 +36,7 @@ class ControllerSupportIndex extends Controller {
             $parent['url'] = $this->url->link('support/category','id='.$parent['id']);
             foreach($childs as $child){
                 if($parent['id'] == $child['parent_id']){
+                    $child['url'] = $this->url->link('support/category','id='.$child['id']);
                     $parent['child'][] = $child;
                 }
             }
@@ -49,10 +52,17 @@ class ControllerSupportIndex extends Controller {
             $search = "";
         }
         $data['search'] = strip_tags(htmlentities($search));
-
+        $data['result'] = [];
         if(!empty($data['search'])){
             $result = $this->model_support_article->searchByText($data['search']);
-            var_dump($result);
+            foreach($result as $r){
+                $data['result'][] = [
+                    'id'=>$r['id'],
+                    'title'=>strip_tags(htmlentities($r['title'])),
+                    'summary'=>strip_tags(htmlentities($r['summary'])),
+                    'tags'=>explode(',',$r['tags'])
+                ];
+            }
         }
 
         $this->response->setOutput($this->load->view('support/index', $data));

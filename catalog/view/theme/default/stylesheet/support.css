@@ -1,0 +1,40 @@
+.non-reuslt{
+    font-size: 20px;
+    color:#ddd;
+    text-align: center;
+    font-weight: bold;
+}
+
+.support section{
+    padding:0;
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.support-right-white{
+    border:2px #3ec392 solid;
+}
+
+.su-mb10 {
+    margin-bottom: 10px;
+}
+
+.su-pd10{
+    padding:10px;
+}
+
+.s-title{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.support .tag.checked{
+    background: #3ec392;
+}
+
+.support .tag-t {
+    font-weight: bold;
+    color:#a0a0a0;
+    word-break: break-all;
+    word-wrap: break-word;
+}

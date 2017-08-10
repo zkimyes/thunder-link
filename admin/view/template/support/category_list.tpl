@@ -28,6 +28,7 @@
                         <thead>
                             <tr>
                                 <td style="width: 1px;" class="text-center"><input @click="checkAll()" type="checkbox" /></td>
+                                <td width="50">Id</td>
                                 <td>Name</td>
                                 <td width="200" class="text-right">Actions</td>
                             </tr>
@@ -35,6 +36,7 @@
                         <tbody>
                             <tr v-for="list in category">
                                 <td><input :checked="checked" type="checkbox" /></td>
+                                <td>${list.id}</td>
                                 <td>${list.title}</td>
                                 <td>
                                     <button @click="delt(list.id)" class="btn btn-danger btn-xs">删除</button>

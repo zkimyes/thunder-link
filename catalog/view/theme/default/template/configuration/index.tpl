@@ -16,47 +16,55 @@
 
             {% for typical in typicals %}
             
-            <div class="thumbnail eg">
-                <h3 class="text-center">
-                    {{typical.name}}
-                </h3>
-                <img src="{{typical.thumb}}" alt="{{typical.name}}">
-                <div class="parameter">
-                    <ul class="list-unstyled">
-                        <li>
-                            <div class="col-md-4">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
-                                        <span class="sr-only"></span>
+                <div class="thumbnail eg">
+                    <h3 class="text-center">
+                        {{typical.name}}
+                    </h3>
+                    <img src="{{typical.thumb}}" alt="{{typical.name}}">
+                    <div class="parameter">
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="col-md-4">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="sr-only"></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="structure">
+                        <img src="{{typical.blueprint_thumb}}" alt="{{typical.name}}_structure">
+                    </div>
+                    <div class="boards">
+                        <table class="table">
+                            <tr>
+                                <th>Board type</th>
+                                <th>Board name</th>
+                                <th>Qty</th>
+                            </tr>
+                            {% for board in typical.link_boards %}
+                                <tr>
+                                    <td>
+                                        {% if board.type == 1 %}
+                                        Sysrtem Board
+                                        {% else %}
+                                        {{board.name}}
+                                        {% endif %}
+                                    </td>
+                                    <td>{{board.name}}</td>
+                                    <td>{{board.qty}}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <p><a href="#" class="btn btn-o-success pull-left" role="button">Quote</a> <a href="#" class="btn btn-o-success pull-right" role="button">Revise</a></p>
+                    </div>
                 </div>
-                <div class="structure">
-                    <img src="/image/u10064.png" alt="">
-                </div>
-                <div class="boards">
-                    <table class="table">
-                        <tr>
-                            <th>Board type</th>
-                            <th>Board name</th>
-                            <th>Qty</th>
-                        </tr>
-                        <tr>
-                            <td>Sysrtem Board</td>
-                            <td>N4GSCC</td>
-                            <td>2</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="caption">
-                    <p><a href="#" class="btn btn-o-success pull-left" role="button">Quote</a> <a href="#" class="btn btn-o-success pull-right" role="button">Revise</a></p>
-                </div>
-            </div>
 
             {% endfor %}
         </div>

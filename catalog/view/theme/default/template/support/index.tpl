@@ -1,57 +1,70 @@
 <?php echo $header; ?>
 <?php echo $content_top ?>
+<script>
+    var activeWindow = 'support';
+</script>
 <main class="main support">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <section>
-                    <div class="title">Support Services >></div>
+                    <div class="title">Support Services <i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
                     <div class="support-search input-group input-group-lg">
-                        <input type="text" id="support_search" class="form-control" name="search" placeholder="VPN Client drivers,firmware,NOS,and application software">
+                        <input type="text" id="support_search" class="form-control" name="search" value="{{search}}" placeholder="VPN Client drivers,firmware,NOS,and application software">
                         <span class="input-group-btn">
                             <button id="support_search_btn" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </span>
                     </div>
                     <div class="support-search-hot-tag">
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
-                        <a class="label label-default" href="">Support Services</a>
+                         {% for tag in is_search_tags %}
+                               <a {% if search == tag.name %}
+                                    class="tag label label-default checked"
+                                    {% else %}
+                                    class="tag label label-default"
+                                {% endif %}
+                            href="{{search_action|raw}}&search={{tag.name}}">{{tag.name}}</a>
+                        {% endfor %}
                     </div>
                 </section>
-
-                <section>
-                    <div class="title">Search {{search}}</div>
-                    <div class="doc-list-content">
-                        <div id="loading" style="display:none;background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
-                            <div></div>
-                        </div>
-                        <!--doc list start-->
-                        <div class="doc-list">
-                            <div class="col-md-3">
-                                <img src="/image/u20733.png" alt="">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="title">U2000V100R006C02SPC301 Installation Introduction</div>
-                                <div class="tags">Tags:<a>osn3500</a><a>u200</a></div>
-                                <div class="desc">software lisTips:This introduction take U2000V100R006C02SPC301 as example to install, if there is other version, please make the corresponding changes according the versions. The installation of the network management software
-                                    won’t be completed, if the operating system or the version of database is...</div>
-                                <div class="info">
-                                    <span><i class="fa fa-eye"></i>500</span>
-                                    <span><i class="fa fa-comments"></i>50</span>
-                                    <span><i class="fa fa-share"></i></span>
+                <div id="loading" style="display:none;background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
+                    <div></div>
+                </div>
+                {% if search %}
+                    <section>
+                        <div class="title">Search {{search}}</div>
+                        <div class="doc-list-content">
+                            <!--doc list start-->
+                            {% for article in result%}
+                                <div class="doc-list">
+                                    <div class="col-md-3">
+                                        <img src="/image/u20733.png" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="title">{{article.title}}</div>
+                                        <div class="tags">
+                                            Tags:{% for tag in article.tags%}<a href="">{{tag}}</a>{% endfor %}
+                                        </div>
+                                        <div class="desc">{{article.summary}}</div>
+                                        <div class="info">
+                                            <span><i class="fa fa-eye"></i>500</span>
+                                            <span><i class="fa fa-comments"></i>50</span>
+                                            <span><i class="fa fa-share"></i></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                            {% endfor %}
 
+                            {% if search and not result %}
+                                <div class="non-reuslt">
+                                    No Result
+                                </div>
+                            {% endif %}
+                        </div>
+                    </section>
+                {% endif %}
                 <section>
-                    <div class="title">Documentation</div>
+                    <div class="title">Documentation <i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     <div class="support-document-block">
                         <a href="">AI</a>
                         <a href="">Huawei OSN 3500 Documentation</a>
@@ -63,7 +76,7 @@
             <div class="support-right col-md-3">
                 {% for sider_category in sider_categories %}
                 <div class="support-right-block">
-                    <div class="title"><a href="{{sider_category.url|raw}}">{{sider_category.title}}</a></div>
+                    <div class="title"><a href="{{sider_category|raw}}">{{sider_category.title}}</a></div>
                     <ul class="list-unstyled">
                         {% for child in sider_category['child'] %}
                         <li><a href="{{child.url|raw}}">{{child.title}}</a></li>

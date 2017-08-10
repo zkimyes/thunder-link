@@ -98,16 +98,16 @@ class ControllerSupportTag extends Controller{
         $data['back_url'] = $this->url->link('support/article/index');
         $data['token'] = $this->session->data['token'];
         if (!empty($data['article']['image']) && is_file(DIR_IMAGE . $data['article']['image'])) {
-			$data['thumb'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
-		} else {
-			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-		}
-
+            $data['thumb'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
+        } else {
+            $data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+        }
+        
         $data['banners'] = $this->model_design_banner->getBanners();
-
-		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-
-
+        
+        $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+        
+        
         $this->response->setOutput($this->load->view('support/article_form', $data));
     }
     
@@ -116,10 +116,10 @@ class ControllerSupportTag extends Controller{
         $url = '';
         $token = $this->session->data['token'];
         if (isset($this->request->get['page'])) {
-			$page = $this->request->get['page'];
-		} else {
-			$page = 1;
-		}
+            $page = $this->request->get['page'];
+        } else {
+            $page = 1;
+        }
         $data['url'] = $this->url;
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
@@ -128,22 +128,23 @@ class ControllerSupportTag extends Controller{
         $data['add_url'] = $this->url->link('support/tag/add');
         $data['update_url'] = $this->url->link('support/tag/update');
         $data['delt_url'] = $this->url->link('support/tag/delete');
+        $data['save_attr'] = $this->url->link('support/tag/ajaxSetTagAttr');
         
         $this->load->model('support/tag');
         $data['lists'] = $this->model_support_tag->getList([],"","",(int)$page);
         $total = $this->model_support_tag->getTotalTags();
         $pagination = new Pagination();
-		$pagination->total = $total;
-		$pagination->page = $page;
-		$pagination->limit = 12;
-		$pagination->url = $this->url->link('support/tag', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
-
-		$data['pagination'] = $pagination->render();
+        $pagination->total = $total;
+        $pagination->page = $page;
+        $pagination->limit = 12;
+        $pagination->url = $this->url->link('support/tag', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+        
+        $data['pagination'] = $pagination->render();
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('support/tag_list', $data));
     }
-
-
+    
+    
     public function ajaxGetTagByName(){
         $name = $this->request->get['name'];
         $this->load->model('support/tag');
@@ -154,7 +155,7 @@ class ControllerSupportTag extends Controller{
             $this->response->jsonOutput(false);
         }
     }
-
+    
     public function ajaxAddTag(){
         $name = $this->request->post['name'];
         $this->load->model('support/tag');
@@ -163,13 +164,48 @@ class ControllerSupportTag extends Controller{
             if($res){
                 $id = $this->db->getLastId();
                 $this->response->jsonOutput([
-                    'id'=>$id,
-                    'msg'=>'succ'
+                'id'=>$id,
+                'msg'=>'succ'
                 ]);
             }else{
                 $this->response->jsonOutput(false);
             }
             
+        }
+    }
+    
+    /**
+    * ajax方式设置标签的
+    *
+    * @return void
+    */
+    public function ajaxSetTagAttr(){
+        if(!empty($this->request->post['selected'])){
+            $selected = $this->request->post['selected'];
+        }else{
+            $selected = null;
+        }
+        
+        if(!empty($this->request->post['attr'])){
+            $attr = $this->request->post['attr'];
+        }else{
+            $attr = null;
+        }
+
+        
+        $this->load->model('support/tag');
+        switch($attr){
+            case 'is_search':
+                $rs = $this->model_support_tag->setIsSearch($selected);
+                break;
+            case 'is_hot':
+                $rs = $this->model_support_tag->setIsHot($selected);
+                break;
+        }
+        if($rs){
+            $this->response->jsonOutput($rs);
+        }else{
+            $this->response->jsonOutput(false);
         }
     }
 }

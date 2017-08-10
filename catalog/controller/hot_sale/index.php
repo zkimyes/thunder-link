@@ -7,8 +7,6 @@ class ControllerHotSaleIndex extends Controller {
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
         $this->document->addStyle('catalog/view/theme/default/stylesheet/hot_sale.css');
 
-        $this->load->_model('hot_sale_category_model');
-        $category = new HotSaleCategory();
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');

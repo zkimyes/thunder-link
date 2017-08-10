@@ -112,6 +112,7 @@ class ControllerSupportCategory extends Controller{
         
         $this->load->model('support/category');
         $categories = $this->model_support_category->getList();
+        $categories = $this->model_support_category->makeTree($categories);
         $data['lists'] = json_encode($categories);
         
         $data['token'] = $token;
