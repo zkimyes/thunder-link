@@ -1,5 +1,5 @@
 <?php
-class ControllerConfigureConfigSelf extends Controller {
+class ControllerConfigurationSelect extends Controller {
 	public function index() {
 		$this->document->setTitle($this->config->get('config_meta_title'));
 		$this->document->setDescription($this->config->get('config_meta_description'));
@@ -17,33 +17,23 @@ class ControllerConfigureConfigSelf extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
+		$this->load->model('tool/image');
+        $this->load->model('configuration/category');
+		$this->load->model('configuration/board_type');
+        $this->load->model('configuration/typical');
+		$data['categorys'] = $this->model_configuration_category->getList();
 
-		$data['board_category'] = [
-			'0'=>[
-				'id'=>'1',
-				'name'=>'MSTP System Board'
-			],
-			'1'=>[
-				'id'=>'12',
-				'name'=>'MSTP System Board'
-			],
-			'2'=>[
-				'id'=>'3',
-				'name'=>'MSTP System Board'
-			],
-			'3'=>[
-				'id'=>'4',
-				'name'=>'MSTP System Board'
-			],
-			'4'=>[
-				'id'=>'5',
-				'name'=>'MSTP System Board'
-			],
-			'5'=>[
-				'id'=>'6',
-				'name'=>'MSTP System Board'
-			],
-		];
+        foreach($data['categorys'] as &$category){
+            if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
+                $category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
+            } else {
+                $category['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
+            }
+
+            $category['url'] = $this->url->link('configuration/index','category_id='.$category['category_id']);
+        }
+
+		$data['board_types'] = $this->model_configuration_board_type->getList();
 
 		$data['board_list'] = [
 			'1'=>[
@@ -69,7 +59,7 @@ class ControllerConfigureConfigSelf extends Controller {
 			$this->response->addHeader('Content-Type: application/json');
 			$this->response->setOutput(json_encode($data['board_list'][1]));
 		}else{
-			$this->response->setOutput($this->load->view('configure/selecting', $data));
+			$this->response->setOutput($this->load->view('configuration/select', $data));
 		}
 	}
 

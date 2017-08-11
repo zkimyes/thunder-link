@@ -18,13 +18,15 @@ class ControllerConfigurationIndex extends Controller {
         $data['header'] = $this->load->controller('common/header');
         
         $data['categorys'] = $this->model_configuration_category->getList();
-        
+
         foreach($data['categorys'] as &$category){
             if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
                 $category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
             } else {
                 $category['thumb'] = $this->model_tool_image->resize('no_image.png', 50, 50);
             }
+
+            $category['url'] = $this->url->link('configuration/index','category_id='.$category['category_id']);
         }
         
         if(!empty($this->request->get['category_id'])){
@@ -50,6 +52,7 @@ class ControllerConfigurationIndex extends Controller {
                 $typical['blueprint_thumb'] = $this->model_tool_image->resize('no_image.png', 228, 180);
             }
             $typical['link_boards'] = json_decode($typical['link_boards'],true);
+            $typical['parameter'] = json_decode($typical['parameter'],true);
         }
 
         

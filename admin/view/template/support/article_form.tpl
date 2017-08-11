@@ -120,7 +120,7 @@
                 category_id: '{{article.category_id}}',
                 meta_keywords: '{{article.meta_keywords}}',
                 meta_desc: '{{article.meta_desc}}',
-                summary: '{{article.summary}}',
+                summary: '{{article.summary|raw}}',
                 tags: '{{article.tags|raw}}' ? JSON.parse('{{article.tags|raw}}') : [],
                 tagList: [],
                 tag: '',

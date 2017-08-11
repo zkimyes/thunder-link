@@ -42,6 +42,10 @@ final class MySQLi {
 	}
 
 	public function escape($value) {
+		if (get_magic_quotes_gpc()){
+			$value = stripslashes($value);
+		}
+		$value = str_replace(["\r","\n"]," ",$value);
 		return $this->connection->real_escape_string($value);
 	}
 	

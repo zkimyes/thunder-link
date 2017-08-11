@@ -2,56 +2,30 @@
 <?php echo $content_top ?>
 <main id="_configure" class="main configure">
     <div class="container">
-        <div class="clearfix mt30">
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
+        <div class="eg clearfix mt30">
+            {% for category in categorys %}
+            <div class="col-md-2">
+                <a href="{{category.url|raw}}" class="eg-block {% if category.category_id == category_id %} actived {% endif %}">
+                    <div class="col-md-5">
+                        <img src="{{category.thumb}}" alt="{{category.name}}">
+                    </div>
+                    <div class="col-md-7">{{category.name}}</div>
+                </a>
             </div>
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
-            </div>
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
-            </div>
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
-            </div>
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
-            </div>
-            <div class="col-md-2 eg-block">
-                <div class="col-md-6">
-                    <img src="/image/p1.png" alt="">
-                </div>
-                <div class="col-md-6">OSN 3500</div>
-            </div>
+            {% endfor %}
         </div>
 
         <div class="packages-setting row">
             <div class="col-md-8 setting-content">
                 <div class="col-md-3 tab-menu">
                     <ul>
-                        <?php foreach($board_category as $cate){ ?>
+                        {% for type in board_types %}
                         <li>
                             <a class="">
-                                <?php echo $cate['name'] ?>
+                                {{type.name}}
                             </a>
                         </li>
-                        <?php } ?>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-md-9 tab-content">
@@ -120,13 +94,23 @@
                     <img src="/image/u672.png" alt="">
                     <div class="boards">
                         <table class="table">
-                            <tr><th>Board type</th><th>Board name</th><th>Qty</th><th></th></tr>
-                            <tr><td>Sysrtem Board</td><td>N4GSCC</td><td>2</td><td>DELETE</td></tr>
+                            <tr>
+                                <th>Board type</th>
+                                <th>Board name</th>
+                                <th>Qty</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Sysrtem Board</td>
+                                <td>N4GSCC</td>
+                                <td>2</td>
+                                <td>DELETE</td>
+                            </tr>
                         </table>
                     </div>
                     <div class="caption clearfix">
-                        <p><a href="#" class="btn btn-o-success pull-left" role="button">Eliminate</a> 
-                        <a href="#" class="btn btn-o-success pull-right" role="button">Quote</a></p>
+                        <p><a href="#" class="btn btn-o-success pull-left" role="button">Eliminate</a>
+                            <a href="#" class="btn btn-o-success pull-right" role="button">Quote</a></p>
                     </div>
                 </div>
             </div>

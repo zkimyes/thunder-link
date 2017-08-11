@@ -58,6 +58,10 @@ final class MySQL {
 
 	public function escape($value) {
 		if ($this->connection) {
+			if (get_magic_quotes_gpc()){
+				$value = stripslashes($value);
+			}
+			$value = str_replace('/\r\n','^',$value);
 			return mysql_real_escape_string($value, $this->connection);
 		}
 	}

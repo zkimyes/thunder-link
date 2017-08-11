@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <label>关联产品</label>
                             <div style="position:relative">
-                                <input type="text" value="" placeholder="输入名字搜索,按@显示所有主板..." v-model="product_search" @input="searchProduct()" class="form-control" />
+                                <input type="text" value="" placeholder="输入名字搜索,按@显示所有产品..." v-model="product_search" @input="searchProduct()" class="form-control" />
                                 <ul class="dropdown-menu" v-if="product_search != ''" style="left:0;top:32px;display:block;">
                                     <li @click="chooseProduct(product)" v-for="product in products"><a href="javascript:;">${product.name}</a>
                                     </li>
@@ -58,7 +58,7 @@
                             <label>配置图</label>
                             <div>
                                 <a href="javascript:;" id="thumb-blueprint" data-toggle="image" class="img-thumbnail"><img src="{{typical.thumb_blueprint}}"  data-placeholder="<?php echo $placeholder; ?>" /></a>
-                                <input v-model="blueprint" type="hidden" name="blueprint" id="input-blueprint" />
+                                <input value="{{typical.blueprint}}" type="hidden" name="blueprint" id="input-blueprint" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -129,7 +129,6 @@
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
                 parameter: '{{typical.parameter|raw}}' ? JSON.parse('{{typical.parameter|raw}}') : '',
-                blueprint: '{{typical.blueprint}}',
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
                 search: '',

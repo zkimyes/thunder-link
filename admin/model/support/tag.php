@@ -101,7 +101,7 @@ class ModelSupportTag extends Model {
     */
     public function setIsSearch($selected){
         if(!empty($selected) && is_array($selected)){
-            $sql = "update ".$this->table." set is_hot= CASE id ";
+            $sql = "update ".$this->table." set is_search= CASE id ";
             $ids = [];
             foreach($selected as $k=>$select){
                 $sql .= sprintf("WHEN %d THEN %d ", $select['id'], $select['checked']);
