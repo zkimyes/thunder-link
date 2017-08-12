@@ -10,75 +10,29 @@
             product guarantee (professional ethics)Professional technical advise (Hardware/Software compatibility)
         </div>
         <div class="categories">
-            <section class="category" class="row">
-                <div class="header">Transmition network</div>
-                <div class="body">
-                    <div class="category_list">
-                        <ul>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="bl1">
-
+            {% for category in all_category %}
+                <section class="category" class="row">
+                    <div class="header">{{category.name|raw}}</div>
+                    <div class="body">
+                        <div class="category_list">
+                            <ul>
+                                {% for child_category in category.child_category %}
+                                <li> <a href="">{{child_category.name|raw}}</a></li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        <div class="bl2">
+                        <div class="content">
+                            <div class="bl1">
 
-                        </div>
-                        <div class="bl3"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="category" class="row">
-                <div class="header">Transmition network</div>
-                <div class="body">
-                    <div class="category_list">
-                        <ul>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="bl1">
+                            </div>
+                            <div class="bl2">
 
+                            </div>
+                            <div class="bl3"></div>
                         </div>
-                        <div class="bl2">
-
-                        </div>
-                        <div class="bl3"></div>
                     </div>
-                </div>
-            </section>
-            <section class="category" class="row">
-                <div class="header">Transmition network</div>
-                <div class="body">
-                    <div class="category_list">
-                        <ul>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                            <li> <a href="">asdasd</a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="bl1">
-
-                        </div>
-                        <div class="bl2">
-
-                        </div>
-                        <div class="bl3"></div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            {% endfor %}
         </div>
     </div>
 </main>

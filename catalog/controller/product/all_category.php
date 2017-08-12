@@ -7,7 +7,7 @@ class ControllerProductAllCategory extends Controller {
 		$this->load->model('tool/image');
 		$this->document->addLink('/catalog/view/theme/default/stylesheet/all_category.css','stylesheet');
 
-		$this->document->setTitle("All Category");
+		$this->document->setTitle("All Categories");
 		$this->document->setDescription("asdasdasdasasdasd");
 		$this->document->setKeywords("adasdasd");
 
@@ -18,9 +18,11 @@ class ControllerProductAllCategory extends Controller {
 			'href' => $this->url->link('common/home')
 		);
 
-		$data['heading_title'] = 'adadasd';
-		
-		var_dump($this->model_catalog_category->getCategories());
+		$data['heading_title'] = 'All Categories';
+		$data['all_category'] = $this->model_catalog_category->getCategories();
+		foreach($data['all_category'] as & $category){
+			$category['child_category'] = $this->model_catalog_category->getCategories($category['category_id']);
+		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
