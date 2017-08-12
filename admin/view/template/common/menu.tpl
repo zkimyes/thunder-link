@@ -3,6 +3,9 @@
     <li id="catalog"><a class="parent"><i class="fa fa-tags fa-fw"></i> <span><?php echo $text_catalog; ?></span></a>
         <ul>
             <li>
+                <a href="{{all_category|raw}}">All Category Setting</a>
+            </li>
+            <li>
                 <a href="<?php echo $category; ?>">
                     <?php echo $text_category; ?>
                 </a>

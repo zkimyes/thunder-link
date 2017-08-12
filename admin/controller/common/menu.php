@@ -221,6 +221,7 @@ class ControllerCommonMenu extends Controller {
 		$data['support_category'] = $this->url->link('support/category','token='.$this->session->data['token'],true);
 		$data['support_article'] = $this->url->link('support/article','token='.$this->session->data['token'],true);
 		$data['support_tags'] = $this->url->link('support/tag','token='.$this->session->data['token'],true);
+		$data['all_category'] = $this->url->link('catalog/all_category','token='.$this->session->data['token'],true);
 		return $this->load->view('common/menu', $data);
 	}
 }
