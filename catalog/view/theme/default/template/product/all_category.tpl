@@ -11,15 +11,71 @@
         </div>
         <div class="categories">
             <section class="category" class="row">
-                <div class="header"></div>
+                <div class="header">Transmition network</div>
                 <div class="body">
-                    <div class="col-md-4">
-                        <div class="first">Transmition network</div>
-                        <div class="others">
-                            <ul>
-                                <li>asdasd</li>
-                            </ul>
+                    <div class="category_list">
+                        <ul>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="bl1">
+
                         </div>
+                        <div class="bl2">
+
+                        </div>
+                        <div class="bl3"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="category" class="row">
+                <div class="header">Transmition network</div>
+                <div class="body">
+                    <div class="category_list">
+                        <ul>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="bl1">
+
+                        </div>
+                        <div class="bl2">
+
+                        </div>
+                        <div class="bl3"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="category" class="row">
+                <div class="header">Transmition network</div>
+                <div class="body">
+                    <div class="category_list">
+                        <ul>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                            <li> <a href="">asdasd</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="bl1">
+
+                        </div>
+                        <div class="bl2">
+
+                        </div>
+                        <div class="bl3"></div>
                     </div>
                 </div>
             </section>

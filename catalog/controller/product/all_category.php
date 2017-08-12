@@ -20,7 +20,7 @@ class ControllerProductAllCategory extends Controller {
 
 		$data['heading_title'] = 'adadasd';
 		
-
+		var_dump($this->model_catalog_category->getCategories());
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
