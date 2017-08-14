@@ -4,3 +4,4 @@ system/storage/logs/*
 
 .vscode/settings.json
 .gitignore
+system/storage/logs/error.log
