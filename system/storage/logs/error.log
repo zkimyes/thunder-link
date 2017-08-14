@@ -3584,3 +3584,5 @@
 2017-08-14 7:23:24 - PHP Notice:  Undefined variable: delete in E:\php\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 22
 2017-08-14 7:23:32 - PHP Notice:  Undefined variable: delete in E:\php\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 22
 2017-08-14 7:39:54 - PHP Notice:  Undefined variable: delete in E:\php\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 22
+2017-08-14 20:51:28 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 22
+2017-08-14 20:51:36 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 22
