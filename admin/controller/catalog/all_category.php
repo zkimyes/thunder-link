@@ -20,9 +20,7 @@ class ControllerCatalogAllCategory extends Controller {
         $data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 		
-		$data['categories'] = $this->model_catalog_category->getCategories([
-			'parent_id'=>0
-		]);
+		$data['categories'] = json_encode($this->model_catalog_category->getAllCategorySetting(),true);
 
         $this->document->setTitle($this->language->get('heading_title'));
         $this->response->setOutput($this->load->view('catalog/all_category_setting', $data));

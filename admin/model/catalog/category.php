@@ -313,5 +313,16 @@ class ModelCatalogCategory extends Model {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "category_to_layout WHERE layout_id = '" . (int)$layout_id . "'");
 
 		return $query->row['total'];
-	}	
+	}
+
+	/**
+	 * 获取所有一级类目的设置
+	 *
+	 * @return void
+	 */
+	public function getAllCategorySetting(){
+		$sql = 'SELECT c.category_id,d.`name`,a.category_id as a_category_id,a.product_id,a.banner_center,a.banner_right_top,a.banner_right_bottom from oc_category c LEFT JOIN oc_category_description d on c.category_id = d.category_id LEFT JOIN oc_all_category a on a.category_id = c.category_id where c.parent_id = 0';
+		$result = $this->db->query($sql);
+		return $result->rows;
+	}
 }
