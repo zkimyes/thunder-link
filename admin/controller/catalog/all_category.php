@@ -18,11 +18,32 @@ class ControllerCatalogAllCategory extends Controller {
         );
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
-		$data['footer'] = $this->load->controller('common/footer');
+        $data['footer'] = $this->load->controller('common/footer');
+        $data['product_search_url'] = $this->url->link('configuration/typical/getProduct');
+        $data['banner_search_url'] = $this->url->link('catalog/all_category/getBanners');
+        $data['token'] = $this->session->data['token'];
 		
-		$data['categories'] = json_encode($this->model_catalog_category->getAllCategorySetting(),true);
+		$data['categories'] = $this->model_catalog_category->getAllCategorySetting();
 
         $this->document->setTitle($this->language->get('heading_title'));
         $this->response->setOutput($this->load->view('catalog/all_category_setting', $data));
+    }
+
+    public function edit(){
+        $this->document->setTitle($this->language->get('heading_title'));
+        $this->response->setOutput($this->load->view('catalog/all_category_setting_form', $data));
+    }
+
+
+    public function getBanners(){
+        if(isset($this->request->get['name'])){
+            $name = $this->request->get['name'];
+        }else{
+            $name = '';
+        }
+
+        $this->response->jsonOutput([
+            'msg'=>'asdasd'
+        ]);
     }
 }

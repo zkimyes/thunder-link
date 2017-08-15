@@ -839,3 +839,33 @@ input[type="checkbox"]:checked::after,
 .hot_level,.hot_level_tips {
     display: none;
 }
+
+.related_box{
+    position: relative;
+}
+
+.related_box .related {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
+}
+
+.related_box .related li{
+    line-height: 30px;
+    text-indent: 10px;
+}
