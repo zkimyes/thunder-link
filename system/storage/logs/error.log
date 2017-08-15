@@ -3619,3 +3619,161 @@
 2017-08-15 13:31:10 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 26
 2017-08-15 13:33:16 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 26
 2017-08-15 13:33:39 - PHP Notice:  Undefined variable: delete in G:\php_projects\thunder-link\admin\view\template\catalog\all_category_setting.tpl on line 26
+2017-08-15 14:58:15 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 129
+2017-08-15 14:58:15 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 14:58:15 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 14:58:15 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:03:24 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 129
+2017-08-15 15:03:24 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:03:24 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:03:24 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:04:12 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:04:12 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:04:12 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:04:12 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:04:25 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:04:25 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:04:25 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:04:25 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:04:29 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:04:29 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:04:29 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:04:29 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:14:00 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:14:00 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:14:00 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:14:00 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:14:04 - PHP Notice:  Undefined index: content in /projects/thunder-link/admin/model/design/banner.php on line 36
+2017-08-15 15:14:29 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:14:29 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:14:29 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:14:29 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:17:01 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:17:01 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:17:01 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:17:01 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:17:06 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:17:06 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:17:06 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:17:06 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:17:59 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 130
+2017-08-15 15:17:59 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 131
+2017-08-15 15:17:59 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 132
+2017-08-15 15:17:59 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/design/banner_form.tpl on line 133
+2017-08-15 15:35:32 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:35:32 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:35:32 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:35:32 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:35:32 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:35:32 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:35:32 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:15 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:15 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:15 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:15 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:15 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:15 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:15 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:22 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:22 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:22 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:22 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:22 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/catalog/all_category.php on line 37
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 1
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 2
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 10
+2017-08-15 15:36:23 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/catalog/all_category_setting_form.tpl on line 72

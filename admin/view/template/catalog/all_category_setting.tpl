@@ -54,7 +54,7 @@
                                     {{category.banner_right_bottom|raw}}
                                 </td>
                                 <td>
-                                    <a class="btn btn-xs btn-warning">编辑</a>
+                                    <a href="{{edit_url|raw}}&category_id={{category.category_id}}" class="btn btn-xs btn-warning">编辑</a>
                                 </td>
                             </tr>
                             {% endfor %}
