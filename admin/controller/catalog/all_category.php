@@ -53,6 +53,15 @@ class ControllerCatalogAllCategory extends Controller {
         $data['banner_search_url'] = $this->url->link('catalog/all_category/getBanners');
         $data['back_url'] = $this->url->link('catalog/all_category','token=' . $this->session->data['token'], true);
         $data['token'] = $this->session->data['token'];
+
+        if(isset($this->request->get['category_id'])){
+            $category_id = $this->request->get['category_id'];
+        }else{
+            $category_id = '';
+        }
+
+        
+
         $this->document->setTitle($this->language->get('heading_title'));
         $this->response->setOutput($this->load->view('catalog/all_category_setting_form', $data));
     }

@@ -28,11 +28,11 @@
                             <form action="{{action}}" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Frist Name</label>
-                                    <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                                    <input type="text" name="firstname" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Last Name</label>
-                                    <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                                    <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Email Address</label>
@@ -50,22 +50,13 @@
                                     <label class="control-label" for="input-password">Your Country</label>
                                     <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
                                 </div>
+                                <div class="checkbox">
+                                    <label>
+                                      <input name="confirm" type="checkbox"> Confirm
+                                    </label>
+                                  </div>
                                 <input type="submit" value="Create an Account" class="btn btn-o-success pull-right" />
                             </form>
-                            <div class="login-by-3td-way">
-                                <p>Login by other ways:</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href=""><img src="/image/u1982_mouseOver.png" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="/image/u1984_mouseOver.png" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="/image/u1986_mouseOver.png" alt=""></a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
