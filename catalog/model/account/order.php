@@ -101,7 +101,7 @@ class ModelAccountOrder extends Model {
 		}
 	}
 
-	public function getOrders($start = 0, $limit = 20) {
+	public function getOrders($start = 0, $limit = 20,$status="") {
 		if ($start < 0) {
 			$start = 0;
 		}

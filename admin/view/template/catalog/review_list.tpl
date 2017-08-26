@@ -118,7 +118,10 @@
                   <td class="text-right"><?php echo $review['rating']; ?></td>
                   <td class="text-left"><?php echo $review['status']; ?></td>
                   <td class="text-left"><?php echo $review['date_added']; ?></td>
-                  <td class="text-right"><a href="<?php echo $review['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                  <td class="text-right">
+                    <a href="<?php echo $review['reply']; ?>" class="btn btn-default"><i class="fa fa-anchor"></i> Reply</a>
+                    <a href="<?php echo $review['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                  </td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>

@@ -35,10 +35,12 @@ class ControllerModuleAccount extends Controller {
 		$data['order'] = $this->url->link('account/order', '', true);
 		$data['download'] = $this->url->link('account/download', '', true);
 		$data['reward'] = $this->url->link('account/reward', '', true);
+		$data['reviews'] = $this->url->link('account/reviews', '', true);
 		$data['return'] = $this->url->link('account/return', '', true);
 		$data['transaction'] = $this->url->link('account/transaction', '', true);
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
 		$data['recurring'] = $this->url->link('account/recurring', '', true);
+
 
 		return $this->load->view('module/account', $data);
 	}

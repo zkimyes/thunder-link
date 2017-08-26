@@ -67,7 +67,7 @@
         </div>
 
         <div class="text-center">
-            <a class="btn btn-lg btn-success config-self" href="">Self Configure</a>
+            <a href="{{select_url|raw}}" class="btn btn-lg btn-success config-self" href="">Self Configure</a>
         </div>
     </div>
 </main>

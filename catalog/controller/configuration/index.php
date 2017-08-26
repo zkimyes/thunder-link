@@ -16,6 +16,7 @@ class ControllerConfigurationIndex extends Controller {
         $data['content_bottom'] = null;
         $data['footer'] = $this->load->controller('common/footer');
         $data['header'] = $this->load->controller('common/header');
+        $data['select_url'] = $this->url->link('configuration/select');
         
         $data['categorys'] = $this->model_configuration_category->getList();
 

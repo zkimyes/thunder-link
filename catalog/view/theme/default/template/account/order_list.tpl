@@ -15,12 +15,10 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1>All Orders</h1>
-      <div class="botton-group">
-          <a class="btn btn-default" href="#" role="button">All</a>
-          <a class="btn btn-default" href="#" role="button">All</a>
-          <a class="btn btn-default" href="#" role="button">All</a>
-          <a class="btn btn-default" href="#" role="button">All</a>
-          <a class="btn btn-default" href="#" role="button">All</a>
+      <div style="margin:10px 0">
+          {% for status in order_status%}
+          <a class="btn btn-default" href="#" role="button">{{status.name}}</a>
+          {% endfor %}
       </div>
       <?php if ($orders) { ?>
       <div class="table-responsive">

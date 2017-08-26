@@ -9,12 +9,16 @@ class ControllerAccountOrder extends Controller {
 
 		$this->load->language('account/order');
 
-		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->setTitle('All Orders');
 		
 		$url = '';
 
 		if (isset($this->request->get['page'])) {
 			$url .= '&page=' . $this->request->get['page'];
+		}
+
+		if(isset($this->request->get['status'])){
+			$url .="&status=".$this->request->get['status'];
 		}
 		
 		$data['breadcrumbs'] = array();
@@ -34,7 +38,7 @@ class ControllerAccountOrder extends Controller {
 			'href' => $this->url->link('account/order', $url, true)
 		);
 
-		$data['heading_title'] = $this->language->get('heading_title');
+		$data['heading_title'] = 'My Orders';
 
 		$data['text_empty'] = $this->language->get('text_empty');
 
@@ -57,6 +61,8 @@ class ControllerAccountOrder extends Controller {
 		$data['orders'] = array();
 
 		$this->load->model('account/order');
+		$this->load->model('localisation/order_status');
+
 
 		$order_total = $this->model_account_order->getTotalOrders();
 
@@ -84,6 +90,7 @@ class ControllerAccountOrder extends Controller {
 		$pagination->url = $this->url->link('account/order', 'page={page}', true);
 
 		$data['pagination'] = $pagination->render();
+		$data['order_status'] = $this->model_localisation_order_status->getOrderStatuses();
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($order_total) ? (($page - 1) * 10) + 1 : 0, ((($page - 1) * 10) > ($order_total - 10)) ? $order_total : ((($page - 1) * 10) + 10), $order_total, ceil($order_total / 10));
 

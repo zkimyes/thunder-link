@@ -99,3 +99,7 @@
     width: 160px;
     padding: 10px 0;
 }
+
+.tab-menu li.actived{
+    background: #fff;
+}

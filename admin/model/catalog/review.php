@@ -113,4 +113,33 @@ class ModelCatalogReview extends Model {
 
 		return $query->row['total'];
 	}
+
+	public function addReply($data = []){
+		if(!empty($data)){
+			$sql = "insert into oc_review_reply (`review_id`,`content`,`author`,`product_id`) values 
+				(
+					".(int)$data['review_id'].",
+					'".$this->db->escape($data['content'])."',
+					'".$this->db->escape($data['author'])."',
+					".(int)$data['product_id']."
+				)";
+
+			$query = $this->db->query($sql);
+			return $query->row;
+		}
+		return false;
+	}
+
+
+	public function getReplyByReviewId($review_id=0){
+		$query = $this->db->query('select * from oc_review_reply where review_id = '.(int)$review_id);
+		return $query->rows;
+	}
+
+	public function deleteReplyById($replyId=0){
+		if(!empty($replyId)){
+			$query = $this->db->query('delete from oc_review_reply where id = '.(int)$replyId);
+			return $query->row;
+		}
+	}
 }

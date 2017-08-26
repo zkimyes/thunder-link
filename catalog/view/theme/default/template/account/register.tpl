@@ -28,27 +28,31 @@
                             <form action="{{action}}" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Frist Name</label>
-                                    <input type="text" name="firstname" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                                    <input type="text" name="firstname"  placeholder="First Name" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Last Name</label>
-                                    <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                                    <input type="text" name="lastname" placeholder="Last Name" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-email">Email Address</label>
-                                    <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+                                    <input type="text" name="email"  placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-password">Password</label>
-                                    <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+                                    <input type="password" name="password" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-password">Confirm Password</label>
-                                    <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+                                    <input type="password" name="password" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="input-password">Your Country</label>
-                                    <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
+                                    <select class="form-control">
+                                        {% for country in countries %}
+                                            <option value="{{country.country_id}}">{{country.name|raw}}</option>
+                                        {% endfor %}
+                                    </select>
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -108,4 +112,7 @@
         </div>
     </div>
 </div>
+<script>
+    $.ajax('')
+</script>
 <?php echo $footer; ?>

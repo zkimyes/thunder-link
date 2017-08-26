@@ -272,7 +272,8 @@ class ControllerCatalogReview extends Controller {
 				'rating'     => $result['rating'],
 				'status'     => ($result['status']) ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
-				'edit'       => $this->url->link('catalog/review/edit', 'token=' . $this->session->data['token'] . '&review_id=' . $result['review_id'] . $url, true)
+				'edit'       => $this->url->link('catalog/review/edit', 'token=' . $this->session->data['token'] . '&review_id=' . $result['review_id'] . $url, true),
+				'reply'      => $this->url->link('catalog/review/reply','token=' . $this->session->data['token'] . '&review_id=' . $result['review_id'] . $url, true)
 			);
 		}
 
@@ -303,6 +304,7 @@ class ControllerCatalogReview extends Controller {
 		$data['button_filter'] = $this->language->get('button_filter');
 
 		$data['token'] = $this->session->data['token'];
+
 
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
@@ -584,5 +586,66 @@ class ControllerCatalogReview extends Controller {
 		}
 
 		return !$this->error;
+	}
+
+	public function reply(){
+		$url = '';
+		$data['breadcrumbs'] = array();
+		
+		$data['breadcrumbs'][] = array(
+			'text' => $this->language->get('text_home'),
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+		);
+
+		$data['breadcrumbs'][] = array(
+			'text' => $this->language->get('heading_title'),
+			'href' => $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true)
+		);
+		$data['header'] = $this->load->controller('common/header');
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['footer'] = $this->load->controller('common/footer');
+
+		$this->load->model('catalog/review');
+
+		if (isset($this->request->get['review_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
+			$review_info = $this->model_catalog_review->getReview($this->request->get['review_id']);
+		}
+
+		$data['add_reply'] = $this->url->link('catalog/review/addReply','token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'] . $url, true);
+		$data['review_info'] = $review_info;
+		$reply = $this->model_catalog_review->getReplyByReviewId($this->request->get['review_id']);
+
+		foreach($reply as $k=>$r){
+			$data['reply'][$k] = $r;
+			$data['reply'][$k]['delete_reply'] = $this->url->link('catalog/review/deleteReply','token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'].'&reply_id='.$r['id'] . $url, true);
+		}
+		
+
+		$this->response->setOutput($this->load->view('catalog/review_reply', $data));
+	}
+
+	public function addReply(){
+		$this->load->model('catalog/review');
+		if (isset($this->request->post['review_id']) && ($this->request->server['REQUEST_METHOD'] == 'POST')) {
+			$this->model_catalog_review->addReply([
+				'content'=>$this->request->post['content'],
+				'review_id'=>$this->request->post['review_id'],
+				'author'=>'Thunder Link',
+				'product_id'=>$this->request->post['product_id']
+			]);
+			$this->response->redirect(
+				$this->url->link('catalog/review/reply','token=' . $this->session->data['token'] . '&review_id=' . $this->request->post['review_id'] . $url, true)
+			);
+		}
+	}
+
+	public function deleteReply(){
+		$this->load->model('catalog/review');
+		if (isset($this->request->get['reply_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
+			$this->model_catalog_review->deleteReplyById($this->request->get['reply_id']);
+			$this->response->redirect(
+				$this->url->link('catalog/review/reply','token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'] . $url, true)
+			);
+		}
 	}
 }

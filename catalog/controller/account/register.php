@@ -275,7 +275,6 @@ class ControllerAccountRegister extends Controller {
 		$this->load->model('localisation/country');
 
 		$data['countries'] = $this->model_localisation_country->getCountries();
-
 		// Custom Fields
 		$this->load->model('account/custom_field');
 
