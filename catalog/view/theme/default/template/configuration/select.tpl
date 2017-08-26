@@ -26,46 +26,10 @@
                 </div>
                 <div class="col-md-9 tab-content">
                     <ul>
-                        <li>
+                        <li v-for="board in showBoard">
                             <div class="col-md-7">
-                                <div class="title">SSN2GSCC</div>
-                                <div class="desc">Description:System Control and Communication Board </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">-</button>
-                                            </span>
-                                    <input type="text" class="form-control" placeholder="0">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">+</button>
-                                            </span>
-                                </div>
-                            </div>
-                            <div class="col-md-2"><button class="btn btn-default">Choose</button></div>
-                        </li>
-                        <li>
-                            <div class="col-md-7">
-                                <div class="title">SSN2GSCC</div>
-                                <div class="desc">Description:System Control and Communication Board </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">-</button>
-                                            </span>
-                                    <input type="text" class="form-control" placeholder="0">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">+</button>
-                                            </span>
-                                </div>
-                            </div>
-                            <div class="col-md-2"><button class="btn btn-default">Choose</button></div>
-                        </li>
-                        <li>
-                            <div class="col-md-7">
-                                <div class="title">SSN2GSCC</div>
-                                <div class="desc">Description:System Control and Communication Board </div>
+                                <div class="title">${board.name}</div>
+                                <div class="desc">${board.content}</div>
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group">
@@ -155,7 +119,7 @@
                 border_type_id:type_id
             },function(result){
                 callback(result)
-            })
+            },'json')
         }
     }
 
