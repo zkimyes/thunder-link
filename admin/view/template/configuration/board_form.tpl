@@ -27,6 +27,10 @@
                             <input type="text" v-model="name" class="form-control" placeholder="输入板卡名">
                         </div>
                         <div class="form-group">
+                            <label>Content</label>
+                            <textarea v-model="content" placeholder="填写描述" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
                             <label>Board Type</label>
                             <select class="form-control" v-model="border_type_id">
                                 <option value="">--选择板卡类型--</option>
@@ -58,6 +62,7 @@
         data: {
             id: '{{board.id}}',
             name: '{{board.name}}',
+            content:'{{board.content}}',
             border_type_id:'{{board.border_type_id}}',
             board_types:JSON.parse('{{board_types|raw}}'),
             order: '{{board.order}}'
@@ -67,12 +72,17 @@
                 let data = {
                     id: this.id,
                     name: this.name,
+                    content:this.content,
                     border_type_id: this.border_type_id,
                     order: this.order
                 }
 
                 if (data.name == "") {
                     return layer.msg('板卡名字不能为空');
+                }
+
+                if (data.content == "") {
+                    return layer.msg('请输入办卡描述');
                 }
 
                 if (data.border_type_id == "") {

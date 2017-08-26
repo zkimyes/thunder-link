@@ -34,30 +34,14 @@ class ControllerConfigurationSelect extends Controller {
 				$category['_image'] = $this->model_tool_image->resize('no_image.png',200,200);
 			}
 		}
-		
+		$boardTypes = $this->model_configuration_board_type->getList();
 		$data['categorys'] = json_encode($data['categorys'],true);
-		$data['board_types'] = json_encode($this->model_configuration_board_type->getList(),true);
+		$data['board_types'] = json_encode($boardTypes,true);
 
 
-		$data['board_list'] = [
-			'1'=>[
-				'0'=>[
-					'name'=>'SSN2GSCC',
-					'desc'=>'Description:System Control and Communication Board',
-					'quantity'=>100
-				],
-				'1'=>[
-					'name'=>'SSN2GSCC',
-					'desc'=>'Description:System Control and Communication Board',
-					'quantity'=>100
-				],
-				'2'=>[
-					'name'=>'SSN2GSCC',
-					'desc'=>'Description:System Control and Communication Board',
-					'quantity'=>100
-				]
-			]
-		];
+		$data['board_list'] = json_encode($this->model_configuration_board->getBoardByType([
+			'type'=>$boardTypes[0]['id']
+		]),true);
 
 		if(is_ajax_request()){
 			$rs = [];

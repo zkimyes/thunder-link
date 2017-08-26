@@ -33,16 +33,16 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="input-group">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">-</button>
-                                            </span>
-                                    <input type="text" class="form-control" placeholder="0">
-                                    <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">+</button>
-                                            </span>
+                                    <span v-if="board.type != 1" @click="board.quantity>0 && board.quantity--" class="input-group-btn">
+                                        <button class="btn btn-default" type="button">-</button>
+                                    </span>
+                                    <input v-if="board.type != 1" v-model="board.quantity" value="0" type="text" class="form-control" placeholder="0">
+                                    <span v-if="board.type != 1" @click="board.quantity++" class="input-group-btn">
+                                        <button class="btn btn-default" type="button">+</button>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="col-md-2"><button class="btn btn-default">Choose</button></div>
+                            <div class="col-md-2"><button @click="selectBoards(board)" class="btn btn-default">Choose</button></div>
                         </li>
                     </ul>
                 </div>
@@ -58,18 +58,18 @@
                                 <th>Board type</th>
                                 <th>Board name</th>
                                 <th>Qty</th>
-                                <th></th>
+                                <th>Action</th>
                             </tr>
-                            <tr>
-                                <td>Sysrtem Board</td>
-                                <td>N4GSCC</td>
-                                <td>2</td>
-                                <td>DELETE</td>
+                            <tr v-for="boards in selectedBoards">
+                                <td style="vertical-align: middle;"><span>${boards.name}</span></td>
+                                <td style="vertical-align: middle;"><span>${boards.name}</span></td>
+                                <td style="vertical-align: middle;"><span>${boards.quantity||0}</span></td>
+                                <td v-if="boards.type !=1"><a @click="removeBoards(boards)" class="btn btn-link"><i class="fa fa-remove"></i> Delete</a></td>
                             </tr>
                         </table>
                     </div>
                     <div class="caption clearfix">
-                        <p><a href="#" class="btn btn-o-success pull-left" role="button">Eliminate</a>
+                        <p><a @click="clearBoards()" class="btn btn-o-success pull-left" role="button">Eliminate</a>
                             <a href="#" class="btn btn-o-success pull-right" role="button">Quote</a></p>
                     </div>
                 </div>
@@ -81,6 +81,7 @@
     
     var categories = '{{categorys|raw}}'?JSON.parse('{{categorys|raw}}'):[],
         board_types = '{{board_types|raw}}'?JSON.parse('{{board_types|raw}}'):[],
+        boards = '{{board_list|raw}}'?JSON.parse('{{board_list|raw}}'):[],
         fech_board_url = '{{fech_board_url}}';
         Vue.config.devtools = true
     new Vue({
@@ -92,11 +93,13 @@
             choosedType:board_types && board_types[0],
             choosedCategory:categories && categories[0],
             boards:{},
-            showBoard:[]
+            showBoard:boards,
+            selectedBoards:[]
         },
         methods:{
             selectCategory:function(choose){
                 this.choosedCategory = choose;
+                this.selectedBoards = [];
             },
             selectType:function(choose){
                 var _vm = this;
@@ -105,10 +108,35 @@
                     _vm.showBoard = _vm.boards[choose.id];
                 }else{
                     serviceGetBoard(choose.id,function(result){
-                        _vm.boards[choose.id] = result;
-                        _vm.showBoard = result;
+                        if(result){
+                            _vm.showBoard = result;
+                            _vm.boards[choose.id] = result;
+                        }
                     });
                 }
+            },
+            selectBoards:function(boards){
+                var _vm = this;
+                var _find = _vm.selectedBoards.find(function(item){
+                    return item.id == boards.id
+                })
+                if(!_find){
+                    _vm.selectedBoards.push(boards);
+                }
+            },
+            removeBoards:function(boards){
+                var _vm = this;
+                var _filterBoars = _vm.selectedBoards.filter(function(item){
+                    return item.id != boards.id
+                })
+                _vm.selectedBoards = _filterBoars;
+            },
+            clearBoards:function(){
+                var _vm = this;
+                var _filterBoars = _vm.selectedBoards.filter(function(item){
+                    return item.type == 1;
+                })
+                _vm.selectedBoards = _filterBoars;
             }
         }
     })

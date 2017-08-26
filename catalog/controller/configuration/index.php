@@ -5,7 +5,6 @@ class ControllerConfigurationIndex extends Controller {
         $this->document->setDescription($this->config->get('config_meta_description'));
         $this->document->setKeywords($this->config->get('config_meta_keyword'));
         $this->document->addStyle('catalog/view/theme/default/stylesheet/configure.css');
-        $this->document->addScript('catalog/view/javascript/app/configure.js');
         
         $this->load->model('tool/image');
         $this->load->model('configuration/category');

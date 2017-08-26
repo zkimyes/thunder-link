@@ -15,10 +15,11 @@ class ModelConfigurationBoard extends Model {
         $values = join(',',array_values($data));
         $rs = $this->db->query("
             INSERT INTO `oc_config_board`
-            (`name`, `order`,`border_type_id`)
+            (`name`,`content`, `order`,`border_type_id`)
              VALUES 
              (
                  '".$this->db->escape($data['name'])."',
+                 '".$this->db->escape($data['content'])."',
                  ".intval($data['order']).",
                  ".intval($data['border_type_id'])."
                  )
@@ -35,7 +36,9 @@ class ModelConfigurationBoard extends Model {
 
     public function update($data = []){
         $rs = $this->db->query("
-                update oc_config_board set `name`='".$this->db->escape($data['name'])."',
+                update oc_config_board set 
+                `name`='".$this->db->escape($data['name'])."',
+                `content`='".$this->db->escape($data['content'])."',
                 `order`=".intval($data['order']).",
                 border_type_id=".intval($data['border_type_id'])."
                  where id=".intval($data['id'])."
