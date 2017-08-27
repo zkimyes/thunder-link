@@ -4295,3 +4295,6 @@
 2017-08-27 1:53:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 679
 2017-08-27 1:53:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 679
 2017-08-27 1:53:02 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 679
+2017-08-26 19:41:08 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 679
+2017-08-26 19:41:08 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 679
+2017-08-26 19:41:08 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 679

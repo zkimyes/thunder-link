@@ -36,7 +36,8 @@
                                     <span v-if="board.type != 1" @click="board.quantity>0 && board.quantity--" class="input-group-btn">
                                         <button class="btn btn-default" type="button">-</button>
                                     </span>
-                                    <input v-if="board.type != 1" v-model="board.quantity" value="0" type="text" class="form-control" placeholder="0">
+                                    <input v-number-only v-if="board.type != 1" v-model.number="board.quantity" value="0" type="text" class="form-control" placeholder="0">
+                                    <input v-if="board.type == 1" readonly class="form-control" v-model="board.quantity" type="text">
                                     <span v-if="board.type != 1" @click="board.quantity++" class="input-group-btn">
                                         <button class="btn btn-default" type="button">+</button>
                                     </span>
@@ -70,7 +71,7 @@
                     </div>
                     <div class="caption clearfix">
                         <p><a @click="clearBoards()" class="btn btn-o-success pull-left" role="button">Eliminate</a>
-                            <a href="#" class="btn btn-o-success pull-right" role="button">Quote</a></p>
+                            <a @click="quote()" class="btn btn-o-success pull-right" role="button">Quote</a></p>
                     </div>
                 </div>
             </div>
@@ -84,6 +85,17 @@
         boards = '{{board_list|raw}}'?JSON.parse('{{board_list|raw}}'):[],
         fech_board_url = '{{fech_board_url}}';
         Vue.config.devtools = true
+    Vue.directive('numberOnly', {
+        bind: function (el) {
+            this.handler = function () {
+                el.value = el.value.replace(/\D+/, '')
+            }.bind(this)
+            el.addEventListener('input', this.handler)
+        },
+        unbind: function (el) {
+            el.removeEventListener('input', this.handler)
+        }
+    })
     new Vue({
         el:'#_configure',
         delimiters: ['${', '}'],
@@ -100,6 +112,9 @@
             selectCategory:function(choose){
                 this.choosedCategory = choose;
                 this.selectedBoards = [];
+                this.showBoard.map(function(item){
+                    item.quantity = 0;
+                })
             },
             selectType:function(choose){
                 var _vm = this;
@@ -129,14 +144,25 @@
                 var _filterBoars = _vm.selectedBoards.filter(function(item){
                     return item.id != boards.id
                 })
+                boards.quantity = 0;
                 _vm.selectedBoards = _filterBoars;
             },
             clearBoards:function(){
                 var _vm = this;
                 var _filterBoars = _vm.selectedBoards.filter(function(item){
+                    item.quantity = 0;
                     return item.type == 1;
                 })
                 _vm.selectedBoards = _filterBoars;
+            },
+            checkInput:function(model){
+                var e = event || window.event;
+                if(isNaN(e.target.value)){
+                    model = 0;
+                }
+            },
+            quote:function(){
+                layer.msg('adasd');
             }
         }
     })
