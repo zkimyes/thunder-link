@@ -59,7 +59,7 @@
                     </table>
                 </div>
                 <div class="caption">
-                    <p><a href="#" class="btn btn-o-success pull-left" role="button">Quote</a> <a href="#" class="btn btn-o-success pull-right" role="button">Revise</a></p>
+                    <p><a href="#" class="btn btn-o-success pull-left" role="button">Quote</a> <a href="{{typical.revise|raw}}" class="btn btn-o-success pull-right" role="button">Revise</a></p>
                 </div>
             </div>
 

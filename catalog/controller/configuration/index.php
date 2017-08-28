@@ -53,6 +53,7 @@ class ControllerConfigurationIndex extends Controller {
             }
             $typical['link_boards'] = json_decode($typical['link_boards'],true);
             $typical['parameter'] = json_decode($typical['parameter'],true);
+            $typical['revise'] = $this->url->link('configuration/select','typical_id='.$typical['id']);
         }
 
         

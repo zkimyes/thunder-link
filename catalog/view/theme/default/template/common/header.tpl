@@ -129,7 +129,7 @@
             <div class="container">
                 <div class="clearfix">
                     <div class="category-meun">
-                        <a class="categroy-btn">
+                        <a href="{{all_category_url|raw}}" class="categroy-btn">
                             ALL CATEGROY
                                 <i class="fa fa-list fa-1x" aria-hidden="true"></i>
                             </a> {% autoescape%}
@@ -217,3 +217,14 @@
             </div>
         </div>
     </header>
+    <script>
+        var Menu = new Vue({
+            el:".category-meun",
+            data:{
+                subCategoryVisable:false
+            },
+            methods:{
+                toggleSubMen
+            }
+        })
+    </script>
