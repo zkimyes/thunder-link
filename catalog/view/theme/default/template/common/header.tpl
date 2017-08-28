@@ -128,15 +128,15 @@
         <div class="main-nav">
             <div class="container">
                 <div class="clearfix">
-                    <div class="category-meun">
+                    <div @mouseenter="toggleSubMen(true)" @mouseleave="toggleSubMen(false)" class="category-meun">
                         <a href="{{all_category_url|raw}}" class="categroy-btn">
                             ALL CATEGROY
                                 <i class="fa fa-list fa-1x" aria-hidden="true"></i>
                             </a> {% autoescape%}
-                        <div class="sub-category">
+                        <div  v-show="subCategoryVisable" style="display:none;" class="sub-category">
                             <ul>
                                 {% for category in categories %}
-                                <li>
+                                <li @mouseenter="toggleSubCon(true)">
                                     <a class="f-cate" href="{{category.href|raw}}">{{category.name}} </a> {% if category.children %}
                                     <div>
                                         {% for subcategory in category.children %}
@@ -147,7 +147,7 @@
                                 </li>
                                 {% endfor %}
                             </ul>
-                            <div class="left-sub-category">
+                            <div v-show="subCategoryContentVisable"  style="display:none" class="left-sub-category">
                                 <div class="col-md-8">
                                     <!--solutions  -->
                                     <div class="solution-list">
@@ -218,13 +218,23 @@
         </div>
     </header>
     <script>
+        Vue.config.devtools = true
         var Menu = new Vue({
             el:".category-meun",
             data:{
-                subCategoryVisable:false
+                subCategoryVisable:false,
+                subCategoryContentVisable:false,
+                showContent:{}
             },
             methods:{
-                toggleSubMen
+                toggleSubMen:function(visable){
+                    this.subCategoryVisable = visable
+                    this.subCategoryContentVisable=false
+                },
+                toggleSubCon:function(visable){
+                    this.subCategoryContentVisable = visable,
+                    this.showContent = {}
+                }
             }
         })
     </script>

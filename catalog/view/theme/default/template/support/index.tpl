@@ -38,10 +38,10 @@
                             {% for article in result%}
                                 <div class="doc-list">
                                     <div class="col-md-3">
-                                        <img src="/image/u20733.png" alt="">
+                                        <a href="{{article.url|raw}}"><img src="/image/u20733.png" alt=""></a>
                                     </div>
                                     <div class="col-md-9">
-                                        <div class="title">{{article.title}}</div>
+                                        <div class="title"><a href="{{article.url|raw}}">{{article.title}}</a></div>
                                         <div class="tags">
                                             Tags:{% for tag in article.tags%}<a href="">{{tag}}</a>{% endfor %}
                                         </div>
