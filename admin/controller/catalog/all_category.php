@@ -60,7 +60,8 @@ class ControllerCatalogAllCategory extends Controller {
             $category_id = '';
         }
 
-        $this->document->setTitle($this->language->get('heading_title'));
+        $data['category'] = $this->model_catalog_category->getCategorySettingByCategoryId($category_id);
+
         $this->response->setOutput($this->load->view('catalog/all_category_setting_form', $data));
     }
 
@@ -68,6 +69,7 @@ class ControllerCatalogAllCategory extends Controller {
 
 
     public function getBanners(){
+        $this->load->model('design/banner');
         
         if(isset($this->request->get['name'])){
             $name = $this->request->get['name'];

@@ -4387,3 +4387,6 @@
 2017-08-30 4:46:34 - PHP Notice:  Trying to get property of non-object in /projects/thunder-link/catalog/model/support/comments.php on line 21
 2017-08-30 4:46:43 - PHP Notice:  Trying to get property of non-object in /projects/thunder-link/catalog/model/support/comments.php on line 21
 2017-08-30 4:46:52 - PHP Notice:  Trying to get property of non-object in /projects/thunder-link/catalog/model/support/comments.php on line 21
+2017-08-30 17:51:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-08-30 17:51:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-08-30 17:51:48 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728

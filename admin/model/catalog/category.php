@@ -325,4 +325,15 @@ class ModelCatalogCategory extends Model {
 		$result = $this->db->query($sql);
 		return $result->rows;
 	}
+
+	/**
+	 * 获取单个目录的设置
+	 *
+	 * @return void
+	 */
+	public function getCategorySettingByCategoryId($category_id){
+		$sql = 'SELECT c.category_id,d.`name`,a.category_id as a_category_id,a.product_id,a.banner_center,a.banner_right_top,a.banner_right_bottom from oc_category c LEFT JOIN oc_category_description d on c.category_id = d.category_id LEFT JOIN oc_all_category a on a.category_id = c.category_id where c.category_id = '.(int)$category_id;
+		$result = $this->db->query($sql);
+		return $result->row;
+	}
 }
