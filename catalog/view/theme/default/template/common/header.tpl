@@ -22,6 +22,7 @@
     <?php } ?>
     <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.bootcss.com/vue/2.3.3/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.2/layer.min.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />

@@ -60,11 +60,11 @@ class ControllerCatalogAllCategory extends Controller {
             $category_id = '';
         }
 
-        
-
         $this->document->setTitle($this->language->get('heading_title'));
         $this->response->setOutput($this->load->view('catalog/all_category_setting_form', $data));
     }
+
+    
 
 
     public function getBanners(){

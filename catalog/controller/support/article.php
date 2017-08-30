@@ -8,7 +8,7 @@ class ControllerSupportArticle extends Controller {
         $data['content_bottom'] = null;
         $data['footer'] = $this->load->controller('common/footer');
         $data['header'] = $this->load->controller('common/header');
-        $data['search_action'] = $this->url->link('support/index');
+        $data['add_comments'] = $this->url->link('support/article/addComments');
         
         $this->load->model('support/article');
 
@@ -18,12 +18,15 @@ class ControllerSupportArticle extends Controller {
             $article = null;
         }
          $data['article'] = $article?[
+            'id'=>$article['id'],
             'title'=>strip_tags(htmlentities($article['title'])),
-            'content'=>htmlentities($article['title'])
+            'content'=>htmlentities($article['title']),
+            'is_comment' =>$article['is_comment']
         ]:null;
 
-        if($article['is_comment']){
-            
+        if($article['is_comment'] == '1'){
+            $this->load->model('support/comments');
+            $data['comments'] = $this->model_support_comments->getCommentsByArticleId($article['id']);
         }
         $this->document->setTitle($this->config->get('config_meta_title'));
         $this->document->setDescription($this->config->get('config_meta_description'));
@@ -31,5 +34,19 @@ class ControllerSupportArticle extends Controller {
 
 
         $this->response->setOutput($this->load->view('support/article', $data));
+    }
+
+
+    public function addComments(){
+        if(isset($this->request->post['content']) && !empty($this->request->post['content'])){
+            $this->load->model('support/comments');
+            $this->model_support_comments->addComments([
+                'article_id'=>$this->request->post['article_id'],
+                'content'=>$this->request->post['content'],
+                'arthor'=>'zkimyes',
+                'custom_id'=>'1233'
+            ]);
+            $this->response->jsonOutput($this->request->post);
+        }
     }
 }

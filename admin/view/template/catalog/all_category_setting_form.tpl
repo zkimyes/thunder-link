@@ -20,19 +20,27 @@
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-pencil"></i> Edit Form</h3>
+                <h3 class="panel-title"><i class="fa fa-pencil"></i> </h3>
             </div>
             <div class="panel-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <div>asdasdasd</div> 
+                    <div>asdasdasd</div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Product</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="exampleInputPassword1">Banner Center</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Banner Right Top</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Banner Right Bottom</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
