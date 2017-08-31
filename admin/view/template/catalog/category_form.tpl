@@ -30,6 +30,7 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li><a href="#tab-solution" data-toggle="tab">Catelog Solution</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -231,11 +232,37 @@
                 </table>
               </div>
             </div>
+
+            <div class="tab-pane" id="tab-solution">
+                <!--关联的解决方案-->
+                <div>
+                  <select class="form-control" name="" id="">
+                    <option value="1">11</option>
+                  </select>
+                </div>
+            </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <script>
+    Vue.config.devtools = true;
+      var soluton = new Vue({
+        el:'#tab-solution',
+        data:{
+          solution:[]
+        },
+        methods:{
+          addSolution:function(){
+            this.solution.push({})
+          },
+          selectSoltuion:function(){
+
+          }
+        }
+      })
+  </script>
   <script type="text/javascript"><!--
 $('input[name=\'path\']').autocomplete({
 	'source': function(request, response) {
