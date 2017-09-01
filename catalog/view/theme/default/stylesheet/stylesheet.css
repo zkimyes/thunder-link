@@ -161,7 +161,7 @@ a {
 .prod-block {
     background-color: #fff;
     text-align: center;
-    height: 300px;
+    height: 280px;
 }
 
 .prod-block::after {
@@ -181,10 +181,6 @@ a {
 
 .prod-block .nav-tabs li {
     margin-left: -2px;
-}
-
-.prod-block .nav-tabs li a {
-    padding: 10px 20px;
 }
 
 .prod-block .nav-tabs>li.active>a,
@@ -368,10 +364,6 @@ a {
 
 .tab-menu ul li:not(:last-child) {
     border-bottom: 1px #ccc solid;
-}
-
-.tab-content {
-    padding: 0;
 }
 
 .tab-content ul {
@@ -559,4 +551,25 @@ a {
     background-color: #ccc;
     display: block;
     margin: 5px -10px;
+}
+
+
+.th-tabs {
+    margin: 0 -30px 0 0;
+}
+
+.th-tabs li{
+    padding:0;
+}
+
+.th-tabs li a{
+    padding:15px 0;
+}
+
+.tab-content {
+    margin: 0 -15px;
+}
+
+.pre-text{
+    font-size: 16px;
 }

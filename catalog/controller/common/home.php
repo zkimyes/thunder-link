@@ -16,6 +16,18 @@ class ControllerCommonHome extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
+
+		$this->load->model('hotsale/products');
+		$data['hot_sale_category'] = $this->model_hotsale_products->getHotSaleCategroy();
+		$hot_product = $this->model_hotsale_products->getHomeHotSaleList();
+
+		foreach($data['hot_sale_category'] as &$category){
+			foreach($hot_product as $product){
+				if($product['category_id'] == $category['id']){
+					$category['products'][] = $product;
+				}
+			}
+		}
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }

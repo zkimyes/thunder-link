@@ -210,7 +210,8 @@ class ControllerCommonMenu extends Controller {
 		);
 
 		//自定义的功能
-		$data['hotsale'] = $this->url->link('hotsale/index','token=' . $this->session->data['token'], true);
+		$data['hotsale_category'] = $this->url->link('hotsale/index','token=' . $this->session->data['token'], true);
+		$data['hotsale_product'] = $this->url->link('hotsale/product','token=' . $this->session->data['token'], true);
 		$data['promotion'] = $this->url->link('promotion/set','token=' . $this->session->data['token'], true);
 		$data['solution_category'] = $this->url->link('solution/category','token=' . $this->session->data['token'], true);
 		$data['solution_article'] = $this->url->link('solution/article','token=' . $this->session->data['token'], true);

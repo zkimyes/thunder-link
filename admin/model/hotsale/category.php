@@ -15,12 +15,13 @@ class ModelHotSaleCategory extends Model {
         if(!empty($data)){
             $query = $this->db->query(
                 'insert into oc_hot_sale_category 
-                (`name`,meta_desc,meta_keywords) 
+                (`name`,meta_desc,meta_keywords,sort_order) 
                 values 
                 (
-                    "'.$data['name'].'",
-                    "'.$data['meta_keywords'].'",
-                    "'.$data['meta_desc'].'"
+                    "'.$this->db->escape($data['name']).'",
+                    "'.$this->db->escape($data['meta_desc']).'",
+                    "'.$this->db->escape($data['meta_keywords']).'",
+                    "'.(int)$data['sort_order'].'"
                 )'
             );
             return $query;
@@ -32,9 +33,10 @@ class ModelHotSaleCategory extends Model {
         if(!empty($data)){
             $query = $this->db->query(
                 'update oc_hot_sale_category 
-                set `name`="'.$data['name'].'",
-                    meta_desc = "'.$data['meta_keywords'].'",
-                    meta_desc = "'.$data['meta_desc'].'"
+                set `name`="'.$this->db->escape($data['name']).'",
+                    meta_keywords = "'.$this->db->escape($data['meta_keywords']).'",
+                    meta_desc = "'.$this->db->escape($data['meta_desc']).'",
+                    sort_order = '.(int)$data['sort_order'].'
                 where id = 
                 '.$data['id']
             );

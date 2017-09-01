@@ -70,7 +70,11 @@
         </ul>
     </li>
     <li id="hotsale">
-        <a href="{{hotsale|raw}}"><i class="fa fa-tags fa-fw"></i>  <span>Hotsale</span></a>
+        <a class="parent"><i class="fa fa-tags fa-fw"></i>  <span>Hot Sale</span></a>
+        <ul>
+            <li><a href="{{hotsale_category|raw}}">Category</a></li>
+            <li><a href="{{hotsale_product|raw}}">Product</a></li>
+        </ul>
     </li>
     <li id="promotion">
         <a href="{{promotion|raw}}"><i class="fa fa-tags fa-fw"></i>   <span>Promotion</span></a>

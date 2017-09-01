@@ -4,54 +4,33 @@
         <div class="prod-block mt30">
             <div class="col-md-2">
                 <h2>Hot Sale</h2>
-                <div>
+                <div class="pre-text">
                     Secure Online <br> Transactions Buy It <br> Now for Fast Dispatch
                 </div>
                 <a href="">View More ></a>
             </div>
             <div class="col-md-10">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">MSTP</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                <ul class="nav nav-tabs th-tabs" role="tablist">
+                    {% for category in hot_sale_category%}
+                    <li class="col-md-2" role="presentation"><a href="#{{category.name}}" aria-controls="{{category.name}}" role="tab" data-toggle="tab">{{category.name}}</a></li>
+                    {% endfor %}
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="home">
-                        <div class="col-md-3">
-                            <a href="">
-                                <img src="/image/u135.png" alt="">
-                                <div><strong>US ￥ 35000</strong></div>
-                                <div>Huawei OptiX OSN3500</div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="">
-                                <img src="/image/u135.png" alt="">
-                                <div><strong>US ￥ 35000</strong></div>
-                                <div>Huawei OptiX OSN3500</div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="">
-                                <img src="/image/u135.png" alt="">
-                                <div><strong>US ￥ 35000</strong></div>
-                                <div>Huawei OptiX OSN3500</div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="">
-                                <img src="/image/u135.png" alt="">
-                                <div><strong>US ￥ 35000</strong></div>
-                                <div>Huawei OptiX OSN3500</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-                    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-                    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                        {% for category in hot_sale_category%}
+                            <div role="tabpanel" class="tab-pane" id="{{category.name}}">
+                                    {% for product in category.products%}
+                                        <div class="col-md-3">
+                                            <a href="">
+                                                <img src="/image/u135.png" alt="">
+                                                <div><strong>US ￥ 35000</strong></div>
+                                                <div>Huawei OptiX OSN3500</div>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                        {% endfor %}
                 </div>
             </div>
         </div>
@@ -59,13 +38,16 @@
         <div class="document-block mt30">
             <div class="section clearfix">
                 <div class="col-md-6">
-                    <div>Support doucument Search</div>
+                    <h4>Support doucument Search</h4>
                     <div class="main-search-bar input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
                     <div class="hot-tag">
-                        <a href="">OTN Configuration</a>
+                        <a class="label" href="">OTN Configuration</a>
+                        <a class="label" href="">OTN Configuration</a>
+                        <a class="label" href="">OTN Configuration</a>
+                        <a class="label" href="">OTN Configuration</a>
                     </div>
                 </div>
                 <div class="col-md-6">
