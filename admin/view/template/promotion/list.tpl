@@ -1,58 +1,84 @@
-<?php echo $header; ?>
-<?php echo $column_left; ?>
+{{ header|raw }} {{ column_left|raw }}
 <div id="content">
     <div class="page-header">
         <div class="container-fluid">
-            <div class="pull-right">
-            </div>
             <h1>
-                <?php echo $heading_title; ?>
+                    Promotion
             </h1>
-            <ul class="breadcrumb">
-                <li>
-                    <a></a>
-                </li>
-            </ul>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{add_url|raw}}"><i class="fa fa-plus"></i></a>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list"></i></h3>
+                <h3 class="panel-title"><i class="fa fa-list"></i> Promotion List
+                </h3>
             </div>
             <div class="panel-body">
-                <form method="post" enctype="multipart/form-data" id="form-attribute">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <td width="40"><input type="checkbox"></td>
-                                    <td>title</td>
-                                    <td>condition</td>
-                                    <td>date_end</td>
-                                    <td>option</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for list in lists %}
-                                <tr>
-                                    <td>{{list.id}}</td>
-                                    <td>{{list.title}}</td>
-                                    <td>{{list.condition}}</td>
-                                    <td>{{list.date_end}}</td>
-                                    <td><button class="btn btn-warning btn-xs">edit</button></td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
-                <div class="row">
-                    <div class="col-sm-6 text-left"></div>
-                    <div class="col-sm-6 text-right"></div>
-                </div>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Condition</th>
+                            <th>Date End</th>
+                            <th>Sort Order</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in products">
+                            <td v-text="item.id"></td>
+                            <td v-text="item.title"></td>
+                            <td v-text="item.condition"></td>
+                            <th v-text="item.date_end"></th>
+                            <td v-text="item.sort_order"></td>
+                            <td>
+                                <a @click="update(item.id)" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
+                                <button @click="delt(item.id)" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></button>
+                            </td>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
+<script>
+    Vue.config.devtools = true
+    var hotsale = new Vue({
+        delimiters: ['${', '}'],
+        el: '#content',
+        data: {
+            products: null,
+            id: null
+        },
+        methods: {
+            delt: function(id) {
+                var _vm = this;
+                _vm.id = id;
+                $.post("{{delt_url|raw}}".replace("amp;", ''), {
+                    id: id
+                }, function(data) {
+                    if (data.return) {
+                        _vm.getList();
+                    }
+                }, 'json')
+            },
+            getList:function(){
+                var _vm = this;
+                $.get("{{getList_url|raw}}".replace('amp;', ''), function(data) {
+                    _vm.products = data.product;
+                }, 'json');
+            },
+            update: function(id) {
+                location.href = "{{update_url|raw}}".replace("amp;", '') + "&id=" + id;
+            }
+        },
+        mounted() {
+            this.getList();
+        }
+    })
+</script>
 {{footer|raw}}

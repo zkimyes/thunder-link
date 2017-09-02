@@ -1,50 +1,68 @@
 <?php
 class ModelPromotionPromotion extends Model {
-    private $limit = 15;
-    private $table = DB_PREFIX . "promotion";
-	public function getList($page) {
-		$sql = "SELECT * FROM " . $this->table;
+    public function getList() {
+        $query = $this->db->query(
+            'select p.*,d.name from oc_promotion p left join oc_product_description d on p.product_id = d.product_id order by sort_order desc'
+        );
+        if($query->rows){
+            return $query->rows;
+        }
+        return null;
+    }
+    
+    public function add($data){
+        if(!empty($data)){
+            $query = $this->db->query(
+                'insert into oc_promotion 
+                (title,product_id,`condition`,date_end,sort_order) 
+                values 
+                (
+                    "'.$this->db->escape($data['title']).'",
+                    '.(int)$data['product_id'].',
+                    "'.$this->db->escape($data['condition']).'",
+                    "'.$this->db->escape($data['date_end']).'",
+                    '.(int)$data['sort_order'].'
+                )'
+            );
+            return $query;
+        }
+        return null;
+    }
 
-        $sql .=" left join ".DB_PREFIX."product_description on ".$this->table.".product_id ="
-                .DB_PREFIX."product_description.product_id";
+    public function update($data){
+        if(!empty($data)){
+            $query = $this->db->query(
+                'update oc_promotion 
+                set title="'.$this->db->escape($data['title']).'",
+                    product_id = '.(int)$data['product_id'].',
+                    `condition` = "'.$this->db->escape($data['condition']).'",
+                    date_end = "'.$this->db->escape($data['date_end']).'",
+                    sort_order = '.(int)$data['sort_order'].'
+                    where id = '.$data['id']
+            );
+            return $query;
+        }
+        return null;
+    }
 
-		// $sort_data = array(
-		// 	'name',
-		// 	'status'
-		// );
-
-		// if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-		// 	$sql .= " ORDER BY " . $data['sort'];
-		// } else {
-		// 	$sql .= " ORDER BY name";
-		// }
-
-		// if (isset($data['order']) && ($data['order'] == 'DESC')) {
-		// 	$sql .= " DESC";
-		// } else {
-		// 	$sql .= " ASC";
-		// }
-
-		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
-
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
-
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-		}
-
-		$query = $this->db->query($sql);
-
-		return $query->rows;
-	}
+    public function delete($id){
+        if(!empty($id)){
+            $query = $this->db->query(
+                'delete from oc_promotion WHERE id = '.$id
+            );
+            return $query;
+        }
+        return null;
+    }
 
 
-    public function getTotal(){
-        $sql = "select count(*) as count from " .$this->table;
-        return $this->db->query($sql);
+    public function find($id){
+        if(!empty($id)){
+            $query = $this->db->query(
+                'select p.*,d.name from oc_promotion p left join oc_product_description d on p.product_id = d.product_id WHERE p.id = '.$id
+            );
+            return $query;
+        }
+        return null;
     }
 }

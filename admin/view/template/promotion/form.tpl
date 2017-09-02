@@ -1,99 +1,165 @@
-<?php echo $header; ?>
-<?php echo $column_left; ?>
+{{ header|raw }} {{ column_left|raw }}
 <div id="content">
     <div class="page-header">
         <div class="container-fluid">
-            <div class="pull-right">
-            </div>
             <h1>
-                {{heading_title}}
+                Promotion -- {{action}}
             </h1>
-            <ul class="breadcrumb">
-                <li>
-                    <a></a>
-                </li>
-            </ul>
         </div>
     </div>
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list"></i></h3>
+                <h3 class="panel-title"><i class="fa fa-list"></i> Promotion
+                </h3>
             </div>
             <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <form method="post" enctype="multipart/form-data" id="form-attribute">
-                            <div class="form-group">
-                                <label>title</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="title">
-                            </div>
-                            <div class="form-group">
-                                <label>condition</label>
-                                <textarea placeholder="dddd" class="form-control" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="asdasdas">Related Product</span></label>
-                                <div class="col-sm-10">
-                                    <input type="text" name="related" value="" placeholder="" id="input-related" class="form-control" />
-                                    <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                                        <div id="product-related_{{product_id}}"><i class="fa fa-minus-circle"></i>
-                                            <input type="hidden" name="product_related[]" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="input-date-available">date_end</label>
-                                <div class="input-group date">
-                                    <input type="text" name="date_available" value="" placeholder="asdas" data-date-format="YYYY-MM-DD" id="input-date-available" class="form-control" />
-                                    <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
-                                        </span>
-                                </div>
-                            </div>
-                        </form>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" v-model="title" placeholder="输入标题..." type="text">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 text-left"></div>
-                    <div class="col-sm-6 text-right"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Product</label>
+                        <div class="col-sm-5" style="position:relative">
+                            <input type="text" value="" placeholder="输入名字搜索,按@显示所有产品..." v-model="product_search" @input="searchProduct()" class="form-control" />
+                            <ul class="dropdown-menu" v-if="product_search != ''" style="left:0;top:32px;display:block;">
+                                <li @click="chooseProduct(product)" v-for="product in products"><a href="javascript:;">${product.name}</a>
+                                </li>
+                                <li style="text-indent:2em" v-if="isAjax">搜索中...</li>
+                                <li style="text-indent:2em;" v-if="isAjax == false && product_search != '' && products.length ==0">没有结果</li>
+                            </ul>
+                            <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                <div v-if="link_product">
+                                    <strong>${link_product.name}</strong><button @click="removeRelatedProduct()" class="btn btn-danger btn-xs"><i class="fa fa-remove"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Condition</label>
+                        <div class="col-sm-5">
+                            <textarea v-model="condition" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Date End</label>
+                        <div class="col-sm-5">
+                                <div class="input-group date" >
+                                    <input type="text" value="{{data.row.date_end}}" readonly placeholder="choose date" data-date-format="YYYY-MM-DD" class="form-control" />
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+                                    </span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Sort Order</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" v-model="sort_order" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button @click="submit()" type="submit" class="btn btn-success">Submit</button>
+                            <button @click="cancel()" type="submit" class="btn btn-default">Cancel</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
-    $('.date').datetimepicker({
-        pickTime: false
+
+    $(function(){
+        $('.date').datetimepicker({
+            format: "dd MM yyyy - hh:ii",
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom-left",
+            pickTime: false
+        });
     });
-    // Related
-    $('input[name=\'related\']').autocomplete({
-        'source': function(request, response) {
-            $.ajax({
-                url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' + encodeURIComponent(request),
-                dataType: 'json',
-                success: function(json) {
-                    response($.map(json, function(item) {
-                        return {
-                            label: item['name'],
-                            value: item['product_id']
-                        }
-                    }));
-                }
-            });
+    Vue.config.devtools = true
+    var postData = function(data) {
+        $.post('{{post_url|raw}}'.replace("amp;", ''), {
+            data: data
+        }, function(res) {
+            if (res) {
+                location.href = "{{backurl|raw}}".replace("amp;", '');
+            }
+        }, 'json')
+    }
+
+    var hotsale = new Vue({
+        delimiters: ['${', '}'],
+        el: '#content',
+        data: {
+            id:'{{data.row.id}}',
+            title:'{{data.row.title}}',
+            product_id:'{{data.row.product_id}}',
+            sort_order:'{{data.row.sort_order}}',
+            condition:'{{data.row.condition}}',
+            date_end:'{{data.row.date_end}}',
+            product_search: '',
+            products: [],
+            link_product: '{{data.row.product_id}}' ? {
+                product_id: '{{data.row.product_id}}',
+                name: '{{data.row.name}}'
+            } : '',
+            isAjax: false
         },
-        'select': function(item) {
-            $('input[name=\'related\']').val('');
-
-            $('#product-related' + item['value']).remove();
-
-            $('#product-related').append('<div id="product-related' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_related[]" value="' + item['value'] + '" /></div>');
-        }
-    });
-
-    $('#product-related').delegate('.fa-minus-circle', 'click', function() {
-        $(this).parent().remove();
-    });
+        methods: {
+            submit: function() {
+                postData({
+                    id: this.id,
+                    title:this.title,
+                    product_id:this.product_id,
+                    condition:this.condition,
+                    sort_order:this.sort_order,
+                    date_end:$('.date').find('input').val(),
+                })
+            },
+            cancel: function() {
+                location.href = "{{backurl|raw}}".replace("amp;", '');
+            },
+            chooseProduct: function(product) {
+                var _vm = this;
+                if (product) {
+                    _vm.link_product = {
+                        product_id: product.product_id,
+                        name: product.name,
+                    }
+                    _vm.product_id = product.product_id;
+                    _vm.product_search = '';
+                    _vm.products = [];
+                }
+            },
+            removeRelatedProduct: function() {
+                var _vm = this;
+                _vm.link_product = ''
+                _vm.product_id = '';
+            },
+            searchProduct: _.debounce(function() {
+                var _vm = this;
+                _vm.isAjax = true;
+                $.get('{{product_search_url|raw}}&token={{token}}', {
+                    search: _vm.product_search
+                }, function(res) {
+                    _vm.isAjax = false;
+                    if (res.products) {
+                        _vm.products= res.products.map(function(item){
+                            item.name = _.unescape(item.name);
+                            return item;
+                        })
+                    }
+                }, 'json')
+            }, 500)
+        },
+        mounted() {}
+    })
 </script>
-<?php echo $footer; ?>
+{{footer|raw}}

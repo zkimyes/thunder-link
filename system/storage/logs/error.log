@@ -4407,3 +4407,112 @@
 2017-09-01 15:37:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
 2017-09-01 15:37:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
 2017-09-01 15:37:08 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-01 21:58:44 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-01 21:58:44 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-01 21:58:44 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-01 21:58:44 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-01 21:59:30 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-01 21:59:30 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-01 21:59:30 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-01 21:59:30 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-01 22:17:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-01 22:17:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-01 22:17:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-01 23:18:22 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:22 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:22 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:22 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:28 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:28 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:28 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-01 23:18:28 - PHP Notice:  Undefined variable: result in G:\php_projects\thunder-link\catalog\controller\common\home.php on line 27
+2017-09-02 0:09:57 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:09:57 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:09:57 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:06 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:58:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:58:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 0:58:17 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 17:21:44 - PHP Notice:  Undefined variable: heading_title in G:\php_projects\thunder-link\admin\view\template\promotion\list.tpl on line 9
+2017-09-02 17:52:16 - PHP Notice:  Undefined index: category_id in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 36
+2017-09-02 17:52:16 - PHP Notice:  Undefined index: is_home in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 39
+2017-09-02 17:52:23 - PHP Notice:  Undefined index: category_id in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 36
+2017-09-02 17:52:23 - PHP Notice:  Undefined index: is_home in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 39
+2017-09-02 17:54:21 - PHP Notice:  Undefined index: category_id in G:\php_projects\thunder-link\admin\model\promotion\promotion.php on line 36
+2017-09-02 19:23:59 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 19:23:59 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 19:23:59 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 19:23:59 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 19:39:10 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 19:39:10 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 19:39:10 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 19:39:10 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 19:39:21 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 19:39:21 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 19:39:21 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 19:39:21 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 20:16:01 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 20:16:01 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 20:16:01 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 20:16:01 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 20:16:16 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 20:16:16 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 20:16:16 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 20:16:16 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 20:16:17 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 130
+2017-09-02 20:16:17 - PHP Notice:  Undefined index: 
+            code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 131
+2017-09-02 20:16:17 - PHP Notice:  Undefined index: 
+            name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 132
+2017-09-02 20:16:17 - PHP Notice:  Undefined index: 
+            language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 133
+2017-09-02 20:17:33 - PHP Notice:  Undefined index: code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:17:33 - PHP Notice:  Undefined index: name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:17:33 - PHP Notice:  Undefined index: language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:17:42 - PHP Notice:  Undefined index: code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:17:42 - PHP Notice:  Undefined index: name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:17:42 - PHP Notice:  Undefined index: language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:20:13 - PHP Notice:  Undefined index: code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:20:13 - PHP Notice:  Undefined index: name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:20:13 - PHP Notice:  Undefined index: language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:23:05 - PHP Notice:  Undefined index: code  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:23:05 - PHP Notice:  Undefined index: name  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 20:23:05 - PHP Notice:  Undefined index: language_id  in G:\php_projects\thunder-link\admin\view\template\design\banner_form.tpl on line 129
+2017-09-02 21:11:08 - PHP Notice:  Undefined index: content in G:\php_projects\thunder-link\admin\model\design\banner.php on line 36
+2017-09-02 23:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 23:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728
+2017-09-02 23:30:10 - PHP Notice:  Array to string conversion in G:\php_projects\thunder-link\vendor\twig\twig\lib\Twig\Environment.php(327) : eval()'d code on line 728

@@ -24,6 +24,10 @@
     transition: all .2s ease-in-out;
 }*/
 
+* {
+    transition: all .2s ease-in-out
+}
+
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 14px;
@@ -79,7 +83,7 @@ a {
 }
 
 .main-search-bar {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .mainlogo img {
@@ -201,13 +205,19 @@ a {
     border-bottom-color: transparent;
 }
 
+
 .prod-block .nav-tabs>li>a:hover {
     border: 1px #34bd8a solid;
+    padding:14px 0px;
+}
+
+.prod-block .nav-tabs>li.active>a:hover {
+    padding:15px 0px;
 }
 
 .document-block {
     border: 1px #ccc solid;
-    background: url('../images/u608_state0.jpg');
+    background: url('/image/u608_state0.jpg');
 }
 
 .misrv-block {
@@ -566,10 +576,58 @@ a {
     padding:15px 0;
 }
 
-.tab-content {
+.prod-block .tab-content {
     margin: 0 -15px;
+    padding-top:10px;
 }
 
 .pre-text{
     font-size: 16px;
+}
+
+
+.animate-1:hover{
+    transform: translateY(-5px);
+}
+
+.document-search-block{
+    border:1px #939393 solid;
+    padding:10px;
+    height: 150px;
+}
+
+.document-ads-block{
+    border:1px #939393 solid;
+    border-left:0;
+    padding:10px;
+    height: 150px;
+}
+
+.document-slik-block{
+    border:1px #939393 solid;
+    border-left:0;
+    margin-top: -1px;
+    padding:10px;
+}
+
+.common-home .owl-carousel{
+    margin:0;
+    background: none;
+    direction: ltr !important;
+    z-index: 1;
+}
+
+.common-home .owl-pagination{
+    top:0;
+}
+
+.common-home .owl-wrapper-outer{
+    border:0;
+    border-radius: 0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+
+.common-home .promotion-block .col-md-10{
+    padding:10px 0;
 }

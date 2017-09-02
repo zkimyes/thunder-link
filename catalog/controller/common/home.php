@@ -18,16 +18,39 @@ class ControllerCommonHome extends Controller {
 
 
 		$this->load->model('hotsale/products');
+		$this->load->model('promotion/promotion');
+
+		//hot sale
 		$data['hot_sale_category'] = $this->model_hotsale_products->getHotSaleCategroy();
 		$hot_product = $this->model_hotsale_products->getHomeHotSaleList();
 
 		foreach($data['hot_sale_category'] as &$category){
 			foreach($hot_product as $product){
 				if($product['category_id'] == $category['id']){
+					if (!empty($product['image']) && is_file(DIR_IMAGE . $product['image'])) {
+						$product['thumb'] = $this->model_tool_image->resize($product['image'], 180, 150);
+					} else {
+						$product['thumb'] = $this->model_tool_image->resize('no_image.png', 180, 150);
+					}
+					$product['url'] = $this->url->link('product/product', 'product_id=' . $product['product_id']);
 					$category['products'][] = $product;
 				}
 			}
 		}
+
+		//promotion
+
+		$data['promotion'] = $this->model_promotion_promotion->getList();
+		foreach($data['promotion'] as &$promotion){
+			if (!empty($promotion['image']) && is_file(DIR_IMAGE . $promotion['image'])) {
+				$promotion['thumb'] = $this->model_tool_image->resize($promotion['image'], 180, 150);
+			} else {
+				$promotion['thumb'] = $this->model_tool_image->resize('no_image.png', 180, 150);
+			}
+			$promotion['url'] = $this->url->link('product/product', 'product_id=' . $promotion['product_id']);
+		}
+
+
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }
