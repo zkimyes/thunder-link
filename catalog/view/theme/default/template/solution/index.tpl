@@ -10,7 +10,12 @@
         <div class="solution-nav">
             <ul>
                 {% for category in solution_categoris %}
-                <li><a href="javascript:;">{{category.title}}</a></li>
+                 {% if loop.index == 1%}
+                 <li class="active"><a href="javascript:;">{{category.title}}</a></li>
+                 {% else %}
+                 <li><a href="javascript:;">{{category.title}}</a></li>
+                 {% endif %}
+                
                 {% endfor %}
             </ul>
         </div>

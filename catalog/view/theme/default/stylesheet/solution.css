@@ -19,7 +19,7 @@
     padding: 5px 45px;
 }
 
-.solution-nav li a:hover {
+.solution-nav li a:hover,.solution-nav li.active {
     border-bottom: 2px #00cc94 solid;
     margin-bottom: -2px;
 }

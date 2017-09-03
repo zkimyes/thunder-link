@@ -631,3 +631,25 @@ a {
 .common-home .promotion-block .col-md-10{
     padding:10px 0;
 }
+
+
+.btn-cart-o {
+    border: 0;
+    background: none;
+    font-size: 40px;
+    margin: -12px;
+    position: relative;
+}
+
+#cart-total{
+    background: #f00;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 4px;
+    right: -9px;
+    line-height: 23px;
+}

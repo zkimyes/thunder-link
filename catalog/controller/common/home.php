@@ -51,6 +51,7 @@ class ControllerCommonHome extends Controller {
 		}
 
 
+		$data['promotion_url'] = $this->url->link('promotion/index');
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }

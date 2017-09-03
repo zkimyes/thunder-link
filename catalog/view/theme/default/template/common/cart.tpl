@@ -1,5 +1,6 @@
 <div id="cart">
-  {#<button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total"><?php echo $text_items; ?></span></button>#}
+  <button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="btn-cart-o dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total"><?php echo $text_items; ?></span></button>
+  <button type="button" style="margin-left:30px" class="btn-cart-o"><i class="fa fa-comments"></i></button>
   <div>
       <button class="btn btn-link"><i class="fa fa-cart"></i></button>
 

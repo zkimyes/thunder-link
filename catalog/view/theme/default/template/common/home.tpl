@@ -122,13 +122,13 @@
                 <div>
                     Secure Online <br> Transactions Buy It <br> Now for Fast Dispatch
                 </div>
-                <a href="">View More ></a>
+                <a href="{{promotion_url|raw}}">View More ></a>
             </div>
             <div class="col-md-10">
                 <div id="promotion_slide" class="owl-carousel owl-theme">
                     {% for product in promotion %}
                     <div class="animate-1 item">
-                        <a href="">
+                        <a href="{{product.url|raw}}">
                             <img src="{{product.thumb}}" alt="{{product.title}}">
                             <div><strong>{{product.price}}</strong></div>
                             <div>{{product.title}}</div>
