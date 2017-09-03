@@ -2260,7 +2260,7 @@ CREATE TABLE `oc_product` (
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `points` int(8) NOT NULL DEFAULT '0',
   `tax_class_id` int(11) NOT NULL,
-  `date_available` date NOT NULL DEFAULT '0000-00-00',
+  `date_available` date NOT NULL DEFAULT '0000-01-01',
   `weight` decimal(15,8) NOT NULL DEFAULT '0.00000000',
   `weight_class_id` int(11) NOT NULL DEFAULT '0',
   `length` decimal(15,8) NOT NULL DEFAULT '0.00000000',
@@ -2371,8 +2371,8 @@ CREATE TABLE `oc_product_discount` (
   `quantity` int(4) NOT NULL DEFAULT '0',
   `priority` int(5) NOT NULL DEFAULT '1',
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `date_start` date NOT NULL DEFAULT '0000-00-00',
-  `date_end` date NOT NULL DEFAULT '0000-00-00',
+  `date_start` date NOT NULL DEFAULT '0000-01-01',
+  `date_end` date NOT NULL DEFAULT '0000-01-01',
   PRIMARY KEY (`product_discount_id`),
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=447 DEFAULT CHARSET=utf8;
@@ -2598,8 +2598,8 @@ CREATE TABLE `oc_product_special` (
   `customer_group_id` int(11) NOT NULL,
   `priority` int(5) NOT NULL DEFAULT '1',
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `date_start` date NOT NULL DEFAULT '0000-00-00',
-  `date_end` date NOT NULL DEFAULT '0000-00-00',
+  `date_start` date NOT NULL DEFAULT '0000-01-01',
+  `date_end` date NOT NULL DEFAULT '0000-01-01',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=446 DEFAULT CHARSET=utf8;
@@ -2773,7 +2773,7 @@ CREATE TABLE `oc_return` (
   `return_action_id` int(11) NOT NULL,
   `return_status_id` int(11) NOT NULL,
   `comment` text,
-  `date_ordered` date NOT NULL DEFAULT '0000-00-00',
+  `date_ordered` date NOT NULL DEFAULT '0000-01-01',
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`return_id`)
@@ -2880,8 +2880,8 @@ CREATE TABLE `oc_review` (
 -- Records of oc_review
 -- ----------------------------
 INSERT INTO `oc_review` VALUES ('1', '30', '2', 'zkim yes', 'asdasdasdasdasdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasd', '5', '1', '2017-08-20 13:58:18', '2017-08-20 14:01:05');
-INSERT INTO `oc_review` VALUES ('2', '30', '2', 'asdasdasdasd', 'asdasdasdasdasdasdasdasdasdasaadasdasdasdasdasdasdasdasdasdasdasd', '5', '0', '2017-08-20 13:58:40', '0000-00-00 00:00:00');
-INSERT INTO `oc_review` VALUES ('3', '30', '2', 'zkim yes', 'asdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasd', '2', '0', '2017-08-21 13:33:48', '0000-00-00 00:00:00');
+INSERT INTO `oc_review` VALUES ('2', '30', '2', 'asdasdasdasd', 'asdasdasdasdasdasdasdasdasdasaadasdasdasdasdasdasdasdasdasdasdasd', '5', '0', '2017-08-20 13:58:40', '0000-01-01 00:00:00');
+INSERT INTO `oc_review` VALUES ('3', '30', '2', 'zkim yes', 'asdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasdasdasdasdasdasdasdasddasdasd', '2', '0', '2017-08-21 13:33:48', '0000-01-01 00:00:00');
 
 -- ----------------------------
 -- Table structure for `oc_review_reply`
@@ -7713,112 +7713,112 @@ CREATE TABLE `oc_zone_to_geo_zone` (
 -- ----------------------------
 -- Records of oc_zone_to_geo_zone
 -- ----------------------------
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('1', '222', '0', '4', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('2', '222', '3513', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('3', '222', '3514', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('4', '222', '3515', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('5', '222', '3516', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('6', '222', '3517', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('7', '222', '3518', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('8', '222', '3519', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('9', '222', '3520', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('10', '222', '3521', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('11', '222', '3522', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('12', '222', '3523', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('13', '222', '3524', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('14', '222', '3525', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('15', '222', '3526', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('16', '222', '3527', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('17', '222', '3528', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('18', '222', '3529', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('19', '222', '3530', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('20', '222', '3531', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('21', '222', '3532', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('22', '222', '3533', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('23', '222', '3534', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('24', '222', '3535', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('25', '222', '3536', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('26', '222', '3537', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('27', '222', '3538', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('28', '222', '3539', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('29', '222', '3540', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('30', '222', '3541', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('31', '222', '3542', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('32', '222', '3543', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('33', '222', '3544', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('34', '222', '3545', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('35', '222', '3546', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('36', '222', '3547', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('37', '222', '3548', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('38', '222', '3549', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('39', '222', '3550', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('40', '222', '3551', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('41', '222', '3552', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('42', '222', '3553', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('43', '222', '3554', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('44', '222', '3555', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('45', '222', '3556', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('46', '222', '3557', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('47', '222', '3558', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('48', '222', '3559', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('49', '222', '3560', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('50', '222', '3561', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('51', '222', '3562', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('52', '222', '3563', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('53', '222', '3564', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('54', '222', '3565', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('55', '222', '3566', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('56', '222', '3567', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('57', '222', '3568', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('58', '222', '3569', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('59', '222', '3570', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('60', '222', '3571', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('61', '222', '3572', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('62', '222', '3573', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('63', '222', '3574', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('64', '222', '3575', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('65', '222', '3576', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('66', '222', '3577', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('67', '222', '3578', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('68', '222', '3579', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('69', '222', '3580', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('70', '222', '3581', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('71', '222', '3582', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('72', '222', '3583', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('73', '222', '3584', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('74', '222', '3585', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('75', '222', '3586', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('76', '222', '3587', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('77', '222', '3588', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('78', '222', '3589', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('79', '222', '3590', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('80', '222', '3591', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('81', '222', '3592', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('82', '222', '3593', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('83', '222', '3594', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('84', '222', '3595', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('85', '222', '3596', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('86', '222', '3597', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('87', '222', '3598', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('88', '222', '3599', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('89', '222', '3600', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('90', '222', '3601', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('91', '222', '3602', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('92', '222', '3603', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('93', '222', '3604', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('94', '222', '3605', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('95', '222', '3606', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('96', '222', '3607', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('97', '222', '3608', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('98', '222', '3609', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('99', '222', '3610', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('100', '222', '3611', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('101', '222', '3612', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('102', '222', '3949', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('103', '222', '3950', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('104', '222', '3951', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('105', '222', '3952', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('106', '222', '3953', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('107', '222', '3954', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('108', '222', '3955', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `oc_zone_to_geo_zone` VALUES ('109', '222', '3972', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('1', '222', '0', '4', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('2', '222', '3513', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('3', '222', '3514', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('4', '222', '3515', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('5', '222', '3516', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('6', '222', '3517', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('7', '222', '3518', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('8', '222', '3519', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('9', '222', '3520', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('10', '222', '3521', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('11', '222', '3522', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('12', '222', '3523', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('13', '222', '3524', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('14', '222', '3525', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('15', '222', '3526', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('16', '222', '3527', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('17', '222', '3528', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('18', '222', '3529', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('19', '222', '3530', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('20', '222', '3531', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('21', '222', '3532', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('22', '222', '3533', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('23', '222', '3534', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('24', '222', '3535', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('25', '222', '3536', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('26', '222', '3537', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('27', '222', '3538', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('28', '222', '3539', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('29', '222', '3540', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('30', '222', '3541', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('31', '222', '3542', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('32', '222', '3543', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('33', '222', '3544', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('34', '222', '3545', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('35', '222', '3546', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('36', '222', '3547', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('37', '222', '3548', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('38', '222', '3549', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('39', '222', '3550', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('40', '222', '3551', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('41', '222', '3552', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('42', '222', '3553', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('43', '222', '3554', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('44', '222', '3555', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('45', '222', '3556', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('46', '222', '3557', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('47', '222', '3558', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('48', '222', '3559', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('49', '222', '3560', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('50', '222', '3561', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('51', '222', '3562', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('52', '222', '3563', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('53', '222', '3564', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('54', '222', '3565', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('55', '222', '3566', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('56', '222', '3567', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('57', '222', '3568', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('58', '222', '3569', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('59', '222', '3570', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('60', '222', '3571', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('61', '222', '3572', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('62', '222', '3573', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('63', '222', '3574', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('64', '222', '3575', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('65', '222', '3576', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('66', '222', '3577', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('67', '222', '3578', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('68', '222', '3579', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('69', '222', '3580', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('70', '222', '3581', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('71', '222', '3582', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('72', '222', '3583', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('73', '222', '3584', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('74', '222', '3585', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('75', '222', '3586', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('76', '222', '3587', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('77', '222', '3588', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('78', '222', '3589', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('79', '222', '3590', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('80', '222', '3591', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('81', '222', '3592', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('82', '222', '3593', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('83', '222', '3594', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('84', '222', '3595', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('85', '222', '3596', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('86', '222', '3597', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('87', '222', '3598', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('88', '222', '3599', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('89', '222', '3600', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('90', '222', '3601', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('91', '222', '3602', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('92', '222', '3603', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('93', '222', '3604', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('94', '222', '3605', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('95', '222', '3606', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('96', '222', '3607', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('97', '222', '3608', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('98', '222', '3609', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('99', '222', '3610', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('100', '222', '3611', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('101', '222', '3612', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('102', '222', '3949', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('103', '222', '3950', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('104', '222', '3951', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('105', '222', '3952', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('106', '222', '3953', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('107', '222', '3954', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('108', '222', '3955', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
+INSERT INTO `oc_zone_to_geo_zone` VALUES ('109', '222', '3972', '3', '0000-01-01 00:00:00', '0000-01-01 00:00:00');
