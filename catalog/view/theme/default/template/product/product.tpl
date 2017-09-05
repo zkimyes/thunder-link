@@ -1,4 +1,13 @@
 <?php echo $header; ?>
+<link rel="stylesheet" href="/catalog/view/javascript/jquery/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css">
+<style>
+    .owl-wrapper-outer{
+        border:0;
+        -webkit-box-shadow:none;
+        box-shadow: none;
+    }
+</style>
 <div class="container">
     <ul class="breadcrumb">
         {% for breadcrumb in breadcrumbs %}
@@ -14,19 +23,19 @@
             <?php echo $content_top; ?>
             <div class="row">
                 <div class="col-md-5">
-                    <div class="">
+                    <div class="dd">
                         <?php if ($thumb) { ?>
                         <div><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
                         <?php } ?>
-                        <?php if ($images) { ?>
-                        <?php foreach ($images as $image) { ?>
-                        <div class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
-                        <?php } ?>
-                        <?php } ?>
+                        <div class="imagelist">
+                            {% for image in images%}
+                            <div style="padding:5px;" class="image-additional item"><a class="thumbnail" href="{{image.popup}}" title="{{heading_title}}"> <img src="{{image.thumb}}" title="{{heading_title}}" alt="{{heading_title}}" /></a></div>
+                            {% endfor %}
+                        </div>
                     </div>
                     <!-- AddThis Button BEGIN -->
-                    <!--<div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-                      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>-->
+                    <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+                      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
                     <!-- AddThis Button END -->
                 </div>
                 <div class="col-md-7">
@@ -65,27 +74,50 @@
                         <div class="content">
                         </div>
                     </div>
-                    <div class="list-prop row">
-                        <div class="label-text">
-                            Available Options:
-                        </div>
-                        <div class="content">
-                            <a class="btn btn-o-success">OSN 3500 Gold Line</a>
-                            <a class="btn btn-o-success">OSN 3500 Gold Line</a>
-                            <a class="btn btn-o-success">OSN 3500 Gold Line</a>
-                            <a class="btn btn-o-success">OSN 3500 Gold Line</a>
-                        </div>
-                    </div>
-                    <div class="list-prop row">
-                        <div class="label-text">
-                            Software Version:
-                        </div>
-                        <div class="content">
-                            <select class="form-control">
-                               <option value="">Please select a software</option>
-                          </select>
-                        </div>
-                    </div>
+
+                    {% if options%}
+                        {% for option in options %}
+                            {% if option.type == 'select' %}
+                                <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
+                                    <div class="label-text">
+                                        <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
+                                    </div>
+                                    <div class="content">
+                                        <select name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
+                                            <option value="">Please select a software</option>
+                                            {% for option_value in option.product_option_value %}
+                                                <option value="{{option_value.product_option_value_id}}">{{option_value.name}}
+                                                    {% if option_value.price%}
+                                                        ({{option_value.price_prefix}}{{option_value.price}})
+                                                    {% endif %}
+                                                </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if option.type == 'checkbox' %}
+                                <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
+                                    <div class="label-text">
+                                        <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
+                                    </div>
+                                    <div class="content">
+                                            {% for option_value in option.product_option_value %}
+                                                <a class="btn btn-o-success" href="">
+                                                        {{option_value.name}}
+                                                        {% if option_value.price%}
+                                                            ({{option_value.price_prefix}}{{option_value.price}})
+                                                        {% endif %}
+                                                </a>
+                                                    
+                                            {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                        {% endfor %}
+                    {% endif %}
+
                     <div class="list-prop row">
                         <div class="label-text">
                             Unit Price:
@@ -97,16 +129,18 @@
                     </div>
                     <div class="list-prop row">
                         <div class="label-text">
-                            Quantity:
+                            <label class="control-label" for="input-quantity">{{entry_qty}}</label>
                         </div>
                         <div class="content">
-
+                            <input type="number" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                            <br />
                         </div>
                     </div>
                     <div class="list-prop row">
                         <div class="content">
                             <a class="btn btn-o-success">Quote</a>
-                            <a class="btn btn-o-success">Add to Cart</a>
+                            <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-o-success"><?php echo $button_cart; ?></button>
                         </div>
                     </div>
                 </div>
@@ -179,4 +213,24 @@
         <?php echo $column_right; ?>
     </div>
 </div>
+<script src="/catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js"></script>
+<script src="/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script>
+    $(function() {
+        $('.imagelist').owlCarousel({
+            items: 6,
+            navigation: true,
+            navigationText: ['<i class="fa fa-chevron-left fa-4x"></i>', '<i class="fa fa-chevron-right fa-4x"></i>'],
+            pagination: true
+        });
+
+        $('.thumbnail').magnificPopup({
+            type:'image',
+            delegate: 'a',
+            gallery: {
+                enabled:true
+            }
+        });
+    })
+</script>
 <?php echo $footer; ?>

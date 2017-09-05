@@ -4535,3 +4535,19 @@
 2017-09-03 15:40:37 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 764
 2017-09-03 15:40:37 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 764
 2017-09-03 16:31:28 - PHP Notice:  Undefined variable: heading_title in /projects/thunder-link/catalog/view/theme/default/template/product/category.tpl on line 17
+2017-09-04 13:56:34 - PHP Notice:  Undefined variable: image in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 22
+2017-09-04 13:56:34 - PHP Notice:  Undefined variable: image in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 22
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 92
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 93
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 93
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 94
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 94
+2017-09-04 16:01:36 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 96
+2017-09-04 16:01:36 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 96
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 92
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 93
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 93
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 94
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 94
+2017-09-04 16:02:45 - PHP Notice:  Undefined variable: option in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 96
+2017-09-04 16:02:45 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 96
