@@ -197,6 +197,7 @@
     </div>
 </div>
 <script>
+    isHome = true;
     Menu.$data.subCategoryVisable = true;
     $(function() {
         $('#promotion_slide').owlCarousel({

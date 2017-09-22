@@ -29,37 +29,17 @@ class ControllerModuleCategory extends Controller {
 
 		$data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		$data['top_category'] = $this->model_catalog_category->getCategory($data['category_id']);
+		$categories = $this->model_catalog_category->getCategories($data['category_id']);
 
 		foreach ($categories as $category) {
-			$children_data = array();
-
-			if ($category['category_id'] == $data['category_id']) {
-				$children = $this->model_catalog_category->getCategories($category['category_id']);
-
-				foreach($children as $child) {
-					$filter_data = array('filter_category_id' => $child['category_id'], 'filter_sub_category' => true);
-
-					$children_data[] = array(
-						'category_id' => $child['category_id'],
-						'name' => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
-					);
-				}
-			}
-
-			$filter_data = array(
-				'filter_category_id'  => $category['category_id'],
-				'filter_sub_category' => true
-			);
-
 			$data['categories'][] = array(
 				'category_id' => $category['category_id'],
-				'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-				'children'    => $children_data,
-				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
+				'name'        => $category['name'],
+				'href'        => $this->url->link('product/category', 'path='.$data['category_id'].'_'. $category['category_id'])
 			);
 		}
+
 
 		return $this->load->view('module/category', $data);
 	}

@@ -1,4 +1,5 @@
 <?php
+
 class ControllerCatalogDownload extends Controller {
 	private $error = array();
 

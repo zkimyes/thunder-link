@@ -8,6 +8,13 @@
     color: rgba(62, 195, 146, 1);
 }
 
+.all_category .category .header a{
+    font-size: 20px;
+    line-height: 40px;
+    color: rgba(62, 195, 146, 1);
+    text-decoration:none;
+}
+
 .all_category .category .body {
     overflow: hidden;
 }
@@ -42,6 +49,7 @@
     width: 470px;
     background: #f2f2f2;
     height: 300px;
+    position: relative;
 }
 
 .all_category .content .bl2 {
@@ -58,4 +66,18 @@
     margin-left: 10px;
     background: #f2f2f2;
     height: 300px;
+}
+
+.banner-block{
+    margin-bottom:10px;
+}
+
+.bl1 .description{
+    position: absolute;
+    width: 65%;
+    margin: 10px;
+}
+
+.bl1 .description .buttons{
+    margin: 10px 0;
 }

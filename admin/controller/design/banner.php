@@ -53,7 +53,6 @@ class ControllerDesignBanner extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_design_banner->editBanner($this->request->get['banner_id'], $this->request->post);
-
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$url = '';
@@ -386,7 +385,6 @@ class ControllerDesignBanner extends Controller {
 				'sort_order'               => $banner_image['sort_order']
 			);
 		}
-
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 
 		$data['header'] = $this->load->controller('common/header');

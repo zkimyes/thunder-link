@@ -129,6 +129,13 @@ $(document).ready(function() {
 	$(document).ajaxStop(function() {
 		$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 	});
+
+
+	$('.dropdown-inline li').hover(function(e){
+		console.log(e)
+	},function(){
+
+	})
 });
 
 // Cart add remove functions

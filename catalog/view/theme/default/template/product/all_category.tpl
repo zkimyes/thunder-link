@@ -11,27 +11,52 @@
         </div>
         <div class="categories">
             {% for category in all_category %}
-                <section class="category" class="row">
-                    <div class="header">{{category.name|raw}}</div>
-                    <div class="body">
-                        <div class="category_list">
-                            <ul>
-                                {% for child_category in category.child_category %}
-                                <li> <a href="">{{child_category.name|raw}}</a></li>
-                                {% endfor %}
-                            </ul>
+            <section class="category" class="row">
+                <div class="header"><a href="{{category.link|raw}}">{{category.name|raw}}</a> | {{category.description}}</div>
+                <div class="body">
+                    <div class="category_list">
+                        <ul>
+                            {% for child_category in category.child_category %}
+                            <li> <a href="{{child_category.link|raw}}">{{child_category.name|raw}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="bl1">
+                            <div class="description">
+                                <h3>{{category.banner_center.title}}</h3>
+                                {{category.banner_center.content}}
+                                <div class="buttons">
+                                        <a href="{{category.banner_center.thumb}}" class="btn btn-success">Learn More</a>
+                                </div>
+                            </div>
+                            <img src="{{category.banner_center.thumb}}" alt="">
+                            
                         </div>
-                        <div class="content">
-                            <div class="bl1">
-
+                        <div class="bl2">
+                            <a href="{{category.product.link}}">
+                                <img src="{{category.product.thumb}}" alt="">
+                            </a>
+                            <h4><a href="{{category.product.link}}">{{category.product.name}}</a></h4>
+                            <div class="text-center">
+                                <button class="btn btn-success">Add To Cart</button>
                             </div>
-                            <div class="bl2">
-
+                        </div>
+                        <div class="bl3">
+                            <div class="banner-block">
+                                <a href="">
+                                    <img src="{{category.banner_right_top.thumb}}" alt="">
+                                </a>
                             </div>
-                            <div class="bl3"></div>
+                            <div class="banner-block">
+                                <a href="">
+                                    <img src="{{category.banner_right_bottom.thumb}}" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
             {% endfor %}
         </div>
     </div>

@@ -869,3 +869,29 @@ input[type="checkbox"]:checked::after,
     line-height: 30px;
     text-indent: 10px;
 }
+
+.search-box {
+    position: relative;
+}
+
+.search-box .autocompelet-list {
+    position: absolute;
+    left:0;
+    top:40px;
+    box-shadow: 2px 3px 5px -3px #000;
+    background: #fff;
+    border: 1px #eee solid;
+    list-style: none;
+    padding: 0;
+    z-index:999;
+}
+
+.autocompelet-list li {
+    padding: 5px 10px;
+    height: 30px;
+}
+
+.autocompelet-list li:hover{
+    background: #778FFC;
+    color:#fff;
+}

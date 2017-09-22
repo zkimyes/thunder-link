@@ -24,6 +24,7 @@
     <script src="https://cdn.bootcss.com/vue/2.3.3/vue.min.js"></script>
     <script src="https://cdn.bootcss.com/layer/3.0.2/layer.min.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!--webfonts-->
@@ -133,72 +134,71 @@
                             ALL CATEGROY
                                 <i class="fa fa-list fa-1x" aria-hidden="true"></i>
                             </a> {% autoescape%}
-                        <div  v-show="subCategoryVisable" style="display:none;" class="sub-category">
+                        <div v-show="subCategoryVisable" style="display:none;" class="sub-category">
                             <ul>
                                 {% for category in categories %}
-                                <li @mouseenter="toggleSubCon(true)">
+                                <li @mouseenter="toggleSubCon({{category.category_id}})">
                                     <a class="f-cate" href="{{category.href|raw}}">{{category.name}} </a> {% if category.children %}
+
                                     <div>
-                                        {% for subcategory in category.children %}
-                                        <a href="{{subcategory.href|raw}}">{{subcategory.name}}</a> {% endfor %}
+                                        {% for third_category in category.third_category %}
+                                        <a href="{{third_category.href|raw}}">{{third_category.name}}</a> {% endfor %}
                                     </div>
                                     {% endif %}
                                     <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                 </li>
                                 {% endfor %}
                             </ul>
-                            <div v-show="subCategoryContentVisable"  style="display:none" class="left-sub-category">
-                                <div class="col-md-8">
-                                    <!--solutions  -->
-                                    <div class="solution-list">
-                                        <ul>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                            <li class="col-md-4">
-                                                <a href="">asdasd</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="banners">
-                                        <div class="col-md-4">
-                                            <a href="">
-                                                <img src="/image/u135.png" alt="">
-                                                <div><strong>US ￥ 35000</strong></div>
-                                                <div>Huawei OptiX OSN3500</div>
-                                            </a>
+                            <div v-show="subCategoryContentVisable" style="display:none" class="left-sub-category">
+                                {% for category in categories %}
+                                <div v-if="select == {{category.category_id}}" data-category="{{category.category_id}}">
+                                    <div class="col-md-8">
+                                        <!--solutions  -->
+                                        <div class="solution-list">
+                                            <ul>
+                                                {% for solution in category.solutions %}
+                                                <li class="col-md-4">
+                                                    <a href="{{solution.link|raw}}">{{solution.title}}</a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
                                         </div>
-                                        <div class="col-md-4">
-                                            <a href="">
-                                                <img src="/image/u135.png" alt="">
-                                                <div><strong>US ￥ 35000</strong></div>
-                                                <div>Huawei OptiX OSN3500</div>
-                                            </a>
+                                        <div class="sub-categories">
+                                            <ul>
+                                                {% for subcategory in category.children %}
+                                                <li> <a href="{{subcategory.href|raw}}">{{subcategory.name}}</a> </li>
+                                                {% endfor %}
+                                            </ul>
                                         </div>
-                                        <div class="col-md-4">
-                                            <a href="">
-                                                <img src="/image/u135.png" alt="">
-                                                <div><strong>US ￥ 35000</strong></div>
-                                                <div>Huawei OptiX OSN3500</div>
-                                            </a>
+                                        <div class="banners">
+                                            <div class="col-md-4">
+                                                <a href="{{category.banners[1].link}}">
+                                                    <img src="{{category.banners[1].thumb}}" alt="">
+                                                    <div>{{category.banners[1].name}}</div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="{{category.banners[2].link}}">
+                                                    <img src="{{category.banners[2].thumb}}" alt="">
+                                                    <div>{{category.banners[2].name}}</div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="{{category.banners[3].link}}">
+                                                    <img src="{{category.banners[3].thumb}}" alt="">
+                                                    <div>{{category.banners[3].name}}</div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-4">
+                                        <a href="{{category.banners[0].link}}">
+                                            <img src="{{category.banners[0].thumb}}" alt="">
+                                            <div>{{category.banners[0].name}}</div>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <img src="/image/cache/catalog/demo/macbook_1-200x200.jpg" alt="">
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         {%endautoescape%}
@@ -219,21 +219,28 @@
     </header>
     <script>
         Vue.config.devtools = true
+        var isHome = false;
         var Menu = new Vue({
-            el:".category-meun",
-            data:{
-                subCategoryVisable:false,
-                subCategoryContentVisable:false,
-                showContent:{}
+            el: ".category-meun",
+            data: {
+                subCategoryVisable: false,
+                subCategoryContentVisable: false,
+                showContent: {},
+                select: null
             },
-            methods:{
-                toggleSubMen:function(visable){
-                    this.subCategoryVisable = visable
-                    this.subCategoryContentVisable=false
+            methods: {
+                toggleSubMen: function(visable) {
+                    if (!isHome) {
+                        this.subCategoryVisable = visable
+                    }
+                    this.subCategoryContentVisable = false
                 },
-                toggleSubCon:function(visable){
-                    this.subCategoryContentVisable = visable,
-                    this.showContent = {}
+                toggleSubCon: function(category_id) {
+                    this.subCategoryContentVisable = true
+                    this.select = category_id
+                },
+                getCategoryData: function() {
+
                 }
             }
         })

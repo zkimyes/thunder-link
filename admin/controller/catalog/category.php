@@ -276,7 +276,16 @@ class ControllerCatalogCategory extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
-
+		$data['get_solution'] = $this->url->link('catalog/category/getSolutions');
+		$data['get_banner'] = $this->url->link('catalog/category/getBanners');
+		$data['get_product'] = $this->url->link('catalog/category/getProducts');
+		$data['save_all_category'] = $this->url->link('catalog/category/save_all_category');
+		$data['save_solutions'] = $this->url->link('catalog/category/save_solutions');
+		$data['save_menu_category'] = $this->url->link('catalog/category/save_menu_category');
+		$data['token'] = $this->session->data['token'];
+		$data['getSolutionByCategory'] = $this->url->link('catalog/category/getSolutionByCategory');
+		$data['getMenuAdsByCategory'] = $this->url->link('catalog/category/getMenuAdsByCategory');
+		$data['getAllCategoryByCategory'] = $this->url->link('catalog/category/getAllCategoryByCategory');
 		$this->response->setOutput($this->load->view('catalog/category_list', $data));
 	}
 
@@ -512,14 +521,91 @@ class ControllerCatalogCategory extends Controller {
 			$data['category_layout'] = array();
 		}
 
+
+		if(isset($this->request->get['cateogry_id'])){
+			$data['category_id'] = $this->request->get['category_id'];
+		}else{
+			$data['category_id'] = null;
+		}
+
 		$this->load->model('design/layout');
+
+		/**
+		 * all category 页面的设置
+		 */
+		if(isset($this->request->get['category_id'])){
+			$all_category_setting = $this->db->query('select * from oc_all_category where category_id ='.(int)$this->request->get['category_id']);
+			$data['all_category_banner_center'] =null;
+			$data['all_category_banner_right_top'] = null;
+			$data['all_category_banner_right_bottom'] = null;
+			$data['all_category_product_id'] = null;
+			if($all_category_setting->row){
+				if($all_category_setting->row['all_category_banner_center']){
+					$data['all_category_banner_center'] = $this->db->query('select * from oc_banner where banner_id='.(int)$all_category_setting->row['all_category_banner_center']);
+					$data['all_category_banner_center'] = json_encode($data['all_category_banner_center']->row,true);
+				}
+				if($all_category_setting->row['all_category_banner_right_top']){
+					$data['all_category_banner_right_top'] = $this->db->query('select * from oc_banner where banner_id='.(int)$all_category_setting->row['all_category_banner_right_top']);
+					$data['all_category_banner_right_top'] = json_encode($data['all_category_banner_right_top']->row,true);
+				}
+				if($all_category_setting->row['all_category_banner_right_bottom']){
+					$data['all_category_banner_right_bottom'] = $this->db->query('select * from oc_banner where banner_id='.(int)$all_category_setting->row['all_category_banner_center']);
+					$data['all_category_banner_right_bottom'] = json_encode($data['all_category_banner_right_bottom']->row,true);
+				}
+				if($all_category_setting->row['all_category_product_id']){
+					$data['all_category_product_id'] = $this->db->query('select p.product_id,d.name from oc_product p left join oc_product_description d on d.product_id = p.product_id where p.product_id='.(int)$all_category_setting->row['all_category_product_id']);
+					$data['all_category_product_id'] = json_encode($data['all_category_product_id']->row,true);
+				}
+			}
+		}
+
+		/**
+		 * 目录上的ad设置
+		 */
+		
+		if(isset($this->request->get['category_id'])){
+			$oc_category_menu_ads = $this->db->query('select * from oc_menu_category where category_id ='.(int)$this->request->get['category_id']);
+			$data['banner_big'] =null;
+			$data['banner_product_1'] = null;
+			$data['banner_product_2'] = null;
+			$data['banner_product_3'] = null;
+			if($oc_category_menu_ads->row){
+				if($oc_category_menu_ads->row['banner_big']){
+					$banner_big = $this->db->query('select * from oc_banner where banner_id='.(int)$oc_category_menu_ads->row['banner_big']);
+					if($banner_big->row){
+						$data['banner_big'] = json_encode($banner_big->row,true);
+					}
+					
+				}
+				if($oc_category_menu_ads->row['banner_product_1']){
+					$banner_product_1 = $this->db->query('select * from oc_banner where banner_id='.(int)$oc_category_menu_ads->row['banner_product_1']);
+					if($banner_product_1->row){
+						$data['banner_product_1'] = json_encode($banner_product_1->row,true);
+					}
+					
+				}
+				if($oc_category_menu_ads->row['banner_product_2']){
+					$banner_product_2 = $this->db->query('select * from oc_banner where banner_id='.(int)$oc_category_menu_ads->row['banner_product_2']);
+					if($banner_product_2->row){
+						$data['banner_product_2'] = json_encode($banner_product_2->row,true);
+					}
+				}
+				if($oc_category_menu_ads->row['banner_product_3']){
+					$banner_product_3 = $this->db->query('select * from oc_banner where banner_id='.(int)$oc_category_menu_ads->row['banner_product_3']);
+					if($banner_product_3->row){
+						$data['banner_product_3'] = json_encode($banner_product_3->row,true);
+					}
+				}
+			}
+		}
+		
+
 
 		$data['layouts'] = $this->model_design_layout->getLayouts();
 
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
-
 		$this->response->setOutput($this->load->view('catalog/category_form', $data));
 	}
 
@@ -610,4 +696,238 @@ class ControllerCatalogCategory extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+	/**
+	 * 目录上绑定的solution
+	 *
+	 * @return void
+	 */
+	public function getSolutionByCategory(){
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$query = $this->db->query('select s.*,a.title from oc_category_solution s left join oc_solution_article a on a.id = s.solution_id where s.category_id ='.(int)$this->request->post['category_id']);
+			$this->response->jsonOutput([
+				'status'=>'success',
+				'data'=>$query,
+				'msg'=>''
+			]);
+		}else{
+			$this->response->jsonOutput([
+				'status'=>'error',
+				'msg'=>'category_id 不能为空'
+			]);
+		}
+		
+	}
+
+	/**
+	 * 获取目录上绑定的设置
+	 *
+	 * @return void
+	 */
+	public function getAllCategoryByCategory(){
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$category_id = (int)$this->request->post['category_id'];
+			$sql = "
+				select b.name,m.all_category_product_id as product_id from oc_product_description b left join oc_all_category m on m.all_category_product_id = b.product_id where m.category_id = $category_id UNION ALL
+				select b.name,m.all_category_banner_center as banner_id from oc_banner b left join oc_all_category m on m.all_category_banner_center = b.banner_id where m.category_id = $category_id UNION ALL
+				select b.name,m.all_category_banner_right_top as banner_id from oc_banner b left join oc_all_category m on m.all_category_banner_right_top = b.banner_id where m.category_id = $category_id UNION ALL
+				select b.name,m.all_category_banner_right_bottom as banner_id from oc_banner b left join oc_all_category m on m.all_category_banner_right_bottom = b.banner_id where m.category_id = $category_id
+			";
+
+			$query = $this->db->query($sql);
+			$this->response->jsonOutput([
+				'status'=>'success',
+				'data'=>$query,
+				'msg'=>''
+			]);
+		}else{
+			$this->response->jsonOutput([
+				'status'=>'error',
+				'msg'=>'category_id 不能为空'
+			]);
+		}
+	}
+
+	/**
+	 * 获取目录上绑定的广告设置
+	 *
+	 * @return void
+	 */
+	public function getMenuAdsByCategory(){
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$category_id = (int)$this->request->post['category_id'];
+			$sql = "
+				select b.name,m.* from oc_banner b left join oc_menu_category m on m.banner_big = b.banner_id where m.category_id = $category_id UNION ALL
+				select b.name,m.* from oc_banner b left join oc_menu_category m on m.banner_product_1 = b.banner_id where m.category_id = $category_id UNION ALL
+				select b.name,m.* from oc_banner b left join oc_menu_category m on m.banner_product_2 = b.banner_id where m.category_id = $category_id UNION ALL
+				select b.name,m.* from oc_banner b left join oc_menu_category m on m.banner_product_3 = b.banner_id where m.category_id = $category_id
+			";
+
+			$query = $this->db->query($sql);
+			$this->response->jsonOutput([
+				'status'=>'success',
+				'data'=>$query,
+				'msg'=>''
+			]);
+		}else{
+			$this->response->jsonOutput([
+				'status'=>'error',
+				'msg'=>'category_id 不能为空'
+			]);
+		}
+	}
+
+	/**
+	 * 通过关键词获取solution
+	 *
+	 * return void
+	 */
+	public function getSolutions(){
+		$name = '';
+		if(isset($this->request->post['name'])){
+			$name = $this->request->post['name'];
+		}
+		$sql = "select * from oc_solution_article where title like '%".$name."%' limit 10";
+		$result = $this->db->query($sql);
+		$this->response->jsonOutput($result);
+	}
+
+	/**
+	 * 通过关键词获取banner
+	 *
+	 * @return void
+	 */
+	public function getBanners(){
+		$name = '';
+		if(isset($this->request->post['name'])){
+			$name = $this->request->post['name'];
+		}
+		$sql = "select * from oc_banner where name like '%".$name."%' order by banner_id desc limit 10";
+		$result = $this->db->query($sql);
+		$this->response->jsonOutput($result);
+	}
+
+
+	/**
+	 * 获取产品
+	 *
+	 * @return void
+	 */
+	public function getProducts(){
+		$name = '';
+		if(isset($this->request->post['name'])){
+			$name = $this->request->post['name'];
+		}
+		$sql = "select p.*,d.name from oc_product p left join oc_product_description d on p.product_id = d.product_id where d.name like '%".$name."%' order by p.product_id desc limit 10";
+		$result = $this->db->query($sql);
+		$this->response->jsonOutput($result);
+	}
+
+
+	/**
+	 * 保存关联的solution
+	 *
+	 * @return void
+	 */
+	public function save_solutions(){
+		$solutions = [];
+		$category_id = null;
+		if(isset($this->request->post['solutions']) && !empty($this->request->post['solutions'])){
+			$solutions = $this->request->post['solutions'];
+		}
+
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$category_id = $this->request->post['category_id'];
+		}
+
+		if(empty($category_id) && !empty($solutions)){
+			$this->response->jsonOutput([
+				'status'=>'erro',
+				'msg'=>'categoryid 为空'
+			]);
+		}else{
+			$this->db->query('delete from oc_category_solution where category_id = '.$category_id);
+			$sql = 'insert into oc_category_solution';
+			$sql .= ' (category_id,solution_id) values';
+			$values = [];
+			foreach($solutions as $k=>$solution){
+				$values[$k]='('.$category_id.','.$solution.')';
+			}
+			$sql .= join(',',$values);
+			$query = $this->db->query($sql);
+			$this->response->jsonOutput($sql);
+		}
+	}
+
+	/**
+	 * 
+	 *保存目录的广告和产品设置
+	 * @return void
+	 */
+	public function save_menu_category(){
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$find = $this->db->query('select * from oc_menu_category where category_id ='.(int)$this->request->post['category_id']);
+			$sql = '';
+			if($find->row){
+				$sql .= 'update oc_menu_category set';
+				$sql .=' banner_big ='.(int)$this->request->post['banner_big'];
+				$sql .=',banner_product_1='.(int)$this->request->post['banner_product_1'];
+				$sql .=',banner_product_2='.(int)$this->request->post['banner_product_2'];
+				$sql .=',banner_product_3='.(int)$this->request->post['banner_product_3'];
+				$sql .=' where category_id='.(int)$this->request->post['category_id'];
+			}else{
+				$sql .= 'insert into oc_menu_category (category_id,banner_big,banner_product_1,banner_product_2,banner_product_3) values
+					('.(int)$this->request->post['category_id'].',
+					 '.(int)$this->request->post['banner_big'].',
+					 '.(int)$this->request->post['banner_product_1'].',
+					 '.(int)$this->request->post['banner_product_2'].',
+					 '.(int)$this->request->post['banner_product_3'].'
+					)';
+			}
+			$rs = $this->db->query($sql);
+			$this->response->jsonOutput($rs);
+		}else{
+			$this->reponse->jsonOutput([
+				'status'=>'erro',
+				'msg'=>'category id 不能为空'
+			]);
+		}
+	}
+
+	/**
+	 * 
+	 * 保存all category 页面的广告
+	 *
+	 * @return void
+	 */
+	public function save_all_category(){
+		if(isset($this->request->post['category_id']) && !empty($this->request->post['category_id'])){
+			$find = $this->db->query('select * from oc_all_category where category_id ='.(int)$this->request->post['category_id']);
+			$sql = '';
+			if($find->row){
+				$sql .= 'update oc_all_category set';
+				$sql .=' all_category_product_id ='.(int)$this->request->post['all_category_product_id'];
+				$sql .=',all_category_banner_center='.(int)$this->request->post['all_category_banner_center'];
+				$sql .=',all_category_banner_right_top='.(int)$this->request->post['all_category_banner_right_top'];
+				$sql .=',all_category_banner_right_bottom='.(int)$this->request->post['all_category_banner_right_bottom'];
+				$sql .=' where category_id='.(int)$this->request->post['category_id'];
+			}else{
+				$sql .= 'insert into oc_all_category (category_id,all_category_product_id,all_category_banner_center,all_category_banner_right_top,all_category_banner_right_bottom) values
+					('.(int)$this->request->post['category_id'].',
+					 '.(int)$this->request->post['all_category_product_id'].',
+					 '.(int)$this->request->post['all_category_banner_center'].',
+					 '.(int)$this->request->post['all_category_banner_right_top'].',
+					 '.(int)$this->request->post['all_category_banner_right_bottom'].'
+					)';
+			}
+			$rs = $this->db->query($sql);
+			$this->response->jsonOutput($rs);
+		}else{
+			$this->reponse->jsonOutput([
+				'status'=>'erro',
+				'msg'=>'category id 不能为空'
+			]);
+		}
+	}
+	
 }
