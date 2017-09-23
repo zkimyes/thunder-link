@@ -131,10 +131,16 @@ $(document).ready(function() {
 	});
 
 
-	$('.dropdown-inline li').hover(function(e){
-		console.log(e)
-	},function(){
+	$('.dropdown-inline>a').mouseenter(function(e){
+		var postion = $(this).position();
+		$(this).next('.menu').css({
+			left:postion.left-6,
+			top:postion.top-6
+		}).show()
+	})
 
+	$('.dropdown-inline .menu').mouseleave(function(e){
+		$(this).hide();
 	})
 });
 

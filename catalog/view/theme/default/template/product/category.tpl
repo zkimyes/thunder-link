@@ -17,9 +17,7 @@
                             {% endfor %}
                             <ul class="menu">
                                 {% for subcategory in breadcrumb.sublings %}
-                                    {% if subcategory.category_id !=  breadcrumb.category_id %}
                                     <li><a href="{{subcategory.link|raw}}">{{subcategory.name}}</a></li>
-                                    {% endif %}
                                 {% endfor %}
                             </ul>
                         </div>

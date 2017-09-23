@@ -79,14 +79,19 @@ class ControllerProductCategory extends Controller {
 				if ($category_info) {
 					$subCategory = $this->model_catalog_category->getCategories($category_info['parent_id']);
 					foreach($subCategory as &$ca){
-						$ca['link'] = $this->url->link('product/category', 'path=' .$path . $url);
+						if($ca['parent_id'] != 0){
+							$ca['link'] = $this->url->link('product/category', 'path=' .$ca['parent_id'].'_'.$ca['category_id'] . $url);
+						}else{
+							$ca['link'] = $this->url->link('product/category', 'path=' .$ca['category_id'] . $url);
+						}
+						
 					}
 					$data['breadcrumbs'][] = array(
 						'type'=>'category',
 						'category_id'=>$category_info['category_id'],
 						'sublings'=>$subCategory,
-						'text' => $category_info['name'],
-						'href' => $this->url->link('product/category', 'path=' . $path . $url)
+						'text' => $category_info['name']
+						//'href' => $this->url->link('product/category', 'path=' . $path . $url)
 					);
 				}
 			}
