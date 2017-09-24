@@ -218,13 +218,14 @@ class ControllerProductProduct extends Controller {
             $this->document->setDescription($product_info['meta_description']);
             $this->document->setKeywords($product_info['meta_keyword']);
             $this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
-            $this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');
-            $this->document->addStyle('catalog/view/javascript/jquery/magnific/magnific-popup.css');
-			$this->document->addStyle('catalog/view/theme/default/stylesheet/product.css');
+            $this->document->addStyle('catalog/view/theme/default/stylesheet/product.css');
+            $this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+            $this->document->addStyle('catalog/view/javascript/lightbox2/dist/css/lightbox.min.css');
             $this->document->addScript('catalog/view/javascript/jquery/datetimepicker/moment.js');
             $this->document->addScript('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js');
             $this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
-            
+            $this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+            $this->document->addScript('catalog/view/javascript/lightbox2/dist/js/lightbox.min.js');
             $data['heading_title'] = $product_info['name'];
             
             $data['text_select'] = $this->language->get('text_select');
@@ -405,6 +406,7 @@ class ControllerProductProduct extends Controller {
             
             $data['products'] = array();
             
+            //关联的产品
             $results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
             foreach ($results as $result) {
                 if ($result['image']) {
@@ -435,6 +437,7 @@ class ControllerProductProduct extends Controller {
                     $rating = (int)$result['rating'];
                 } else {
                     $rating = false;
+                    
                 }
                 $data['products'][] = array(
                 'product_id'  => $result['product_id'],
@@ -466,7 +469,15 @@ class ControllerProductProduct extends Controller {
             $data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
             
             $this->model_catalog_product->updateViewed($this->request->get['product_id']);
-            
+
+                 //下载
+            // $this->getDownloads()
+            $data['downloads'] = $this->getDownloads($product_info['product_id']);
+
+            foreach($data['downloads'] as &$download){
+                $download['link'] = $this->url->link('product/product/download','product_id='.$product_info['product_id'].'&download_id='.$download['download_id']);
+            }
+
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
@@ -619,6 +630,27 @@ class ControllerProductProduct extends Controller {
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }
+
+    /**
+     * 获取关联的下载文件
+     *
+     * @param [type] $product_id
+     * @return void
+     */
+    private function getDownloads($product_id){
+        $query = $this->db->query('select download_id from oc_product_to_download where product_id ='.$product_id);
+        $download_ids = $query->rows;
+        $ids = [];
+        foreach($download_ids as $download){
+            $ids[] = $download['download_id'];
+        }
+
+        if(!empty($ids)){
+            $query = $this->db->query('select * from oc_download d left join oc_download_description p on p.download_id = d.download_id where d.download_id in ('.join(',',$ids).') limit 6');
+            return $query->rows;
+        }
+        return null;
+    }   
     
     
     private function notFount(){
@@ -693,7 +725,7 @@ class ControllerProductProduct extends Controller {
         
         $data['continue'] = $this->url->link('common/home');
         
-        $this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
+        $this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . '404 Not Found');
         
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
@@ -704,4 +736,53 @@ class ControllerProductProduct extends Controller {
         
         $this->response->setOutput($this->load->view('error/not_found', $data));
     }
+
+
+    public function download() {
+		$this->load->model('account/download');
+
+		if (isset($this->request->get['download_id'])) {
+			$download_id = $this->request->get['download_id'];
+		} else {
+			$download_id = 0;
+        }
+        
+        if (isset($this->request->get['product_id'])) {
+			$product_id = $this->request->get['product_id'];
+		} else {
+			$product_id = 0;
+		}
+
+        $download_info = $this->db->query('select * from oc_download where download_id='.(int)$download_id);
+        $download_info = $download_info->row;
+		if ($download_info) {
+			$file = DIR_DOWNLOAD . $download_info['filename'];
+			$mask = basename($download_info['mask']);
+
+			if (!headers_sent()) {
+				if (file_exists($file)) {
+					header('Content-Type: application/octet-stream');
+					header('Content-Disposition: attachment; filename="' . ($mask ? $mask : basename($file)) . '"');
+					header('Expires: 0');
+					header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+					header('Pragma: public');
+					header('Content-Length: ' . filesize($file));
+
+					if (ob_get_level()) {
+						ob_end_clean();
+					}
+
+					readfile($file, 'rb');
+
+					exit();
+				} else {
+					exit('Error: Could not find file ' . $file . '!');
+				}
+			} else {
+				exit('Error: Headers already sent out!');
+			}
+		} else {
+			$this->response->redirect($this->url->link('product/product', 'product_id='.$product_id, true));
+		}
+	}
 }

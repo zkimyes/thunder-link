@@ -449,14 +449,14 @@ class ControllerCatalogDownload extends Controller {
 				// Allowed file extension types
 				$allowed = array();
 
-				$extension_allowed = preg_replace('~\r?\n~', "\n", $this->config->get('config_file_ext_allowed'));
+				$extension_allowed = preg_replace('~\r?\n~', "\n", htmlspecialchars_decode($this->config->get('config_file_ext_allowed')));
 
-				$filetypes = explode("\n", $extension_allowed);
+				$filetypes = explode(" ", $extension_allowed);
 
-				foreach ($filetypes as $filetype) {
-					$allowed[] = trim($filetype);
-				}
-
+				// foreach ($filetypes as $filetype) {
+				// 	$allowed[] = trim($filetype);
+				// }
+				$allowed = explode(' ',$filetypes[0]);
 				if (!in_array(strtolower(substr(strrchr($filename, '.'), 1)), $allowed)) {
 					$json['error'] = $this->language->get('error_filetype');
 				}
@@ -464,13 +464,15 @@ class ControllerCatalogDownload extends Controller {
 				// Allowed file mime types
 				$allowed = array();
 
-				$mime_allowed = preg_replace('~\r?\n~', "\n", $this->config->get('config_file_mime_allowed'));
+				$mime_allowed = preg_replace('~\r?\n~', "\n", htmlspecialchars_decode($this->config->get('config_file_mime_allowed')));
 
 				$filetypes = explode("\n", $mime_allowed);
 
-				foreach ($filetypes as $filetype) {
-					$allowed[] = trim($filetype);
-				}
+				// foreach ($filetypes as $filetype) {
+				// 	$allowed[] = trim($filetype);
+				// }
+
+				$allowed = explode(' ',$filetypes[0]);
 
 				if (!in_array($this->request->files['file']['type'], $allowed)) {
 					$json['error'] = $this->language->get('error_filetype');

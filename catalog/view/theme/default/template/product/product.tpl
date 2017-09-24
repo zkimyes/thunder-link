@@ -1,10 +1,8 @@
 <?php echo $header; ?>
-<link rel="stylesheet" href="/catalog/view/javascript/jquery/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css">
 <style>
-    .owl-wrapper-outer{
-        border:0;
-        -webkit-box-shadow:none;
+    .owl-wrapper-outer {
+        border: 0;
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
 </style>
@@ -16,7 +14,7 @@
                 {{breadcrumb['text']|raw}}
             </a>
         </li>
-        {% endfor %}
+        {% endfor %} 
     </ul>
     <div class="row">
         <div id="content" class="container">
@@ -25,17 +23,24 @@
                 <div class="col-md-5">
                     <div class="dd">
                         <?php if ($thumb) { ?>
-                        <div><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
+                        <div id="thumb-big"><a class="thumbnail" href="<?php echo $popup; ?>" data-lightbox="roadtrip" data-title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
                         <?php } ?>
                         <div class="imagelist">
                             {% for image in images%}
-                            <div style="padding:5px;" class="image-additional item"><a class="thumbnail" href="{{image.popup}}" title="{{heading_title}}"> <img src="{{image.thumb}}" title="{{heading_title}}" alt="{{heading_title}}" /></a></div>
+                            <div style="padding:5px;" class="image-additional item">
+                                <a class="thumbnail image-items" href="{{image.popup}}" data-lightbox="roadtrip" data-title="{{heading_title}}"> <img src="{{image.thumb}}" title="{{heading_title}}" alt="{{heading_title}}" /></a>
+                            </div>
                             {% endfor %}
                         </div>
                     </div>
                     <!-- AddThis Button BEGIN -->
-                    <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-                      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+                    <div class="addthis_toolbox addthis_default_style" data-url="<?php echo $share; ?>">
+                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                        <a class="addthis_button_tweet"></a>
+                        <a class="addthis_button_pinterest_pinit"></a>
+                        <a class="addthis_counter addthis_pill_style"></a>
+                    </div>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
                     <!-- AddThis Button END -->
                 </div>
                 <div class="col-md-7">
@@ -75,15 +80,13 @@
                         </div>
                     </div>
 
-                    {% if options%}
-                        {% for option in options %}
-                            {% if option.type == 'select' %}
-                                <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
-                                    <div class="label-text">
-                                        <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
-                                    </div>
-                                    <div class="content">
-                                        <select name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
+                    {% if options%} {% for option in options %} {% if option.type == 'select' %}
+                    <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
+                        <div class="label-text">
+                            <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
+                        </div>
+                        <div class="content">
+                            <select name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
                                             <option value="">Please select a software</option>
                                             {% for option_value in option.product_option_value %}
                                                 <option value="{{option_value.product_option_value_id}}">{{option_value.name}}
@@ -93,30 +96,24 @@
                                                 </option>
                                             {% endfor %}
                                         </select>
-                                    </div>
-                                </div>
-                            {% endif %}
-                            {% if option.type == 'checkbox' %}
-                                <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
-                                    <div class="label-text">
-                                        <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
-                                    </div>
-                                    <div class="content">
-                                            {% for option_value in option.product_option_value %}
-                                                <a class="btn btn-o-success" href="">
+                        </div>
+                    </div>
+                    {% endif %} {% if option.type == 'checkbox' %}
+                    <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
+                        <div class="label-text">
+                            <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
+                        </div>
+                        <div class="content">
+                            {% for option_value in option.product_option_value %}
+                            <a class="btn btn-o-success" href="">
                                                         {{option_value.name}}
                                                         {% if option_value.price%}
                                                             ({{option_value.price_prefix}}{{option_value.price}})
                                                         {% endif %}
-                                                </a>
-                                                    
-                                            {% endfor %}
-                                    </div>
-                                </div>
-                            {% endif %}
-
-                        {% endfor %}
-                    {% endif %}
+                                                </a> {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %} {% endfor %} {% endif %}
 
                     <div class="list-prop row">
                         <div class="label-text">
@@ -169,7 +166,22 @@
                                     foreach($attribute_groups as $attrs){
                                         if($attrs['name'] == 'Overview'){
                                             foreach($attrs['attribute'] as $attr){?>
-                            <div>
+                            <div style="">
+                                <?php echo $attr['text'];?>
+                            </div>
+                            <?php 
+                                    }}} 
+                                ?>
+                        </div>
+                        <div class="tab-content" id="techSpecs">
+                            <div class="title">
+                                <h3>Tech Specs</h3>
+                            </div>
+                            <?php 
+                                    foreach($attribute_groups as $attrs){
+                                        if($attrs['name'] == 'Techspecs'){
+                                            foreach($attrs['attribute'] as $attr){?>
+                            <div style="">
                                 <?php echo $attr['text'];?>
                             </div>
                             <?php 
@@ -178,29 +190,35 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 product-right">
                         <div class="panel panel-ghost">
-                            <div class="panel-heading">Buyer Guide</div>
+                            <div class="panel-heading">
+                                <h3> Buyer Guide </h3>
+                            </div>
                             <div class="panel-body">
-                                <ul class="list-unstyled">
-                                    <li><span class="glyphicon glyphicon-question-sign"></span><a href="">Why Buy From US</a></li>
-                                    <li><span class="glyphicons glyphicons-usd"></span><a href="">How To Buy</a></li>
-                                    <li><span class="glyphicons glyphicons-fees-payments"></span><a href="">Payment</a></li>
-                                    <li><span class="glyphicons glyphicons-vr-maintenance"></span><a href="">Technical Support</a></li>
-                                    <li><span class="glyphicons glyphicons-suitcase"></span><a href="">Warranty</a></li>
+                                <ul class="list-unstyled buyer-guide">
+                                    <li><i style="font-size:22px;" class="fa fa-question-circle" aria-hidden="true"></i><a href="">Why Buy From US</a></li>
+                                    <li><i style="font-size:22px;" class="fa fa-usd" aria-hidden="true"></i><a href="">How To Buy</a></li>
+                                    <li><i style="font-size:16px;" class="fa fa-credit-card-alt" aria-hidden="true"></i><a href="">Payment</a></li>
+                                    <li><i style="font-size:16px;" class="fa fa-life-ring" aria-hidden="true"></i><a href="">Technical Support</a></li>
+                                    <li><i style="font-size:16px;" class="fa fa-handshake-o" aria-hidden="true"></i><a href="">Warranty</a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="panel panel-ghost">
-                            <div class="panel-heading">Downloads</div>
+                            <div class="panel-heading">
+                                <h3> Downloads </h3>
+                            </div>
                             <div class="panel-body">
-                                <ul>
-                                    <li><a href="">Why Buy From US</a></li>
-                                    <li><a href="">How To Buy</a></li>
+                                <ul class="list-unstyled">
+                                    {% for download in downloads %}
+                                    <li><a href="{{download.link|raw}}">{{download.name}}</a></li>
+                                    {% endfor %}
+                                    <!-- <li><a href="">How To Buy</a></li>
                                     <li><a href="">Payment</a></li>
                                     <li><a href="">Technical Support</a></li>
-                                    <li><a href="">Warranty</a></li>
+                                    <li><a href="">Warranty</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -213,22 +231,19 @@
         <?php echo $column_right; ?>
     </div>
 </div>
-<script src="/catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js"></script>
-<script src="/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
 <script>
     $(function() {
         $('.imagelist').owlCarousel({
             items: 6,
             navigation: true,
             navigationText: ['<i class="fa fa-chevron-left fa-4x"></i>', '<i class="fa fa-chevron-right fa-4x"></i>'],
-            pagination: true
-        });
-
-        $('.thumbnail').magnificPopup({
-            type:'image',
-            delegate: 'a',
-            gallery: {
-                enabled:true
+            pagination: false,
+            afterMove:function(){
+                var _currentImag = $('#thumb-big img');
+                $('.image-items').removeClass('actived');
+                $('.image-items').eq(this.currentItem).addClass('actived');
+                _currentImag.attr('src',$('.image-items').eq(this.currentItem).attr('href'))
+                
             }
         });
     })

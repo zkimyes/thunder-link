@@ -1,7 +1,7 @@
 {{header|raw}}{{content_top|raw}}
 <main class="main">
     <div class="container">
-        <div class="prod-block mt30">
+        <div class="prod-block mt30 animate">
             <div class="col-md-2">
                 <h2>Hot Sale</h2>
                 <div class="pre-text">
@@ -116,7 +116,7 @@
         </div>
 
 
-        <div class="prod-block promotion-block mt30">
+        <div class="prod-block promotion-block mt30 animate">
             <div class="col-md-2">
                 <h2>Promotion</h2>
                 <div>
