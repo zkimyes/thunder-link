@@ -19,6 +19,7 @@ class ControllerCommonHome extends Controller {
 
 		$this->load->model('hotsale/products');
 		$this->load->model('promotion/promotion');
+		$this->load->model('support/article');
 
 		//hot sale
 		$data['hot_sale_category'] = $this->model_hotsale_products->getHotSaleCategroy();
@@ -51,7 +52,20 @@ class ControllerCommonHome extends Controller {
 		}
 
 
+		//support 
+
+		$data['support'] = $this->model_support_article->getHomeArticleList();
+		foreach($data['support'] as &$support){
+			if (!empty($support['image']) && is_file(DIR_IMAGE . $support['image'])) {
+				$support['thumb'] = $this->model_tool_image->resize($support['image'], 210, 150);
+			} else {
+				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
+			}
+			$support['url'] = $this->url->link('support/article', 'article_id=' . $support['id']);
+		}
+
 		$data['promotion_url'] = $this->url->link('promotion/index');
+		$data['hotsale_url'] = $this->url->link('product/hotsale');
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }

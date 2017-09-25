@@ -57,5 +57,11 @@ class ModelSupportArticle extends Model {
             return $article->row;
         }
     }
+
+
+    public function getHomeArticleList(){
+        $query = $this->db->query("select * from oc_support_article where is_home =1 limit 3");
+        return $query->rows;
+    }
     
 }

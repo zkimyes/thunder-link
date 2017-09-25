@@ -2,12 +2,17 @@
     background: #fff;
 }
 
+.hot_sale a{
+    text-decoration: none;
+}
+
 .hot_sale .product_list {
     border: 1px #ddd solid;
     transform: translateX(2px);
     margin-bottom: 20px;
     padding: 20px;
     margin-left: -1px;
+    height: 400px;
 }
 
 .hot_sale .product_list .thumb {
@@ -33,4 +38,8 @@
 .hot_sale .product_list .in {
     font-size: 18px;
     float: left;
+}
+
+.hot_sale .info{
+    height: 100px;
 }

@@ -70,33 +70,18 @@
                 </div>
             </div>
             <div class="section clearfix">
+                {% for article in support %}
                 <div class="col-md-4 document-slik-block">
-                    <div class="col-md-5">
-                        <p>FTTX Leased Line Solution For Enterprise</p>
-                        <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
-                    </div>
-                    <div class="col-md-7">
-                        <img src="/image/u646.png" alt="">
-                    </div>
+                    <a href="{{article.url}}">
+                        <div class="col-md-5">
+                            {{article.summary}}
+                        </div>
+                        <div class="col-md-7">
+                            <img src="{{article.thumb}}" alt="{{article.title}}">
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4 document-slik-block">
-                    <div class="col-md-5">
-                        <p>FTTX Leased Line Solution For Enterprise</p>
-                        <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
-                    </div>
-                    <div class="col-md-7">
-                        <img src="/image/u646.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-4 document-slik-block">
-                    <div class="col-md-5">
-                        <p>FTTX Leased Line Solution For Enterprise</p>
-                        <p>FTTX leased Line solution for Enterprise--- FTTx Leased Line Solution Main SlidesOverview ..</p>
-                    </div>
-                    <div class="col-md-7">
-                        <img src="/image/u646.png" alt="">
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 

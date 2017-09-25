@@ -2,28 +2,36 @@
 <?php echo $content_top ?>
 <main class="main hot_sale">
     <div class="container">
+        {% for category in hot_sale_category%}
         <section>
-            <div class="title"><strong>MSTP</strong></div>
+            <div class="title">
+                <h3>{{category.name}}</h3>
+            </div>
             <div class="body row">
-                {% for item in [1,2,3,4,5,6] %}
+                {% for product in category.products %}
                 <div class="col-md-3 product_list">
-                    <div class="thumb">
-                        <img src="/image/u135.png" alt="">
-                    </div>
-                    <h4>Huawei OptiX OSN3500</h4>
-                    <div class="info">
-                        OSN3500 Subrack with 2*STM-64, 11*STM-16 four-fiber MSP rings.11*STM-16 four-fiber MSP rings
-                    </div>
-                    <div class="price">
-                        <span class="in">
-                            US$ 350000
-                        </span>
-                        <span class="pull-right"> In Stock</span>
-                    </div>
+                    <a href="{{product.href|raw}}">
+                        <div class="thumb">
+                            <img src="{{product.thumb|raw}}" alt="{{product.name}}">
+                        </div>
+                        <h4>{{product.name}}</h4>
+                        <div class="info">
+                            {{product.description}}
+                        </div>
+                        <div class="price">
+                            <span class="in">
+                                            {{product.price}}
+                                        </span>
+                            <span class="pull-right"> {{product.stock_status}}</span>
+                        </div>
+                    </a>
+
                 </div>
                 {% endfor %}
             </div>
         </section>
+
+        {% endfor %}
     </div>
 </main>
 <?php echo $content_bottom ?>
