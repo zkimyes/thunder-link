@@ -61,11 +61,17 @@ class ControllerCommonHome extends Controller {
 			} else {
 				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
 			}
+			$support['summary'] = utf8_substr(strip_tags(html_entity_decode($support['summary'], ENT_QUOTES, 'UTF-8')), 0, 120) . '..';
 			$support['url'] = $this->url->link('support/article', 'article_id=' . $support['id']);
 		}
 
+		$this->load->model('support/article');
+        $data['is_search_tags'] = $this->model_support_article->getIsSeachTags(8);
+
 		$data['promotion_url'] = $this->url->link('promotion/index');
 		$data['hotsale_url'] = $this->url->link('product/hotsale');
+		$data['support_url'] = $this->url->link('support/index');
+		$data['solution_url'] = $this->url->link('solution/index');
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }

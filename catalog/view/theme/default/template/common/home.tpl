@@ -7,7 +7,7 @@
                 <div class="pre-text">
                     Secure Online <br> Transactions Buy It <br> Now for Fast Dispatch
                 </div>
-                <a href="">View More ></a>
+                <a href="{{hotsale_url|raw}}">View More ></a>
             </div>
             <div class="col-md-10">
                 <ul class="nav nav-tabs th-tabs" role="tablist">
@@ -58,10 +58,8 @@
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
                     <div class="hot-tag">
-                        <a class="label label-default" href="">OTN Configuration</a>
-                        <a class="label label-default" href="">OTN Configuration</a>
-                        <a class="label label-default" href="">OTN Configuration</a>
-                        <a class="label label-default" href="">OTN Configuration</a>
+                        {% for tag in is_search_tags %}
+                        <a class="tag label label-default" href="{{search_action|raw}}&search={{tag.name}}">{{tag.name}}</a> {% endfor %}
                     </div>
                 </div>
                 <div class="col-md-6 document-ads-block">
@@ -133,7 +131,7 @@
             <div class="help-block">
                 <div class="header">
                     <strong>Support</strong>
-                    <a href="" class="more">View More »</a>
+                    <a href="{{support_url|raw}}" class="more">View More »</a>
                 </div>
                 <div class="body">
                     <div class="col-md-4">
@@ -150,7 +148,7 @@
             <div class="help-block">
                 <div class="header">
                     <strong>Solution</strong>
-                    <a href="" class="more">View More »</a>
+                    <a href="{{solution_url|raw}}" class="more">View More »</a>
                 </div>
                 <div class="body">
                     <div class="col-md-4">

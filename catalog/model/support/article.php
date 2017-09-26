@@ -36,8 +36,8 @@ class ModelSupportArticle extends Model {
      *
      * @return void
      */
-    public function getIsSeachTags(){
-        $tags = $this->db->query('select * from oc_support_tags where is_search=1');
+    public function getIsSeachTags($limit=10){
+        $tags = $this->db->query('select * from oc_support_tags where is_search=1 limit '.$limit);
         return $tags->rows;
     }
     

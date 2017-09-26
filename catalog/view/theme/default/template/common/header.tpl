@@ -121,6 +121,7 @@
                 </div>
                 <div class="col-sm-3">
                     <?php echo $cart; ?>
+                    asdasd
                 </div>
             </div>
         </div>
@@ -192,7 +193,6 @@
                                     <div class="col-md-4">
                                         <a href="{{category.banners[0].link}}">
                                             <img src="{{category.banners[0].thumb}}" alt="">
-                                            <div>{{category.banners[0].name}}</div>
                                         </a>
                                     </div>
                                 </div>
@@ -236,9 +236,6 @@
                 toggleSubCon: function(category_id) {
                     this.subCategoryContentVisable = true
                     this.select = category_id
-                },
-                getCategoryData: function() {
-
                 }
             }
         })
