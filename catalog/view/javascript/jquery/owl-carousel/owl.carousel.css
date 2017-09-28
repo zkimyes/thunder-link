@@ -115,6 +115,7 @@
 	text-align: center;
 	top: 20px;
 	position: relative;
+	margin-top: -25px;
 }
 .owl-controls .owl-page {
 	display: inline-block;
