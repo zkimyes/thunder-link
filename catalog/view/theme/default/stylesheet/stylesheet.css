@@ -453,7 +453,7 @@ a {
 
 .thunder-link-class .breadcrumb {
     background-color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     margin: 20px 0 0;
 }
 
@@ -675,7 +675,6 @@ a {
 
 .dropdown-inline {
     display: inline-block;
-    border: 1px #ddd solid;
     padding: 5px;
 }
 
@@ -717,4 +716,25 @@ a {
     font-size:20px;
     display: inline-block;
     width:40px;
+}
+
+.category-tabs li{
+    border-top:2px #ccc solid;
+    background: #f1f1f1;
+    border-right: 1px #ddd solid;
+    border-left:1px #ddd solid;
+    margin-top: 1px;
+}
+
+.category-tabs li.active{
+    border-top:2px #396 solid;
+    background: #f1f1f1;
+    border-right: 0 none;
+    border-bottom:0;
+    background: #fff;
+}
+
+.category-tabs.nav-tabs>li.active>a, .category-tabs.nav-tabs>li.active>a:focus, .category-tabs.nav-tabs>li.active>a:hover {
+    border:0 none;
+    margin-right:0;
 }

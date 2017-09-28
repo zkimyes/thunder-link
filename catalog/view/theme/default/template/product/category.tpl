@@ -17,8 +17,9 @@
                             {% endfor %}
                             <ul class="menu">
                                 {% for subcategory in breadcrumb.sublings %}
-                                    <li><a href="{{subcategory.link|raw}}">{{subcategory.name}}</a></li>
+                                    <li><a href="{{subcategory.link|raw}}">{{subcategory.name}}&nbsp;<span class="caret"></span></a></li>
                                 {% endfor %}
+                                    
                             </ul>
                         </div>
                     </li>
@@ -39,7 +40,7 @@
             <div id="content" class="<?php echo $class; ?>">
                 <?php echo $content_top; ?>
                 <!-- tabs -->
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs category-tabs">
                     <li class="active"><a>All Items</a></li>
                     <li><a>Top Sale</a></li>
                 </ul>
