@@ -41,8 +41,8 @@
                 <?php echo $content_top; ?>
                 <!-- tabs -->
                 <ul class="nav nav-tabs category-tabs">
-                    <li class="active"><a>All Items</a></li>
-                    <li><a>Top Sale</a></li>
+                    <li class="active"><a href="{{all_item_link|raw}}">All Items</a></li>
+                    <li><a href="{{top_sale_link|raw}}">Top Sale</a></li>
                 </ul>
                 <?php if ($products) { ?>
                 <div class="form-inline category-sort">
