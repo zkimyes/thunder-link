@@ -6,7 +6,7 @@
         box-shadow: none;
     }
 </style>
-<div class="container">
+<div id="products_detail" class="container">
     <ul class="breadcrumb">
         {% for breadcrumb in breadcrumbs %}
         <li>
@@ -14,7 +14,7 @@
                 {{breadcrumb['text']|raw}}
             </a>
         </li>
-        {% endfor %} 
+        {% endfor %}
     </ul>
     <div class="row">
         <div id="content" class="container">
@@ -77,16 +77,17 @@
                             Description:
                         </div>
                         <div class="content">
+                            <?php echo $product['description']; ?>
                         </div>
                     </div>
-
-                    {% if options%} {% for option in options %} {% if option.type == 'select' %}
+                    {% if options%} {% for option in options %} 
+                    {% if option.type == 'select' %}
                     <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
                         <div class="label-text">
                             <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
                         </div>
                         <div class="content">
-                            <select name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
+                            <select v-model="options[1]" name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
                                             <option value="">Please select a software</option>
                                             {% for option_value in option.product_option_value %}
                                                 <option value="{{option_value.product_option_value_id}}">{{option_value.name}}
@@ -98,19 +99,26 @@
                                         </select>
                         </div>
                     </div>
-                    {% endif %} {% if option.type == 'checkbox' %}
+                    {% endif %} {% if option.type == 'radio' %}
                     <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
                         <div class="label-text">
                             <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
                         </div>
                         <div class="content">
                             {% for option_value in option.product_option_value %}
-                            <a class="btn btn-o-success" href="">
-                                                        {{option_value.name}}
-                                                        {% if option_value.price%}
-                                                            ({{option_value.price_prefix}}{{option_value.price}})
-                                                        {% endif %}
-                                                </a> {% endfor %}
+                            <a class="btn btn-o-success" >
+                                <label>
+                                      <input style="display:none"  type="radio" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
+                                      {% if option_value.image %}
+                                      <img src="{{ option_value.image }}" alt="{{ option_value.name }}" class="img-thumbnail" /> 
+                                      {% endif %}
+                                      {{ option_value.name }}
+                                      {% if option_value.price %}
+                                      ({{ option_value.price_prefix }} {{ option_value.price }})
+                                      {% endif %}
+                                    </label>
+                            </a>
+                            {% endfor %}
                         </div>
                     </div>
                     {% endif %} {% endfor %} {% endif %}
@@ -129,7 +137,14 @@
                             <label class="control-label" for="input-quantity">{{entry_qty}}</label>
                         </div>
                         <div class="content">
-                            <input type="number" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+                            <div class="input">
+                                <input type="text" name="quantity" v-model.number="quantity" size="2" id="input-quantity" class="form-control" />
+                                <div class="buttons">
+                                    <button @click="quantity++"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+                                    <button @click="quantity--"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <?php echo $stock; ?>
                             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                             <br />
                         </div>
@@ -151,13 +166,73 @@
                         <li>FAQ</li>
                     </ul>
                 </div>
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="tab-content" id="relevant-items">
-                            <div class="title">
-                                <h3>Relevant items</h3>
+                <?php if ($products) { ?>
+                <div class="row" style="margin-top:10px;">
+                    <?php $i = 0; ?>
+                    <?php foreach ($products as $product) { ?>
+                    <?php if ($column_left && $column_right) { ?>
+                    <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
+                    <?php } elseif ($column_left || $column_right) { ?>
+                    <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
+                    <?php } else { ?>
+                    <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
+                    <?php } ?>
+                    <div class="<?php echo $class; ?>">
+                        <div class="product-thumb transition">
+                            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+                            <div class="caption">
+                                <h4>
+                                    <a href="<?php echo $product['href']; ?>">
+                                        <?php echo $product['name']; ?>
+                                    </a>
+                                </h4>
+                                <p>
+                                    <?php echo $product['description']; ?>
+                                </p>
+                                <?php if ($product['rating']) { ?>
+                                <div class="rating">
+                                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                    <?php if ($product['rating'] < $i) { ?>
+                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <?php } else { ?>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <?php } ?>
+                                    <?php } ?>
+                                </div>
+                                <?php } ?>
+                                <?php if ($product['price']) { ?>
+                                <p class="price">
+                                    <?php if (!$product['special']) { ?>
+                                    <?php echo $product['price']; ?>
+                                    <?php } else { ?>
+                                    <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                                    <?php } ?>
+                                    <?php if ($product['tax']) { ?>
+                                    <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                                    <?php } ?>
+                                </p>
+                                <?php } ?>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
+                                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+                                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
                             </div>
                         </div>
+                    </div>
+                    <?php if (($column_left && $column_right) && ($i % 2 == 0)) { ?>
+                    <div class="clearfix visible-md visible-sm"></div>
+                    <?php } elseif (($column_left || $column_right) && ($i % 3 == 0)) { ?>
+                    <div class="clearfix visible-md"></div>
+                    <?php } elseif ($i % 4 == 0) { ?>
+                    <div class="clearfix visible-md"></div>
+                    <?php } ?>
+                    <?php $i++; ?>
+                    <?php } ?>
+                </div>
+                <?php } ?>
+                <div class="row">
+                    <div class="col-md-9">
                         <div class="tab-content" id="overview">
                             <div class="title">
                                 <h3>Overview</h3>
@@ -190,7 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 product-right">
+                    <div class="col-md-3 product-right" style="margin-top:50px">
                         <div class="panel panel-ghost">
                             <div class="panel-heading">
                                 <h3> Buyer Guide </h3>
@@ -238,14 +313,43 @@
             navigation: true,
             navigationText: ['<i class="fa fa-chevron-left fa-4x"></i>', '<i class="fa fa-chevron-right fa-4x"></i>'],
             pagination: false,
-            afterMove:function(){
+            afterMove: function() {
                 var _currentImag = $('#thumb-big img');
                 $('.image-items').removeClass('actived');
                 $('.image-items').eq(this.currentItem).addClass('actived');
-                _currentImag.attr('src',$('.image-items').eq(this.currentItem).attr('href'))
-                
+                _currentImag.attr('src', $('.image-items').eq(this.currentItem).attr('href'))
+
             }
         });
+    })
+    Vue.directive('numberOnly', {
+        bind: function(el) {
+            this.handler = function() {
+                el.value = el.value.replace(/\D+/, '')
+            }.bind(this)
+            el.addEventListener('input', this.handler)
+        },
+        unbind: function(el) {
+            el.removeEventListener('input', this.handler)
+        }
+    })
+
+    new Vue({
+        el: '#products_detail',
+        delimiters: ['${', '}'],
+        data: {
+            quantity: Number('{{minimum}}'),
+            options:[]
+        },
+        watch:{
+            quantity:function(newV){
+                if(isNaN(newV) || parseInt(newV)< 1 ){
+                    this.quantity = 1
+                } 
+            }
+        },
+        methods: {
+        }
     })
 </script>
 <?php echo $footer; ?>

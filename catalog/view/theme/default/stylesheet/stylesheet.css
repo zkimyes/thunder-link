@@ -734,7 +734,42 @@ a {
     background: #fff;
 }
 
+.category-tabs li:last-child.active{
+    border-top:2px #396 solid;
+    background: #f1f1f1;
+    border-right: 1px #ddd solid;
+    border-bottom:0;
+    background: #fff;
+}
+
 .category-tabs.nav-tabs>li.active>a, .category-tabs.nav-tabs>li.active>a:focus, .category-tabs.nav-tabs>li.active>a:hover {
     border:0 none;
     margin-right:0;
+}
+
+div.input{
+    border:1px #ddd solid;
+    width:100px;
+    overflow: hidden;
+}
+
+div.input>input{
+    float: left;
+    border:0 none;
+    width: 82px;
+}
+
+div.input>.buttons{
+    float: left;
+    width: 15px;
+    height: 35px;
+    margin-top: -6px;
+}
+
+div.input>.buttons>button{
+    border: 0 none;
+    background: none;
+    height: 15px;
+    padding:0;
+    margin:0;
 }

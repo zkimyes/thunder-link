@@ -3494,7 +3494,7 @@ CREATE TABLE `oc_review_reply` (
   `content` text COLLATE utf8_bin NOT NULL,
   `author` varchar(200) COLLATE utf8_bin NOT NULL,
   `product_id` int(11) NOT NULL,
-  `date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_added` datetime NOT NULL DEFAULT '0001-01-01 01:01:01',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -3859,7 +3859,7 @@ CREATE TABLE `oc_support_comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `article_id` int(11) NOT NULL,
   `content` text,
-  `createAt` datetime DEFAULT CURRENT_TIMESTAMP,
+  `createAt` datetime DEFAULT '0001-01-01 01:01:01',
   `arthor` varchar(100) DEFAULT NULL,
   `custom_id` int(11) DEFAULT NULL,
   `status` int(1) DEFAULT '0',

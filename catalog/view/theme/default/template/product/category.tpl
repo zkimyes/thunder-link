@@ -3,30 +3,25 @@
 <div class="container">
     <div class="row">
         <ul class="breadcrumb">
-            {% for breadcrumb in breadcrumbs%}
-                {% if breadcrumb.type == 'category'%}
-                    <li>
-                        <div class="dropdown-inline">
-                            {% for subcategory in breadcrumb.sublings %}
-                                {% if subcategory.category_id ==  breadcrumb.category_id %}
-                                <a href="{{subcategory.link|raw}}">
+            {% for breadcrumb in breadcrumbs%} {% if breadcrumb.type == 'category'%}
+            <li>
+                <div class="dropdown-inline">
+                    {% for subcategory in breadcrumb.sublings %} {% if subcategory.category_id == breadcrumb.category_id %}
+                    <a href="{{subcategory.link|raw}}">
                                         {{subcategory.name}}
                                         <span class="caret"></span>
-                                </a>
-                                {% endif %}
-                            {% endfor %}
-                            <ul class="menu">
-                                {% for subcategory in breadcrumb.sublings %}
-                                    <li><a href="{{subcategory.link|raw}}">{{subcategory.name}}&nbsp;<span class="caret"></span></a></li>
-                                {% endfor %}
-                                    
-                            </ul>
-                        </div>
-                    </li>
-                    {% else %}
-                    <li><a href="{{breadcrumb.href|raw}}">{{breadcrumb.text|raw}}</a></li>
-                {% endif %}
-            {% endfor %}
+                                </a> {% endif %} {% endfor %}
+                    <ul class="menu">
+                        {% for subcategory in breadcrumb.sublings %}
+                        <li><a href="{{subcategory.link|raw}}">{{subcategory.name}}&nbsp;<span class="caret"></span></a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </li>
+            {% else %}
+            <li><a href="{{breadcrumb.href|raw}}">{{breadcrumb.text|raw}}</a></li>
+            {% endif %} {% endfor %}
         </ul>
         <div class="row">
             <?php echo $column_left; ?>
@@ -41,8 +36,14 @@
                 <?php echo $content_top; ?>
                 <!-- tabs -->
                 <ul class="nav nav-tabs category-tabs">
+                    {% if top_sale %}
+                    <li><a href="{{all_item_link|raw}}">All Items</a></li>
+                    <li class="active"><a href="{{top_sale_link|raw}}">Top Sale</a></li>
+                    {% else %}
                     <li class="active"><a href="{{all_item_link|raw}}">All Items</a></li>
                     <li><a href="{{top_sale_link|raw}}">Top Sale</a></li>
+                    {% endif %}
+
                 </ul>
                 <?php if ($products) { ?>
                 <div class="form-inline category-sort">
@@ -124,8 +125,8 @@
                     </div>
                 </div>
                 <?php } ?>
-                <?php if (!$categories && !$products) { ?>
-                <p>
+                <?php if (!$categories || !$products) { ?>
+                <p class="alert alert-dismissable">
                     <?php echo $text_empty; ?>
                 </p>
                 <div class="buttons">

@@ -46,6 +46,12 @@ class ControllerProductCategory extends Controller {
         } else {
             $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
         }
+
+        if(isset($this->request->get['top_sale'])){
+            $top_sale = 1;
+        }else{
+            $top_sale = 0;
+        }
         
         
         if (isset($this->request->get['path'])) {
@@ -194,8 +200,10 @@ class ControllerProductCategory extends Controller {
             'sort'               => $sort,
             'order'              => $order,
             'start'              => ($page - 1) * $limit,
-            'limit'              => $limit
+            'limit'              => $limit,
+            'top_sale'           =>$top_sale
             );
+
             
             $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
             
@@ -387,6 +395,64 @@ class ControllerProductCategory extends Controller {
             $data['order'] = $order;
             $data['limit'] = $limit;
             
+
+            $url = '';
+            
+            if (isset($this->request->get['filter'])) {
+                $url .= '&filter=' . $this->request->get['filter'];
+            }
+            
+            if (isset($this->request->get['sort'])) {
+                $url .= '&sort=' . $this->request->get['sort'];
+            }
+            
+            if (isset($this->request->get['order'])) {
+                $url .= '&order=' . $this->request->get['order'];
+            }
+            
+            if (isset($this->request->get['limit'])) {
+                $url .= '&limit=' . $this->request->get['limit'];
+            }
+
+            if (isset($this->request->get['page'])) {
+                $url .= '&page=' . $this->request->get['page'];
+            }
+
+            if (isset($this->request->get['path'])) {
+                $url .= '&path=' . $this->request->get['path'];
+            }
+
+
+            $data['all_item_link'] = $this->url->link('product/category',$url,true);
+            
+
+            $url = '';
+            
+            if (isset($this->request->get['filter'])) {
+                $url .= '&filter=' . $this->request->get['filter'];
+            }
+            
+            if (isset($this->request->get['sort'])) {
+                $url .= '&sort=' . $this->request->get['sort'];
+            }
+            
+            if (isset($this->request->get['order'])) {
+                $url .= '&order=' . $this->request->get['order'];
+            }
+            
+            if (isset($this->request->get['limit'])) {
+                $url .= '&limit=' . $this->request->get['limit'];
+            }
+
+            if (isset($this->request->get['page'])) {
+                $url .= '&page=' . $this->request->get['page'];
+            }
+
+            if (isset($this->request->get['path'])) {
+                $url .= '&path=' . $this->request->get['path'];
+            }
+
+
             $data['continue'] = $this->url->link('common/home');
             
             $data['column_left'] = $this->load->controller('common/column_left');
@@ -395,6 +461,14 @@ class ControllerProductCategory extends Controller {
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
+            
+            $data['top_sale_link'] = $this->url->link('product/category',$url.'&top_sale=1',true);
+
+            if(isset($this->request->get['top_sale'])){
+                $data['top_sale'] = $this->request->get['top_sale'];
+            }else{
+                $data['top_sale'] = '';
+            }
             
             $this->response->setOutput($this->load->view('product/category', $data));
         } else {
