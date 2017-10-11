@@ -1,8 +1,6 @@
 <?php
 
 ini_set("display_errors", "Off");
-ini_set("error_reporting", 'E_ALL & ~E_NOTICE');
-var_dump(111);
 // Version
 define('VERSION', '2.2.0.0');
 

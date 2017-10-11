@@ -54,8 +54,8 @@
                 <div class="col-md-6 document-search-block">
                     <h4>Support Doucument Search</h4>
                     <div class="main-search-bar input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" name="search" class="form-control">
+                        <span class="input-group-addon"><button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button></span>
                     </div>
                     <div class="hot-tag">
                         {% for tag in is_search_tags %}
@@ -72,7 +72,7 @@
                 <div class="col-md-4 document-slik-block">
                     <a href="{{article.url}}">
                         <div class="col-md-5">
-                            {{article.summary}}
+                            {{article.desc_home}}
                         </div>
                         <div class="col-md-7">
                             <img src="{{article.thumb}}" alt="{{article.title}}">
@@ -84,18 +84,12 @@
         </div>
 
         <div class="misrv-block clearfix mt30">
-            <div class="col-md-4">
-                <p>MA5603T Typical Configuration</p>
-                <p><a class="btn btn-success" href="">Go See It</a></p>
+            {% for banner in three_banner%}
+            <div class="col-md-4" style="background:url('{{banner.thumb}}') no-repeat center right">
+                <p>{{banner.title}}</p>
+                <p><a class="btn btn-success" href="{{banner.link|raw}}">Go See It</a></p>
             </div>
-            <div class="col-md-4">
-                <p>MA5603T Typical Configuration</p>
-                <p><a class="btn btn-success" href="">Go See It</a></p>
-            </div>
-            <div class="col-md-4">
-                <p>MA5603T Typical Configuration</p>
-                <p><a class="btn btn-success" href="">Go See It</a></p>
-            </div>
+            {% endfor %}
         </div>
 
 
@@ -112,9 +106,12 @@
                     {% for product in promotion %}
                     <div class="animate-1 item">
                         <a href="{{product.url|raw}}">
+                            <h4>{{product.title}}</h4>
+                            <div><strong style="color:#f00;font-size:18px;">{{product.price}}</strong></div>
                             <img src="{{product.thumb}}" alt="{{product.title}}">
-                            <div><strong>{{product.price}}</strong></div>
-                            <div>{{product.title}}</div>
+                            <div>{{product.condition}}
+                                <br> {{product.date_end}}
+                            </div>
                         </a>
                     </div>
                     {% endfor %}

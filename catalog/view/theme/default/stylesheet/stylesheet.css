@@ -596,6 +596,11 @@ a {
     height: 150px;
 }
 
+.document-search-block .input-group-addon{
+    padding:0;
+    border:0;
+}
+
 .document-ads-block{
     border:1px #939393 solid;
     border-left:0;
