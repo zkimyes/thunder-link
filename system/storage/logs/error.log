@@ -6280,3 +6280,6 @@
 2017-10-08 15:59:29 - PHP Notice:  Undefined variable: name in /Volumes/SAMSUNGUSB 1/projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 47
 2017-10-08 15:59:29 - PHP Notice:  Undefined variable: name in /Volumes/SAMSUNGUSB 1/projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 47
 2017-10-08 15:59:29 - PHP Notice:  Undefined variable: product in /Volumes/SAMSUNGUSB 1/projects/thunder-link/catalog/view/theme/default/template/product/product.tpl on line 80
+2017-10-11 11:23:44 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 47
+2017-10-11 11:23:44 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 47
+2017-10-11 11:23:44 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 47

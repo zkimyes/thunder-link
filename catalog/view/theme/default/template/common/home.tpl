@@ -75,7 +75,7 @@
                             {{article.summary}}
                         </div>
                         <div class="col-md-7">
-                            <img src="{{article.thumb}}" alt="{{article.title}}">
+                            <img src="{{article.thumb}}" alt="{{article.title_in_home}}">
                         </div>
                     </a>
                 </div>
