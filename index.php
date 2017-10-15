@@ -1,10 +1,7 @@
 <?php
 
 ini_set("display_errors", "Off");
-<<<<<<< HEAD
-=======
 ini_set("error_reporting", 'E_ALL & ~E_NOTICE');
->>>>>>> 218f5339f44ef81b64cc1f394373a5357960778b
 // Version
 define('VERSION', '2.2.0.0');
 

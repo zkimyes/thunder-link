@@ -451,6 +451,12 @@ a {
     color: #fff
 }
 
+.btn-o-success.actived{
+    border: 1px #3ec492 solid;
+    background-color: #3ec492;
+    color: #fff
+}
+
 .thunder-link-class .breadcrumb {
     background-color: #fff;
     font-size: 14px;
@@ -644,6 +650,7 @@ a {
     font-size: 40px;
     margin: -12px;
     position: relative;
+    text-decoration: none !important;
 }
 
 #cart-total{
@@ -657,6 +664,7 @@ a {
     top: 4px;
     right: -9px;
     line-height: 23px;
+    text-align: center;
 }
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{

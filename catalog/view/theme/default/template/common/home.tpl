@@ -105,7 +105,7 @@
                 <div id="promotion_slide" class="owl-carousel owl-theme">
                     {% for product in promotion %}
                     <div class="animate-1 item">
-                        <a href="{{product.url|raw}}">
+                        <a data-toggle="modal" data-target="#home-promotion-modal">
                             <h4>{{product.title}}</h4>
                             <div><strong style="color:#f00;font-size:18px;">{{product.price}}</strong></div>
                             <img src="{{product.thumb}}" alt="{{product.title}}">
@@ -189,4 +189,35 @@
         })
     })
 </script>
+<div id="home-promotion-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Huawei OptiX OSN3500</h4>
+            </div>
+            <div class="row" style="padding:30px;">
+                    <div class="col-md-3">
+                            <img src="http://localhost:3000/image/cache/catalog/demo/hp_1-180x150.jpg" alt="">
+                        </div>
+                        <div class="col-md-9">
+                            <div>
+                                <div class="col-md-2">Description:</div>
+                                <div class="col-md-10">STM-64/STM-16 Intelligent MSTP Product • Large Capacity: 200G TDM / 160G Packet universal switch, 15 service slots • Ultra Broadband: Bandwidth smooth evolution with built-in WDM • Future-proof: Packet and TDM services transported
+                                    by </div>
+                            </div>
+                            <div>
+                                <div class="col-md-2">Condition:</div>
+                                <div class="col-md-10">No package，Second-hand，31 unti in stock End promotions of May 3</div>
+                            </div>
+                            <div>
+                                <div class="col-md-2">Price:</div>
+                                <div class="col-md-10">US$ 350000 <button class="btn btn-o-success">Add To Cart</button></div>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 <?php echo $footer; ?>

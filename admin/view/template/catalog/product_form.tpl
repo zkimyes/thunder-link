@@ -431,7 +431,7 @@
                         <input type="hidden" name="product_attribute[<?php echo $attribute_row; ?>][attribute_id]" value="<?php echo $product_attribute['attribute_id']; ?>" /></td>
                       <td class="text-left"><?php foreach ($languages as $language) { ?>
                         <div class="input-group"><span class="input-group-addon"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /></span>
-                          <textarea name="product_attribute[<?php echo $attribute_row; ?>][product_attribute_description][<?php echo $language['language_id']; ?>][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="form-control"><?php echo isset($product_attribute['product_attribute_description'][$language['language_id']]) ? $product_attribute['product_attribute_description'][$language['language_id']]['text'] : ''; ?></textarea>
+                          <textarea name="product_attribute[<?php echo $attribute_row; ?>][product_attribute_description][<?php echo $language['language_id']; ?>][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="form-control summernote"><?php echo isset($product_attribute['product_attribute_description'][$language['language_id']]) ? $product_attribute['product_attribute_description'][$language['language_id']]['text'] : ''; ?></textarea>
                         </div>
                         <?php } ?></td>
                       <td class="text-left"><button type="button" onclick="$('#attribute-row<?php echo $attribute_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
@@ -1068,14 +1068,14 @@ $('#product-related').delegate('.fa-minus-circle', 'click', function() {
 });
 //--></script>
   <script type="text/javascript"><!--
-var attribute_row = <?php echo $attribute_row; ?>;
+var attribute_row = '<?php echo $attribute_row; ?>';
 
 function addAttribute() {
     html  = '<tr id="attribute-row' + attribute_row + '">';
 	html += '  <td class="text-left" style="width: 20%;"><input type="text" name="product_attribute[' + attribute_row + '][name]" value="" placeholder="<?php echo $entry_attribute; ?>" class="form-control" /><input type="hidden" name="product_attribute[' + attribute_row + '][attribute_id]" value="" /></td>';
 	html += '  <td class="text-left">';
 	<?php foreach ($languages as $language) { ?>
-	html += '<div class="input-group"><span class="input-group-addon"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /></span><textarea name="product_attribute[' + attribute_row + '][product_attribute_description][<?php echo $language['language_id']; ?>][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="form-control"></textarea></div>';
+	html += '<div class="input-group"><span class="input-group-addon"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /></span><textarea id="product_attribute[' + attribute_row + '][product_attribute_description][<?php echo $language['language_id']; ?>][text]" name="product_attribute[' + attribute_row + '][product_attribute_description][<?php echo $language['language_id']; ?>][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="form-control summernote"></textarea></div>';
     <?php } ?>
 	html += '  </td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#attribute-row' + attribute_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
@@ -1084,8 +1084,12 @@ function addAttribute() {
 	$('#attribute tbody').append(html);
 
 	attributeautocomplete(attribute_row);
-
-	attribute_row++;
+  
+  attribute_row++;
+  $('.summernote').each(function() {
+		var element = this;
+		CKEDITOR.replace(element)
+	});
 }
 
 function attributeautocomplete(attribute_row) {
@@ -1117,7 +1121,7 @@ $('#attribute tbody tr').each(function(index, element) {
 });
 //--></script>
   <script type="text/javascript"><!--
-var option_row = <?php echo $option_row; ?>;
+var option_row = '<?php echo $option_row; ?>';
 
 $('input[name=\'option\']').autocomplete({
 	'source': function(request, response) {
@@ -1258,7 +1262,7 @@ $('input[name=\'option\']').autocomplete({
 });
 //--></script>
   <script type="text/javascript"><!--
-var option_value_row = <?php echo $option_value_row; ?>;
+var option_value_row = '<?php echo $option_value_row; ?>';
 
 function addOptionValue(option_row) {
 	html  = '<tr id="option-value-row' + option_value_row + '">';
@@ -1295,7 +1299,7 @@ function addOptionValue(option_row) {
 }
 //--></script>
   <script type="text/javascript"><!--
-var discount_row = <?php echo $discount_row; ?>;
+var discount_row = '<?php echo $discount_row; ?>';
 
 function addDiscount() {
 	html  = '<tr id="discount-row' + discount_row + '">';
@@ -1322,7 +1326,7 @@ function addDiscount() {
 }
 //--></script>
   <script type="text/javascript"><!--
-var special_row = <?php echo $special_row; ?>;
+var special_row = '<?php echo $special_row; ?>';
 
 function addSpecial() {
 	html  = '<tr id="special-row' + special_row + '">';
@@ -1348,7 +1352,7 @@ function addSpecial() {
 }
 //--></script>
   <script type="text/javascript"><!--
-var image_row = <?php echo $image_row; ?>;
+var image_row = '<?php echo $image_row; ?>';
 
 function addImage() {
 	html  = '<tr id="image-row' + image_row + '">';
@@ -1363,7 +1367,7 @@ function addImage() {
 }
 //--></script>
   <script type="text/javascript"><!--
-var recurring_row = <?php echo $recurring_row; ?>;
+var recurring_row = '<?php echo $recurring_row; ?>';
 
 function addRecurring() {
 	recurring_row++;

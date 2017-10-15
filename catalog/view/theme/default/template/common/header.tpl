@@ -49,7 +49,7 @@
     <nav id="top" class="navbar navbar-inverse">
         <div class="container">
             <?php //echo $currency; ?>
-            <?php echo $language; ?>
+            <?php //echo $language; ?>
             <div id="top-links" class="navbar-right navbar-nav list-unstyled top-nav">
                 <ul class="list-inline">
                     <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
@@ -121,7 +121,6 @@
                 </div>
                 <div class="col-sm-3">
                     <?php echo $cart; ?>
-                    asdasd
                 </div>
             </div>
         </div>

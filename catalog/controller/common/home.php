@@ -57,34 +57,12 @@ class ControllerCommonHome extends Controller {
 
 		$data['support'] = $this->model_support_article->getHomeArticleList();
 		foreach($data['support'] as &$support){
-<<<<<<< HEAD
 			if (!empty($support['image_home']) && is_file(DIR_IMAGE . $support['image_home'])) {
 				$support['thumb'] = $this->model_tool_image->resize($support['image_home'], 210, 150);
 			} else {
 				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
 			}
 			$support['desc_home'] = utf8_substr(strip_tags(html_entity_decode($support['desc_home'], ENT_QUOTES, 'UTF-8')), 0, 120) . '..';
-=======
-			if (!empty($support['image_in_home']) && is_file(DIR_IMAGE . $support['image_in_home'])) {
-				$support['thumb'] = $this->model_tool_image->resize($support['image'], 210, 150);
-			} else {
-				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
-			}
-			$support['desc_in_home'] = utf8_substr(strip_tags(html_entity_decode($support['desc_in_home'], ENT_QUOTES, 'UTF-8')), 0, 120) . '..';
-			$support['url'] = $this->url->link('support/article', 'article_id=' . $support['id']);
-		}
-
-
-		//获取support栏目块的广告
-		$data['home_three_banner'] = $this->modle_design_banner->getHomeThreeBanner();
-		foreach($data['support'] as &$support){
-			if (!empty($support['image_in_home']) && is_file(DIR_IMAGE . $support['image_in_home'])) {
-				$support['thumb'] = $this->model_tool_image->resize($support['image'], 210, 150);
-			} else {
-				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
-			}
-			$support['desc_in_home'] = utf8_substr(strip_tags(html_entity_decode($support['desc_in_home'], ENT_QUOTES, 'UTF-8')), 0, 120) . '..';
->>>>>>> 218f5339f44ef81b64cc1f394373a5357960778b
 			$support['url'] = $this->url->link('support/article', 'article_id=' . $support['id']);
 		}
 

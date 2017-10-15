@@ -77,20 +77,19 @@
                             Description:
                         </div>
                         <div class="content">
-                            <?php echo $product['description']; ?>
+                            {{description|raw}}
                         </div>
                     </div>
-                    {% if options%} {% for option in options %} 
-                    {% if option.type == 'select' %}
+                    {% if options%} {% for option in options %} {% if option.type == 'select' %}
                     <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
                         <div class="label-text">
                             <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
                         </div>
                         <div class="content">
-                            <select v-model="options[1]" name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
-                                            <option value="">Please select a software</option>
+                            <select v-model="options.select" name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
+                                            <option value="">--Please Select--</option>
                                             {% for option_value in option.product_option_value %}
-                                                <option value="{{option_value.product_option_value_id}}">{{option_value.name}}
+                                                <option value="{{option_value.option_value_id}}">{{option_value.name}}
                                                     {% if option_value.price%}
                                                         ({{option_value.price_prefix}}{{option_value.price}})
                                                     {% endif %}
@@ -106,19 +105,35 @@
                         </div>
                         <div class="content">
                             {% for option_value in option.product_option_value %}
-                            <a class="btn btn-o-success" >
-                                <label>
-                                      <input style="display:none"  type="radio" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
-                                      {% if option_value.image %}
-                                      <img src="{{ option_value.image }}" alt="{{ option_value.name }}" class="img-thumbnail" /> 
-                                      {% endif %}
-                                      {{ option_value.name }}
-                                      {% if option_value.price %}
-                                      ({{ option_value.price_prefix }} {{ option_value.price }})
-                                      {% endif %}
-                                    </label>
-                            </a>
-                            {% endfor %}
+                            <label class="btn btn-o-success" :class="{actived:options.radio == '{{ option_value.product_option_value_id }}'}">
+                                    <input style="display:none;" v-model="options.radio"  type="radio" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
+                                    {% if option_value.image %}
+                                    <img src="{{ option_value.image }}" alt="{{ option_value.name }}" class="img-thumbnail" /> 
+                                    {% endif %}
+                                    {{ option_value.name }}
+                                    {% if option_value.price %}
+                                    ({{ option_value.price_prefix }} {{ option_value.price }})
+                                    {% endif %}
+                            </label> {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %} {% if option.type == 'checkbox' %}
+                    <div class="form-group{{option.required ? 'required' : ''}} list-prop row">
+                        <div class="label-text">
+                            <label for="input-option{{option.product_option_id}}">{{option.name}}：</label>
+                        </div>
+                        <div class="content">
+                            {% for option_value in option.product_option_value %}
+                            <label class="btn btn-o-success" :class="{actived:options.checkbox.indexOf('{{ option_value.product_option_value_id }}') >=0}">
+                                    <input style="display:none" v-model="options.checkbox"  type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
+                                    {% if option_value.image %}
+                                    <img src="{{ option_value.image }}" alt="{{ option_value.name }}" class="img-thumbnail" /> 
+                                    {% endif %}
+                                    {{ option_value.name }}
+                                    {% if option_value.price %}
+                                    ({{ option_value.price_prefix }} {{ option_value.price }})
+                                    {% endif %}
+                            </label> {% endfor %}
                         </div>
                     </div>
                     {% endif %} {% endfor %} {% endif %}
@@ -128,8 +143,8 @@
                             Unit Price:
                         </div>
                         <div class="content">
-                            <span class="price">US $35000</span>
-                            <span class="saved-price">$ 45000</span>
+                            <span class="price">{{special?special:price}}</span>
+                            <span class="saved-price">{{special?price:null}}</span>
                         </div>
                     </div>
                     <div class="list-prop row">
@@ -152,7 +167,7 @@
                     <div class="list-prop row">
                         <div class="content">
                             <a class="btn btn-o-success">Quote</a>
-                            <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-o-success"><?php echo $button_cart; ?></button>
+                            <button type="button" @click="addCard()" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-o-success"><?php echo $button_cart; ?></button>
                         </div>
                     </div>
                 </div>
@@ -290,10 +305,6 @@
                                     {% for download in downloads %}
                                     <li><a href="{{download.link|raw}}">{{download.name}}</a></li>
                                     {% endfor %}
-                                    <!-- <li><a href="">How To Buy</a></li>
-                                    <li><a href="">Payment</a></li>
-                                    <li><a href="">Technical Support</a></li>
-                                    <li><a href="">Warranty</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -334,21 +345,80 @@
         }
     })
 
-    new Vue({
+    var productVue = new Vue({
         el: '#products_detail',
         delimiters: ['${', '}'],
         data: {
             quantity: Number('{{minimum}}'),
-            options:[]
+            options: {
+                select: '',
+                checkbox: [],
+                radio: '',
+                text: ''
+            }
         },
-        watch:{
-            quantity:function(newV){
-                if(isNaN(newV) || parseInt(newV)< 1 ){
+        watch: {
+            quantity: function(newV) {
+                if (isNaN(newV) || parseInt(newV) < 1) {
                     this.quantity = 1
-                } 
+                }
             }
         },
         methods: {
+            addCard: function() {
+                $.ajax({
+                    url: 'index.php?route=checkout/cart/add',
+                    type: 'post',
+                    data: $('#products_detail input[type=\'text\'], #products_detail input[type=\'hidden\'], #products_detail input[type=\'radio\']:checked, #products_detail input[type=\'checkbox\']:checked, #products_detail select, #products_detail textarea'),
+                    dataType: 'json',
+                    beforeSend: function() {
+                        $('#button-cart').button('loading');
+                    },
+                    complete: function() {
+                        $('#button-cart').button('reset');
+                    },
+                    success: function(json) {
+                        $('.alert, .text-danger').remove();
+                        $('.form-group').removeClass('has-error');
+
+                        if (json['error']) {
+                            if (json['error']['option']) {
+                                for (i in json['error']['option']) {
+                                    var element = $('#input-option' + i.replace('_', '-'));
+
+                                    if (element.parent().hasClass('input-group')) {
+                                        element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                    } else {
+                                        element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                    }
+                                }
+                            }
+
+                            if (json['error']['recurring']) {
+                                $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                            }
+
+                            // Highlight any found errors
+                            $('.text-danger').parent().addClass('has-error');
+                        }
+
+                        if (json['success']) {
+                            $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+
+                            $('#cart > a:first').html('<i class="fa fa-shopping-cart"></i> <span id="cart-total">' + json['total'] +'</span>');
+
+                            $('html, body').animate({
+                                scrollTop: 0
+                            }, 'slow');
+
+                            $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    }
+                });
+            }
         }
     })
 </script>
