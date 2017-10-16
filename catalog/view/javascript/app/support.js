@@ -6,7 +6,7 @@ $(function() {
     $searchBtn.on('click', function search() {
         if ($searchInput.val() != '') {
             $loadingBar.show();
-            location.href = searchUrl + '&search=' + decodeURI($searchInput.val());
+            location.href = searchUrl + '&keyword=' + decodeURI($searchInput.val());
         }
 
     });
@@ -16,7 +16,7 @@ $(function() {
         if(e.keyCode && e.keyCode == 13 && activeWindow=='support'){
             if ($searchInput.val() != '') {
                 $loadingBar.show();
-                location.href = searchUrl + '&search=' + decodeURI($searchInput.val());
+                location.href = searchUrl + '&keyword=' + decodeURI($searchInput.val());
             }
         }
     })

@@ -46,15 +46,15 @@ class ControllerSupportIndex extends Controller {
         $data['sider_categories'] = $parents;
         
         
-        if(isset($this->request->get['search']) && !empty($this->request->get['search'])){
-            $search = $this->request->get['search'];
+        if(isset($this->request->get['keyword']) && !empty($this->request->get['keyword'])){
+            $search = $this->request->get['keyword'];
         }else{
             $search = "";
         }
-        $data['search'] = strip_tags(htmlentities($search));
+        $data['support_search'] = strip_tags(htmlentities($search));
         $data['result'] = [];
-        if(!empty($data['search'])){
-            $result = $this->model_support_article->searchByText($data['search']);
+        if(!empty($data['support_search'])){
+            $result = $this->model_support_article->searchByText($data['support_search']);
             foreach($result as $r){
                 $data['result'][] = [
                     'id'=>$r['id'],

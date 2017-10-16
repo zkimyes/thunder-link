@@ -11,7 +11,7 @@
                     <div class="title">Support Services <i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
                     <div class="support-search input-group input-group-lg">
-                        <input type="text" id="support_search" class="form-control" name="search" value="{{search}}" placeholder="VPN Client drivers,firmware,NOS,and application software">
+                        <input type="text" id="support_search" class="form-control" name="keyword" value="{{support_search}}" placeholder="VPN Client drivers,firmware,NOS,and application software">
                         <span class="input-group-btn">
                             <button id="support_search_btn" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </span>
@@ -30,9 +30,9 @@
                 <div id="loading" style="display:none;background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
                     <div></div>
                 </div>
-                {% if search %}
+                {% if support_search %}
                     <section>
-                        <div class="title">Search {{search}}</div>
+                        <div class="title">Search {{support_search}}</div>
                         <div class="doc-list-content">
                             <!--doc list start-->
                             {% for article in result%}

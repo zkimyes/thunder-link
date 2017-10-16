@@ -23,8 +23,10 @@
     <script src="view/javascript/jquery/datetimepicker/moment.js" type="text/javascript"></script>
     <script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     <link href="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" type="text/css" href="view/javascript/ueditor/themes/default/css/ueditor.min.css">
     <script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
-    <script src="https://cdn.bootcss.com/ckeditor/4.7.1/ckeditor.js"></script>
+    <script src="view/javascript/ueditor/ueditor.config.js"></script>
+    <script src="view/javascript/ueditor/ueditor.all.min.js"></script>
     <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
     <link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
     <?php foreach ($styles as $style) { ?>

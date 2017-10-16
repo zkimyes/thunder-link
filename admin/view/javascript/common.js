@@ -108,7 +108,8 @@ $(document).ready(function() {
 	// Override summernotes image manager
 	$('.summernote').each(function() {
 		var element = this;
-		CKEDITOR.replace(element)
+		//CKEDITOR.replace(element)
+		UE.getEditor($(this).attr('id'));
 	});
 
 	// Image Manager
