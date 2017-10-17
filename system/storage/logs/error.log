@@ -7410,3 +7410,25 @@
 2017-10-16 15:37:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 858
 2017-10-16 15:37:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 858
 2017-10-16 15:37:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 858
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1233
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            code  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1234
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1235
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1236
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            language_id  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1237
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            customer_group_id  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1471
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1472
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            customer_group_id  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1502
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1503
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            customer_group_id  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1562
+2017-10-17 14:57:41 - PHP Notice:  Undefined index: 
+            name  in /projects/thunder-link/admin/view/template/catalog/product_form.tpl on line 1563
