@@ -472,11 +472,11 @@ class ControllerProductProduct extends Controller {
                  //下载
             // $this->getDownloads()
             $data['downloads'] = $this->getDownloads($product_info['product_id']);
-
-            foreach($data['downloads'] as &$download){
-                $download['link'] = $this->url->link('product/product/download','product_id='.$product_info['product_id'].'&download_id='.$download['download_id']);
+            if(!empty($data['downloads'])){
+                foreach($data['downloads'] as &$download){
+                    $download['link'] = $this->url->link('product/product/download','product_id='.$product_info['product_id'].'&download_id='.$download['download_id']);
+                }
             }
-
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');

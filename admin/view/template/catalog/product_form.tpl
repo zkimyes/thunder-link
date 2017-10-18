@@ -1228,14 +1228,9 @@
             html = '<tr id="attribute-row' + attribute_row + '">';
             html += '  <td class="text-left" style="width: 20%;"><input type="text" name="product_attribute[' + attribute_row + '][name]" value="" placeholder="<?php echo $entry_attribute; ?>" class="form-control" /><input type="hidden" name="product_attribute[' + attribute_row + '][attribute_id]" value="" /></td>';
             html += '  <td class="text-left">';
-            {% for language in languages %}
-            html += '<div class="input-group"><span class="input-group-addon"><img src="language/<?php echo $language['
-            code ']; ?>/<?php echo $language['
-            code ']; ?>.png" title="<?php echo $language['
-            name ']; ?>" /></span><textarea id="product_attribute[' + attribute_row + '][product_attribute_description][<?php echo $language['
-            language_id ']; ?>][text]" name="product_attribute[' + attribute_row + '][product_attribute_description][<?php echo $language['
-            language_id ']; ?>][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="summernote"></textarea></div>';
-            {% endfor %}
+            '{% for language in languages %}'
+            html += '<div class="input-group"><span class="input-group-addon"><img src="language/{{language.code}}/{{language.code}}.png" title="{{language.name}}" /></span><textarea id="product_attribute[' + attribute_row + '][product_attribute_description][{{language.language_id}}][text]" name="product_attribute[' + attribute_row + '][product_attribute_description][{{language.language_id}}][text]" rows="5" placeholder="<?php echo $entry_text; ?>" class="summernote"></textarea></div>';
+            '{% endfor %}'
             html += '  </td>';
             html += '  <td class="text-left"><button type="button" onclick="$(\'#attribute-row' + attribute_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
             html += '</tr>';
@@ -1243,9 +1238,10 @@
             $('#attribute >tbody').append(html);
 
             attributeautocomplete(attribute_row);
-
+            '{% for language in languages %}'
+            UE.getEditor('product_attribute[' + attribute_row + '][product_attribute_description][{{language.language_id}}][text]');
+            '{% endfor %}'
             attribute_row++;
-            UE.getEditor($(element).attr('id'));
         }
 
         function attributeautocomplete(attribute_row) {
@@ -1467,9 +1463,7 @@
             html = '<tr id="discount-row' + discount_row + '">';
             html += '  <td class="text-left"><select name="product_discount[' + discount_row + '][customer_group_id]" class="form-control">';
             <?php foreach ($customer_groups as $customer_group) { ?>
-            html += '    <option value="<?php echo $customer_group['
-            customer_group_id ']; ?>"><?php echo addslashes($customer_group['
-            name ']); ?></option>';
+            html += '    <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo addslashes($customer_group['name']); ?></option>';
             <?php } ?>
             html += '  </select></td>';
             html += '  <td class="text-right"><input type="text" name="product_discount[' + discount_row + '][quantity]" value="" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>';
@@ -1498,9 +1492,7 @@
             html = '<tr id="special-row' + special_row + '">';
             html += '  <td class="text-left"><select name="product_special[' + special_row + '][customer_group_id]" class="form-control">';
             <?php foreach ($customer_groups as $customer_group) { ?>
-            html += '      <option value="<?php echo $customer_group['
-            customer_group_id ']; ?>"><?php echo addslashes($customer_group['
-            name ']); ?></option>';
+            html += '      <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo addslashes($customer_group['name']); ?></option>';
             <?php } ?>
             html += '  </select></td>';
             html += '  <td class="text-right"><input type="text" name="product_special[' + special_row + '][priority]" value="" placeholder="<?php echo $entry_priority; ?>" class="form-control" /></td>';
@@ -1549,18 +1541,14 @@
             html += '  <td class="left">';
             html += '    <select name="product_recurring[' + recurring_row + '][recurring_id]" class="form-control">>';
             <?php foreach ($recurrings as $recurring) { ?>
-            html += '      <option value="<?php echo $recurring['
-            recurring_id ']; ?>"><?php echo $recurring['
-            name ']; ?></option>';
+            html += '      <option value="<?php echo $recurring['recurring_id']; ?>"><?php echo $recurring['name']; ?></option>';
             <?php } ?>
             html += '    </select>';
             html += '  </td>';
             html += '  <td class="left">';
             html += '    <select name="product_recurring[' + recurring_row + '][customer_group_id]" class="form-control">>';
             <?php foreach ($customer_groups as $customer_group) { ?>
-            html += '      <option value="<?php echo $customer_group['
-            customer_group_id ']; ?>"><?php echo $customer_group['
-            name ']; ?></option>';
+            html += '      <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>';
             <?php } ?>
             html += '    <select>';
             html += '  </td>';

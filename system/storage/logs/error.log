@@ -7440,3 +7440,126 @@
 2017-10-18 11:14:10 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
 2017-10-18 11:14:10 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
 2017-10-18 11:14:10 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 13:37:44 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 13:37:44 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 13:37:44 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            code  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1233
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            code  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1234
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1235
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            language_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1236
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            language_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1237
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1471
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1472
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1502
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1503
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1562
+2017-10-18 14:23:18 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1563
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            code  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1233
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            code  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1234
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1235
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            language_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1236
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            language_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1237
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1471
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1472
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1502
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1503
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1562
+2017-10-18 14:23:20 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1563
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1466
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1467
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1497
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1498
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1557
+2017-10-18 14:37:31 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1558
+2017-10-18 14:51:36 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1495
+2017-10-18 14:51:36 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1496
+2017-10-18 14:51:36 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1555
+2017-10-18 14:51:36 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1556
+2017-10-18 15:11:57 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1495
+2017-10-18 15:11:57 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1496
+2017-10-18 15:11:57 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1555
+2017-10-18 15:11:57 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1556
+2017-10-18 15:12:45 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1553
+2017-10-18 15:12:45 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1554
+2017-10-18 15:13:05 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1551
+2017-10-18 15:13:05 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1552
+2017-10-18 15:13:56 - PHP Notice:  Undefined index: 
+            customer_group_id  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1551
+2017-10-18 15:13:56 - PHP Notice:  Undefined index: 
+            name  in E:\php\php_projects\thunder-link\admin\view\template\catalog\product_form.tpl on line 1552
+2017-10-18 16:34:59 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:34:59 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:34:59 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:04 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:04 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:04 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:06 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:06 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:06 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:08 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:08 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:08 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:11 - PHP Warning:  Invalid argument supplied for foreach() in E:\php\php_projects\thunder-link\catalog\controller\product\product.php on line 476
+2017-10-18 16:35:11 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:11 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:11 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:18 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:18 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:18 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:25 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:25 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 16:35:25 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:03 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:03 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:03 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:05 - PHP Warning:  Invalid argument supplied for foreach() in E:\php\php_projects\thunder-link\catalog\controller\product\product.php on line 476
+2017-10-18 17:09:05 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:05 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:05 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:58 - PHP Warning:  Invalid argument supplied for foreach() in E:\php\php_projects\thunder-link\catalog\controller\product\product.php on line 476
+2017-10-18 17:09:58 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:58 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:09:58 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:12:54 - PHP Notice:  Undefined variable: home in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:12:54 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
+2017-10-18 17:12:54 - PHP Notice:  Undefined variable: name in E:\php\php_projects\thunder-link\catalog\view\theme\default\template\common\footer.tpl on line 103
