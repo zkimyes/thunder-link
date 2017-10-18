@@ -174,15 +174,25 @@
             </div>
             <div class="row">
                 <div class="tab-header">
-                    <ul>
-                        <li>Relevant items</li>
-                        <li>Overview</li>
-                        <li>Tech Specs</li>
-                        <li>FAQ</li>
+                    <ul role="tablist">
+                        <li role="presentation">
+                           <a href="{{url|raw}}/#relevantitems">Relevant items</a> 
+                        </li>
+                        <li role="presentation">
+                            <a href="{{url|raw}}/#overview">Overview</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{{url|raw}}/#techspecs">Tech Specs</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{{url|raw}}/#faq">
+                                FAQ
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <?php if ($products) { ?>
-                <div class="row" style="margin-top:10px;">
+                <div class="row" id="relevantitems" style="margin-top:10px;">
                     <?php $i = 0; ?>
                     <?php foreach ($products as $product) { ?>
                     <?php if ($column_left && $column_right) { ?>
@@ -252,31 +262,27 @@
                             <div class="title">
                                 <h3>Overview</h3>
                             </div>
-                            <?php 
-                                    foreach($attribute_groups as $attrs){
-                                        if($attrs['name'] == 'Overview'){
-                                            foreach($attrs['attribute'] as $attr){?>
-                            <div style="">
-                                <?php echo $attr['text'];?>
-                            </div>
-                            <?php 
-                                    }}} 
-                                ?>
+                            <?php foreach($attribute_groups as $group){ ?>
+                                <?php if(strtolower($group['name']) == 'overview'){?>
+                                    <?php foreach($group['attribute'] as $attr){ ?>
+                                        <h4 class="text-center"><?php echo $attr['name']; ?></h4>
+                                        <?php echo htmlspecialchars_decode($attr['text']); ?>
+                                    <?php } ?>
+                                <?php } ?>
+                            <?php } ?>
                         </div>
-                        <div class="tab-content" id="techSpecs">
+                        <div class="tab-content" id="techspecs">
                             <div class="title">
                                 <h3>Tech Specs</h3>
                             </div>
-                            <?php 
-                                    foreach($attribute_groups as $attrs){
-                                        if($attrs['name'] == 'Techspecs'){
-                                            foreach($attrs['attribute'] as $attr){?>
-                            <div style="">
-                                <?php echo $attr['text'];?>
-                            </div>
-                            <?php 
-                                    }}} 
-                                ?>
+                            <?php foreach($attribute_groups as $group){ ?>
+                                <?php if(strtolower($group['name']) == 'techspecs'){?>
+                                    <?php foreach($group['attribute'] as $attr){ ?>
+                                        <h4 class="text-center"><?php echo $attr['name']; ?></h4>
+                                        <?php echo htmlspecialchars_decode($attr['text']); ?>
+                                    <?php } ?>
+                                <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
 

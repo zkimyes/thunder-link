@@ -786,3 +786,20 @@ div.input>.buttons>button{
     padding:0;
     margin:0;
 }
+
+#products_detail .tab-content{
+   word-break: break-all;
+   word-wrap: break-word;
+}
+
+#products_detail .tab-content table{
+    border:1px #ddd solid;
+    width:100%;
+}
+
+#products_detail .tab-content table td{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
