@@ -5,3 +5,6 @@ system/storage/logs/*
 .vscode/settings.json
 .gitignore
 system/storage/logs/error.log
+config.php
+admin/config.php
+.vscode/sftp.json
