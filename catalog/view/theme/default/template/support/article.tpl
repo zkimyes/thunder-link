@@ -32,7 +32,7 @@
             {% endif %} {% if article.is_comment == 1 %}
             <div class="row">
                 <div class="panel-heading">
-                    <h4>Comments</h4>
+                    <h3>Comments</h3>
                 </div>
                 <div class="panel-body">
                     {% for comment in comments %}
@@ -72,7 +72,9 @@
                     article_id:'{{article.id}}',
                     content:_vm.comment
                 },function(res){
-                    console.log(res)
+                    if(res){
+                        location.reload();
+                    }
                 },'json')
             }
         }

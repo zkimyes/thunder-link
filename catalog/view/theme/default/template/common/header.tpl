@@ -216,6 +216,17 @@
     </header>
     <script>
         Vue.config.devtools = true
+        Vue.directive('numberOnly', {
+            bind: function(el) {
+                this.handler = function() {
+                    el.value = el.value.replace(/\D+/, '')
+                }.bind(this)
+                el.addEventListener('input', this.handler)
+            },
+            unbind: function(el) {
+                el.removeEventListener('input', this.handler)
+            }
+        });
         var isHome = false;
         var Menu = new Vue({
             el: ".category-meun",

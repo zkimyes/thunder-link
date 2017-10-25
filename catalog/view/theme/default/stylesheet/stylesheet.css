@@ -803,3 +803,19 @@ div.input>.buttons>button{
     vertical-align: top;
     border-top: 1px solid #ddd;
 }
+
+#products_detail .product-thumb {
+    text-align: center;
+}
+
+#products_detail .product-thumb .image{
+    border:1px #ddd solid;
+}
+
+#products_detail .product-thumb .image img{
+    display: inline-block !important;
+}
+
+.promotion-home-modal .modal-body .row{
+    margin-bottom: 10px;
+}

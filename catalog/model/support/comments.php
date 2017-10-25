@@ -18,6 +18,6 @@ class ModelSupportComments extends Model {
             ".(int)$data['custom_id']."
         )";
         $query = $this->db->query($sql);
-        return $query->row;
+        return $query;
     }
 }

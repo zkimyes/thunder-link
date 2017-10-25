@@ -30,7 +30,6 @@
                         <div class="col-md-8">
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="{{parma.value}}" aria-valuemin="{{parma.min}}" aria-valuemax="{{parma.max}}" style="width: {{parma.value/(parma.max-parma.min)*100}}%;">
-                                    <span class="sr-only">60% Complete</span>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +58,8 @@
                     </table>
                 </div>
                 <div class="caption">
-                    <p><a href="#" class="btn btn-o-success pull-left" role="button">Quote</a> <a href="{{typical.revise|raw}}" class="btn btn-o-success pull-right" role="button">Revise</a></p>
+                    <a href="javascript:viod(0);" class="btn btn-o-success pull-left" role="button">Quote</a> 
+                    <a href="{{typical.revise|raw}}" class="btn btn-o-success pull-right" role="button">Revise</a>
                 </div>
             </div>
 

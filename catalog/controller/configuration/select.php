@@ -38,7 +38,16 @@ class ControllerConfigurationSelect extends Controller {
 		$data['categorys'] = json_encode($data['categorys'],true);
 		$data['board_types'] = json_encode($boardTypes,true);
 
+		//是否有典型配置传入
+		if(isset($this->request->get['typical_id']) && !empty($this->request->get['typical_id'])){
+			$typical_id = $this->request->get['typical_id'];
+		}else{
+			$typical_id = null;
+		}
 
+		
+
+		//默认展示第一个类型
 		$data['board_list'] = json_encode($this->model_configuration_board->getBoardByType([
 			'type'=>$boardTypes[0]['id']
 		]),true);

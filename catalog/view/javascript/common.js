@@ -72,6 +72,18 @@ $(document).ready(function() {
 		}
 	});
 
+
+	$('#docSearch').on('click',function(){
+		var url = $('base').attr('href') + 'index.php?route=support/index';
+		var value = $('#home-doc-search').val();
+
+		if (value) {
+			url += '&keyword=' + encodeURIComponent(value);
+		}
+
+		location = url;
+	})
+
 	// Menu
 	$('#menu .dropdown-menu').each(function() {
 		var menu = $('#menu').offset();
@@ -170,12 +182,12 @@ var cart = {
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
-						$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+						$('#cart > a.btn-cart-o').html('<i class="fa fa-shopping-cart"></i><span id="cart-total"> ' + json['total'] + '</span>');
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
+					//$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

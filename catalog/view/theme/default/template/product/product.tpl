@@ -61,10 +61,10 @@
                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
                                 <?php } ?>
                                 <?php } ?>
-                                <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">
+                                <a onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">
                                     <?php echo $reviews; ?>
                                 </a> /
-                                <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">
+                                <a onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">
                                     <?php echo $text_write; ?>
                                 </a>
                             </p>
@@ -87,15 +87,15 @@
                         </div>
                         <div class="content">
                             <select v-model="options.select" name="option[{{option.product_option_id}}]" id="input-option{{option.product_option_id}}" class="form-control">
-                                            <option value="">--Please Select--</option>
-                                            {% for option_value in option.product_option_value %}
-                                                <option value="{{option_value.option_value_id}}">{{option_value.name}}
-                                                    {% if option_value.price%}
-                                                        ({{option_value.price_prefix}}{{option_value.price}})
-                                                    {% endif %}
-                                                </option>
-                                            {% endfor %}
-                                        </select>
+                                <option value="">--Please Select--</option>
+                                {% for option_value in option.product_option_value %}
+                                    <option value="{{option_value.option_value_id}}">{{option_value.name}}
+                                        {% if option_value.price%}
+                                            ({{option_value.price_prefix}}{{option_value.price}})
+                                        {% endif %}
+                                    </option>
+                                {% endfor %}
+                            </select>
                         </div>
                     </div>
                     {% endif %} {% if option.type == 'radio' %}
@@ -175,17 +175,17 @@
             <div class="row">
                 <div class="tab-header">
                     <ul role="tablist">
-                        <li role="presentation">
-                           <a href="{{url|raw}}/#relevantitems">Relevant items</a> 
+                        <li :class="{actived:activeTab=='relevantitems'}" role="presentation">
+                           <a href="{{url|raw}}#relevantitems">Relevant items</a> 
                         </li>
-                        <li role="presentation">
-                            <a href="{{url|raw}}/#overview">Overview</a>
+                        <li :class="{actived:activeTab=='overview'}" role="presentation">
+                            <a href="{{url|raw}}#overview">Overview</a>
                         </li>
-                        <li role="presentation">
-                            <a href="{{url|raw}}/#techspecs">Tech Specs</a>
+                        <li :class="{actived:activeTab=='techspecs'}" role="presentation">
+                            <a href="{{url|raw}}#techspecs">Tech Specs</a>
                         </li>
-                        <li role="presentation">
-                            <a href="{{url|raw}}/#faq">
+                        <li :class="{actived:activeTab=='faq'}" role="presentation">
+                            <a href="{{url|raw}}#faq">
                                 FAQ
                             </a>
                         </li>
@@ -211,9 +211,6 @@
                                         <?php echo $product['name']; ?>
                                     </a>
                                 </h4>
-                                <p>
-                                    <?php echo $product['description']; ?>
-                                </p>
                                 <?php if ($product['rating']) { ?>
                                 <div class="rating">
                                     <?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -239,9 +236,7 @@
                                 <?php } ?>
                             </div>
                             <div class="button-group">
-                                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
-                                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-                                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+                                <button type="button" class="btn btn-o-success" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
                             </div>
                         </div>
                     </div>
@@ -339,23 +334,13 @@
             }
         });
     })
-    Vue.directive('numberOnly', {
-        bind: function(el) {
-            this.handler = function() {
-                el.value = el.value.replace(/\D+/, '')
-            }.bind(this)
-            el.addEventListener('input', this.handler)
-        },
-        unbind: function(el) {
-            el.removeEventListener('input', this.handler)
-        }
-    })
 
     var productVue = new Vue({
         el: '#products_detail',
         delimiters: ['${', '}'],
         data: {
             quantity: Number('{{minimum}}'),
+            activeTab:'relevantitems',
             options: {
                 select: '',
                 checkbox: [],
@@ -424,6 +409,15 @@
                         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                     }
                 });
+            }
+        },
+        mounted:function(){
+            var _that = this;
+            window.onhashchange = function(e){
+                console.log(this);
+                _that.activeTab = location.hash.substr(1);
+                console.log(location.hash)
+                console.log(11)
             }
         }
     })

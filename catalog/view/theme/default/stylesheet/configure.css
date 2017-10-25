@@ -12,6 +12,8 @@
     overflow: hidden;
     margin: 3px -13px;
     display: block;
+    word-break: break-all;
+    word-wrap:break-word;
 }
 
 .eg-block.actived {

@@ -49,6 +49,7 @@ class ControllerCommonHome extends Controller {
 			} else {
 				$promotion['thumb'] = $this->model_tool_image->resize('no_image.png', 150, 100);
 			}
+			$promotion['description'] = utf8_substr(strip_tags(htmlspecialchars_decode($promotion['description'])), 0, 140) . '..';
 			$promotion['url'] = $this->url->link('product/product', 'product_id=' . $promotion['product_id']);
 		}
 

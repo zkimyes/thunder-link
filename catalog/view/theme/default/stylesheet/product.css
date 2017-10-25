@@ -47,6 +47,20 @@
     color:#fff;
 }
 
+.tab-header li a{
+    color:#fff;
+}
+
+.tab-header li.actived{
+    background: #fff;
+    border: 1px #3dc391 solid;
+    border-bottom: 0;
+}
+
+.tab-header li.actived a{
+    color:#3dc391;
+}
+
 .tab-content {
     padding: 20px 0;
 }
