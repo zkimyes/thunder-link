@@ -32,29 +32,4 @@ class ModelConfigurationTypical extends Model {
         return $typical->row;
     }
 
-
-    public function update($data = []){
-        $rs = $this->db->query("
-                update oc_config_typical 
-                set category_id = ".intval($data['category_id']).",
-                `name`='".$this->db->escape($data['name'])."',
-                link_product_id = ".intval($data['link_product_id']).",
-                parameter = '".$this->db->escape(json_encode($data['parameter']))."',
-                blueprint = '".$this->db->escape($data['blueprint'])."',
-                link_boards = '".$this->db->escape(json_encode($data['link_boards']))."',
-                sort_order=".intval($data['sort_order'])."
-                 where id=".intval($data['id'])."
-             ");
-        return $rs;
-    }
-
-    public function delt($id=[]){
-        if(count($id)>0){
-            $id = join(',',$id);
-            $rs = $this->db->query("delete from oc_config_typical where id in (".$id.")");
-            return $rs;
-        }
-        return false;
-    }
-
 }

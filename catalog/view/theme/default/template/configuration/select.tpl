@@ -80,7 +80,7 @@
 </main>
 <script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
 <script>
-    
+    Vue.config.devtools = true
     var categories = '{{categorys|raw}}'?JSON.parse('{{categorys|raw}}'):[],
         board_types = '{{board_types|raw}}'?JSON.parse('{{board_types|raw}}'):[],
         boards = '{{board_list|raw}}'?JSON.parse('{{board_list|raw}}'):[],
