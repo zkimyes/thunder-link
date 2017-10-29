@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <label>Content</label>
-                            <textarea class="form-control" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
+                            <textarea class="summernote" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="input-related">Related Products</label>
@@ -124,8 +124,7 @@
                 tags: '{{article.tags|raw}}' ? JSON.parse('{{article.tags|raw}}') : [],
                 tagList: [],
                 tag: '',
-                isFetch: false,
-                editor: null
+                isFetch: false
             },
             methods: {
                 removeTag: function(tag) {
@@ -214,7 +213,7 @@
                         tag_ids: _vm.tags.map(item => {
                             return item.id
                         }),
-                        content: _vm.editor.getData()
+                        content:UE.getEditor('editor').getContent()
                     }, function(res) {
                         if (res) {
                             location.href = "{{back_url}}&token={{token}}";
@@ -224,7 +223,7 @@
 
             },
             mounted: function() {
-                this.editor = CKEDITOR.replace('editor');
+                //console.log(UE.getEditor('editor').getContent())
             }
         })
 

@@ -67,7 +67,7 @@
                         </div>
                         <div class="form-group">
                             <label>Content</label>
-                            <textarea class="form-control" id="editor" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
+                            <textarea id="editor" class="summernote" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
                         </div>
                        <div class="form-group">
                             <label for="input-related">Related Products</label>
@@ -94,7 +94,7 @@
         </div>
     </div>
     <script>
-        var editor = CKEDITOR.replace( 'editor' );
+        // var editor = CKEDITOR.replace( 'editor' );
         $('[name="category_id"]').val("{{article.category_id}}");
         $('[name="banner_id"]').val("{{article.banner_id}}");
         function submit(){
@@ -121,9 +121,8 @@
                     meta_desc:_meta_desc,
                     summary:_summary,
                     related_product_ids:_related_product,
-                    content:editor.getData()
+                    content:$('#editor').val()
                 },function(res){
-                    debugger
                     if(res){
                         location.href = "{{back_url}}&token={{token}}";
                     }
