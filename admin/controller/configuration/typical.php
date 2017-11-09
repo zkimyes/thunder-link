@@ -101,7 +101,8 @@ class ControllerConfigurationTypical extends Controller{
 		}
         $data['categorys'] = $this->model_configuration_category->getList();
         $data['boards'] = json_encode($this->model_configuration_board->getList());
-		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+        $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+        
         $this->response->setOutput($this->load->view('configuration/typical_form', $data));
     }
     

@@ -165,10 +165,10 @@ var cart = {
 			data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
 			dataType: 'json',
 			beforeSend: function() {
-				$('#cart > button').button('loading');
+				$('#cart > a.btn-cart-o').button('loading');
 			},
 			complete: function() {
-				$('#cart > button').button('reset');
+				$('#cart > a.btn-cart-o').button('reset');
 			},
 			success: function(json) {
 				$('.alert, .text-danger').remove();

@@ -10,10 +10,10 @@
         <div class="solution-nav">
             <ul>
                 {% for category in solution_categoris %}
-                 {% if loop.index == 1%}
+                 {% if category.id == get_id %}
                  <li class="active"><a href="javascript:;">{{category.title}}</a></li>
                  {% else %}
-                 <li><a href="javascript:;">{{category.title}}</a></li>
+                 <li><a href="{{category.link|raw}}">{{category.title}}</a></li>
                  {% endif %}
                 
                 {% endfor %}
@@ -23,7 +23,7 @@
             {% for article in articles %}
             <div class="solution">
                 <div class="s-img">
-                    <img src="{{article.thumb}}" alt="">
+                    <img src="{{article.thumb}}" alt="{{article.title}}">
                 </div>
                 <div class="s-content">
                     <h4>{{article.title}}</h4>

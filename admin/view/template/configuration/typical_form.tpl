@@ -86,7 +86,7 @@
                                             <span class="label label-default" v-if="board.type == 1">系统板</span>
                                             <span class="label label-success" v-else>配置板</span> ${board.name}
                                         </div>
-                                        <div class="col-md-1"><input v-number style="width:100%;" style="padding:0" v-model="board.qty" placeholder="数量" type="text"></div>
+                                        <div class="col-md-1"><input v-number style="width:100%;" style="padding:0" v-model.number="board.qty" placeholder="数量" type="text"></div>
                                         <div class="col-md-2"><button @click="removeBoard(board)" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i></button></div>
                                     </div>
                                 </div>
@@ -113,9 +113,9 @@
     <script>
         Vue.config.devtools = true;
         Vue.directive('number', function(el) {
-            if (isNaN(el.value)) {
+            if (el.value == '' || el.value != '' && isNaN(el.value)) {
                 el.value = 0;
-            } else {
+            }else{
                 el.value = parseInt(el.value);
             }
         })
@@ -128,11 +128,11 @@
                 image: '{{typical.image}}',
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
-                parameter: '{{typical.parameter|raw}}' ? JSON.parse('{{typical.parameter|raw}}') : '',
+                parameter: {{typical.parameter|raw}} ? JSON.parse('{{typical.parameter|raw}}') : [],
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
                 search: '',
-                link_boards: '{{typical.link_boards|raw}}' ? JSON.parse('{{typical.link_boards|raw}}') : [],
+                link_boards: {{typical.link_boards|raw}} ? JSON.parse('{{typical.link_boards|raw}}') : [],
                 product_search: '',
                 products: [],
                 link_product: '{{typical.product_name}}' ? {

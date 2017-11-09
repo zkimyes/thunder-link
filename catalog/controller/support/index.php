@@ -61,7 +61,8 @@ class ControllerSupportIndex extends Controller {
                     'title'=>strip_tags(htmlentities($r['title'])),
                     'summary'=>strip_tags(htmlentities($r['summary'])),
                     'tags'=>explode(',',$r['tags']),
-                    'url'=>$this->url->link('support/article','id='.$r['id'])
+                    'url'=>$this->url->link('support/article','id='.$r['id']),
+                    'comments'=>$r['comments']
                 ];
             }
         }

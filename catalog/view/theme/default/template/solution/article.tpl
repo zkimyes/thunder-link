@@ -13,18 +13,22 @@
                 <table class="table">
                     <thead style="background:#f1f1f1;">
                         <tr>
+                            <td>Item Number</td>
                             <td>Name</td>
                             <td>Price</td>
                             <td>Model</td>
+                            <td>Item Description</td>
                             <td></td>
                         </tr>
                     </thead>
                     {% for product in related_products %}
                      <tr>
-                         <td>{{product.name}}</td>
+                         <td><b class="red-ccl">{{loop.index}}</b></td>
+                         <td><a href="">{{product.name}}</a></td>
                          <td>{{product.price}}</td>
                          <td>{{product.model}}</td>
-                         <td><a class="btn btn-o-success" href=""><i class="fa fa-shopping-cart"></i> Add To Cart</a></td>
+                         <td>{{product.description}}</td>
+                         <td><a class="btn btn-o-success" onclick="cart.add('{{product.product_id}}', '{{product.minimum}}');"><i class="fa fa-shopping-cart"></i> Add To Cart</a></td>
                      </tr>
                     {% endfor %}
                 </table>

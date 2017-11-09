@@ -105,3 +105,10 @@
 .tab-menu li.actived{
     background: #fff;
 }
+
+
+.emptys{
+    color:#ccc;
+    text-align: center;
+    line-height: 60px;
+}

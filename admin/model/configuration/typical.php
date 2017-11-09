@@ -15,7 +15,7 @@ class ModelConfigurationTypical extends Model {
                 '".$this->db->escape($data['name'])."',
                 '',
                 ".intval($data['link_product_id']).",
-                '".$this->db->escape(json_encode($data['parameter'],true))."',
+                '".$data['parameter'] ? $this->db->escape(json_encode($data['parameter'],true)):''."',
                 '".$this->db->escape($data['blueprint'])."',
                 '".$this->db->escape(json_encode($data['link_boards'],true))."',
                 ".intval($data['sort_order'])."

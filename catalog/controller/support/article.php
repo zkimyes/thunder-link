@@ -20,7 +20,7 @@ class ControllerSupportArticle extends Controller {
          $data['article'] = $article?[
             'id'=>$article['id'],
             'title'=>strip_tags(htmlentities($article['title'])),
-            'content'=>htmlentities($article['title']),
+            'content'=>htmlspecialchars_decode($article['content']),
             'is_comment' =>$article['is_comment']
         ]:null;
 

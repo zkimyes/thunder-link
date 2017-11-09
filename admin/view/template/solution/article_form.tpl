@@ -121,7 +121,7 @@
                     meta_desc:_meta_desc,
                     summary:_summary,
                     related_product_ids:_related_product,
-                    content:$('#editor').val()
+                    content:UE.getEditor('editor').getContent()
                 },function(res){
                     if(res){
                         location.href = "{{back_url}}&token={{token}}";

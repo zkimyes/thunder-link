@@ -4,9 +4,9 @@
     <div class="container">
         <div class="solution-content-article">
             <div class="article-header">
-                <h1>{{article.title}}</h1>
+                <h1 class="text-center">{{article.title}}</h1>
             </div>
-            <div class="article-body">
+            <div class="article-body mtt30">
                 {{article.content|raw}}
             </div>
             {% if related_products %}

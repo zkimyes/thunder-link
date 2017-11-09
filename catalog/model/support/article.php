@@ -2,8 +2,8 @@
 class ModelSupportArticle extends Model {
     
     public function searchByText($text=""){
-        $sql = "SELECT a.id,a.title,a.summary,a.image,group_concat(t.name) as tags from oc_support_article a left join oc_support_tag_relative as r on a.id = r.support_id left JOIN oc_support_tags as t on t.id = r.tag_id WHERE a.title LIKE '%".$this->db->escape($text)."%'
-        OR a.id in (SELECT support_id FROM oc_support_tag_relative WHERE tag_id in (SELECT id FROM oc_support_tags WHERE `name` LIKE '%".$this->db->escape($text)."%')) GROUP BY id";
+        $sql = "SELECT a.id,a.title,a.summary,a.image,group_concat(t.name) as tags,(SELECT count(*) from oc_support_comments where article_id = a.id) as comments from oc_support_article a left join oc_support_tag_relative as r on a.id = r.support_id left JOIN oc_support_tags as t on t.id = r.tag_id WHERE a.title LIKE '%".$this->db->escape($text)."%'
+        OR a.id in (SELECT support_id FROM oc_support_tag_relative WHERE tag_id in (SELECT id FROM oc_support_tags WHERE `name` = '".$this->db->escape($text)."')) GROUP BY id";
         if(!empty($text)){
             $rs = $this->db->query($sql);
             return $rs->rows;

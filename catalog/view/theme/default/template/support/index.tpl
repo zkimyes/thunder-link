@@ -18,12 +18,12 @@
                     </div>
                     <div class="support-search-hot-tag">
                          {% for tag in is_search_tags %}
-                               <a {% if search == tag.name %}
+                               <a {% if support_search == tag.name %}
                                     class="tag label label-default checked"
                                     {% else %}
                                     class="tag label label-default"
                                 {% endif %}
-                            href="{{search_action|raw}}&search={{tag.name}}">{{tag.name}}</a>
+                            href="{{search_action|raw}}&keyword={{tag.name}}">{{tag.name}}</a>
                         {% endfor %}
                     </div>
                 </section>
@@ -43,12 +43,12 @@
                                     <div class="col-md-9">
                                         <div class="title"><a href="{{article.url|raw}}">{{article.title}}</a></div>
                                         <div class="tags">
-                                            Tags:{% for tag in article.tags%}<a href="">{{tag}}</a>{% endfor %}
+                                            Tags:{% for tag in article.tags%}<a class="label label-default" style="margin-right:5px" href="{{search_action|raw}}&keyword={{tag}}">{{tag}}</a>{% endfor %}
                                         </div>
                                         <div class="desc">{{article.summary}}</div>
                                         <div class="info">
                                             <span><i class="fa fa-eye"></i>500</span>
-                                            <span><i class="fa fa-comments"></i>50</span>
+                                            <span><i class="fa fa-comments"></i>  {{article.comments}}</span>
                                             <span><i class="fa fa-share"></i></span>
                                         </div>
                                     </div>

@@ -25,7 +25,9 @@
                     </ul>
                 </div>
                 <div class="col-md-9 tab-content">
-                    <ul>
+                    <div class="loading"><i class="fa fa-loading"></i></div>
+                    <div class="emptys" v-if="showBoard.length == 0">No Results</div>
+                    <ul v-else>
                         <li v-for="board in showBoard">
                             <div class="col-md-7">
                                 <div class="title">${board.name}</div>
@@ -36,8 +38,11 @@
                                     <span v-if="board.type != 1" @click="board.quantity>0 && board.quantity--" class="input-group-btn">
                                         <button class="btn btn-default" type="button">-</button>
                                     </span>
-                                    <input v-number-only v-if="board.type != 1" v-model.number="board.quantity" value="0" type="text" class="form-control" placeholder="0">
-                                    <input v-if="board.type == 1" readonly class="form-control" v-model="board.quantity" type="text">
+                                    <input v-number-only v-if="board.type != 1" v-model.number="board.quantity" type="text" class="form-control" placeholder="0">
+                                    <select v-if="board.type == 1" v-model.number="board.quantity">
+                                        <option value="2">2</option>
+                                        <option value="1">1</option>
+                                    </select>
                                     <span v-if="board.type != 1" @click="board.quantity++" class="input-group-btn">
                                         <button class="btn btn-default" type="button">+</button>
                                     </span>
@@ -78,7 +83,24 @@
         </div>
     </div>
 </main>
-<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
+<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
 <script>
     Vue.config.devtools = true
     var categories = '{{categorys|raw}}'?JSON.parse('{{categorys|raw}}'):[],
@@ -125,6 +147,13 @@
                 }else{
                     serviceGetBoard(choose.id,function(result){
                         if(result){
+                            result.map(function(item){
+                                if(item.type == 1){
+                                    item.quantity = 2;
+                                }else{
+                                    item.quantity = 1;
+                                }
+                            })
                             _vm.showBoard = result;
                             _vm.boards[choose.id] = result;
                         }
@@ -137,8 +166,21 @@
                     return item.id == boards.id
                 })
                 if(!_find){
-                    _vm.selectedBoards.push(boards);
+                    _vm.selectedBoards.push(_.cloneDeep(boards));
+                }else{
+                    _vm.selectedBoards = _vm.selectedBoards.map((board)=>{
+                        if(board.id == boards.id){
+                            board.quantity = boards.quantity
+                        }
+                        return board;
+                    });
                 }
+                if(boards.type == 1){
+                    boards.quantity = 2;
+                }else{
+                    boards.quantity = 1;
+                }
+                
             },
             removeBoards:function(boards){
                 var _vm = this;
@@ -163,8 +205,18 @@
                 }
             },
             quote:function(){
-                layer.msg('adasd');
+                $('#quoteModal').modal('show');
             }
+        },
+        mounted:function(){
+            this.showBoard = this.showBoard.map((borad)=>{
+                if(borad.type == 1){
+                    borad.quantity = 2;
+                }else{
+                    borad.quantity = 0;
+                }
+                return borad;
+            })
         }
     })
 

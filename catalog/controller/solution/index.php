@@ -12,8 +12,15 @@ class ControllerSolutionIndex extends Controller{
         $this->load->model('solution/article');
         $this->load->model('tool/image');
         $data['solution_categoris'] = $this->model_solution_category->getCategoris();
-        $category_ids = implode(',',array_map('returnCid',$data['solution_categoris']));
-        $data['articles'] = $this->model_solution_article->getList($category_ids);
+        if(isset($this->request->get['category_id']) && !empty($this->request->get['category_id'])){
+            $data['get_id'] = $this->request->get['category_id'];
+        }else{
+            $data['get_id'] = $data['solution_categoris'][0]['id'];
+        }
+        foreach($data['solution_categoris'] as &$category){
+            $category['link'] = $this->url->link('solution/index','category_id='.$category['id']);
+        }
+        $data['articles'] = $this->model_solution_article->getList($data['get_id']);
         foreach($data['articles'] as &$article){
             if(!empty($article['image']) && is_file(DIR_IMAGE . $article['image'])){
                 $article['thumb'] =  $this->model_tool_image->resize($article['image'], 140, 115);
@@ -30,7 +37,7 @@ class ControllerSolutionIndex extends Controller{
         $data['content_bottom'] = null;
         $data['footer'] = $this->load->controller('common/footer');
         $data['header'] = $this->load->controller('common/header');
-        
+
         $this->response->setOutput($this->load->view('solution/index', $data));
     }
 }

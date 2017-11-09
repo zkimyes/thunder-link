@@ -43,7 +43,6 @@ class ControllerConfigurationSelect extends Controller {
 			$data['typical'] = $this->model_configuration_typical->find($this->request->get['typical_id']);
 		}
 		
-		var_dump($data['typical']);
 		//默认展示第一个类型
 		$data['board_list'] = json_encode($this->model_configuration_board->getBoardByType([
 			'type'=>$boardTypes[0]['id']

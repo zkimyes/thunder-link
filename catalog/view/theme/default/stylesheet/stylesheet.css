@@ -50,6 +50,10 @@ a {
     margin-bottom: 30px;
 }
 
+.mtt30 {
+   margin-top: 30px; 
+}
+
 .bg-white {
     background-color: #fff !important;
 }
@@ -818,4 +822,21 @@ div.input>.buttons>button{
 
 .promotion-home-modal .modal-body .row{
     margin-bottom: 10px;
+}
+
+.empty-bords{
+    color:#ccc;
+    text-align: center;
+    line-height: 60px;
+}
+
+.red-ccl{
+    display: block;
+    width:20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #396;
+    color:#fff;
+    border-radius: 50%;
 }
