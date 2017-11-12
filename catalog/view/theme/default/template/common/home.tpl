@@ -59,7 +59,7 @@
                     </div>
                     <div class="hot-tag">
                         {% for tag in is_search_tags %}
-                        <a class="tag label label-default" href="{{search_action|raw}}&search={{tag.name}}">{{tag.name}}</a> {% endfor %}
+                        <a class="tag label label-default" href="{{search_action|raw}}&keyword={{tag.name}}">{{tag.name}}</a> {% endfor %}
                     </div>
                 </div>
                 <div class="col-md-6 document-ads-block">
@@ -70,12 +70,12 @@
             <div class="section clearfix">
                 {% for article in support %}
                 <div class="col-md-4 document-slik-block">
-                    <a href="{{article.url}}">
-                        <div class="col-md-5">
+                    <a href="{{article.url|raw}}">
+                        <div class="col-md-6">
                             {{article.desc_home}}
                         </div>
-                        <div class="col-md-7">
-                            <img src="{{article.thumb}}" alt="{{article.title_in_home}}">
+                        <div class="col-md-6">
+                            <img style="max-width:100%" src="{{article.thumb}}" alt="{{article.title_home}}">
                         </div>
                     </a>
                 </div>

@@ -42,7 +42,6 @@ class ControllerSupportIndex extends Controller {
             }
         }
         
-        
         $data['sider_categories'] = $parents;
         
         

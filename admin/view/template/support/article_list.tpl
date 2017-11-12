@@ -4,7 +4,10 @@
     <div class="page-header">
         <div class="container-fluid">
             <div class="pull-right">
-                <a href="{{add_url}}&token={{token}}" data-toggle="tooltip" title="Article Add" class="btn btn-primary"><i class="fa fa-plus"></i></a></div>
+                <a href="{{add_url}}&token={{token}}" data-toggle="tooltip" title="Article Add" class="btn btn-primary">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
             <h1>Support Article</h1>
             <ul class="breadcrumb">
                 <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -20,7 +23,8 @@
     <div class="container-fluid" id="content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-list"></i>Article List</h3>
+                <h3 class="panel-title">
+                    <i class="fa fa-list"></i>Article List</h3>
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
@@ -31,6 +35,7 @@
                                 <td width='50%'>Title</td>
                                 <td>Category</td>
                                 <td>Image</td>
+                                <td>位置</td>
                                 <td>CreateAt</td>
                                 <td class="text-right">Actions</td>
                             </tr>
@@ -41,7 +46,12 @@
                                 <td>{{list.id}}</td>
                                 <td>{{list.title}}</td>
                                 <td>{{list.category_name}}</td>
-                                <td><img src="{{list.thumb}}" alt=""></td>
+                                <td>
+                                    {% if list.is_home == 1 %} 首页广告位 {% elseif is_home == 2%} 搜索页推荐位 {% else%} 列表页 {% endif %}
+                                </td>
+                                <td>
+                                    <img src="{{list.thumb}}" alt="">
+                                </td>
                                 <td>{{list.createAt}}</td>
                                 <td>
                                     <button onclick="delt('{{list.id}}')" class="btn btn-danger btn-xs">删除</button>
@@ -62,10 +72,10 @@
     </div>
 </div>
 <script>
-    var delt = function(id) {
+    var delt = function (id) {
         $.post("{{delt_url|raw}}".replace("amp;", '') + '&token={{token}}', {
             selected: [id]
-        }, function(data) {
+        }, function (data) {
             location.reload();
         }, 'json')
     }

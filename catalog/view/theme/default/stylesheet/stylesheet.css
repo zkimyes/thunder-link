@@ -840,3 +840,7 @@ div.input>.buttons>button{
     color:#fff;
     border-radius: 50%;
 }
+
+.solution-content-article * {
+    max-width: 100%;
+}

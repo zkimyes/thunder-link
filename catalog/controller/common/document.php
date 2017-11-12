@@ -1,5 +1,5 @@
 <?php
-class ControllerCommonHome extends Controller {
+class ControllerCommonDocument extends Controller {
 	public function index() {
 		$this->document->setTitle($this->config->get('config_meta_title'));
 		$this->document->setDescription($this->config->get('config_meta_description'));
@@ -64,7 +64,7 @@ class ControllerCommonHome extends Controller {
 				$support['thumb'] = $this->model_tool_image->resize('no_image.png', 210, 150);
 			}
 			$support['desc_home'] = utf8_substr(strip_tags(html_entity_decode($support['desc_home'], ENT_QUOTES, 'UTF-8')), 0, 120) . '..';
-			$support['url'] = $this->url->link('support/article', 'id=' . $support['id']);
+			$support['url'] = $this->url->link('support/article', 'article_id=' . $support['id']);
 		}
 
 
@@ -86,7 +86,6 @@ class ControllerCommonHome extends Controller {
 		$data['support_url'] = $this->url->link('support/index');
 		$data['solution_url'] = $this->url->link('solution/index');
 		$data['document_search_link'] = $this->url->link('support/index');
-		$data['search_action'] = $this->url->link('support/index');
-		$this->response->setOutput($this->load->view('common/home', $data));
+		$this->response->setOutput($this->load->view('common/document', $data));
 	}
 }

@@ -42,6 +42,14 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label>Place</label>
+                            <select v-model="is_home" name="is_home" class="form-control">
+                                <option value="">无</option>
+                                <option value="1">首页</option>
+                                <option value="2">目录推荐位</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Image</label>
                             <div>
                                 <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
@@ -49,8 +57,19 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label>Image On Home</label>
+                            <div>
+                                <a href="javascript:;" id="thumb-image-home" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb_home; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                <input type="hidden" name="image_home" value="{{article.image_home}}" id="input-image2" />
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label>Title</label>
                             <input v-model="title" type="text" class="form-control" name="title" placeholder="标题">
+                        </div>
+                        <div class="form-group">
+                            <label>Title Home</label>
+                            <input v-model="title_home" type="text" class="form-control" name="title_home" placeholder="首页标题">
                         </div>
                         <div class="form-group">
                             <label>Meta Keywords</label>
@@ -63,6 +82,10 @@
                         <div class="form-group">
                             <label>Summary</label>
                             <textarea v-model="summary" class="form-control" name="summary" placeholder="summary"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Desc Home</label>
+                            <textarea v-model="desc_home" class="form-control" name="desc_home" placeholder="desc_home"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Content</label>
@@ -121,6 +144,10 @@
                 meta_keywords: '{{article.meta_keywords}}',
                 meta_desc: '{{article.meta_desc}}',
                 summary: '{{article.summary|raw}}',
+                is_home:'{{article.is_home}}',
+                title_home:'{{article.title_home}}',
+                image_home:'{{article.image_home}}',
+                desc_home:'{{article.desc_home}}',
                 tags: '{{article.tags|raw}}' ? JSON.parse('{{article.tags|raw}}') : [],
                 tagList: [],
                 tag: '',
@@ -195,6 +222,7 @@
                 submit: function() {
                     var _vm = this,
                         _image = $('[name="image"]').val(),
+                        _image_home = $('[name="image_home"]').val(),
                         _related_product = [];
                     $('[name^="product_related"]').each(function(item) {
                         _related_product[item] = $(this).val();
@@ -210,6 +238,10 @@
                         meta_desc: _vm.meta_desc,
                         summary: _vm.summary,
                         related_product_ids: _related_product,
+                        desc_home:_vm.desc_home,
+                        title_home:_vm.desc_home,
+                        is_home:_vm.is_home,
+                        image_home:_image_home,
                         tag_ids: _vm.tags.map(item => {
                             return item.id
                         }),
@@ -223,7 +255,6 @@
 
             },
             mounted: function() {
-                //console.log(UE.getEditor('editor').getContent())
             }
         })
 

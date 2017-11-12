@@ -3,7 +3,7 @@ class ModelSupportArticle extends Model {
     
     public function getList($condition=[],$field=[],$order=""){
         $artilces = $this->db->query('
-        select a.id,a.title,a.createAt,a.image,c.title as category_name from oc_support_article as a left join oc_support_category as c on c.id = a.category_id
+        select a.id,a.title,a.createAt,a.image,a.is_home,c.title as category_name from oc_support_article as a left join oc_support_category as c on c.id = a.category_id
         ');
         return $artilces->rows;
     }
@@ -12,7 +12,7 @@ class ModelSupportArticle extends Model {
         if(!empty($data)){
             $this->db->query("
             insert into oc_support_article (
-            title,category_id,meta_title,meta_keywords,meta_desc,summary,content,image,banner_id,related_product_ids,createAt
+            title,category_id,meta_title,meta_keywords,meta_desc,summary,content,image,title_home,image_home,desc_home,is_home,banner_id,related_product_ids,createAt
             ) values
             (
             '".$this->db->escape($data['title'])."',
@@ -23,6 +23,10 @@ class ModelSupportArticle extends Model {
             '".$this->db->escape($data['summary'])."',
             '".$this->db->escape($data['content'])."',
             '".$this->db->escape($data['image'])."',
+            '".$this->db->escape($data['title_home'])."',
+            '".$this->db->escape($data['image_home'])."',
+            '".$this->db->escape($data['desc_home'])."',
+            ".intval($data['is_home']).",
             ".intval($data['banner_id']).",
             '".$this->db->escape($data['related_product_ids'])."',
             '".date('Y-m-d H:i:s')."'
@@ -75,6 +79,10 @@ class ModelSupportArticle extends Model {
         content = '".$this->db->escape($data['content'])."',
         image = '".$this->db->escape($data['image'])."',
         banner_id = ".intval($data['banner_id']).",
+        is_home = ".intval($data['is_home']).",
+        title_home = '".$this->db->escape($data['title_home'])."',
+        image_home = '".$this->db->escape($data['image_home'])."',
+        desc_home = '".$this->db->escape($data['desc_home'])."',
         related_product_ids='".$this->db->escape($data['related_product_ids'])."'
         where id=".intval($data['id'])."
         ");

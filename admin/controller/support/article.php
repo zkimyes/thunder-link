@@ -65,7 +65,7 @@ class ControllerSupportArticle extends Controller{
         'href'=>$this->url->link('commom/dashboard','token='.$this->session->data['token'])
         ];
         $data['breadcrumbs'][] = [
-        'text'=>'Solution Article Update',
+        'text'=>'Support Article Update',
         'href'=>''
         ];
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
@@ -102,6 +102,11 @@ class ControllerSupportArticle extends Controller{
 			$data['thumb'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+        if (!empty($data['article']['image_home']) && is_file(DIR_IMAGE . $data['article']['thumb_home'])) {
+            $data['thumb_home'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
+		} else {
+			$data['thumb_home'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
 

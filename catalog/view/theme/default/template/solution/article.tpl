@@ -27,7 +27,7 @@
                          <td><a href="">{{product.name}}</a></td>
                          <td>{{product.price}}</td>
                          <td>{{product.model}}</td>
-                         <td>{{product.description}}</td>
+                         <td>{{product.description|raw}}</td>
                          <td><a class="btn btn-o-success" onclick="cart.add('{{product.product_id}}', '{{product.minimum}}');"><i class="fa fa-shopping-cart"></i> Add To Cart</a></td>
                      </tr>
                     {% endfor %}
