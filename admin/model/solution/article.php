@@ -13,7 +13,7 @@ class ModelSolutionArticle extends Model {
         if(!empty($data)){
             $rs = $this->db->query("
                 insert into oc_solution_article (
-                    title,category_id,meta_title,meta_keywords,meta_desc,summary,content,image,banner_id,related_product_ids,createAt
+                    title,category_id,meta_title,meta_keywords,meta_desc,summary,content,main_content,image,banner_id,related_product_ids,createAt
                 ) values
                 (
                     '".$this->db->escape($data['title'])."',
@@ -23,6 +23,7 @@ class ModelSolutionArticle extends Model {
                     '".$this->db->escape($data['meta_desc'])."',
                     '".$this->db->escape($data['summary'])."',
                     '".$this->db->escape($data['content'])."',
+                    '".$this->db->escape($data['main_content'])."',
                     '".$this->db->escape($data['image'])."',
                     ".intval($data['banner_id']).",
                     '".$this->db->escape($data['related_product_ids'])."',
@@ -51,6 +52,7 @@ class ModelSolutionArticle extends Model {
                 meta_desc='".$this->db->escape($data['meta_desc'])."',
                 summary='".$this->db->escape($data['summary'])."',
                 content = '".$this->db->escape($data['content'])."',
+                main_content = '".$this->db->escape($data['main_content'])."',
                 image = '".$this->db->escape($data['image'])."',
                 banner_id = ".intval($data['banner_id']).",
                 related_product_ids='".$this->db->escape($data['related_product_ids'])."'

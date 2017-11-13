@@ -69,6 +69,10 @@
                             <label>Content</label>
                             <textarea id="editor" class="summernote" name="content" placeholder="meta description">{{article.content|raw}}</textarea>
                         </div>
+                        <div class="form-group">
+                            <label>Main Content</label>
+                            <textarea id="editor2" class="summernote" name="main_content" placeholder="meta description">{{article.main_content|raw}}</textarea>
+                        </div>
                        <div class="form-group">
                             <label for="input-related">Related Products</label>
                             <div>
@@ -121,7 +125,8 @@
                     meta_desc:_meta_desc,
                     summary:_summary,
                     related_product_ids:_related_product,
-                    content:UE.getEditor('editor').getContent()
+                    content:UE.getEditor('editor').getContent(),
+                    main_content:UE.getEditor('editor2').getContent()
                 },function(res){
                     if(res){
                         location.href = "{{back_url}}&token={{token}}";

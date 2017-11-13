@@ -14,6 +14,7 @@ class ControllerSolutionArticle extends Controller{
 				$this->emptyPage();
 			}
 			$data['article']['content'] = htmlspecialchars_decode($data['article']['content']);
+			$data['article']['main_content'] = htmlspecialchars_decode($data['article']['main_content']);
 			$data['related_products'] = $data['article']['related_product_ids'] != ''?$this->model_catalog_product->getProductsByProductIds($data['article']['related_product_ids']):null;
 		}else{
 			$this->emptyPage();

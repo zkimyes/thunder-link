@@ -8,6 +8,8 @@
             </div>
             <div class="article-body">
                 {{article.content|raw}}
+                <br>
+                {{article.main_content|raw}}
             </div>
             {% if related_products %}
                 <table class="table">
