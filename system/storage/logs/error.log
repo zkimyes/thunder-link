@@ -10009,3 +10009,860 @@
 2017-11-13 15:26:38 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
 2017-11-13 15:26:38 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
 2017-11-13 15:26:38 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
+2017-11-15 14:34:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 14:34:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 14:34:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: data in /projects/thunder-link/admin/controller/common/document.php on line 8
+2017-11-15 14:36:41 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/system/engine/loader.php on line 82
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: header in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 1
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: column_left in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 1
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: heading_title in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 5
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: breadcrumbs in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 7
+2017-11-15 14:36:41 - PHP Warning:  Invalid argument supplied for foreach() in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 7
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: error_install in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 14
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: order in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 20
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: sale in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 21
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: customer in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 22
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: online in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 23
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: map in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 26
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: chart in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 27
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: activity in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 30
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: recent in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 31
+2017-11-15 14:36:41 - PHP Notice:  Undefined variable: footer in /projects/thunder-link/admin/view/template/common/dashboard.tpl on line 35
+2017-11-15 15:06:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:06:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:06:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:36 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:42 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-15 15:07:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:18 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:18 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:18 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:38 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:07:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:21 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:28 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-16 17:08:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:44 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:44 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:44 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:52 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:41:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
+2017-11-18 12:41:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
+2017-11-18 12:41:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 887
+2017-11-18 12:44:01 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:44:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 12:44:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:33:13 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:33:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:33:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:25 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:25 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:25 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:42 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:36:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:37:24 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:37:24 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:37:24 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:45 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:59 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:38:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:11 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 16:39:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:36 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:38 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:03:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:36 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:38 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:54 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:06:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:07 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:07:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:06 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:17 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:17 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:08:17 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:14 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:16 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:10:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:25 - PHP Notice:  Undefined variable: id in /projects/thunder-link/catalog/controller/common/document.php on line 17
+2017-11-18 17:13:25 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:25 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:25 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:13:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:14:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:14:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:14:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:07 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:15 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:19 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/common/document.php on line 14
+2017-11-18 17:15:19 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:19 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:19 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:24 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:24 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:24 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:15:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:00 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:04 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:27 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:36 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:43 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-18 17:16:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:25:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:25:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:25:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:26:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:26:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:26:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:41 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:41 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:41 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:43 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:27:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:13 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:15 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:28:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:30:56 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:30:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:30:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:02 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:26 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:26 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:26 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:47 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:47 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:47 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:54 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:57 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:31:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:40 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:40 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:40 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:59 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:32:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:22 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:22 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:22 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:33:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:08 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:08 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:08 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:10 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:37 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:37 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:37 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:46 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/common/document.php on line 14
+2017-11-19 4:34:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:34:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:52 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:59 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:35:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:36:34 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:36:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:36:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:31 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:31 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:31 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 4:37:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 6:47:19 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 6:47:19 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 6:47:19 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 10:54:59 - PHP Notice:  Undefined index: list in /projects/thunder-link/admin/controller/common/document.php on line 17
+2017-11-19 12:08:10 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:15 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:18 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:18 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:18 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:22 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/common/document.php on line 14
+2017-11-19 12:08:22 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:22 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:08:22 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:09:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:16 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:42 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:10:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:11:32 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:11:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:11:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:53:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:53:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 12:53:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:01:54 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:01:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:01:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:14:04 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:14:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:14:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:18:56 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:18:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 13:18:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:03:36 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:03:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:03:36 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:15:41 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:15:41 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 15:15:41 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:39 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:43 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:52 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:57 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:59 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 16:52:59 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:47 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:47 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:47 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:29:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:29 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:34:33 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:34:33 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:34:33 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:35:16 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:35:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:35:16 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:35:16 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:35:16 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:35:16 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:36:06 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:36:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:36:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:36:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:36:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:36:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 906
+2017-11-19 17:41:42 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:41:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:41:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 17:41:42 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 17:41:42 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 17:41:42 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:29 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:34 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:39 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:45 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:45 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:45 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:45 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-19 18:45:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-19 18:45:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:51:28 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:51:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:51:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:51:29 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:51:29 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:51:29 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:28 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:28 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:28 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:28 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:30 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:55 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:55 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:55 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:57 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 1:57:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 1:57:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 909
+2017-11-20 2:00:34 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:00:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:00:34 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:00:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:00:49 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:00:49 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:00:49 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:01:32 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:01:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:01:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:01:32 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:01:32 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:01:32 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:04:57 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:04:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:04:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:04:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:04:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:04:57 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:05:11 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:11 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:05:11 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:05:11 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 937
+2017-11-20 2:05:26 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:26 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:26 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:05:26 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:05:26 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:05:26 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:38:27 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:38:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:38:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 2:38:27 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:38:27 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:38:27 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 2:38:46 - PHP Notice:  Undefined index: thumb_home in /projects/thunder-link/admin/controller/support/article.php on line 106
+2017-11-20 5:29:46 - PHP Notice:  Undefined index: thumb_home in /projects/thunder-link/admin/controller/support/article.php on line 107
+2017-11-20 5:29:48 - PHP Notice:  Undefined index: thumb_home in /projects/thunder-link/admin/controller/support/article.php on line 107
+2017-11-20 5:33:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 5:33:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 5:33:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 5:33:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 5:33:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 5:33:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 6:56:30 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 6:56:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 6:56:30 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-20 6:56:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:56:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:57:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:57:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 6:57:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-20 7:00:57 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:00:57 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:01:05 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:01:05 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:01:14 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:01:14 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:02:39 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:02:58 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:03:40 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:04:18 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:05:42 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 19
+2017-11-20 7:06:56 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:08:20 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 19
+2017-11-20 7:08:24 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 19
+2017-11-20 7:09:19 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 19
+2017-11-20 7:10:34 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:12:03 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:12:49 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:29:20 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:29:20 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/configuration/typical.php on line 25
+2017-11-20 7:31:04 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/configuration/typical.php on line 24
+2017-11-20 7:33:07 - PHP Notice:  Undefined index: parameter in /projects/thunder-link/admin/model/configuration/typical.php on line 18
+2017-11-20 7:33:07 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/configuration/typical.php on line 25
+2017-11-20 7:34:02 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/configuration/typical.php on line 25
+2017-11-22 10:21:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:21:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:21:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:21:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:21:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:21:52 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:21:56 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:21:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:21:56 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:01 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:22:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:22:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 10:22:04 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:13 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 10:22:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 14:12:14 - PHP Notice:  Undefined index: related_article_ids in /projects/thunder-link/admin/model/support/article.php on line 90
+2017-11-22 14:14:14 - PHP Notice:  Undefined index: related_article_ids in /projects/thunder-link/admin/model/support/article.php on line 90
+2017-11-22 14:19:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1734
+2017-11-22 14:19:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1736
+2017-11-22 14:19:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1734
+2017-11-22 14:19:31 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1736
+2017-11-22 14:19:58 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 1734
+2017-11-22 15:35:40 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:40 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:40 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:42 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:42 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:43 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:43 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:43 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:48 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:48 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:48 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:48 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:48 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:48 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:51 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 948
+2017-11-22 15:35:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:35:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:37:32 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:37:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 15:37:32 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:01 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:03 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:08:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:54 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:13:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:27 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:27 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:28 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 41
+2017-11-22 16:43:28 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 42
+2017-11-22 16:43:28 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 47
+2017-11-22 16:43:29 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:43:29 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 41
+2017-11-22 16:43:29 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 42
+2017-11-22 16:43:29 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 47
+2017-11-22 16:45:08 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:08 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:08 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:08 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 37
+2017-11-22 16:45:08 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 38
+2017-11-22 16:45:08 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 43
+2017-11-22 16:45:09 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:09 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 37
+2017-11-22 16:45:09 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 38
+2017-11-22 16:45:09 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 43
+2017-11-22 16:45:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:53 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 38
+2017-11-22 16:45:53 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 39
+2017-11-22 16:45:53 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 44
+2017-11-22 16:45:54 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:54 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:45:54 - PHP Notice:  Undefined index: id in /projects/thunder-link/catalog/controller/support/article.php on line 38
+2017-11-22 16:45:54 - PHP Notice:  Undefined index: image in /projects/thunder-link/catalog/controller/support/article.php on line 39
+2017-11-22 16:45:54 - PHP Notice:  Undefined index: title in /projects/thunder-link/catalog/controller/support/article.php on line 44
+2017-11-22 16:46:50 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:50 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:50 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:51 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:51 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:58 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:46:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:47:46 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:47:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:47:46 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:48:00 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:48:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:48:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:11 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:44 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:44 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:44 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:45 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:49:45 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:28 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:28 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:34 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:34 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:58 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:50:58 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 841
+2017-11-22 16:51:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:51:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:51:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:30 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:52:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:05 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:33 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-22 16:53:33 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:32:52 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:32:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:32:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:07 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:09 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:12 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:12 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:12 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:12 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:12 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:12 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:33:13 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:13 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:15 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:15 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:17 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:17 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:33:17 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:41:58 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:41:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:41:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:41:58 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:41:58 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:41:58 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:00 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:00 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:00 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:00 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:00 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:01 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:01 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:02 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:04 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:04 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:04 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:06 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:06 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:42:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:42:06 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:45:25 - PHP Notice:  Undefined variable: rs in /projects/thunder-link/admin/model/support/article.php on line 49
+2017-11-26 3:45:35 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:35 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:35 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:37 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:37 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:37 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:37 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:45:37 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:45:37 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 3:45:38 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:38 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:45:38 - PHP Notice:  Undefined variable: content_right in /projects/thunder-link/catalog/view/theme/default/template/support/article.tpl on line 83
+2017-11-26 3:46:48 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:46:48 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:46:48 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:46:58 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:46:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:46:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:52 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:52 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:58 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:51:58 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:21 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:29 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:29 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:43 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:43 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:53 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:52:53 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:01 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:01 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:57 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:53:57 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:11 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:11 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:35 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:35 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:35 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:55 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:54:55 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:10 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:10 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:20 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:20 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:39 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:39 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:49 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 3:55:49 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:03 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:03 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:03 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:05 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:05 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:05 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:07 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:07 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:07 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:09 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:09 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:09 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:09 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:09 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:14 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:14 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:14 - PHP Notice:  Array to string conversion in /projects/thunder-link/vendor/twig/twig/lib/Twig/Environment.php(327) : eval()'d code on line 926
+2017-11-26 4:07:21 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:21 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:30 - PHP Notice:  Undefined variable: home in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103
+2017-11-26 4:07:30 - PHP Notice:  Undefined variable: name in /projects/thunder-link/catalog/view/theme/default/template/common/footer.tpl on line 103

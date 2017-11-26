@@ -18,7 +18,8 @@
     <div class="container-fluid" id="content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa "></i>Article Form</h3>
+                <h3 class="panel-title">
+                    <i class="fa "></i>Article Form</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -28,7 +29,7 @@
                             <select v-model="banner_id" name="banner_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for banner in banners %}
-                                    <option value="{{banner.banner_id}}">{{banner.name}}</option>
+                                <option value="{{banner.banner_id}}">{{banner.name}}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -37,29 +38,37 @@
                             <select v-model="category_id" name="category_id" class="form-control">
                                 <option value="">--请选择--</option>
                                 {% for category in categorys %}
-                                    <option value="{{category.id}}">{{category.title}}</option>
+                                <option value="{{category.id}}">{{category.title}}</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Place</label>
-                            <select v-model="is_home" name="is_home" class="form-control">
-                                <option value="">无</option>
-                                <option value="1">首页</option>
-                                <option value="2">目录推荐位</option>
-                            </select>
+                            <div>显示位置</div>
+
+                            <label>首页
+                                <input type="checkbox" value="1" v-model="is_home" name="is_home">
+                            </label>
+                            <label>搜索页推荐
+                                <input type="checkbox" value="2" v-model="is_home" name="is_home">
+                            </label>
                         </div>
                         <div class="form-group">
                             <label>Image</label>
                             <div>
-                                <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                <a href="javascript:;" id="thumb-image" data-toggle="image" class="img-thumbnail">
+                                    <img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>"
+                                    />
+                                </a>
                                 <input type="hidden" name="image" value="{{article.image}}" id="input-image" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Image On Home</label>
                             <div>
-                                <a href="javascript:;" id="thumb-image-home" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb_home; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                                <a href="javascript:;" id="thumb-image-home" data-toggle="image" class="img-thumbnail">
+                                    <img src="<?php echo $thumb_home; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>"
+                                    />
+                                </a>
                                 <input type="hidden" name="image_home" value="{{article.image_home}}" id="input-image2" />
                             </div>
                         </div>
@@ -97,11 +106,28 @@
                                 <input type="text" name="related" value="" placeholder="输入名字搜索产品" id="input-related" class="form-control" />
                                 <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
                                     <?php foreach ($product_relateds as $product_related) { ?>
-                                    <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i>
+                                    <div id="product-related<?php echo $product_related['product_id']; ?>">
+                                        <i class="fa fa-minus-circle"></i>
                                         <?php echo $product_related['name']; ?>
                                         <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
                                     </div>
                                     <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-related">Related Article</label>
+                            <div style="position:relative">
+                                <input type="text" v-model="article_search" @keyup="findArticle()" placeholder="输入标题" class="form-control" />
+                                <ul class="dropdown-menu" v-if="article_search != ''" style="left:0;top:32px;display:block;">
+                                    <li @click="chooseArticle(related_article)" v-for="related_article in search_article_list">
+                                        <a href="javascript:;">${related_article.title}</a>
+                                    </li>
+                                    <li v-if="isFetch2" style="text-indent:2em;">检索中...</li>
+                                    <li style="text-indent:2em;" v-if="!isFetch2 && search_article_list.length == 0">没有结果</li>
+                                </ul>
+                                <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
+                                    <div @click="removeArticle(index)" v-for="(related_article,index) in related_article_list"><span class="fa fa-minus-circle"></span> ${related_article.title}</div>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +136,8 @@
                             <div style="position:relative">
                                 <input type="text" v-model="tag" @keyup="findTag()" @keyup.enter="addTag()" placeholder="输入标签" class="form-control" />
                                 <ul class="dropdown-menu" v-if="tag != ''" style="left:0;top:32px;display:block;">
-                                    <li @click="chooseTag(tag)" v-for="tag in tagList"><a href="javascript:;">${tag.name}</a>
+                                    <li @click="chooseTag(tag)" v-for="tag in tagList">
+                                        <a href="javascript:;">${tag.name}</a>
                                     </li>
                                     <li v-if="isFetch" style="text-indent:2em;">检索中...</li>
                                     <li style="text-indent:2em;" v-if="!isFetch && tagList == ''">没有结果,回车添加标签</li>
@@ -144,36 +171,40 @@
                 meta_keywords: '{{article.meta_keywords}}',
                 meta_desc: '{{article.meta_desc}}',
                 summary: '{{article.summary|raw}}',
-                is_home:'{{article.is_home}}',
-                title_home:'{{article.title_home}}',
-                image_home:'{{article.image_home}}',
-                desc_home:'{{article.desc_home}}',
+                is_home: '{{article.is_home}}'.split(','),
+                title_home: '{{article.title_home}}',
+                image_home: '{{article.image_home}}',
+                desc_home: '{{article.desc_home}}',
                 tags: '{{article.tags|raw}}' ? JSON.parse('{{article.tags|raw}}') : [],
                 tagList: [],
                 tag: '',
-                isFetch: false
+                article_search:'',
+                search_article_list:[],
+                related_article_list:'{{related_articles|raw}}'?JSON.parse('{{related_articles|raw}}'):[],
+                isFetch: false,
+                isFetch2:false
             },
             methods: {
-                removeTag: function(tag) {
-                    this.tags = this.tags.filter(function(item) {
+                removeTag: function (tag) {
+                    this.tags = this.tags.filter(function (item) {
                         return item.id != tag.id;
                     })
                 },
-                addTag: function() {
+                addTag: function () {
                     var _vm = this;
                     var flag = null;
-                    flag = _vm.tags.find(function(item) {
+                    flag = _vm.tags.find(function (item) {
                         return item.name == _vm.tag;
                     })
                     if (!flag) {
                         $.get('{{ajaxGetTags|raw}}&token={{token}}', {
                             name: _vm.tag
-                        }, function(res) {
+                        }, function (res) {
                             if (!res || res.length == 0) {
                                 $.post('{{ajaxAddTags|raw}}&token={{token}}', {
                                     name: _vm.tag,
                                     token: '{{token}}'
-                                }, function(rt) {
+                                }, function (rt) {
                                     if (rt && rt.msg && rt.msg == 'succ') {
                                         _vm.tags.push({
                                             id: rt.id,
@@ -188,17 +219,17 @@
                         }, 'json')
                     }
                 },
-                findTag: _.debounce(function() {
+                findTag: _.debounce(function () {
                     var _vm = this;
                     var flag = null
-                    flag = _vm.tags.find(function(item) {
+                    flag = _vm.tags.find(function (item) {
                         return item.name == _vm.tag;
                     })
                     if (!flag) {
                         _vm.isFetch = true;
                         $.get('{{ajaxGetTags|raw}}&token={{token}}', {
                             name: _vm.tag
-                        }, function(res) {
+                        }, function (res) {
                             _vm.isFetch = false;
                             if (res && res.length > 0) {
                                 _vm.tagList = res;
@@ -208,10 +239,10 @@
                         }, 'json')
                     }
                 }, 300),
-                chooseTag: function(tag) {
+                chooseTag: function (tag) {
                     var _vm = this;
                     var flag = null;
-                    flag = _vm.tags.find(function(item) {
+                    flag = _vm.tags.find(function (item) {
                         return item.name == tag.name;
                     })
                     if (!flag) {
@@ -219,12 +250,43 @@
                     }
                     _vm.tag = '';
                 },
-                submit: function() {
+                findArticle: _.debounce(function(){
+                    var _vm = this;
+                    var flag = null
+                    _vm.isFetch2 = true;
+                    _vm.article_search&&$.post('{{ajaxGetAritcle}}&token={{token}}', {
+                        title: _vm.article_search
+                    }, function (res) {
+                        if (res && res.length > 0) {
+                            _vm.search_article_list = res;
+                        } else {
+                            _vm.search_article_list = []
+                        }
+                        _vm.isFetch2 = false;
+                    }, 'json')
+                }, 300),
+
+                chooseArticle:function(article){
+                    var flag = null;
+                    flag = this.related_article_list.find(function (item) {
+                        return item.id == article.id;
+                    })
+                    if (!flag) {
+                        this.related_article_list.push(article);
+                    }
+                    this.search_article_list = [];
+                    this.article_search = '';
+                },
+                removeArticle:function(index){
+                    this.article_search = '';
+                    this.related_article_list.splice(index,1);
+                },
+                submit: function () {
                     var _vm = this,
                         _image = $('[name="image"]').val(),
                         _image_home = $('[name="image_home"]').val(),
                         _related_product = [];
-                    $('[name^="product_related"]').each(function(item) {
+                    $('[name^="product_related"]').each(function (item) {
                         _related_product[item] = $(this).val();
                     })
                     _related_product = _related_product.join(',');
@@ -238,15 +300,16 @@
                         meta_desc: _vm.meta_desc,
                         summary: _vm.summary,
                         related_product_ids: _related_product,
-                        desc_home:_vm.desc_home,
-                        title_home:_vm.desc_home,
-                        is_home:_vm.is_home,
-                        image_home:_image_home,
+                        desc_home: _vm.desc_home,
+                        title_home: _vm.desc_home,
+                        is_home: _vm.is_home,
+                        image_home: _image_home,
                         tag_ids: _vm.tags.map(item => {
                             return item.id
                         }),
-                        content:UE.getEditor('editor').getContent()
-                    }, function(res) {
+                        related_article_ids:_vm.related_article_list.map(function(item){return item.id}).join(','),
+                        content: UE.getEditor('editor').getContent()
+                    }, function (res) {
                         if (res) {
                             location.href = "{{back_url}}&token={{token}}";
                         }
@@ -254,19 +317,19 @@
                 }
 
             },
-            mounted: function() {
+            mounted: function () {
             }
         })
 
 
         // Related
         $('input[name=\'related\']').autocomplete({
-            'source': function(request, response) {
+            'source': function (request, response) {
                 $.ajax({
                     url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' + encodeURIComponent(request),
                     dataType: 'json',
-                    success: function(json) {
-                        response($.map(json, function(item) {
+                    success: function (json) {
+                        response($.map(json, function (item) {
                             return {
                                 label: item['name'],
                                 value: item['product_id']
@@ -275,7 +338,7 @@
                     }
                 });
             },
-            'select': function(item) {
+            'select': function (item) {
                 $('input[name=\'related\']').val('');
 
                 $('#product-related' + item['value']).remove();
@@ -284,7 +347,7 @@
             }
         });
 
-        $('#product-related').delegate('.fa-minus-circle', 'click', function() {
+        $('#product-related').delegate('.fa-minus-circle', 'click', function () {
             $(this).parent().remove();
         });
     </script>

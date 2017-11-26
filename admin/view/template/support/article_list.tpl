@@ -47,10 +47,18 @@
                                 <td>{{list.title}}</td>
                                 <td>{{list.category_name}}</td>
                                 <td>
-                                    {% if list.is_home == 1 %} 首页广告位 {% elseif is_home == 2%} 搜索页推荐位 {% else%} 列表页 {% endif %}
+                                    <img src="{{list.thumb}}" alt="">
                                 </td>
                                 <td>
-                                    <img src="{{list.thumb}}" alt="">
+                                    <script>
+                                        var a = "{{list.is_home}}".split(',');
+                                        if (a.indexOf('1') >= 0) {
+                                            document.write('<span class="label label-default">首页</span><br style="margin:5px 0"/>');
+                                        }
+                                        if (a.indexOf('2') >= 0) {
+                                            document.write('<span class="label label-default">搜索页推荐</span><br style="margin:5px 0"/>');
+                                        }
+                                    </script>
                                 </td>
                                 <td>{{list.createAt}}</td>
                                 <td>

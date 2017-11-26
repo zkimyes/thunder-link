@@ -27,6 +27,17 @@
                         {% endfor %}
                     </div>
                 </section>
+                <div>
+                    <ul class="list-unstyled">
+                        {% for su in recommendSupport%}
+                        <li>
+                            <a href="{{su.url|raw}}">{{su.title}}
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
                 <div id="loading" style="display:none;background:#aeb0af;line-height: 50%;text-align: center;" class="loader-inner ball-clip-rotate">
                     <div></div>
                 </div>
@@ -63,12 +74,14 @@
                         </div>
                     </section>
                 {% endif %}
+                
                 <section>
-                    <div class="title">Documentation <i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                    <div class="title"><a href="{{index_link}}">Documentation</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
                     <div class="support-document-block">
-                        <a href="">AI</a>
-                        <a href="">Huawei OSN 3500 Documentation</a>
-                        <a href="">Huawei OSN 500 Documentation</a>
+                        <a class="links" href="{{index_link}}">All</a>
+                        {% for cate in doc_cate%}
+                        <a class="links" href="{{cate.link|raw}}">{{cate.name}}</a>
+                        {% endfor %}
                     </div>
                 </section>
             </div>

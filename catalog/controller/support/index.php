@@ -21,6 +21,7 @@ class ControllerSupportIndex extends Controller {
         $this->load->model('support/article');
         $data['is_search_tags'] = $this->model_support_article->getIsSeachTags();
         $categories = $this->model_support_category->getList('',"id,title,parent_id");
+        $getRecommendSupport = $this->model_support_article->getRecommendSupport();
         $parents = [];
         $childs = [];
         
@@ -40,6 +41,14 @@ class ControllerSupportIndex extends Controller {
                     $parent['child'][] = $child;
                 }
             }
+        }
+        //var_dump($getRecommendSupport);
+        foreach ($getRecommendSupport as $key => $value) {
+            $data['recommendSupport'][$key] = [
+                'id'=>$value['id'],
+                'title'=>$value['title'],
+                'url'=>$this->url->link('support/article','id='.$value['id'])
+            ];
         }
         
         $data['sider_categories'] = $parents;
@@ -65,6 +74,15 @@ class ControllerSupportIndex extends Controller {
                 ];
             }
         }
+
+        //document 目录
+
+        $doc_category = $this->db->query('select * from oc_document_category');
+        $data['doc_cate'] = $doc_category->rows;
+        foreach ($data['doc_cate'] as &$category) {
+			$category['link'] = $this->url->link('common/document/index','id='.$category['id']);
+		}
+        $data['index_link'] = $this->url->link('common/document/index');
 
         $this->response->setOutput($this->load->view('support/index', $data));
     }

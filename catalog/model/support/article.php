@@ -60,7 +60,12 @@ class ModelSupportArticle extends Model {
 
 
     public function getHomeArticleList(){
-        $query = $this->db->query("select * from oc_support_article where is_home =1 limit 3");
+        $query = $this->db->query("select * from oc_support_article where FIND_IN_SET('1',is_home) limit 3");
+        return $query->rows;
+    }
+
+    public function getRecommendSupport(){
+        $query = $this->db->query("select id,title from oc_support_article where FIND_IN_SET('2',is_home) limit 6");
         return $query->rows;
     }
     

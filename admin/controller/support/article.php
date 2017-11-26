@@ -77,14 +77,19 @@ class ControllerSupportArticle extends Controller{
             if(!empty($id)){
                 $article = $this->model_support_article->find($id);
                 $article['tags'] = json_encode($this->model_support_article->getRelateTagsById($id));
+                $data['article'] = $article;
+                $data['product_relateds'] = [];
+                if(!empty($article['related_product_ids'])){
+                    $related_info = $this->model_catalog_product->getProductsByProductIds($article['related_product_ids']);
+                    $data['product_relateds'] = $related_info;
+                }
+                if(!empty($article['related_article_ids'])){
+                    $related_articles = $this->model_support_article->getList("where a.id in (".$article['related_article_ids'].")");
+                    $data['related_articles'] = json_encode($related_articles);
+                }
+                $this->form($data);
             }
-            $data['article'] = $article;
-            $data['product_relateds'] = [];
-            if(!empty($article['related_product_ids'])){
-                $related_info = $this->model_catalog_product->getProductsByProductIds($article['related_product_ids']);
-                $data['product_relateds'] = $related_info;
-            }
-            $this->form($data);
+            
         };
     }
     
@@ -103,8 +108,8 @@ class ControllerSupportArticle extends Controller{
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
-        if (!empty($data['article']['image_home']) && is_file(DIR_IMAGE . $data['article']['thumb_home'])) {
-            $data['thumb_home'] = $this->model_tool_image->resize($data['article']['image'], 100, 100);
+        if (!empty($data['article']['image_home']) && is_file(DIR_IMAGE . $data['article']['image_home'])) {
+            $data['thumb_home'] = $this->model_tool_image->resize($data['article']['image_home'], 100, 100);
 		} else {
 			$data['thumb_home'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
@@ -115,6 +120,7 @@ class ControllerSupportArticle extends Controller{
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
         $data['ajaxGetTags'] = $this->url->link('support/tag/ajaxGetTagByName');
         $data['ajaxAddTags'] = $this->url->link('support/tag/ajaxAddTag');
+        $data['ajaxGetAritcle'] = $this->url->link('support/article/getArticle');
         $this->response->setOutput($this->load->view('support/article_form', $data));
     }
     
@@ -143,5 +149,16 @@ class ControllerSupportArticle extends Controller{
         
         $data['token'] = $token;
         $this->response->setOutput($this->load->view('support/article_list', $data));
+    }
+
+    public function getArticle(){
+        if(isset($this->request->post['title']) && !empty($this->request->post['title']))
+        {
+            $sql = "select * from oc_support_article where title like '%".$this->db->escape($this->request->post['title'])."%'";
+            $result = $this->db->query($sql);
+            return $this->response->jsonOutput($result->rows);
+            //var_dump($result);
+        }
+        return $this->response->jsonOutput(false);
     }
 }

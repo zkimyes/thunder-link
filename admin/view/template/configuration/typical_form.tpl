@@ -128,11 +128,11 @@
                 image: '{{typical.image}}',
                 name: '{{typical.name}}',
                 link_product_id: '{{typical.link_product_id}}',
-                parameter: {{typical.parameter|raw}} ? JSON.parse('{{typical.parameter|raw}}') : [],
+                parameter: '{{typical.parameter|raw}}' ? JSON.parse('{{typical.parameter|raw}}') : [],
                 link_boards: '{{typical.link_boards}}',
                 sort_order: '{{typical.sort_order}}',
                 search: '',
-                link_boards: {{typical.link_boards|raw}} ? JSON.parse('{{typical.link_boards|raw}}') : [],
+                link_boards: '{{typical.link_boards|raw}}' ? JSON.parse('{{typical.link_boards|raw}}') : [],
                 product_search: '',
                 products: [],
                 link_product: '{{typical.product_name}}' ? {

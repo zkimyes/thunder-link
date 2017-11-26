@@ -24,10 +24,27 @@ class ControllerSupportArticle extends Controller {
             'is_comment' =>$article['is_comment']
         ]:null;
 
-        if($article['is_comment'] == '1'){
-            $this->load->model('support/comments');
-            $data['comments'] = $this->model_support_comments->getCommentsByArticleId($article['id']);
+        // if($article['is_comment'] == '1'){
+        //     $this->load->model('support/comments');
+        //     $data['comments'] = $this->model_support_comments->getCommentsByArticleId($article['id']);
+        // }
+
+        if(!empty($article['related_article_ids'])){
+            $articles = $this->db->query('select * from oc_support_article where id in ('.$article['related_article_ids'].')');
+            if($articles->rows){
+                $articles = $articles->rows;
+                foreach ($articles as $key => $value) {
+                    $data['related_articles'][$key]['link'] = $this->url->link('support/article','id='.$value['id']);
+                    if ($value['image']) {
+                        $data['related_articles'][$key]['thumb'] = $this->model_tool_image->resize($value['image'], 300, 240);
+                    } else {
+                        $data['related_articles'][$key]['thumb'] = $this->model_tool_image->resize('placeholder.png', 300, 240);
+                    }
+                    $data['related_articles'][$key]['title'] = $value['title'];
+                }
+            }
         }
+
         $this->document->setTitle($this->config->get('config_meta_title'));
         $this->document->setDescription($this->config->get('config_meta_description'));
         $this->document->setKeywords($this->config->get('config_meta_keyword'));

@@ -7,7 +7,7 @@ class ModelConfigurationTypical extends Model {
     }
 
     public function add($data = []){
-        $rs = $this->db->query("
+        $sql = "
             INSERT INTO `oc_config_typical`
             (`category_id`, `name`, `description`, `link_product_id`, `parameter`, `blueprint`, `link_boards`, `sort_order`) 
             VALUES (
@@ -15,12 +15,13 @@ class ModelConfigurationTypical extends Model {
                 '".$this->db->escape($data['name'])."',
                 '',
                 ".intval($data['link_product_id']).",
-                '".$data['parameter'] ? $this->db->escape(json_encode($data['parameter'],true)):''."',
+                '".$this->db->escape(isset($data['parameter'])?json_encode($data['parameter'],true):'')."',
                 '".$this->db->escape($data['blueprint'])."',
                 '".$this->db->escape(json_encode($data['link_boards'],true))."',
                 ".intval($data['sort_order'])."
                 )
-            ");
+            ";
+        $rs = $this->db->query($sql);
         return $rs;
     }
 
