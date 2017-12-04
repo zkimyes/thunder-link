@@ -26,7 +26,7 @@
                         <div class="animate-1 col-md-3">
                             <a href="{{product.url|raw}}">
                                 <img src="{{product.thumb}}" alt="{{product.name}}">
-                                <div><strong>{{product.price}}</strong></div>
+                                <div><strong>${{product.price}}</strong></div>
                                 <div>{{product.name}}</div>
                             </a>
                         </div>
@@ -38,7 +38,7 @@
                         <div class="animate-1 col-md-3">
                             <a href="{{product.url|raw}}">
                                 <img src="{{product.thumb}}" alt="{{product.name}}">
-                                <div><strong>{{product.price}}</strong></div>
+                                <div><strong>${{product.price}}</strong></div>
                                 <div>{{product.name}}</div>
                             </a>
                         </div>
@@ -109,7 +109,7 @@
                         onclick="HomeApp.showPromotion('{{product.product_id}}','{{product.title}}','{{product.thumb}}','{{product.condition}}','{{product.description}}','{{product.price}}','{{product.date_end}}')" 
                         data-target="#home-promotion-modal">
                             <h4>{{product.title}}</h4>
-                            <div><strong style="color:#f00;font-size:18px;">{{product.price}}</strong></div>
+                            <div><strong style="color:#f00;font-size:18px;">${{product.price}}</strong></div>
                             <img src="{{product.thumb}}" alt="{{product.title}}">
                             <div>{{product.condition}}
                                 <br> {{product.date_end}}
