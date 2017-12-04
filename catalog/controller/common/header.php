@@ -105,7 +105,6 @@ class ControllerCommonHeader extends Controller {
 				$children_data = array();
 				$children_ids = [];
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
-				
 				foreach ($children as $child) {
 					$filter_data = array(
 						'filter_category_id'  => $child['category_id'],
@@ -183,6 +182,7 @@ class ControllerCommonHeader extends Controller {
 			}
 
 		}
+
 
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');

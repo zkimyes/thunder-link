@@ -10,7 +10,7 @@
     <ul class="breadcrumb">
         {% for breadcrumb in breadcrumbs %}
         <li>
-            <a href="{{breadcrumb['href']}}">
+            <a href="{{breadcrumb['href']|raw}}">
                 {{breadcrumb['text']|raw}}
             </a>
         </li>
@@ -278,6 +278,12 @@
                                     <?php } ?>
                                 <?php } ?>
                             <?php } ?>
+                        </div>
+                        <div class="tab-content" id="reviews">
+                            <div class="title">
+                                <h3>Customer Reviews</h3>
+                            </div>
+                            <?php var_dump($reviews); ?>
                         </div>
                     </div>
 

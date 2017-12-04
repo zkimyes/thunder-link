@@ -138,7 +138,7 @@
                                 <li @mouseenter="toggleSubCon({{category.category_id}})">
                                     <a class="f-cate" href="{{category.href|raw}}">{{category.name}} </a> {% if category.children %}
 
-                                    <div>
+                                    <div style="margin:5px 10px;">
                                         {% for third_category in category.third_category %}
                                         <a href="{{third_category.href|raw}}">{{third_category.name}}</a> {% endfor %}
                                     </div>

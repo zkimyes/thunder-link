@@ -535,13 +535,13 @@ a {
     padding: 10px;
 }
 
-.sub-category .f-cate:hover {
-    background: #3fc38ea6;
+.sub-category li:hover {
+    background: #3fc38c59;
 }
 
 .sub-category i {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 20%;
     color: #fff;
 }
@@ -865,4 +865,12 @@ div.input>.buttons>button {
 
 .links {
     margin: 0 10px;
+}
+
+.product-thumb{
+    height: 460px;
+}
+
+.product-thumb .caption{
+    min-height: 160px;
 }
