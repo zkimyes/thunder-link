@@ -1292,10 +1292,25 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('design/layout');
 
 		$data['layouts'] = $this->model_design_layout->getLayouts();
-
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
+		if (isset($this->request->post['product_layout'])) {
+			$data['product_layout'] = $this->request->post['product_layout'];
+		} elseif (isset($this->request->get['product_id'])) {
+			$data['product_layout'] = $this->model_catalog_product->getProductLayouts($this->request->get['product_id']);
+		} else {
+			$data['product_layout'] = array();
+		}
+
+		if (isset($this->request->post['hot_sale'])) {
+			$data['hot_sale'] = $this->request->post['hot_sale'];
+		} elseif (isset($this->request->get['product_id'])) {
+			$data['hot_sale'] = $this->model_catalog_product->getProduct($this->request->get['product_id'])['hot_sale'];
+		} else {
+			$data['hot_sale'] = 0;
+		}
+		
 
 		$this->response->setOutput($this->load->view('catalog/product_form', $data));
 	}

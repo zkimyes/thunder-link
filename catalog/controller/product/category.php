@@ -72,57 +72,35 @@ class ControllerProductCategory extends Controller {
             $path = '';
             
             $parts = explode('_', (string)$this->request->get['path']);
-            
-            $category_id = (int)array_pop($parts);
-            
-            foreach ($parts as $path_id) {
-                if (!$path) {
-                    $path = (int)$path_id;
-                } else {
-                    $path .= '_' . (int)$path_id;
+
+            if(count($parts)>1){
+                $category_id = (int)array_pop($parts);
+                foreach($parts as $p){
+                    $c = $this->model_catalog_category->getCategory($p);
+                    var_dump($c);
+                    $data['breadcrumbs'][] = array(
+                        'text' => $c['name'],
+                        'href' => $this->url->link('product/category', 'path=' . $this->request->get['path']),
+                        'sublings'=>$this->model_catalog_category->getCategoriesByCon($c['parent_id'],$p),
+                        'type'=>'category',
+                        'category_id' =>$category_id
+                    );
                 }
-                // $category_info = $this->model_catalog_category->getCategory($path_id);
-                // if ($category_info) {
-                //     $subCategory = $this->model_catalog_category->getCategories($category_info['parent_id']);
-                //     foreach($subCategory as &$ca){
-                //         if($ca['parent_id'] != 0){
-                //             $ca['link'] = $this->url->link('product/category', 'path=' .$ca['parent_id'].'_'.$ca['category_id'] . $url);
-                //         }else{
-                //             $ca['link'] = $this->url->link('product/category', 'path=' .$ca['category_id'] . $url);
-                //         }
-                        
-                //     }
-                //     $data['breadcrumbs'][] = array(
-                //     'type'=>'category',
-                //     'category_id'=>$category_info['category_id'],
-                //     'sublings'=>$subCategory,
-                //     'text' => $category_info['name'],
-                //     'href' => $this->url->link('product/category', 'path=' . $path . $url)
-                //     );
-                // }
+            }else{
+                $category_id = (int)$this->request->get['path'];
             }
         } else {
             $category_id = 0;
         }
-        
+
+        var_dump($data['breadcrumbs'][1]);
+
         $category_info = $this->model_catalog_category->getCategory($category_id);
         
         if ($category_info) {
             $this->document->setTitle($category_info['meta_title']);
             $this->document->setDescription($category_info['meta_description']);
             $this->document->setKeywords($category_info['meta_keyword']);
-            
-            // $subCategory = $this->model_catalog_category->getCategories($category_info['parent_id']);
-            // foreach($subCategory as &$ca){
-            //     $ca['link'] = $this->url->link('product/category', 'path=' .$path . $url);
-            // }
-            // $data['breadcrumbs'][] = array(
-            // 'type'=>'category',
-            // 'category_id'=>$category_info['category_id'],
-            // 'sublings'=>$subCategory,
-            // 'text' => $category_info['name'],
-            // 'href' => $this->url->link('product/category', 'path=' . $category_id . $url)
-            // );
             
             $data['text_refine'] = $this->language->get('text_refine');
             $data['text_empty'] = $this->language->get('text_empty');
@@ -146,7 +124,10 @@ class ControllerProductCategory extends Controller {
             // Set the last category breadcrumb
             // $data['breadcrumbs'][] = array(
             // 	'text' => $category_info['name'],
-            // 	'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'])
+            // 	'href' => $this->url->link('product/category', 'path=' . $this->request->get['path']),
+            //     'sublings'=>$this->model_catalog_category->getCategoriesByCon($category_info['parent_id'],$category_id),
+            //     'type'=>'category',
+            //     'category_id' =>$category_id
             // );
             
             if ($category_info['image']) {

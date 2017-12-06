@@ -100,8 +100,22 @@
                                 <?php } ?>
                             </ul>
                             <div class="tab-content">
+                               
                                 <?php foreach ($languages as $language) { ?>
                                 <div class="tab-pane" id="language<?php echo $language['language_id']; ?>">
+                                    <div class="form-group required">
+                                        <label class="col-sm-2 control-label" for="">Is Hot Sale</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-control" style="border:0;box-shadow:none">
+                                                <?php if($hot_sale == 1) { ?>
+                                                    <input name="hot_sale" checked="checked" value="0" type="checkbox"/>
+                                                <?php } ?>
+                                                 <?php if($hot_sale == 0) { ?>
+                                                    <input name="hot_sale" value="1" type="checkbox"/>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-group required">
                                         <label class="col-sm-2 control-label" for="input-name<?php echo $language['language_id']; ?>"><?php echo $entry_name; ?></label>
                                         <div class="col-sm-10">

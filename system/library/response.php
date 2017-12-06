@@ -26,7 +26,7 @@ class Response {
 	}
 
 	public function jsonOutput($output){
-		header('Content-Type: application/json');
+		header('content-type:application/json;charset=utf8');
 		$this->output = json_encode($output);
 	}
 

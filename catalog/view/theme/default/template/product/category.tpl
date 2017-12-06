@@ -3,14 +3,14 @@
 <div class="container">
     <div class="row">
         <ul class="breadcrumb">
-            {% for breadcrumb in breadcrumbs%} {% if breadcrumb.type == 'category'%}
+            {% for breadcrumb in breadcrumbs%} 
+            {% if breadcrumb.type == 'category'%}
             <li>
                 <div class="dropdown-inline">
-                    {% for subcategory in breadcrumb.sublings %} {% if subcategory.category_id == breadcrumb.category_id %}
-                    <a href="{{subcategory.link|raw}}">
-                        {{subcategory.name}}
+                    <a href="{{breadcrumb.href|raw}}">
+                        {{breadcrumb.text}}
                         <span class="caret"></span>
-                    </a> {% endif %} {% endfor %}
+                    </a>
                     <ul class="menu">
                         {% for subcategory in breadcrumb.sublings %}
                         <li>
