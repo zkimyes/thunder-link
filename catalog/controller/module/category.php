@@ -40,12 +40,7 @@ class ControllerModuleCategory extends Controller {
 			);
 		}
 
-		if(isset($this->request->get['path']) && !empty($this->request->get['path'])){
-			$path = $this->request->get['path'];
-		}else{
-			$path = 0;
-		}
-
+		
 
 		return $this->load->view('module/category', $data);
 	}

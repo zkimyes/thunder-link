@@ -72,28 +72,42 @@ class ControllerProductCategory extends Controller {
             $path = '';
             
             $parts = explode('_', (string)$this->request->get['path']);
+            //获取面包屑
+            foreach ($parts as $value) {
+                $query = $this->model_catalog_category->getCategory($value);
+                $link = '';
+                $sublings = null;
+                if($query['parent_id'] != '0'){
+                   $link = $this->url->link('product/category','path='.$query['parent_id'].'_'.$value);
+                }else{
+                   $link = $this->url->link('product/category','path='.$value);
+                }
 
+                $sublings = $this->model_catalog_category->getCategoriesByCon($query['parent_id'],$value);
+                foreach ($sublings as &$sub) {
+                    if($sub['parent_id'] != '0'){
+                        $sub['link'] = $this->url->link('product/category','path='.$sub['parent_id'].'_'.$sub['category_id']);
+                    }else{
+                        $sub['link'] = $this->url->link('product/category','path='.$sub['category_id']);
+                    }
+                }
+
+                $data['breadcrumbs'][] = array(
+                    'text' => $query['name'],
+                    'href' => $link,
+                    'sublings'=>$sublings,
+                    'sublingsCount'=>count($sublings)
+                );
+            }
             if(count($parts)>1){
                 $category_id = (int)array_pop($parts);
-                foreach($parts as $p){
-                    $c = $this->model_catalog_category->getCategory($p);
-                    var_dump($c);
-                    $data['breadcrumbs'][] = array(
-                        'text' => $c['name'],
-                        'href' => $this->url->link('product/category', 'path=' . $this->request->get['path']),
-                        'sublings'=>$this->model_catalog_category->getCategoriesByCon($c['parent_id'],$p),
-                        'type'=>'category',
-                        'category_id' =>$category_id
-                    );
-                }
             }else{
                 $category_id = (int)$this->request->get['path'];
             }
+            
         } else {
             $category_id = 0;
         }
-
-        var_dump($data['breadcrumbs'][1]);
 
         $category_info = $this->model_catalog_category->getCategory($category_id);
         
@@ -120,16 +134,7 @@ class ControllerProductCategory extends Controller {
             $data['button_continue'] = $this->language->get('button_continue');
             $data['button_list'] = $this->language->get('button_list');
             $data['button_grid'] = $this->language->get('button_grid');
-            
-            // Set the last category breadcrumb
-            // $data['breadcrumbs'][] = array(
-            // 	'text' => $category_info['name'],
-            // 	'href' => $this->url->link('product/category', 'path=' . $this->request->get['path']),
-            //     'sublings'=>$this->model_catalog_category->getCategoriesByCon($category_info['parent_id'],$category_id),
-            //     'type'=>'category',
-            //     'category_id' =>$category_id
-            // );
-            
+
             if ($category_info['image']) {
                 $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'));
             } else {

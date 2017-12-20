@@ -2,9 +2,19 @@
 // Version
 define('VERSION', '2.2.0.0');
 // Configuration
-if (is_file('config.php')) {
-	require_once('config.php');
+define('DEBUG',true);
+
+// Configuration
+if(constant('DEBUG')){
+	if (is_file('config.php')) {
+		require_once('config.php');
+	}
+}else{
+	if (is_file('config.prod.php')) {
+		require_once('config.prod.php');
+	}
 }
+
 
 // Install
 if (!defined('DIR_APPLICATION')) {

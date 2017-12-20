@@ -26,7 +26,7 @@
                     <img src="{{article.thumb}}" alt="{{article.title}}">
                 </div>
                 <div class="s-content">
-                    <h4>{{article.title}}</h4>
+                    <h4><a href="{{article.link|raw}}">{{article.title}}</a></h4>
                     <p>{{article.summary}}</p>
                     <a class="btn btn-link" href="{{article.link|raw}}">Learn More</a>
                 </div>
