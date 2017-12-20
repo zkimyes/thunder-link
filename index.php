@@ -3,7 +3,7 @@ ini_set("display_errors", "On");
 ini_set("error_reporting", 'E_ALL & ~E_DEPRECATED & ~E_STRICT');
 // Version
 define('VERSION', '2.2.0.0');
-define('DEBUG',true);
+define('DEBUG',false);
 
 // Configuration
 if(DEBUG){

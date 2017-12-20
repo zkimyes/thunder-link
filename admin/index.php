@@ -2,7 +2,7 @@
 // Version
 define('VERSION', '2.2.0.0');
 // Configuration
-define('DEBUG',true);
+define('DEBUG',false);
 
 // Configuration
 if(constant('DEBUG')){
