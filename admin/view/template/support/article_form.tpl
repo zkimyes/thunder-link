@@ -301,7 +301,7 @@
                         summary: _vm.summary,
                         related_product_ids: _related_product,
                         desc_home: _vm.desc_home,
-                        title_home: _vm.desc_home,
+                        title_home: _vm.title_home,
                         is_home: _vm.is_home,
                         image_home: _image_home,
                         tag_ids: _vm.tags.map(item => {

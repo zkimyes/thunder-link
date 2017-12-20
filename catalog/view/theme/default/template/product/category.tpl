@@ -3,31 +3,26 @@
 <div class="container">
     <div class="row">
         <ul class="breadcrumb">
-            {% for breadcrumb in breadcrumbs%} 
-            {% if breadcrumb.type == 'category'%}
-            <li>
-                <div class="dropdown-inline">
-                    <a href="{{breadcrumb.href|raw}}">
-                        {{breadcrumb.text}}
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="menu">
-                        {% for subcategory in breadcrumb.sublings %}
-                        <li>
-                            <a href="{{subcategory.link|raw}}">{{subcategory.name}}&nbsp;
-                                <span class="caret"></span>
-                            </a>
-                        </li>
-                        {% endfor %}
+            {% for breadcrumb in breadcrumbs%}
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" href="{{breadcrumb.href|raw}}">
+                    {{breadcrumb.text}} {% if breadcrumb.sublingsCount >0 %}
+                    <b class="caret"></b>
+                    {% endif %}
+                </a>
+                {% if breadcrumb.sublingsCount >0 %}
+                <ul style="margin-left:20px" class="dropdown-menu">
+                    {% for subcategory in breadcrumb.sublings %}
+                    <li>
+                        <a href="{{subcategory.link|raw}}">{{subcategory.name}}
+                        </a>
+                    </li>
+                    {% endfor %}
 
-                    </ul>
-                </div>
+                </ul>
+                {% endif %}
             </li>
-            {% else %}
-            <li>
-                <a href="{{breadcrumb.href|raw}}">{{breadcrumb.text|raw}}</a>
-            </li>
-            {% endif %} {% endfor %}
+            {% else %}{% endfor %}
         </ul>
         <div class="row">
             <?php echo $column_left; ?>

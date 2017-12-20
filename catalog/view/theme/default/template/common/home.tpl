@@ -71,6 +71,7 @@
                 {% for article in support %}
                 <div class="col-md-4 document-slik-block">
                     <a href="{{article.url|raw}}">
+                        <h5>{{article.title_home}}</h5>
                         <div class="col-md-6">
                             {{article.desc_home}}
                         </div>
