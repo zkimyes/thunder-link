@@ -40,7 +40,6 @@ class ControllerModuleCategory extends Controller {
 			);
 		}
 
-		
 
 		return $this->load->view('module/category', $data);
 	}
