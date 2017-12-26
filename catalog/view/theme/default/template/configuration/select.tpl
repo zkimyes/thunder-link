@@ -167,7 +167,7 @@
             selectBoards:function(boards){
                 var _vm = this;
                 var _find = _vm.selectedBoards.find(function(item){
-                    return item.id == boards.id
+                    return item.id == boards.id && item.type != 1
                 })
                 if(!_find){
                     _vm.selectedBoards.push(_.cloneDeep(boards));
