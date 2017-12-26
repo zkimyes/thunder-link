@@ -49,7 +49,7 @@
                         {% for board in typical.link_boards %}
                         <tr>
                             <td>
-                                {% if board.type == 1 %} Sysrtem Board {% else %} {{board.name}} {% endif %}
+                                {{board.type_name}}
                             </td>
                             <td>{{board.name}}</td>
                             <td>{{board.qty}}</td>

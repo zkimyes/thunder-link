@@ -17,14 +17,19 @@ class ControllerConfigurationSelect extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['fech_board_url'] = $this->url->link('configuration/select');
 
-
 		$this->load->model('tool/image');
         $this->load->model('configuration/category');
 		$this->load->model('configuration/board_type');
 		$this->load->model('configuration/typical');
 		$this->load->model('configuration/board');
+		
 		$data['categorys'] = $this->model_configuration_category->getList();
-
+		$borderType = $this->db->query('select name,type from oc_config_board_type');
+        $data['borderType'] = [];
+        foreach ($borderType->rows as $key => $value) {
+            $data['borderType'][$value['type']] = $value['name'];
+        }
+		$data['borderType'] = json_encode($data['borderType']);
         foreach($data['categorys'] as &$category){
             if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
 				$category['thumb'] = $this->model_tool_image->resize($category['image'], 50, 50);
@@ -40,8 +45,18 @@ class ControllerConfigurationSelect extends Controller {
 
 		//是否有典型配置传入
 		if(isset($this->request->get['typical_id']) && !empty($this->request->get['typical_id'])){
-			$data['typical'] = $this->model_configuration_typical->find($this->request->get['typical_id']);
+
+			$typical = $this->model_configuration_typical->find($this->request->get['typical_id']);
+			if($typical){
+				$data['typical'] = json_encode([
+					'id'=>$typical['id'],
+					'name'=>$typical['name'],
+					'_image'=> $this->model_tool_image->resize($typical['image'],200,200),
+					'selectedBoards'=>json_decode($typical['link_boards'])
+				]);
+			}
 		}
+
 		
 		//默认展示第一个类型
 		$data['board_list'] = json_encode($this->model_configuration_board->getBoardByType([

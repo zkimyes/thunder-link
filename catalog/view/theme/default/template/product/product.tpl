@@ -283,7 +283,7 @@
                             <div class="title">
                                 <h3>Customer Reviews</h3>
                             </div>
-                            <?php var_dump($reviews); ?>
+                            <?php echo $review ?>
                         </div>
                     </div>
 

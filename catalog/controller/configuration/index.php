@@ -18,6 +18,11 @@ class ControllerConfigurationIndex extends Controller {
         $data['select_url'] = $this->url->link('configuration/select');
         
         $data['categorys'] = $this->model_configuration_category->getList();
+        $borderType = $this->db->query('select name,type from oc_config_board_type');
+        $data['borderType'] = [];
+        foreach ($borderType->rows as $key => $value) {
+            $data['borderType'][$value['type']] = $value['name'];
+        }
 
         foreach($data['categorys'] as &$category){
             if (!empty($category['image']) && is_file(DIR_IMAGE . $category['image'])) {
@@ -51,10 +56,16 @@ class ControllerConfigurationIndex extends Controller {
             } else {
                 $typical['blueprint_thumb'] = $this->model_tool_image->resize('no_image.png', 228, 180);
             }
-            $typical['link_boards'] = json_decode($typical['link_boards'],true);
+            $typical_borderType = json_decode($typical['link_boards'],true);
+            foreach ($typical_borderType as &$types) {
+                $types['type_name'] = $data['borderType'][$types['type']];
+            }
+
+            $typical['link_boards'] = $typical_borderType;
             $typical['parameter'] = json_decode($typical['parameter'],true);
             $typical['revise'] = $this->url->link('configuration/select','typical_id='.$typical['id']);
         }
+
 
         
         $this->response->setOutput($this->load->view('configuration/index', $data));

@@ -67,9 +67,9 @@
                                 <th>Action</th>
                             </tr>
                             <tr v-for="boards in selectedBoards">
+                                <td style="vertical-align: middle;"><span>${borderType[boards.type]}</span></td>
                                 <td style="vertical-align: middle;"><span>${boards.name}</span></td>
-                                <td style="vertical-align: middle;"><span>${boards.name}</span></td>
-                                <td style="vertical-align: middle;"><span>${boards.quantity||0}</span></td>
+                                <td style="vertical-align: middle;"><span>${boards.quantity||boards.qty||0}</span></td>
                                 <td v-if="boards.type !=1"><a @click="removeBoards(boards)" class="btn btn-link"><i class="fa fa-remove"></i> Delete</a></td>
                             </tr>
                         </table>
@@ -106,8 +106,12 @@
     var categories = '{{categorys|raw}}'?JSON.parse('{{categorys|raw}}'):[],
         board_types = '{{board_types|raw}}'?JSON.parse('{{board_types|raw}}'):[],
         boards = '{{board_list|raw}}'?JSON.parse('{{board_list|raw}}'):[],
-        fech_board_url = '{{fech_board_url}}';
-        Vue.config.devtools = true
+        fech_board_url = '{{fech_board_url}}',
+        typical='{{typical|raw}}'?(function(){
+            let _sv = JSON.parse('{{typical|raw}}');
+            return _sv;
+        })():'',
+        borderType = '{{borderType}}'?JSON.parse('{{borderType|raw}}'):''
     Vue.directive('numberOnly', {
         bind: function (el) {
             this.handler = function () {
@@ -126,7 +130,7 @@
             categories:categories,
             board_types:board_types,
             choosedType:board_types && board_types[0],
-            choosedCategory:categories && categories[0],
+            choosedCategory:(typical != '') ? typical:categories && categories[0],
             boards:{},
             showBoard:boards,
             selectedBoards:[]
@@ -209,6 +213,9 @@
             }
         },
         mounted:function(){
+            if(typical){
+                this.selectedBoards = typical['selectedBoards']
+            }
             this.showBoard = this.showBoard.map((borad)=>{
                 if(borad.type == 1){
                     borad.quantity = 2;

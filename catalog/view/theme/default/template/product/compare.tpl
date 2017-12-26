@@ -1,4 +1,9 @@
 <?php echo $header; ?>
+<style>
+  table {
+    table-layout: fixed !important; 
+  }
+</style>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -21,7 +26,7 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <?php if ($products) { ?>
-      <table class="table table-bordered">
+      <table style="table-layout:fixed" class="table table-bordered">
         <thead>
           <tr>
             <td colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $text_product; ?></strong></td>
@@ -78,9 +83,9 @@
             <?php foreach ($products as $product) { ?>
             <td class="rating"><?php for ($i = 1; $i <= 5; $i++) { ?>
               <?php if ($product['rating'] < $i) { ?>
-              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack"></i></span>
               <?php } else { ?>
-              <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+              <span class="fa fa-stack"><i class="fa fa-star fa-stack"></i><i class="fa fa-star-o fa-stack"></i></span>
               <?php } ?>
               <?php } ?>
               <br />
@@ -119,7 +124,7 @@
             <td><?php echo $attribute['name']; ?></td>
             <?php foreach ($products as $product) { ?>
             <?php if (isset($product['attribute'][$key])) { ?>
-            <td><?php echo $product['attribute'][$key]; ?></td>
+            <td><?php echo html_entity_decode($product['attribute'][$key]); ?></td>
             <?php } else { ?>
             <td></td>
             <?php } ?>

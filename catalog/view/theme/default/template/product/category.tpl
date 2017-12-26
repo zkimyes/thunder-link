@@ -103,9 +103,13 @@
                                             <?php echo $product['name']; ?>
                                         </a>
                                     </h4>
-                                    <p>
+                                    <p class="product_list_desc">
                                         <?php echo $product['description']; ?>
                                     </p>
+                                    <div class="mpms">
+                                        <span class="pull-left"><?php echo '#'.$product['mpn']; ?> </span>
+                                        <span class="pull-right"><?php echo $product['stock_status']; ?></span>
+                                    </div>
                                     <?php if ($product['rating']) { ?>
                                     <div class="rating">
                                         <?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -125,7 +129,9 @@
                                     <?php if ($product['price']) { ?>
                                     <p class="price">
                                         <?php if (!$product['special']) { ?>
-                                        <?php echo $product['price']; ?>
+                                        <span class="price-new">
+                                            <?php echo $product['price']; ?>
+                                        </span>
                                         <?php } else { ?>
                                         <span class="price-new">
                                             <?php echo $product['special']; ?>
@@ -134,24 +140,19 @@
                                             <?php echo $product['price']; ?>
                                         </span>
                                         <?php } ?>
-                                        <?php if ($product['tax']) { ?>
-                                        <span class="price-tax">
-                                            <?php echo $text_tax; ?>
-                                            <?php echo $product['tax']; ?>
-                                        </span>
-                                        <?php } ?>
+
                                     </p>
                                     <?php } ?>
                                 </div>
                                 <div class="button-group">
-                                    <button class="btn btn-o-success" type="button" onclick="cart.add('{{product.product_id}}', '{{product.minimum}}');">
+                                    <button class="btn btn-o-success" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');">
                                         <i class="fa fa-shopping-cart"></i>
                                         <span class="hidden-xs hidden-sm hidden-md">
                                             <?php echo $button_cart; ?>
                                         </span>
                                     </button>
                                     <!-- <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button> -->
-                                    <button class="btn btn-o-success" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('{{product.product_id}}');">Add Compare</button>
+                                    <button class="btn btn-o-success" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id'] ?>');">Add Compare</button>
                                 </div>
                             </div>
                         </div>

@@ -180,7 +180,6 @@ class ControllerCommonHeader extends Controller {
 				}
 				$category['solutions'] = $solutions->rows;
 			}
-
 		}
 
 

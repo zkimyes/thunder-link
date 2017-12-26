@@ -470,7 +470,6 @@ class ControllerProductProduct extends Controller {
             $this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
                  //下载
-            // $this->getDownloads()
             $data['downloads'] = $this->getDownloads($product_info['product_id']);
             if(!empty($data['downloads'])){
                 foreach($data['downloads'] as &$download){
@@ -484,6 +483,7 @@ class ControllerProductProduct extends Controller {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
             $data['url'] = $this->url->link('product/product', 'product_id=' . $product_id.$url);
+            $data['review'] = $this->review();
             $this->response->setOutput($this->load->view('product/product', $data));
         } else {
             $this->notFount();
@@ -527,9 +527,7 @@ class ControllerProductProduct extends Controller {
         $data['pagination'] = $pagination->render();
         
         $data['results'] = sprintf($this->language->get('text_pagination'), ($review_total) ? (($page - 1) * 5) + 1 : 0, ((($page - 1) * 5) > ($review_total - 5)) ? $review_total : ((($page - 1) * 5) + 5), $review_total, ceil($review_total / 5));
-        
-        $this->response->jsonOutput(['a'=>1]);
-        //$this->response->setOutput($this->load->view('product/review', $data));
+        return $this->load->view('product/review', $data);
     }
     
     public function write() {
